@@ -1,12 +1,12 @@
-# Xem PLAN.md mục 3. Sau khi `pip install -r requirements.txt` chạy thành công lần đầu,
-# chạy `pip freeze > requirements.txt` để khoá chính xác phiên bản (đặc biệt langgraph, ragas).
-langgraph>=0.2
+# Xem PLAN.md mục 3. Đây là danh sách phụ thuộc trực tiếp; bản đầy đủ đã khoá
+# (mọi gói con) nằm ở requirements.lock.txt, tạo bằng `pip freeze`.
+langgraph==1.2.12
 langchain>=0.3
 langchain-google-genai
 langchain-groq
 FlagEmbedding
 qdrant-client
-ragas
+ragas==0.4.3
 pydantic>=2
 fastapi
 uvicorn[standard]
@@ -17,3 +17,4 @@ beautifulsoup4
 pytest
 ruff
 python-dotenv
+kaggle
