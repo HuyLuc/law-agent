@@ -4,9 +4,10 @@ Lay top-N tu search_hybrid, rerank roi giu top 5.
 
 Do tren CPU (Intel i7-8565U): rerank 20 cap khong gioi han do dai ~188s/query
 (khong kha thi cho app thoi gian thuc). Sau khi gioi han max_length=384 va
-giam con 10 cap prefetch (theo dung mitigation trong PLAN.md muc 8 "Reranker
-chay cham tren CPU"), con ~10-12s/query -- van cham, se can ban ONNX INT8
-o Tuan 6 neu muon dua vao production that.
+giam con 5 cap prefetch (theo dung mitigation trong PLAN.md muc 8 "Reranker
+chay cham tren CPU"), con ~30s/query (do thuc te tren eval/results/retrieval_dev.json)
+-- van rat cham cho ung dung thoi gian thuc, se can ban ONNX INT8 o Tuan 6
+neu muon dua vao production that.
 """
 
 from functools import lru_cache
@@ -44,6 +45,6 @@ def get_reranker() -> Reranker:
     return Reranker()
 
 
-def search_reranked(query: str, top_k: int = 5, prefetch_limit: int = 10) -> list[dict]:
+def search_reranked(query: str, top_k: int = 5, prefetch_limit: int = 5) -> list[dict]:
     candidates = search_hybrid(query, top_k=prefetch_limit, prefetch_limit=prefetch_limit)
     return get_reranker().rerank(query, candidates, top_k=top_k)
