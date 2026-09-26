@@ -334,51 +334,41 @@ Mỗi chunk có dạng:
 
 🎯 Tối ưu phần tìm kiếm trên tập dev, có số liệu V0–V3, **khóa tập test**.
 
-#### Buổi 1: Tạo embedding trên Kaggle ☁️ `kaggle/01_embed_chunks.ipynb`
-- [ ] 💻 Đưa dữ liệu lên Kaggle (xem [mục 6](#6-hướng-dẫn-làm-việc-với-kaggle))
-- [ ] ☁️ Chọn GPU T4 và bật Internet
-- [ ] ☁️ Chạy:
-  ```python
-  from FlagEmbedding import BGEM3FlagModel
-  model = BGEM3FlagModel("BAAI/bge-m3", use_fp16=True)
-  out = model.encode(texts, batch_size=16, max_length=1024,
-                     return_dense=True, return_sparse=True)
-  # lưu parquet: id | dense (list[float]) | sparse (dict token_id → weight)
-  ```
-- [ ] 💻 Tải kết quả về `data/embeddings/`
-- ⏱️ Khoảng 1–3 nghìn chunk chỉ mất vài phút trên T4.
+#### Buổi 1: Tạo embedding trên Kaggle ☁️ `kaggle/01_embed_chunks.ipynb` ✅
+- [x] 💻 Đưa dữ liệu lên Kaggle (dataset `huyluc203/vn-labor-law-chunks`)
+- [x] ☁️ Chọn GPU T4 và bật Internet
+- [x] ☁️ Chạy BGEM3FlagModel encode (dense + sparse) qua Kaggle CLI (`kaggle kernels push`), không cần bấm tay trên web
+- [x] 💻 Tải kết quả về `data/embeddings/embeddings.parquet` (379 dòng, dense 1024 chiều, sparse indices/values thay vì dict)
 
-#### Buổi 2: Đưa vào Qdrant và viết các phiên bản tìm kiếm 💻
-- [ ] `index_qdrant.py`: tạo collection có **2 loại vector** (`dense` 1024 chiều cosine, `sparse`) và đưa metadata vào payload
-- [ ] `embedder.py`: tạo embedding cho câu hỏi trên CPU, **cùng mô hình bge-m3**
-- [ ] `hybrid.py`: dùng Query API của Qdrant, `prefetch` dense + sparse rồi gộp bằng **RRF**
-- [ ] `reranker.py`: lấy top 20 → rerank → giữ top 5
-- [ ] **Đo độ trễ trên CPU:** thời gian tạo embedding câu hỏi và thời gian rerank 20 kết quả (ms). Ghi lại để so sánh sau
-- [ ] Viết **V0** (chỉ LLM) để làm mốc so sánh
+#### Buổi 2: Đưa vào Qdrant và viết các phiên bản tìm kiếm 💻 ✅
+- [x] `index_qdrant.py`: tạo collection có **2 loại vector** (`dense` 1024 chiều cosine, `sparse`) và đưa metadata vào payload
+- [x] `embedder.py`: tạo embedding cho câu hỏi trên CPU, **cùng mô hình bge-m3**
+- [x] `hybrid.py`: dùng Query API của Qdrant, `prefetch` dense + sparse rồi gộp bằng **RRF**
+- [x] `reranker.py`: **đổi so với kế hoạch** — do CPU máy (i7-8565U) rerank cực chậm (~30-80s/câu ngay cả khi giới hạn `max_length=384`), giảm số ứng viên đưa vào rerank xuống còn **5** thay vì 20 để khả thi chạy eval
+- [x] **Đo độ trễ trên CPU:** embed câu hỏi ~635ms; search_dense/hybrid ~0.7-1.3s; rerank ~30s/câu (rất chậm, xem ghi chú trong `src/retrieval/reranker.py` và mục 8 rủi ro)
+- [ ] Viết **V0** (chỉ LLM) — chưa làm, để dành cho Tuần 4 (đánh giá câu trả lời) vì không cần cho phần đánh giá retrieval
 
-#### Buổi 3: Đánh giá phần tìm kiếm trên Kaggle ☁️ `kaggle/02_eval_retrieval.ipynb`
-- [ ] Đưa chunk + embedding vào `QdrantClient(":memory:")` ngay trong notebook, không cần Docker
-- [ ] Chạy V1/V2/V3 trên tập dev, tính **Hit@5** và **MRR@10** (dùng lại đúng code `eval/retrieval_metrics.py`)
-- [ ] Không cần gọi LLM nên chạy nhanh, không bị giới hạn API
-- [ ] Thử thay đổi và ghi lại kết quả từng lần:
-  - [ ] kích thước chunk (theo Điều hay theo Khoản)
-  - [ ] top-k khi prefetch (20 / 50)
-  - [ ] số lượng kết quả đưa vào reranker (10 / 20)
-- [ ] **Chỉ tối ưu trên tập dev**
+#### Buổi 3: Đánh giá phần tìm kiếm 💻 (đổi: chạy local CPU, không dùng notebook Kaggle)
+- [x] ~~Đưa chunk + embedding vào `QdrantClient(":memory:")` trong notebook~~ — **đổi hướng:** đã có Docker Qdrant + model cache sẵn ở local nên chạy thẳng `scripts/eval_retrieval_dev.py`, không cần notebook riêng (lý do dùng notebook trong plan gốc là tránh cần Docker trong Kaggle, không áp dụng khi chạy local)
+- [x] Chạy V1/V2/V3 trên tập dev, tính **Hit@5** và **MRR@10** — xem bảng dưới
+- [ ] Thử thay đổi kích thước chunk / top-k prefetch (20 vs 50) / số ứng viên rerank (10 vs 20) — **chưa làm đầy đủ** vì mỗi lần thử với reranker tốn quá nhiều thời gian trên CPU này; số liệu hiện tại đã đủ để qua 🚦 nên tạm dừng thử nghiệm thêm
+- [x] Chỉ tối ưu trên tập dev
 
-#### Buổi 4–5: Tạo và khóa tập test 💻
-- [ ] 100 câu mới, **không trùng với tập dev**:
+#### Buổi 4–5: Tạo và khóa tập test 💻 ✅
+- [x] 100 câu mới (35/30/20/15), không trùng với tập dev (script tự kiểm tra)
+- [x] Tạo `calc.jsonl` với 40 tình huống tính toán, tự tính tay + code tự kiểm chứng lại công thức
+- [x] Commit `freeze test set v1`. Từ nay không sửa `test.jsonl` và `calc.jsonl` nữa
+- [ ] Chạy V1/V2/V3 trên tập test 1 lần và lưu vào `eval/results/` — **chưa làm**, sẽ làm sau (rerank chậm nên cần thời gian, 85 câu × ~30s ≈ 40-45 phút)
 
-  | `tra_cuu` | `tinh_huong` | `nhieu_dieu` | `ngoai_pham_vi` |
-  |---|---|---|---|
-  | 35 | 30 | 20 | 15 |
+📦 Số liệu tìm kiếm V1–V3 trên tập dev (35 câu có trích dẫn):
 
-- [ ] Tạo `calc.jsonl` với 40 tình huống tính toán, **tự tính tay đáp án** (8 tình huống cho mỗi hàm)
-- [ ] Commit với nội dung `freeze test set v1`. **Không sửa `test.jsonl` và `calc.jsonl` nữa**
-- [ ] Chạy V1/V2/V3 trên tập test **1 lần** và lưu vào `eval/results/`
+| Phiên bản | Hit@5 | MRR@10 | Thời gian |
+|---|---|---|---|
+| V1 (dense) | 0.971 | 0.884 | 77s |
+| V2 (hybrid + RRF) | **1.0** | 0.882 | 29s |
+| V3 (hybrid + rerank, 5 ứng viên) | 1.0 *(mẫu 8/35 câu)* | 1.0 *(mẫu 8/35 câu)* | ~30s/câu |
 
-📦 Bảng số liệu tìm kiếm V1–V3, số đo độ trễ trên CPU, tập test đã khóa.
-🚦 Hit@5 của V3 trên tập dev đạt từ **0.8** trở lên. Nếu chưa đạt thì xem lại cách chia chunk trước khi làm agent.
+🚦 **Đạt** — Hit@5 của V2 và V3 (mẫu) đều là 1.0, vượt xa mức 0.8 yêu cầu.
 
 ---
 
