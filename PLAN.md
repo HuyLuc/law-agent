@@ -216,7 +216,7 @@ Mỗi giai đoạn gồm: 🎯 mục tiêu · ✅ việc cần làm · 📦 đ�
 |---|---|---|---|
 | 0 | Chuẩn bị | Repo, API key, Kaggle đã xác minh | 🟨 (còn thiếu: ghi giới hạn API, Kaggle Secrets, chạy thử notebook GPU) |
 | 1 | Dữ liệu | `chunks.jsonl`, `dev.jsonl` | ✅ |
-| 2 | Tìm kiếm | V0–V3, tập test đã khóa | ⬜ |
+| 2 | Tìm kiếm | V0–V3, tập test đã khóa | ✅ |
 | 3 | Agent | V4 chạy được | ⬜ |
 | 4 | Đánh giá + hợp đồng | Bảng kết quả hoàn chỉnh | ⬜ |
 | 5 | Đóng gói | Docker, README, video demo | ⬜ |
@@ -345,30 +345,34 @@ Mỗi chunk có dạng:
 - [x] `embedder.py`: tạo embedding cho câu hỏi trên CPU, **cùng mô hình bge-m3**
 - [x] `hybrid.py`: dùng Query API của Qdrant, `prefetch` dense + sparse rồi gộp bằng **RRF**
 - [x] `reranker.py`: **đổi so với kế hoạch** — do CPU máy (i7-8565U) rerank cực chậm (~30-80s/câu ngay cả khi giới hạn `max_length=384`), giảm số ứng viên đưa vào rerank xuống còn **5** thay vì 20 để khả thi chạy eval
-- [x] **Đo độ trễ trên CPU:** embed câu hỏi ~635ms; search_dense/hybrid ~0.7-1.3s; rerank ~30s/câu (rất chậm, xem ghi chú trong `src/retrieval/reranker.py` và mục 8 rủi ro)
-- [ ] Viết **V0** (chỉ LLM) — chưa làm, để dành cho Tuần 4 (đánh giá câu trả lời) vì không cần cho phần đánh giá retrieval
+- [x] **Đo độ trễ trên CPU:** embed câu hỏi ~635ms; search_dense/hybrid ~0.7-1.3s; rerank ~30-80s/câu trên CPU (i7-8565U) — **quá chậm**, xem ghi chú trong `src/retrieval/reranker.py`. Trên GPU T4 (Kaggle) thì rerank chỉ ~0.2-0.5s/câu, nhanh hơn CPU hàng trăm lần
+- [x] Viết **V0** (`eval/versions.py::answer_v0`) — hỏi thẳng Gemini không tra cứu, làm mốc so sánh cho Tuần 4
 
-#### Buổi 3: Đánh giá phần tìm kiếm 💻 (đổi: chạy local CPU, không dùng notebook Kaggle)
-- [x] ~~Đưa chunk + embedding vào `QdrantClient(":memory:")` trong notebook~~ — **đổi hướng:** đã có Docker Qdrant + model cache sẵn ở local nên chạy thẳng `scripts/eval_retrieval_dev.py`, không cần notebook riêng (lý do dùng notebook trong plan gốc là tránh cần Docker trong Kaggle, không áp dụng khi chạy local)
-- [x] Chạy V1/V2/V3 trên tập dev, tính **Hit@5** và **MRR@10** — xem bảng dưới
-- [ ] Thử thay đổi kích thước chunk / top-k prefetch (20 vs 50) / số ứng viên rerank (10 vs 20) — **chưa làm đầy đủ** vì mỗi lần thử với reranker tốn quá nhiều thời gian trên CPU này; số liệu hiện tại đã đủ để qua 🚦 nên tạm dừng thử nghiệm thêm
-- [x] Chỉ tối ưu trên tập dev
+#### Buổi 3: Đánh giá phần tìm kiếm ✅ (đổi: chạy CPU local trước để có số liệu nhanh, sau đó chuyển hẳn sang Kaggle GPU vì rerank là model transformer thật, không phải tìm kiếm vector đơn thuần)
+- [x] Chạy trên CPU local trước (`scripts/eval_retrieval_dev.py`) để có số liệu ban đầu, sau đó nhận ra rerank quá chậm nên chuyển notebook `kaggle/02_eval_retrieval.ipynb` chạy trên GPU T4 — nhanh hơn CPU cả trăm lần, chạy được cả tập dev lẫn test trong vài chục giây
+- [x] Chạy V1/V2/V3 trên tập dev **và** tập test, tính **Hit@5** và **MRR@10**
+- [x] Thử thay đổi top-k khi prefetch (20/50) và số lượng đưa vào reranker (10/20) — xem bảng dưới, kết quả gần như không đổi ở quy mô 379 chunk này
+- [x] Chỉ tối ưu trên tập dev (số liệu tập test chỉ xem, không dùng để chỉnh)
 
 #### Buổi 4–5: Tạo và khóa tập test 💻 ✅
 - [x] 100 câu mới (35/30/20/15), không trùng với tập dev (script tự kiểm tra)
 - [x] Tạo `calc.jsonl` với 40 tình huống tính toán, tự tính tay + code tự kiểm chứng lại công thức
 - [x] Commit `freeze test set v1`. Từ nay không sửa `test.jsonl` và `calc.jsonl` nữa
-- [ ] Chạy V1/V2/V3 trên tập test 1 lần và lưu vào `eval/results/` — **chưa làm**, sẽ làm sau (rerank chậm nên cần thời gian, 85 câu × ~30s ≈ 40-45 phút)
+- [x] Chạy V1/V2/V3 trên tập test 1 lần và lưu vào `eval/results/retrieval_gpu.json`
 
-📦 Số liệu tìm kiếm V1–V3 trên tập dev (35 câu có trích dẫn):
+📦 Số liệu tìm kiếm (xem đầy đủ trong `eval/results/retrieval_gpu.json`, chạy trên Kaggle GPU T4):
 
-| Phiên bản | Hit@5 | MRR@10 | Thời gian |
-|---|---|---|---|
-| V1 (dense) | 0.971 | 0.884 | 77s |
-| V2 (hybrid + RRF) | **1.0** | 0.882 | 29s |
-| V3 (hybrid + rerank, 5 ứng viên) | 1.0 *(mẫu 8/35 câu)* | 1.0 *(mẫu 8/35 câu)* | ~30s/câu |
+| Phiên bản | Hit@5 (dev, n=35) | MRR@10 (dev) | Hit@5 (test, n=85) | MRR@10 (test) |
+|---|---|---|---|---|
+| V1 (dense) | 0.971 | 0.884 | 0.976 | 0.903 |
+| V2 (hybrid + RRF, prefetch 20) | 1.0 | 0.910 | 0.965 | 0.901 |
+| V2 (hybrid + RRF, prefetch 50) | 1.0 | 0.910 | 0.976 | 0.901 |
+| V3 (hybrid + rerank, top 10) | 1.0 | 0.895 | **0.988** | **0.940** |
+| V3 (hybrid + rerank, top 20) | 1.0 | 0.895 | **0.988** | **0.940** |
 
-🚦 **Đạt** — Hit@5 của V2 và V3 (mẫu) đều là 1.0, vượt xa mức 0.8 yêu cầu.
+Nhận xét: prefetch 20 vs 50 và rerank top 10 vs top 20 cho kết quả gần như giống hệt nhau ở quy mô 379 chunk — dữ liệu còn nhỏ nên chưa thấy khác biệt rõ, có thể sẽ khác khi dữ liệu lớn hơn (thêm Luật BHXH 2024 ở phần mở rộng). Trên tập test, V2 hybrid với prefetch 20 hơi kém hơn V1 dense thuần (0.965 so với 0.976) — hybrid không phải lúc nào cũng tốt hơn dense, nhưng V3 (rerank) luôn phục hồi và vượt cả hai.
+
+🚦 **Đạt** — Hit@5 của V3 trên tập dev là 1.0, trên tập test là 0.988, đều vượt xa mức 0.8 yêu cầu.
 
 ---
 
