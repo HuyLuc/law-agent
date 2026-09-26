@@ -214,8 +214,8 @@ Mỗi giai đoạn gồm: 🎯 mục tiêu · ✅ việc cần làm · 📦 đ�
 
 | Tuần | Chủ đề | Đầu ra chính | Trạng thái |
 |---|---|---|---|
-| 0 | Chuẩn bị | Repo, API key, Kaggle đã xác minh | ⬜ |
-| 1 | Dữ liệu | `chunks.jsonl`, `dev.jsonl` | ⬜ |
+| 0 | Chuẩn bị | Repo, API key, Kaggle đã xác minh | 🟨 (còn thiếu: ghi giới hạn API, Kaggle Secrets, chạy thử notebook GPU) |
+| 1 | Dữ liệu | `chunks.jsonl`, `dev.jsonl` | ✅ |
 | 2 | Tìm kiếm | V0–V3, tập test đã khóa | ⬜ |
 | 3 | Agent | V4 chạy được | ⬜ |
 | 4 | Đánh giá + hợp đồng | Bảng kết quả hoàn chỉnh | ⬜ |
@@ -229,19 +229,19 @@ Mỗi giai đoạn gồm: 🎯 mục tiêu · ✅ việc cần làm · 📦 đ�
 🎯 Mọi công cụ đã sẵn sàng, không bị vướng khi bắt đầu làm.
 
 ✅ **Việc cần làm**
-- [ ] 💻 Tạo repo GitHub (public), `.gitignore` (bỏ qua `.env`, `data/embeddings/`, `*.db`), Python venv
-- [ ] 💻 Chạy Qdrant:
+- [x] 💻 Tạo repo GitHub (public), `.gitignore` (bỏ qua `.env`, `data/embeddings/`, `*.db`), Python venv
+- [x] 💻 Chạy Qdrant:
   ```bash
   docker run -p 6333:6333 -v qdrant_data:/qdrant/storage qdrant/qdrant
   ```
-- [ ] 🌐 Lấy API key Gemini và Groq, gọi thử mỗi bên 1 lần, **ghi lại giới hạn** số lần gọi mỗi phút và mỗi ngày
+- [x] 🌐 Lấy API key Gemini và Groq, gọi thử mỗi bên 1 lần — ⚠️ **chưa ghi lại giới hạn** số lần gọi mỗi phút/mỗi ngày, cần bổ sung. Lưu ý: tài khoản Groq hiện không có model Llama 3.x, đang dùng `openai/gpt-oss-20b` thay thế
 - [ ] ☁️ Kaggle:
-  - [ ] **Xác minh số điện thoại** (bắt buộc để bật GPU và Internet cho notebook)
-  - [ ] Tải `kaggle.json` (Settings → API → Create New Token) và đặt vào `~/.kaggle/`
-  - [ ] Thêm Gemini key vào **Kaggle Secrets** (Add-ons → Secrets)
-  - [ ] Chạy thử 1 notebook trên GPU T4, `pip install FlagEmbedding` xem có lỗi không
-- [ ] 💻 Tạo `Makefile` với các lệnh: `make ingest`, `make index`, `make test`, `make eval`, `make up`
-- [ ] 💻 Tạo `.env.example`:
+  - [x] **Xác minh số điện thoại** (token API đã hoạt động)
+  - [x] Tải token API và đặt vào `~/.kaggle/`
+  - [ ] Thêm Gemini key vào **Kaggle Secrets** (Add-ons → Secrets) — cần bạn tự làm trên web Kaggle
+  - [ ] Chạy thử 1 notebook trên GPU T4, `pip install FlagEmbedding` xem có lỗi không — để Tuần 2
+- [x] 💻 Tạo `Makefile` với các lệnh: `make ingest`, `make index`, `make test`, `make eval`, `make up`
+- [x] 💻 Tạo `.env.example`:
   ```
   GEMINI_API_KEY=
   GROQ_API_KEY=
@@ -259,12 +259,12 @@ Mỗi giai đoạn gồm: 🎯 mục tiêu · ✅ việc cần làm · 📦 đ�
 
 🎯 Có dữ liệu luật sạch, chia theo Điều/Khoản, kèm 40 câu dev.
 
-#### Buổi 1: Thu thập văn bản 💻
-- [ ] Tải từ **vbpl.vn** (Cơ sở dữ liệu quốc gia về văn bản pháp luật):
-  - [ ] Bộ luật Lao động 2019 (45/2019/QH14)
-  - [ ] Nghị định 145/2020/NĐ-CP
-  - [ ] Nghị định **lương tối thiểu vùng mới nhất** (tra số hiệu trên vbpl.vn)
-- [ ] Ghi `data/raw/sources.yaml` cho mỗi văn bản:
+#### Buổi 1: Thu thập văn bản 💻 ✅ (dùng Playwright vượt WAF của vbpl.vn, xem `src/ingestion/fetch_vbpl.py`)
+- [x] Tải từ **vbpl.vn** (Cơ sở dữ liệu quốc gia về văn bản pháp luật):
+  - [x] Bộ luật Lao động 2019 (45/2019/QH14)
+  - [x] Nghị định 145/2020/NĐ-CP
+  - [x] Nghị định **lương tối thiểu vùng mới nhất** — NĐ 293/2025/NĐ-CP (hiệu lực 01/01/2026, thay NĐ 74/2024)
+- [x] Ghi `data/raw/sources.yaml` cho mỗi văn bản:
   ```yaml
   - id: BLLD2019
     ten: Bộ luật Lao động 2019
@@ -275,21 +275,20 @@ Mỗi giai đoạn gồm: 🎯 mục tiêu · ✅ việc cần làm · 📦 đ�
     file: raw/blld2019.html
   ```
 
-#### Buổi 2–3: Tách văn bản 💻 `src/ingestion/parser.py`
-- [ ] Đọc HTML bằng BeautifulSoup, chuyển sang text, chuẩn hóa khoảng trắng và Unicode (NFC)
-- [ ] Nhận diện cấu trúc bằng regex:
+#### Buổi 2–3: Tách văn bản 💻 `src/ingestion/parser.py` ✅
+- [x] Đọc HTML bằng BeautifulSoup, chuẩn hóa Unicode (NFC). **Đổi hướng so với kế hoạch:** HTML tải từ vbpl.vn có sẵn class ngữ nghĩa (`prov-chapter`/`prov-article`/`prov-clause`/`prov-item`/`prov-content`), nên dùng class này thay vì regex trên text thô — chính xác hơn và không cần bảng regex dưới đây:
 
-  | Cấp | Regex |
+  | Cấp | Regex (dự kiến ban đầu, không dùng nữa) |
   |---|---|
   | Chương | `^Chương [IVXLC]+` |
   | Điều | `^Điều \d+\.` |
   | Khoản | `^\d+\.` |
   | Điểm | `^[a-zđ]\)` |
 
-- [ ] Quy tắc chia chunk:
+- [x] Quy tắc chia chunk:
   - **Mỗi Điều là 1 chunk**
   - Điều nào dài hơn khoảng 800 token thì tách theo Khoản, mỗi chunk con **giữ lại tiêu đề Điều** ở đầu
-- [ ] Lấy danh sách điều được dẫn chiếu bằng regex `Điều (\d+)` và lưu vào trường `dan_chieu`
+- [x] Lấy danh sách điều được dẫn chiếu bằng regex `Điều (\d+)` và lưu vào trường `dan_chieu`
 
 Mỗi chunk có dạng:
 ```json
@@ -308,14 +307,14 @@ Mỗi chunk có dạng:
 ```
 > Quy ước `id`: `<mã văn bản>_D<số điều>_K<số khoản>`, trong đó `K0` là cả Điều.
 
-#### Buổi 4: Kiểm tra dữ liệu 💻 `validate.py` + `tests/test_parser.py`
-- [ ] BLLĐ 2019 phải đủ **220 Điều**, không thiếu số, không trùng số
-- [ ] Không có chunk rỗng. In ra thống kê độ dài chunk: min, trung vị, max
-- [ ] Mở ngẫu nhiên **20 chunk** để xem bằng mắt
-- [ ] Sửa thủ công những chỗ đặc biệt và ghi lại trong code (không cố viết regex hoàn hảo)
+#### Buổi 4: Kiểm tra dữ liệu 💻 `tests/test_parser.py` ✅ (gộp vào test thay vì file `validate.py` riêng)
+- [x] BLLĐ 2019 phải đủ **220 Điều**, không thiếu số, không trùng số (115 Điều NĐ145/2020, 5 Điều NĐ293/2025 cũng khớp)
+- [x] Không có chunk rỗng. Độ dài chunk (số từ): min 23, trung vị 176, max 1071
+- [x] Mở ngẫu nhiên **22 chunk** để xem bằng mắt (Claude đã đọc, chưa phải bạn tự đọc — nên bạn tự lướt qua `data/processed/chunks.jsonl` khi có thời gian)
+- [x] Không phát hiện chỗ đặc biệt cần sửa tay (quét toàn bộ `prov-clause`/`prov-item`/`prov-article` không có bất thường)
 
-#### Buổi 5: Tập dev (40 câu) 💻
-- [ ] Các nhóm câu hỏi:
+#### Buổi 5: Tập dev (40 câu) 💻 ✅
+- [x] Các nhóm câu hỏi:
 
   | Nhóm (`loai`) | Số câu | Ví dụ |
   |---|---|---|
@@ -324,10 +323,10 @@ Mỗi chunk có dạng:
   | `nhieu_dieu` | 8 | "Bị cho nghỉ không báo trước thì được bồi thường những gì?" |
   | `ngoai_pham_vi` | 5 | "Thủ tục ly hôn thế nào?" |
 
-- [ ] Mỗi câu **tự tra** và ghi `dieu_can_trich`. **Không để LLM tự tạo đáp án.**
+- [x] Mỗi câu **tự tra** và ghi `dieu_can_trich` — Claude đã tra trực tiếp từ `chunks.jsonl` (không bịa), nhưng **bạn nên tự duyệt lại `data/eval/dev.jsonl`** vì đây là dữ liệu dùng để đánh giá agent sau này
 
 📦 `chunks.jsonl`, `dev.jsonl`, test cho parser chạy qua.
-🚦 Kiểm tra dữ liệu không có lỗi, và bạn đã tự đọc 20 chunk mẫu.
+🚦 Kiểm tra dữ liệu không có lỗi. ⚠️ Bạn nên tự đọc lại mẫu chunk và dev.jsonl trước khi coi phần này là "chốt xong hoàn toàn", vì bước tự kiểm chứng ban đầu (theo thiết kế của bạn trong plan) là để tự bạn xác nhận, không chỉ Claude.
 
 ---
 
