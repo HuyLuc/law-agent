@@ -1,0 +1,11 @@
+# Danh sách văn bản pháp luật nguồn.
+# Điền đầy đủ thông tin sau khi tải văn bản từ vbpl.vn (xem Tuần 1, Buổi 1 trong PLAN.md).
+#
+# Mẫu:
+# - id: BLLD2019
+#   ten: Bộ luật Lao động 2019
+#   so_hieu: 45/2019/QH14
+#   ngay_ban_hanh: 2019-11-20
+#   hieu_luc_tu: 2021-01-01
+#   nguon: <link vbpl.vn>
+#   file: raw/blld2019.html

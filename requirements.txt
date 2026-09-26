@@ -1,0 +1,19 @@
+# Xem PLAN.md mục 3. Sau khi `pip install -r requirements.txt` chạy thành công lần đầu,
+# chạy `pip freeze > requirements.txt` để khoá chính xác phiên bản (đặc biệt langgraph, ragas).
+langgraph>=0.2
+langchain>=0.3
+langchain-google-genai
+langchain-groq
+FlagEmbedding
+qdrant-client
+ragas
+pydantic>=2
+fastapi
+uvicorn[standard]
+streamlit
+pypdf
+python-docx
+beautifulsoup4
+pytest
+ruff
+python-dotenv

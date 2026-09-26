@@ -1,0 +1,30 @@
+# Environment / secrets
+.env
+*.db
+kaggle.json
+
+# Data (large / generated)
+data/embeddings/
+data/raw/*.html
+data/raw/*.pdf
+!data/raw/sources.yaml
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Kaggle outputs
+kaggle/*.parquet
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Eval scratch (keep locked test set, ignore run artifacts if regenerated locally)
+eval/results/*.tmp.json
