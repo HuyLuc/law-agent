@@ -1,0 +1,268 @@
+"""Script tam thoi de sinh data/eval/dev.jsonl (Tuan 1, Buoi 5).
+
+Cau hoi va dieu_can_trich duoc tac gia (Claude) tu tra cuu thu cong tren
+data/processed/chunks.jsonl va doi chieu voi PLAN.md. Script chi lam nhiem
+vu ghi file + kiem tra moi id trong dieu_can_trich co ton tai that.
+
+Chay: python scripts/build_dev_set.py
+"""
+
+# ruff: noqa: C408 -- dict(...) de doc hon {} cho danh sach cau hoi dai
+
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+CHUNKS_PATH = ROOT / "data" / "processed" / "chunks.jsonl"
+OUT_PATH = ROOT / "data" / "eval" / "dev.jsonl"
+
+DEV_SET = [
+    # ---- tra_cuu (15) ----
+    dict(id="d001", loai="tra_cuu",
+         question="Thời gian thử việc tối đa là bao lâu?",
+         ground_truth="Tuỳ tính chất công việc: tối đa 180 ngày với người quản lý doanh nghiệp; "
+                       "tối đa 60 ngày với công việc cần trình độ cao đẳng trở lên; tối đa 30 ngày "
+                       "với công việc cần trình độ trung cấp, công nhân kỹ thuật, nhân viên nghiệp vụ; "
+                       "tối đa 6 ngày làm việc với công việc khác. Mỗi công việc chỉ được thử việc một lần.",
+         dieu_can_trich=["BLLD2019_D25_K0"]),
+    dict(id="d002", loai="tra_cuu",
+         question="Tiền lương thử việc thấp nhất bằng bao nhiêu phần trăm lương chính thức?",
+         ground_truth="Do hai bên thoả thuận nhưng ít nhất phải bằng 85% mức lương của công việc đó.",
+         dieu_can_trich=["BLLD2019_D26_K0"]),
+    dict(id="d003", loai="tra_cuu",
+         question="Trong thời gian thử việc, người lao động có được nghỉ việc ngay mà không cần báo trước không?",
+         ground_truth="Có. Trong thời gian thử việc, mỗi bên có quyền huỷ bỏ hợp đồng thử việc hoặc hợp "
+                       "đồng lao động đã giao kết mà không cần báo trước và không phải bồi thường.",
+         dieu_can_trich=["BLLD2019_D27_K0"]),
+    dict(id="d004", loai="tra_cuu",
+         question="Thời giờ làm việc bình thường tối đa là bao nhiêu giờ mỗi ngày và mỗi tuần?",
+         ground_truth="Không quá 8 giờ trong 1 ngày và không quá 48 giờ trong 1 tuần. Nếu quy định theo "
+                       "tuần thì không quá 10 giờ/ngày nhưng vẫn không quá 48 giờ/tuần.",
+         dieu_can_trich=["BLLD2019_D105_K0"]),
+    dict(id="d005", loai="tra_cuu",
+         question="Làm thêm giờ vào ngày thường được trả lương ít nhất bằng bao nhiêu phần trăm?",
+         ground_truth="Ít nhất bằng 150% tiền lương của ngày làm việc bình thường.",
+         dieu_can_trich=["BLLD2019_D98_K0"]),
+    dict(id="d006", loai="tra_cuu",
+         question="Người lao động làm đủ 12 tháng trong điều kiện lao động bình thường được nghỉ phép năm bao nhiêu ngày?",
+         ground_truth="12 ngày làm việc (14 ngày với lao động chưa thành niên, người khuyết tật, nghề nặng "
+                       "nhọc độc hại nguy hiểm; 16 ngày với nghề đặc biệt nặng nhọc độc hại nguy hiểm).",
+         dieu_can_trich=["BLLD2019_D113_K0"]),
+    dict(id="d007", loai="tra_cuu",
+         question="Cứ bao nhiêu năm làm việc thì người lao động được cộng thêm 1 ngày phép năm?",
+         ground_truth="Cứ đủ 5 năm làm việc cho một người sử dụng lao động thì được cộng thêm 1 ngày nghỉ phép năm.",
+         dieu_can_trich=["BLLD2019_D114_K0"]),
+    dict(id="d008", loai="tra_cuu",
+         question="Tết Âm lịch, người lao động được nghỉ mấy ngày hưởng nguyên lương?",
+         ground_truth="5 ngày.",
+         dieu_can_trich=["BLLD2019_D112_K0"]),
+    dict(id="d009", loai="tra_cuu",
+         question="Mỗi tuần người lao động phải được nghỉ ít nhất bao nhiêu giờ liên tục?",
+         ground_truth="Ít nhất 24 giờ liên tục; trường hợp đặc biệt không thể nghỉ hằng tuần thì phải bảo "
+                       "đảm bình quân 1 tháng ít nhất 4 ngày nghỉ.",
+         dieu_can_trich=["BLLD2019_D111_K0"]),
+    dict(id="d010", loai="tra_cuu",
+         question="Bộ luật Lao động quy định những hình thức xử lý kỷ luật lao động nào?",
+         ground_truth="4 hình thức: khiển trách; kéo dài thời hạn nâng lương không quá 6 tháng; cách chức; sa thải.",
+         dieu_can_trich=["BLLD2019_D124_K0"]),
+    dict(id="d011", loai="tra_cuu",
+         question="Mức lương tối thiểu Vùng I hiện nay (áp dụng từ 01/01/2026) là bao nhiêu?",
+         ground_truth="5.310.000 đồng/tháng, hoặc 25.500 đồng/giờ nếu trả lương theo giờ.",
+         dieu_can_trich=["ND293_2025_D3_K0"]),
+    dict(id="d012", loai="tra_cuu",
+         question="Trợ cấp mất việc làm tối thiểu là mấy tháng lương?",
+         ground_truth="Cứ mỗi năm làm việc trả 1 tháng tiền lương, nhưng tổng trợ cấp ít nhất phải bằng 2 tháng tiền lương.",
+         dieu_can_trich=["BLLD2019_D47_K0"]),
+    dict(id="d013", loai="tra_cuu",
+         question="Người lao động làm việc theo hợp đồng không xác định thời hạn muốn đơn phương nghỉ việc phải báo trước bao lâu?",
+         ground_truth="Ít nhất 45 ngày.",
+         dieu_can_trich=["BLLD2019_D35_K0"]),
+    dict(id="d014", loai="tra_cuu",
+         question="Hợp đồng lao động bắt buộc phải có những nội dung chủ yếu nào?",
+         ground_truth="Tên/địa chỉ các bên; công việc và địa điểm làm việc; thời hạn hợp đồng; mức lương, "
+                       "hình thức và thời hạn trả lương, phụ cấp; chế độ nâng bậc nâng lương; thời giờ làm "
+                       "việc/nghỉ ngơi; trang bị bảo hộ lao động; BHXH/BHYT/BHTN; đào tạo, bồi dưỡng nâng cao trình độ.",
+         dieu_can_trich=["BLLD2019_D21_K0"]),
+    dict(id="d015", loai="tra_cuu",
+         question="Thời gian làm việc để tính trợ cấp thôi việc/mất việc làm có tháng lẻ thì được tính như thế nào?",
+         ground_truth="Tính theo năm (đủ 12 tháng); tháng lẻ từ 6 tháng trở xuống được tính bằng 1/2 năm, "
+                       "trên 6 tháng được tính tròn 1 năm làm việc.",
+         dieu_can_trich=["ND145_2020_D8_K3"]),
+
+    # ---- tinh_huong (12) ----
+    dict(id="d016", loai="tinh_huong",
+         question="Công ty bắt tôi thử việc 3 tháng cho vị trí kế toán, có đúng luật không?",
+         ground_truth="Không đúng. Vị trí kế toán cần trình độ chuyên môn từ cao đẳng trở lên nên thời gian "
+                       "thử việc tối đa chỉ được 60 ngày, trong khi 3 tháng (khoảng 90 ngày) đã vượt quá.",
+         dieu_can_trich=["BLLD2019_D25_K0"]),
+    dict(id="d017", loai="tinh_huong",
+         question="Tôi làm nhân viên rửa xe (công việc phổ thông, không yêu cầu bằng cấp), công ty yêu cầu thử việc 15 ngày làm việc, có đúng luật không?",
+         ground_truth="Không đúng. Với công việc phổ thông không thuộc nhóm cần trình độ cao đẳng/trung cấp/"
+                       "quản lý, thời gian thử việc tối đa chỉ là 6 ngày làm việc.",
+         dieu_can_trich=["BLLD2019_D25_K0"]),
+    dict(id="d018", loai="tinh_huong",
+         question="Tôi là quản lý cấp cao của doanh nghiệp, ký hợp đồng lao động có thời hạn, công ty thử việc tôi 90 ngày, có đúng luật không?",
+         ground_truth="Đúng luật. Đối với công việc của người quản lý doanh nghiệp, thời gian thử việc được "
+                       "phép tối đa 180 ngày, nên 90 ngày là hợp lệ.",
+         dieu_can_trich=["BLLD2019_D25_K0"]),
+    dict(id="d019", loai="tinh_huong",
+         question="Trong thời gian thử việc, công ty chỉ trả tôi 70% mức lương chính thức của công việc đó, có đúng luật không?",
+         ground_truth="Không đúng. Tiền lương thử việc ít nhất phải bằng 85% mức lương của công việc đó; "
+                       "70% thấp hơn mức tối thiểu cho phép.",
+         dieu_can_trich=["BLLD2019_D26_K0"]),
+    dict(id="d020", loai="tinh_huong",
+         question="Tôi làm việc liên tục 6 tiếng một ca mà không được nghỉ giữa giờ phút nào, công ty có vi phạm không?",
+         ground_truth="Có vi phạm. Người lao động làm việc từ 6 giờ trở lên trong một ngày phải được nghỉ "
+                       "giữa giờ ít nhất 30 phút liên tục (ít nhất 45 phút nếu làm việc ban đêm).",
+         dieu_can_trich=["BLLD2019_D109_K0"]),
+    dict(id="d021", loai="tinh_huong",
+         question="Công ty quy định tuần làm việc 6 ngày, mỗi ngày 9 giờ, có đúng luật không?",
+         ground_truth="Không đúng. Tổng thời giờ làm việc bình thường không được quá 48 giờ/tuần; 9 giờ x 6 "
+                       "ngày = 54 giờ, vượt quá giới hạn cho phép.",
+         dieu_can_trich=["BLLD2019_D105_K0"]),
+    dict(id="d022", loai="tinh_huong",
+         question="Tôi làm thêm giờ đúng vào ngày Tết Dương lịch (ngày lễ được nghỉ hưởng nguyên lương), tôi được trả thêm ít nhất bao nhiêu phần trăm?",
+         ground_truth="Ít nhất 300% tiền lương của ngày làm việc bình thường, chưa kể tiền lương ngày lễ mà "
+                       "người lao động vẫn được hưởng.",
+         dieu_can_trich=["BLLD2019_D98_K0"]),
+    dict(id="d023", loai="tinh_huong",
+         question="Tôi mới làm việc cho công ty được 8 tháng thì xin nghỉ, tôi được tính bao nhiêu ngày phép năm (điều kiện lao động bình thường)?",
+         ground_truth="Vì chưa làm đủ 12 tháng, số ngày nghỉ phép năm được tính theo tỷ lệ tương ứng với số "
+                       "tháng đã làm việc: khoảng 8 ngày (12 ngày × 8/12 tháng).",
+         dieu_can_trich=["BLLD2019_D113_K0"]),
+    dict(id="d024", loai="tinh_huong",
+         question="Công ty sa thải tôi vì phát hiện tôi đánh bạc trong giờ làm việc tại nơi làm việc, việc sa thải này có đúng luật không?",
+         ground_truth="Có căn cứ đúng luật. Đánh bạc tại nơi làm việc là một trong các hành vi được phép áp "
+                       "dụng hình thức kỷ luật sa thải.",
+         dieu_can_trich=["BLLD2019_D125_K0"]),
+    dict(id="d025", loai="tinh_huong",
+         question="Tôi bị kỷ luật khiển trách cách đây 4 tháng và không tái phạm, kỷ luật của tôi đã được xoá chưa?",
+         ground_truth="Đã được xoá. Người bị khiển trách sau 3 tháng kể từ ngày bị xử lý mà không tiếp tục "
+                       "vi phạm kỷ luật lao động thì đương nhiên được xoá kỷ luật.",
+         dieu_can_trich=["BLLD2019_D126_K0"]),
+    dict(id="d026", loai="tinh_huong",
+         question="Hợp đồng lao động của tôi chỉ thoả thuận miệng về mức lương, không ghi rõ trong văn bản hợp đồng, có hợp lệ không?",
+         ground_truth="Không hợp lệ. Mức lương theo công việc/chức danh là nội dung chủ yếu bắt buộc phải có "
+                       "trong hợp đồng lao động.",
+         dieu_can_trich=["BLLD2019_D21_K0"]),
+    dict(id="d027", loai="tinh_huong",
+         question="Tôi làm việc liên tục 6 ngày trong tuần, không có ngày nghỉ nào, công ty có vi phạm không?",
+         ground_truth="Có vi phạm. Mỗi tuần người lao động phải được nghỉ ít nhất 24 giờ liên tục.",
+         dieu_can_trich=["BLLD2019_D111_K0"]),
+
+    # ---- nhieu_dieu (8) ----
+    dict(id="d028", loai="nhieu_dieu",
+         question="Tôi đã làm việc liên tục 4,5 năm cho công ty, nay xin nghỉ việc và báo trước đủ 45 ngày "
+                   "theo hợp đồng không xác định thời hạn. Tôi có được nhận trợ cấp thôi việc không?",
+         ground_truth="Có. Đây là trường hợp người lao động đơn phương chấm dứt hợp đồng lao động đúng luật "
+                       "(báo trước đủ thời hạn), thuộc một trong các trường hợp chấm dứt hợp đồng được hưởng "
+                       "trợ cấp thôi việc, với điều kiện đã làm việc thường xuyên từ đủ 12 tháng trở lên.",
+         dieu_can_trich=["BLLD2019_D35_K0", "BLLD2019_D34_K0", "BLLD2019_D46_K0"]),
+    dict(id="d029", loai="nhieu_dieu",
+         question="Tôi tự ý nghỉ việc ngay lập tức, không báo trước và không thuộc trường hợp được miễn báo "
+                   "trước, tôi có bị mất quyền lợi gì không?",
+         ground_truth="Đây là đơn phương chấm dứt hợp đồng lao động trái pháp luật (vi phạm nghĩa vụ báo "
+                       "trước). Hậu quả: không được trợ cấp thôi việc; phải bồi thường cho người sử dụng lao "
+                       "động nửa tháng tiền lương và một khoản tương ứng tiền lương những ngày không báo "
+                       "trước; phải hoàn trả chi phí đào tạo (nếu có).",
+         dieu_can_trich=["BLLD2019_D35_K0", "BLLD2019_D40_K0"]),
+    dict(id="d030", loai="nhieu_dieu",
+         question="Công ty tôi tuyên bố giải thể (chấm dứt hoạt động), tôi đã làm việc liên tục 3 năm. Tôi "
+                   "được nhận khoản trợ cấp nào?",
+         ground_truth="Được nhận trợ cấp thôi việc (không phải trợ cấp mất việc làm), vì doanh nghiệp chấm "
+                       "dứt hoạt động là một trong các trường hợp chấm dứt hợp đồng được liệt kê để hưởng trợ "
+                       "cấp thôi việc: mỗi năm làm việc được nửa tháng lương.",
+         dieu_can_trich=["BLLD2019_D34_K0", "BLLD2019_D46_K0"]),
+    dict(id="d031", loai="nhieu_dieu",
+         question="Công ty thay đổi công nghệ sản xuất, phải cắt giảm nhân sự, cho tôi thôi việc dù tôi "
+                   "không vi phạm gì. Tôi được nhận khoản gì?",
+         ground_truth="Đây là trường hợp cho thôi việc do thay đổi cơ cấu, công nghệ, nên được nhận trợ cấp "
+                       "mất việc làm: mỗi năm làm việc 1 tháng tiền lương, nhưng ít nhất bằng 2 tháng tiền lương.",
+         dieu_can_trich=["BLLD2019_D34_K0", "BLLD2019_D42_K0", "BLLD2019_D47_K0"]),
+    dict(id="d032", loai="nhieu_dieu",
+         question="Tôi đang điều trị ốm đau liên tục 4 tháng theo hợp đồng lao động xác định thời hạn 24 "
+                   "tháng. Công ty đơn phương chấm dứt hợp đồng với tôi ngay bây giờ, có đúng luật không, và "
+                   "nếu sai thì công ty phải làm gì?",
+         ground_truth="Không đúng luật. Với hợp đồng xác định thời hạn 12-36 tháng, người sử dụng lao động "
+                       "chỉ được đơn phương chấm dứt hợp đồng khi người lao động đã điều trị ốm đau liên tục "
+                       "6 tháng; mới điều trị 4 tháng là chưa đủ điều kiện nên đây là chấm dứt trái pháp luật. "
+                       "Công ty phải nhận người lao động trở lại làm việc, trả lương và đóng BHXH/BHYT/BHTN "
+                       "cho những ngày không được làm việc, và trả thêm ít nhất 2 tháng tiền lương.",
+         dieu_can_trich=["BLLD2019_D36_K0", "BLLD2019_D39_K0", "BLLD2019_D41_K0"]),
+    dict(id="d033", loai="nhieu_dieu",
+         question="Công ty sa thải một lao động nữ đang nuôi con 8 tháng tuổi với lý do 'năng suất giảm do "
+                   "phải chăm con', việc chấm dứt hợp đồng này có hợp pháp không?",
+         ground_truth="Không hợp pháp. Pháp luật cấm người sử dụng lao động sa thải hoặc đơn phương chấm dứt "
+                       "hợp đồng lao động vì lý do nuôi con dưới 12 tháng tuổi; đây không phải là căn cứ hợp "
+                       "lệ để đơn phương chấm dứt hợp đồng.",
+         dieu_can_trich=["BLLD2019_D137_K0", "BLLD2019_D36_K0"]),
+    dict(id="d034", loai="nhieu_dieu",
+         question="Tôi làm việc theo ca đêm liên tục 7 giờ không nghỉ, công ty có vi phạm về thời giờ làm "
+                   "việc/nghỉ ngơi không?",
+         ground_truth="Có vi phạm. Làm việc ban đêm vẫn nằm trong giới hạn thời giờ làm việc bình thường "
+                       "(không quá 8 giờ/ngày), nhưng làm việc từ 6 giờ liên tục trở lên vào ban đêm phải "
+                       "được nghỉ giữa giờ ít nhất 45 phút liên tục.",
+         dieu_can_trich=["BLLD2019_D105_K0", "BLLD2019_D109_K0"]),
+    dict(id="d035", loai="nhieu_dieu",
+         question="Tôi làm việc toàn thời gian tại Vùng II, hợp đồng ghi mức lương theo công việc là "
+                   "4.200.000 đồng/tháng (chưa kể phụ cấp), có đúng luật về lương tối thiểu không?",
+         ground_truth="Không đúng. Mức lương theo công việc/chức danh không được thấp hơn mức lương tối "
+                       "thiểu vùng; tại Vùng II mức lương tối thiểu tháng hiện là 4.730.000 đồng, cao hơn mức "
+                       "4.200.000 đồng công ty trả.",
+         dieu_can_trich=["BLLD2019_D90_K0", "ND293_2025_D3_K0"]),
+
+    # ---- ngoai_pham_vi (5) ----
+    dict(id="d036", loai="ngoai_pham_vi",
+         question="Thủ tục ly hôn thế nào?",
+         ground_truth="Câu hỏi thuộc lĩnh vực hôn nhân và gia đình, ngoài phạm vi tư vấn Luật Lao động. Nên "
+                       "tham khảo luật sư hoặc quy định về Luật Hôn nhân và Gia đình.",
+         dieu_can_trich=[]),
+    dict(id="d037", loai="ngoai_pham_vi",
+         question="Tôi muốn khởi kiện hàng xóm vì lấn chiếm đất, cần thủ tục gì?",
+         ground_truth="Thuộc lĩnh vực đất đai/dân sự, ngoài phạm vi Luật Lao động. Nên tham khảo luật sư "
+                       "hoặc quy định pháp luật đất đai, tố tụng dân sự.",
+         dieu_can_trich=[]),
+    dict(id="d038", loai="ngoai_pham_vi",
+         question="Thuế thu nhập cá nhân năm nay tính như thế nào?",
+         ground_truth="Thuộc lĩnh vực pháp luật thuế, ngoài phạm vi Luật Lao động. Nên tham khảo Luật Thuế "
+                       "thu nhập cá nhân hoặc cơ quan thuế.",
+         dieu_can_trich=[]),
+    dict(id="d039", loai="ngoai_pham_vi",
+         question="Tôi bị công an phạt vi phạm giao thông, muốn khiếu nại thì làm sao?",
+         ground_truth="Thuộc lĩnh vực giao thông/xử phạt hành chính, ngoài phạm vi Luật Lao động. Nên tham "
+                       "khảo quy định về xử lý vi phạm hành chính giao thông.",
+         dieu_can_trich=[]),
+    dict(id="d040", loai="ngoai_pham_vi",
+         question="Thủ tục đăng ký kết hôn với người nước ngoài cần giấy tờ gì?",
+         ground_truth="Thuộc lĩnh vực hộ tịch/hôn nhân có yếu tố nước ngoài, ngoài phạm vi Luật Lao động. Nên "
+                       "tham khảo quy định về hộ tịch, hôn nhân và gia đình.",
+         dieu_can_trich=[]),
+]
+
+
+def main() -> None:
+    known_ids = {json.loads(line)["id"] for line in CHUNKS_PATH.open(encoding="utf-8")}
+
+    missing = []
+    for item in DEV_SET:
+        for cid in item["dieu_can_trich"]:
+            if cid not in known_ids:
+                missing.append((item["id"], cid))
+    if missing:
+        raise SystemExit(f"Cac id khong ton tai trong chunks.jsonl: {missing}")
+
+    counts: dict[str, int] = {}
+    for item in DEV_SET:
+        counts[item["loai"]] = counts.get(item["loai"], 0) + 1
+    assert len(DEV_SET) == 40, f"Can 40 cau, hien co {len(DEV_SET)}"
+    print("Phan bo theo loai:", counts)
+
+    OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    with OUT_PATH.open("w", encoding="utf-8") as f:
+        for item in DEV_SET:
+            f.write(json.dumps(item, ensure_ascii=False) + "\n")
+    print(f"Da ghi {len(DEV_SET)} cau vao {OUT_PATH}")
+
+
+if __name__ == "__main__":
+    main()
