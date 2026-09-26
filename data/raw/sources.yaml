@@ -1,11 +1,36 @@
 # Danh sách văn bản pháp luật nguồn.
-# Điền đầy đủ thông tin sau khi tải văn bản từ vbpl.vn (xem Tuần 1, Buổi 1 trong PLAN.md).
-#
-# Mẫu:
-# - id: BLLD2019
-#   ten: Bộ luật Lao động 2019
-#   so_hieu: 45/2019/QH14
-#   ngay_ban_hanh: 2019-11-20
-#   hieu_luc_tu: 2021-01-01
-#   nguon: <link vbpl.vn>
-#   file: raw/blld2019.html
+# Nguồn: Cơ sở dữ liệu quốc gia về pháp luật (vbpl.vn). File .html là nội dung
+# tab "Nội dung" (id kết thúc bằng "panel-toan-van") của từng trang chi tiết,
+# đã giữ nguyên class ngữ nghĩa prov-chapter/prov-section/prov-article/prov-clause/prov-item
+# để parser.py (Tuần 1, Buổi 2-3) dùng trực tiếp, không cần regex trên text thô.
+
+- id: BLLD2019
+  ten: Bộ luật Lao động 2019
+  so_hieu: 45/2019/QH14
+  ngay_ban_hanh: 2019-11-20
+  hieu_luc_tu: 2021-01-01
+  trang_thai: Hết hiệu lực một phần
+  so_dieu: 220
+  nguon: https://vbpl.vn/van-ban/chi-tiet/bo-luat-lao-dong-so-45-2019-qh14--139264
+  file: raw/blld2019.html
+
+- id: ND145_2020
+  ten: Nghị định 145/2020/NĐ-CP quy định chi tiết và hướng dẫn thi hành một số điều của Bộ luật Lao động về điều kiện lao động và quan hệ lao động
+  so_hieu: 145/2020/NĐ-CP
+  ngay_ban_hanh: 2020-12-14
+  hieu_luc_tu: 2021-02-01
+  trang_thai: Hết hiệu lực một phần
+  so_dieu: 115
+  nguon: https://vbpl.vn/van-ban/chi-tiet/nghi-dinh-so-145-2020-nd-cp-quy-dinh-chi-tiet-va-huong-dan-thi-hanh-mot-so-dieu-cua-bo-luat-lao-dong-ve-dieu-kien-lao-dong-va-quan-he-lao-dong--152668
+  file: raw/nd145_2020.html
+
+- id: ND293_2025
+  ten: Nghị định 293/2025/NĐ-CP quy định mức lương tối thiểu đối với người lao động làm việc theo hợp đồng lao động
+  so_hieu: 293/2025/NĐ-CP
+  ngay_ban_hanh: 2025-11-10
+  hieu_luc_tu: 2026-01-01
+  trang_thai: Còn hiệu lực
+  so_dieu: 5
+  nguon: https://vbpl.vn/van-ban/chi-tiet/nghi-dinh-so-293-2025-nd-cp-quy-dinh-muc-luong-toi-thieu-doi-voi-nguoi-lao-dong-lam-viec-theo-hop-dong-lao-dong--183939
+  file: raw/nd293_2025.html
+  ghi_chu: Nghị định lương tối thiểu vùng mới nhất tại thời điểm làm dự án (thay thế NĐ 74/2024/NĐ-CP), hiệu lực từ 01/01/2026.
