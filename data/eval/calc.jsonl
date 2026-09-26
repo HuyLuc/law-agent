@@ -1,0 +1,40 @@
+{"id": "c001", "tool": "tinh_tro_cap_thoi_viec", "input": {"thoi_gian_lam_viec_thang": 54, "thoi_gian_dong_bhtn_thang": 0, "luong_bq_6_thang": 12000000}, "expected": 27000000}
+{"id": "c002", "tool": "tinh_tro_cap_thoi_viec", "input": {"thoi_gian_lam_viec_thang": 84, "thoi_gian_dong_bhtn_thang": 0, "luong_bq_6_thang": 10000000}, "expected": 35000000}
+{"id": "c003", "tool": "tinh_tro_cap_thoi_viec", "input": {"thoi_gian_lam_viec_thang": 90, "thoi_gian_dong_bhtn_thang": 0, "luong_bq_6_thang": 8000000}, "expected": 30000000}
+{"id": "c004", "tool": "tinh_tro_cap_thoi_viec", "input": {"thoi_gian_lam_viec_thang": 91, "thoi_gian_dong_bhtn_thang": 0, "luong_bq_6_thang": 8000000}, "expected": 32000000}
+{"id": "c005", "tool": "tinh_tro_cap_thoi_viec", "input": {"thoi_gian_lam_viec_thang": 120, "thoi_gian_dong_bhtn_thang": 36, "luong_bq_6_thang": 15000000}, "expected": 52500000}
+{"id": "c006", "tool": "tinh_tro_cap_thoi_viec", "input": {"thoi_gian_lam_viec_thang": 30, "thoi_gian_dong_bhtn_thang": 6, "luong_bq_6_thang": 9000000}, "expected": 9000000}
+{"id": "c007", "tool": "tinh_tro_cap_thoi_viec", "input": {"thoi_gian_lam_viec_thang": 14, "thoi_gian_dong_bhtn_thang": 10, "luong_bq_6_thang": 6000000}, "expected": 1500000}
+{"id": "c008", "tool": "tinh_tro_cap_thoi_viec", "input": {"thoi_gian_lam_viec_thang": 180, "thoi_gian_dong_bhtn_thang": 100, "luong_bq_6_thang": 20000000}, "expected": 70000000}
+{"id": "c009", "tool": "tinh_tro_cap_mat_viec", "input": {"thoi_gian_lam_viec_thang": 30, "thoi_gian_dong_bhtn_thang": 0, "luong_bq_6_thang": 10000000}, "expected": 25000000}
+{"id": "c010", "tool": "tinh_tro_cap_mat_viec", "input": {"thoi_gian_lam_viec_thang": 18, "thoi_gian_dong_bhtn_thang": 0, "luong_bq_6_thang": 7000000}, "expected": 14000000}
+{"id": "c011", "tool": "tinh_tro_cap_mat_viec", "input": {"thoi_gian_lam_viec_thang": 13, "thoi_gian_dong_bhtn_thang": 0, "luong_bq_6_thang": 5000000}, "expected": 10000000}
+{"id": "c012", "tool": "tinh_tro_cap_mat_viec", "input": {"thoi_gian_lam_viec_thang": 12, "thoi_gian_dong_bhtn_thang": 0, "luong_bq_6_thang": 6000000}, "expected": 12000000}
+{"id": "c013", "tool": "tinh_tro_cap_mat_viec", "input": {"thoi_gian_lam_viec_thang": 20, "thoi_gian_dong_bhtn_thang": 14, "luong_bq_6_thang": 8000000}, "expected": 16000000}
+{"id": "c014", "tool": "tinh_tro_cap_mat_viec", "input": {"thoi_gian_lam_viec_thang": 100, "thoi_gian_dong_bhtn_thang": 52, "luong_bq_6_thang": 9000000}, "expected": 36000000}
+{"id": "c015", "tool": "tinh_tro_cap_mat_viec", "input": {"thoi_gian_lam_viec_thang": 200, "thoi_gian_dong_bhtn_thang": 150, "luong_bq_6_thang": 11000000}, "expected": 49500000}
+{"id": "c016", "tool": "tinh_tro_cap_mat_viec", "input": {"thoi_gian_lam_viec_thang": 130, "thoi_gian_dong_bhtn_thang": 60, "luong_bq_6_thang": 13000000}, "expected": 78000000}
+{"id": "c017", "tool": "tinh_tien_lam_them_gio", "input": {"don_gia_gio": 50000, "loai_ngay": "thuong", "so_gio": 2, "lam_dem": false}, "expected": 150000}
+{"id": "c018", "tool": "tinh_tien_lam_them_gio", "input": {"don_gia_gio": 60000, "loai_ngay": "nghi_tuan", "so_gio": 3, "lam_dem": false}, "expected": 360000}
+{"id": "c019", "tool": "tinh_tien_lam_them_gio", "input": {"don_gia_gio": 80000, "loai_ngay": "le_tet", "so_gio": 4, "lam_dem": false}, "expected": 960000}
+{"id": "c020", "tool": "tinh_tien_lam_them_gio", "input": {"don_gia_gio": 50000, "loai_ngay": "thuong", "so_gio": 2, "lam_dem": true}, "expected": 200000}
+{"id": "c021", "tool": "tinh_tien_lam_them_gio", "input": {"don_gia_gio": 60000, "loai_ngay": "nghi_tuan", "so_gio": 3, "lam_dem": true}, "expected": 450000}
+{"id": "c022", "tool": "tinh_tien_lam_them_gio", "input": {"don_gia_gio": 70000, "loai_ngay": "le_tet", "so_gio": 5, "lam_dem": true}, "expected": 1225000}
+{"id": "c023", "tool": "tinh_tien_lam_them_gio", "input": {"don_gia_gio": 100000, "loai_ngay": "thuong", "so_gio": 1, "lam_dem": false}, "expected": 150000}
+{"id": "c024", "tool": "tinh_tien_lam_them_gio", "input": {"don_gia_gio": 45000, "loai_ngay": "nghi_tuan", "so_gio": 6, "lam_dem": true}, "expected": 675000}
+{"id": "c025", "tool": "tinh_ngay_phep_nam", "input": {"loai_lao_dong": "binh_thuong", "so_thang_lam_viec": 12, "tham_nien_nam": 3}, "expected": 12}
+{"id": "c026", "tool": "tinh_ngay_phep_nam", "input": {"loai_lao_dong": "binh_thuong", "so_thang_lam_viec": 12, "tham_nien_nam": 5}, "expected": 13}
+{"id": "c027", "tool": "tinh_ngay_phep_nam", "input": {"loai_lao_dong": "binh_thuong", "so_thang_lam_viec": 12, "tham_nien_nam": 12}, "expected": 14}
+{"id": "c028", "tool": "tinh_ngay_phep_nam", "input": {"loai_lao_dong": "nang_nhoc", "so_thang_lam_viec": 12, "tham_nien_nam": 6}, "expected": 15}
+{"id": "c029", "tool": "tinh_ngay_phep_nam", "input": {"loai_lao_dong": "dac_biet_nang_nhoc", "so_thang_lam_viec": 12, "tham_nien_nam": 10}, "expected": 18}
+{"id": "c030", "tool": "tinh_ngay_phep_nam", "input": {"loai_lao_dong": "binh_thuong", "so_thang_lam_viec": 8, "tham_nien_nam": 0}, "expected": 8.0}
+{"id": "c031", "tool": "tinh_ngay_phep_nam", "input": {"loai_lao_dong": "binh_thuong", "so_thang_lam_viec": 6, "tham_nien_nam": 0}, "expected": 6.0}
+{"id": "c032", "tool": "tinh_ngay_phep_nam", "input": {"loai_lao_dong": "nang_nhoc", "so_thang_lam_viec": 9, "tham_nien_nam": 0}, "expected": 10.5}
+{"id": "c033", "tool": "tinh_thoi_han_bao_truoc", "input": {"thoi_han_hop_dong_thang": null}, "expected": 45}
+{"id": "c034", "tool": "tinh_thoi_han_bao_truoc", "input": {"thoi_han_hop_dong_thang": 24}, "expected": 30}
+{"id": "c035", "tool": "tinh_thoi_han_bao_truoc", "input": {"thoi_han_hop_dong_thang": 12}, "expected": 30}
+{"id": "c036", "tool": "tinh_thoi_han_bao_truoc", "input": {"thoi_han_hop_dong_thang": 36}, "expected": 30}
+{"id": "c037", "tool": "tinh_thoi_han_bao_truoc", "input": {"thoi_han_hop_dong_thang": 11}, "expected": 3}
+{"id": "c038", "tool": "tinh_thoi_han_bao_truoc", "input": {"thoi_han_hop_dong_thang": 6}, "expected": 3}
+{"id": "c039", "tool": "tinh_thoi_han_bao_truoc", "input": {"thoi_han_hop_dong_thang": 1}, "expected": 3}
+{"id": "c040", "tool": "tinh_thoi_han_bao_truoc", "input": {"thoi_han_hop_dong_thang": 13}, "expected": 30}
