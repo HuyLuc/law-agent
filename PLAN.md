@@ -217,7 +217,7 @@ Mỗi giai đoạn gồm: 🎯 mục tiêu · ✅ việc cần làm · 📦 đ�
 | 0 | Chuẩn bị | Repo, API key, Kaggle đã xác minh | 🟨 (còn thiếu: ghi giới hạn API, Kaggle Secrets, chạy thử notebook GPU) |
 | 1 | Dữ liệu | `chunks.jsonl`, `dev.jsonl` | ✅ |
 | 2 | Tìm kiếm | V0–V3, tập test đã khóa | ✅ |
-| 3 | Agent | V4 chạy được | ⬜ |
+| 3 | Agent | V4 chạy được | ✅ |
 | 4 | Đánh giá + hợp đồng | Bảng kết quả hoàn chỉnh | ⬜ |
 | 5 | Đóng gói | Docker, README, video demo | ⬜ |
 | 6 | Dự phòng | Sửa lỗi, phần mở rộng | ⬜ |
@@ -234,7 +234,7 @@ Mỗi giai đoạn gồm: 🎯 mục tiêu · ✅ việc cần làm · 📦 đ�
   ```bash
   docker run -p 6333:6333 -v qdrant_data:/qdrant/storage qdrant/qdrant
   ```
-- [x] 🌐 Lấy API key Gemini và Groq, gọi thử mỗi bên 1 lần — ⚠️ **chưa ghi lại giới hạn** số lần gọi mỗi phút/mỗi ngày, cần bổ sung. Lưu ý: tài khoản Groq hiện không có model Llama 3.x, đang dùng `openai/gpt-oss-20b` thay thế
+- [x] 🌐 Lấy API key Gemini và Groq, gọi thử mỗi bên 1 lần. **Giới hạn thực tế (phát hiện khi test agent Tuần 3):** Gemini free tier `gemini-2.5-flash` chỉ **20 request/ngày** — rất thấp, hết quota ngay giữa 1 buổi test. Groq free tier cao hơn nhiều, dùng làm fallback qua `.with_fallbacks()`. Groq hiện không có model Llama 3.x, đang dùng `openai/gpt-oss-20b` thay thế
 - [ ] ☁️ Kaggle:
   - [x] **Xác minh số điện thoại** (token API đã hoạt động)
   - [x] Tải token API và đặt vào `~/.kaggle/`
@@ -447,11 +447,25 @@ Các quy tắc bắt buộc trong system prompt:
 4. Mỗi nhận định pháp lý kèm `[Điều X, <tên văn bản>]`.
 5. Kết thúc bằng lời lưu ý: *chỉ mang tính tham khảo, không thay thế tư vấn pháp lý*.
 
-- [ ] Bật `temperature=0` và `SQLiteCache`
-- [ ] Chạy thử 10 câu trong tập dev, **đọc lại từng bước agent đã làm**, sửa prompt và docstring công cụ
+- [x] Bật `temperature=0` và `SQLiteCache`
+- [x] Chạy thử 10 câu trong tập dev, **đọc lại từng bước agent đã làm**, sửa prompt và docstring công cụ
 
-📦 **V4 = Agent** chạy được trên CLI, có 3 ví dụ mẫu (tra luật, tính toán, hỏi lại).
-🚦 Agent xử lý đúng ít nhất **8/10** câu thử, và **không có trường hợp tự tính tiền**.
+**Kết quả chạy 10 câu (`scripts/agent_smoke_test.py`, xem `scripts/agent_smoke_test_output.txt`):**
+
+| id | loại | kết quả |
+|---|---|---|
+| d001, d016, d017, d021, d024, d034, d036, d039 | — | ✅ đúng, có trích dẫn đúng |
+| d030 | nhieu_dieu | ⏸️ agent chủ động gọi `ask_user` hỏi thêm lương/BHTN — đúng hành vi (rule 3), chỉ là script test không tự động trả lời tiếp được |
+| d028 | nhieu_dieu | ⚠️ phát hiện lỗi: agent tự diễn giải công thức bằng lời thay vì gọi `ask_user` trước — đã sửa prompt (rule 2-3), nhưng chưa verify lại được vì hết quota Gemini free tier giữa chừng |
+
+**2 lỗi đã sửa trong lúc đọc lại:**
+1. `router`/`agent_loop` gọi thẳng `get_primary_llm()`, không dùng fallback Groq — sửa dùng `.with_fallbacks()` đúng chuẩn LangChain.
+2. `verify_citation` quét toàn bộ *nội dung* evidence tìm "Điều X" — nếu 1 đoạn luật lấy được có dẫn chiếu chéo sang điều khác thì điều đó bị coi nhầm là "có căn cứ" dù chưa thực sự được tra. Sửa: chỉ tin các Điều **thực sự được trả về** (parse từ `chunk_id` hoặc `can_cu`, không quét nội dung).
+
+**Phát hiện quan trọng (bổ sung mục 8 Rủi ro):** Gemini free tier (`gemini-2.5-flash`) giới hạn chỉ **20 request/ngày** — thấp hơn nhiều so với dự tính, bị hết quota ngay giữa buổi test. Khi Gemini hết quota kéo dài, việc luân phiên thử lại Gemini rồi rơi xuống Groq ở mỗi lượt gọi có thể gây lỗi trộn định dạng "reasoning" giữa 2 nhà cung cấp trong lịch sử hội thoại dài (agent trả lời rỗng). Chưa có thời gian sửa triệt để trong Tuần 3 — ghi nhận là hạn chế đã biết, ưu tiên xử lý ở Tuần 6 nếu còn thời gian.
+
+📦 **V4 = Agent** chạy được trên CLI, có 3 ví dụ mẫu (tra luật, tính toán, hỏi lại) — đã test thật cả 3.
+🚦 **Đạt** — 8/10 câu đúng rõ ràng (+ 1 câu hành vi đúng nhưng không tự động resume được trong test), **không có trường hợp tự tính tiền** (số tiền cụ thể luôn do gọi hàm tính, không do LLM tự bịa).
 
 ---
 
@@ -658,7 +672,8 @@ kaggle datasets version -p data/processed -m "update chunks"
 | Rủi ro | Dấu hiệu | Cách xử lý |
 |---|---|---|
 | Văn bản luật khó tách | Đếm không đủ 220 Điều | Sửa tay các chỗ đặc biệt, ghi lại trong `validate.py` |
-| Gemini miễn phí bị giới hạn | Lỗi 429 | Cache, chạy đánh giá theo lô nhỏ, dự phòng bằng Groq |
+| Gemini miễn phí bị giới hạn | Lỗi 429 (thực tế: chỉ 20 request/ngày cho `gemini-2.5-flash`, xác nhận ở Tuần 3) | Cache, chạy đánh giá theo lô nhỏ, dự phòng bằng Groq qua `.with_fallbacks()` |
+| Trộn Gemini/Groq khi Gemini hết quota kéo dài gây lỗi trộn định dạng "reasoning" giữa 2 provider | Agent trả lời rỗng sau nhiều vòng gọi liên tiếp | Chưa sửa triệt để (Tuần 3); cần thêm: nếu Gemini lỗi liên tục trong 1 hội thoại thì ép dùng hẳn Groq cho cả hội thoại đó thay vì thử lại Gemini mỗi lần |
 | Kaggle hết quota GPU | Không chọn được GPU | Công việc ở đây chỉ tốn vài giờ. Nếu hết thì dùng Colab |
 | Reranker chạy chậm trên CPU | p50 trên 3 giây | Rerank top 10 thay vì 20, hoặc làm bản ONNX INT8 |
 | Agent lặp vô hạn hoặc gọi quá nhiều công cụ | Số lần gọi công cụ cao | Giới hạn cứng 6 lần gọi và 2 vòng kiểm tra |

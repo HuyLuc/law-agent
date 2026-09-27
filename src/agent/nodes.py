@@ -14,13 +14,14 @@ from src.agent.prompts import (
 )
 from src.agent.state import AgentState, RouteDecision
 from src.agent.tools import ALL_TOOLS
-from src.llm import get_primary_llm
+from src.llm import get_fallback_llm, get_primary_llm
 
 MAX_TOOL_CALLS = 6
 MAX_VERIFY_ROUNDS = 2
 
 _tool_node = ToolNode(ALL_TOOLS)
 _DIEU_RE = re.compile(r"Điều\s+(\d+)")
+_CHUNK_ID_DIEU_RE = re.compile(r"_D(\d+)_K")
 
 
 def message_text(message) -> str:
@@ -37,14 +38,25 @@ def message_text(message) -> str:
     return "\n".join(parts)
 
 
+def _with_fallback(primary, fallback):
+    """Goi Gemini truoc; tu dong chuyen sang Groq neu Gemini loi (vd het quota)."""
+    return primary.with_fallbacks([fallback])
+
+
 def router(state: AgentState) -> dict:
-    llm = get_primary_llm().with_structured_output(RouteDecision)
+    llm = _with_fallback(
+        get_primary_llm().with_structured_output(RouteDecision),
+        get_fallback_llm().with_structured_output(RouteDecision),
+    )
     decision = llm.invoke([SystemMessage(ROUTER_PROMPT), *state["messages"]])
     return {"route": decision.route}
 
 
 def agent_loop(state: AgentState) -> dict:
-    llm = get_primary_llm().bind_tools(ALL_TOOLS)
+    llm = _with_fallback(
+        get_primary_llm().bind_tools(ALL_TOOLS),
+        get_fallback_llm().bind_tools(ALL_TOOLS),
+    )
     messages = [SystemMessage(AGENT_SYSTEM_PROMPT), *state["messages"]]
     response = llm.invoke(messages)
     return {"messages": [response]}
@@ -79,20 +91,41 @@ def should_call_tools(state: AgentState) -> str:
     return "verify_citation"
 
 
+def _allowed_dieu_numbers(evidence: dict[str, str]) -> set[int]:
+    """Chi tin cac Dieu THUC SU duoc tra ve (parse tu key), khong quet noi
+    dung chunk -- vi mot chunk co the nhac ("dan chieu") den Dieu khac ma
+    KHONG dong nghia Dieu do da duoc tra dung."""
+    allowed: set[int] = set()
+    for key in evidence:
+        chunk_match = _CHUNK_ID_DIEU_RE.search(key)
+        if chunk_match:
+            allowed.add(int(chunk_match.group(1)))
+        elif key.startswith("can_cu:"):
+            allowed.update(int(m) for m in _DIEU_RE.findall(key))
+    return allowed
+
+
 def verify_citation(state: AgentState) -> dict:
     last = state["messages"][-1]
-    answer = message_text(last)
+    answer = message_text(last).strip()
+    rounds = state.get("verify_rounds", 0)
+
+    if not answer:
+        rounds += 1
+        if rounds >= MAX_VERIFY_ROUNDS:
+            return {"verify_rounds": rounds}
+        return {
+            "verify_rounds": rounds,
+            "messages": [SystemMessage("Câu trả lời bị trống. Hãy trả lời lại đầy đủ câu hỏi của người dùng.")],
+        }
+
     cited = {int(m) for m in _DIEU_RE.findall(answer)}
-
-    allowed: set[int] = set()
-    for content in state.get("evidence", {}).values():
-        allowed.update(int(m) for m in _DIEU_RE.findall(content))
-
+    allowed = _allowed_dieu_numbers(state.get("evidence", {}))
     invalid = cited - allowed
     if not invalid:
         return {}
 
-    rounds = state.get("verify_rounds", 0) + 1
+    rounds += 1
     if rounds >= MAX_VERIFY_ROUNDS:
         return {"verify_rounds": rounds}
 

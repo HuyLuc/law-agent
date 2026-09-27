@@ -1,0 +1,220 @@
+================================================================================
+d001 [tra_cuu] Thời gian thử việc tối đa là bao lâu?
+--- ground_truth: Tuỳ tính chất công việc: tối đa 180 ngày với người quản lý doanh nghiệp; tối đa 60 ngày với công việc cần trình độ cao đẳng trở lên; tối đa 30 ngày với công việc cần trình độ trung cấp, công nhân kỹ thuật, nhân viên nghiệp vụ; tối đa 6 ngày làm việc với công việc khác. Mỗi công việc chỉ được thử việc một lần.
+--- dieu_can_trich: ['BLLD2019_D25_K0']
+
+{
+  "route": "legal_qa",
+  "trace": [
+    {
+      "tool_calls": [
+        [
+          "search_law_tool",
+          {
+            "query": "thời gian thử việc tối đa"
+          }
+        ]
+      ]
+    },
+    {
+      "tool_result_preview": "[BLLD2019_D25_K0] Điều 25 - Bộ luật Lao động 2019\nĐiều 25. Thời gian thử việc\nThời gian thử việc do hai bên thỏa thuận căn cứ vào tính chất và mức độ phức tạp của công việc nhưng chỉ được thử việc một"
+    }
+  ],
+  "final_answer": "Thời gian thử việc tối đa được quy định tại Điều 25 Bộ luật Lao động 2019 như sau:\n\n*   Không quá 180 ngày đối với công việc của người quản lý doanh nghiệp.\n*   Không quá 60 ngày đối với công việc có chức danh nghề nghiệp cần trình độ chuyên môn, kỹ thuật từ cao đẳng trở lên.\n*   Không quá 30 ngày đối với công việc có chức danh nghề nghiệp cần trình độ chuyên môn, kỹ thuật trung cấp, công nhân kỹ thuật, nhân viên nghiệp vụ.\n*   Không quá 06 ngày làm việc đối với công việc khác.\n\n[Điều 25, Bộ luật Lao động 2019]\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+  "verify_rounds": 0
+}
+
+================================================================================
+d016 [tinh_huong] Công ty bắt tôi thử việc 3 tháng cho vị trí kế toán, có đúng luật không?
+--- ground_truth: Không đúng. Vị trí kế toán cần trình độ chuyên môn từ cao đẳng trở lên nên thời gian thử việc tối đa chỉ được 60 ngày, trong khi 3 tháng (khoảng 90 ngày) đã vượt quá.
+--- dieu_can_trich: ['BLLD2019_D25_K0']
+
+{
+  "route": "legal_qa",
+  "trace": [
+    {
+      "tool_calls": [
+        [
+          "search_law_tool",
+          {
+            "query": "thời gian thử việc"
+          }
+        ]
+      ]
+    },
+    {
+      "tool_result_preview": "[BLLD2019_D25_K0] Điều 25 - Bộ luật Lao động 2019\nĐiều 25. Thời gian thử việc\nThời gian thử việc do hai bên thỏa thuận căn cứ vào tính chất và mức độ phức tạp của công việc nhưng chỉ được thử việc một"
+    }
+  ],
+  "final_answer": "Theo Điều 25 Bộ luật Lao động 2019 [BLLD2019_D25_K0]:\n\n*   Thời gian thử việc đối với công việc có chức danh nghề nghiệp cần trình độ chuyên môn, kỹ thuật từ cao đẳng trở lên không quá 60 ngày.\n*   Vị trí kế toán thường yêu cầu trình độ chuyên môn từ cao đẳng trở lên.\n\nDo đó, việc công ty bắt bạn thử việc 3 tháng (khoảng 90 ngày) cho vị trí kế toán là không đúng quy định của pháp luật, vì thời gian thử việc tối đa cho công việc này chỉ là 60 ngày.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+  "verify_rounds": 0
+}
+
+================================================================================
+d017 [tinh_huong] Tôi làm nhân viên rửa xe (công việc phổ thông, không yêu cầu bằng cấp), công ty yêu cầu thử việc 15 ngày làm việc, có đúng luật không?
+--- ground_truth: Không đúng. Với công việc phổ thông không thuộc nhóm cần trình độ cao đẳng/trung cấp/quản lý, thời gian thử việc tối đa chỉ là 6 ngày làm việc.
+--- dieu_can_trich: ['BLLD2019_D25_K0']
+
+{
+  "route": "legal_qa",
+  "trace": [
+    {
+      "tool_calls": [
+        [
+          "search_law_tool",
+          {
+            "query": "thời gian thử việc"
+          }
+        ]
+      ]
+    },
+    {
+      "tool_result_preview": "[BLLD2019_D25_K0] Điều 25 - Bộ luật Lao động 2019\nĐiều 25. Thời gian thử việc\nThời gian thử việc do hai bên thỏa thuận căn cứ vào tính chất và mức độ phức tạp của công việc nhưng chỉ được thử việc một"
+    }
+  ],
+  "final_answer": "**Câu trả lời:**\n\nTheo **Điều 25 – Bộ luật Lao động 2019** (thời gian thử việc), đối với công việc “khác” (công việc phổ thông, không yêu cầu bằng cấp) thời gian thử việc tối đa được quy định là **6 ngày làm việc**.  \n> [Điều 25, Bộ luật Lao động 2019]\n\nDo đó, yêu cầu thử việc **15 ngày** vượt quá giới hạn pháp luật và **không đúng luật**.  \n\nNếu công ty muốn áp dụng thời gian thử việc dài hơn, cần phải có căn cứ pháp lý khác (ví dụ: công việc có tính chất đặc thù, yêu cầu kỹ năng chuyên môn, hoặc có thỏa thuận hợp đồng thử việc đặc biệt được quy định rõ ràng trong hợp đồng). Tuy nhiên, với thông tin hiện có, 15 ngày thử việc là không hợp pháp.\n\n> **Lưu ý:** Nội dung này chỉ mang tính tham khảo, không thay thế tư vấn pháp lý chuyên nghiệp.",
+  "verify_rounds": 0
+}
+
+================================================================================
+d021 [tinh_huong] Công ty quy định tuần làm việc 6 ngày, mỗi ngày 9 giờ, có đúng luật không?
+--- ground_truth: Không đúng. Tổng thời giờ làm việc bình thường không được quá 48 giờ/tuần; 9 giờ x 6 ngày = 54 giờ, vượt quá giới hạn cho phép.
+--- dieu_can_trich: ['BLLD2019_D105_K0']
+
+{
+  "route": "legal_qa",
+  "trace": [
+    {
+      "tool_calls": [
+        [
+          "search_law_tool",
+          {
+            "query": "thời giờ làm việc"
+          }
+        ]
+      ]
+    },
+    {
+      "tool_result_preview": "[BLLD2019_D105_K0] Điều 105 - Bộ luật Lao động 2019\nĐiều 105. Thời giờ làm việc bình thường\n1. Thời giờ làm việc bình thường không quá 08 giờ trong 01 ngày và không quá 48 giờ trong 01 tuần.\n2. Người "
+    }
+  ],
+  "final_answer": "Theo quy định của pháp luật, thời giờ làm việc bình thường không quá 08 giờ trong 01 ngày và không quá 48 giờ trong 01 tuần. Trường hợp người sử dụng lao động quy định thời giờ làm việc theo tuần thì thời giờ làm việc bình thường không quá 10 giờ trong 01 ngày và không quá 48 giờ trong 01 tuần [Điều 105, Bộ luật Lao động 2019].\n\nVới quy định của công ty bạn là tuần làm việc 6 ngày, mỗi ngày 9 giờ, tổng số giờ làm việc trong tuần là 54 giờ (6 ngày * 9 giờ/ngày). Điều này vượt quá giới hạn 48 giờ làm việc bình thường trong 01 tuần theo quy định của pháp luật.\n\nDo đó, quy định của công ty bạn về thời giờ làm việc là không đúng luật.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+  "verify_rounds": 0
+}
+
+================================================================================
+d024 [tinh_huong] Công ty sa thải tôi vì phát hiện tôi đánh bạc trong giờ làm việc tại nơi làm việc, việc sa thải này có đúng luật không?
+--- ground_truth: Có căn cứ đúng luật. Đánh bạc tại nơi làm việc là một trong các hành vi được phép áp dụng hình thức kỷ luật sa thải.
+--- dieu_can_trich: ['BLLD2019_D125_K0']
+
+{
+  "route": "legal_qa",
+  "trace": [
+    {
+      "tool_calls": [
+        [
+          "search_law_tool",
+          {
+            "query": "sa thải vì đánh bạc trong giờ làm việc",
+            "van_ban": "Bộ luật Lao động 2019"
+          }
+        ]
+      ]
+    },
+    {
+      "tool_result_preview": "[BLLD2019_D125_K0] Điều 125 - Bộ luật Lao động 2019\nĐiều 125. Áp dụng hình thức xử lý kỷ luật sa thải\nHình thức xử lý kỷ luật sa thải được người sử dụng lao động áp dụng trong trường hợp sau đây:\n1. N"
+    },
+    {
+      "tool_calls": [
+        [
+          "get_article_tool",
+          {
+            "dieu": 125,
+            "khoan": null,
+            "van_ban": "Bộ luật Lao động 2019"
+          }
+        ]
+      ]
+    },
+    {
+      "tool_result_preview": "[BLLD2019_D125_K0] Điều 125 - Bộ luật Lao động 2019\nĐiều 125. Áp dụng hình thức xử lý kỷ luật sa thải\nHình thức xử lý kỷ luật sa thải được người sử dụng lao động áp dụng trong trường hợp sau đây:\n1. N"
+    }
+  ],
+  "final_answer": "Việc công ty sa thải bạn vì phát hiện bạn đánh bạc trong giờ làm việc tại nơi làm việc **đúng luật** theo quy định của **Điều 125 Bộ luật Lao động 2019**:\n\n- **Điều 125** quy định: “Người lao động có hành vi trộm cắp, tham ô, **đánh bạc**, cố ý gây thương tích, sử dụng ma túy tại nơi làm việc” là một trong những trường hợp hợp pháp để người sử dụng lao động áp dụng hình thức xử lý kỷ luật sa thải.  \n- Do đó, hành động sa thải của công ty dựa trên hành vi đánh bạc của bạn được coi là hợp pháp theo pháp luật hiện hành.\n\n[Điều 125, Bộ luật Lao động 2019]\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+  "verify_rounds": 0
+}
+
+================================================================================
+d028 [nhieu_dieu] Tôi đã làm việc liên tục 4,5 năm cho công ty, nay xin nghỉ việc và báo trước đủ 45 ngày theo hợp đồng không xác định thời hạn. Tôi có được nhận trợ cấp thôi việc không?
+--- ground_truth: Có. Đây là trường hợp người lao động đơn phương chấm dứt hợp đồng lao động đúng luật (báo trước đủ thời hạn), thuộc một trong các trường hợp chấm dứt hợp đồng được hưởng trợ cấp thôi việc, với điều kiện đã làm việc thường xuyên từ đủ 12 tháng trở lên.
+--- dieu_can_trich: ['BLLD2019_D35_K0', 'BLLD2019_D34_K0', 'BLLD2019_D46_K0']
+
+{
+  "route": "legal_qa",
+  "trace": [],
+  "final_answer": "",
+  "verify_rounds": 0
+}
+
+================================================================================
+d030 [nhieu_dieu] Công ty tôi tuyên bố giải thể (chấm dứt hoạt động), tôi đã làm việc liên tục 3 năm. Tôi được nhận khoản trợ cấp nào?
+--- ground_truth: Được nhận trợ cấp thôi việc (không phải trợ cấp mất việc làm), vì doanh nghiệp chấm dứt hoạt động là một trong các trường hợp chấm dứt hợp đồng được liệt kê để hưởng trợ cấp thôi việc: mỗi năm làm việc được nửa tháng lương.
+--- dieu_can_trich: ['BLLD2019_D34_K0', 'BLLD2019_D46_K0']
+
+{
+  "interrupted": true,
+  "question_payload": {
+    "question": "Bạn có thể cho biết mức lương bình quân 6 tháng trước khi thôi việc (đơn vị: đồng) và thời gian tham gia bảo hiểm thất nghiệp (tháng) không?"
+  }
+}
+
+================================================================================
+d034 [nhieu_dieu] Tôi làm việc theo ca đêm liên tục 7 giờ không nghỉ, công ty có vi phạm về thời giờ làm việc/nghỉ ngơi không?
+--- ground_truth: Có vi phạm. Làm việc ban đêm vẫn nằm trong giới hạn thời giờ làm việc bình thường (không quá 8 giờ/ngày), nhưng làm việc từ 6 giờ liên tục trở lên vào ban đêm phải được nghỉ giữa giờ ít nhất 45 phút liên tục.
+--- dieu_can_trich: ['BLLD2019_D105_K0', 'BLLD2019_D109_K0']
+
+{
+  "route": "legal_qa",
+  "trace": [
+    {
+      "tool_calls": [
+        [
+          "search_law_tool",
+          {
+            "query": "thời giờ làm việc ban đêm nghỉ giữa ca"
+          }
+        ]
+      ]
+    },
+    {
+      "tool_result_preview": "[ND145_2020_D64_K0] Điều 64 - Nghị định 145/2020/NĐ-CP quy định chi tiết và hướng dẫn thi hành một số điều của Bộ luật Lao động về điều kiện lao động và quan hệ lao động\nĐiều 64. Nghỉ trong giờ làm vi"
+    }
+  ],
+  "final_answer": "Theo quy định của Bộ luật Lao động 2019 và Nghị định 145/2020/NĐ-CP, công việc ban đêm phải được bố trí thời gian nghỉ giữa ca ít nhất 45 phút.  \n\n- **Điều 109, Bộ luật Lao động 2019** quy định: “người lao động làm việc ban đêm thì được nghỉ giữa giờ ít nhất 45 phút liên tục; trong trường hợp làm việc theo ca liên tục, thời gian nghỉ giữa giờ được tính vào giờ làm việc.”  \n- **Điều 64, Nghị định 145/2020/NĐ-CP** xác nhận: “nghỉ trong giờ làm việc…đối với người lao động làm việc ban đêm thì được nghỉ giữa giờ ít nhất 45 phút liên tục.”  \n- **Điều 63, Nghị định 145/2020/NĐ-CP** quy định về ca làm việc liên tục, trong đó yêu cầu thời gian nghỉ giữa ca phải đáp ứng điều kiện trên.\n\nVì vậy, làm việc liên tục 7 giờ mà không nghỉ giữa ca vi phạm quy định về thời gian nghỉ giữa ca cho công việc ban đêm. Công ty có thể bị xem là vi phạm về thời giờ làm việc/nghỉ ngơi.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+  "verify_rounds": 0
+}
+
+================================================================================
+d036 [ngoai_pham_vi] Thủ tục ly hôn thế nào?
+--- ground_truth: Câu hỏi thuộc lĩnh vực hôn nhân và gia đình, ngoài phạm vi tư vấn Luật Lao động. Nên tham khảo luật sư hoặc quy định về Luật Hôn nhân và Gia đình.
+--- dieu_can_trich: []
+
+{
+  "route": "out_of_scope",
+  "trace": [],
+  "final_answer": "Câu hỏi này nằm ngoài phạm vi tư vấn của tôi (chỉ hỗ trợ Luật Lao động\nViệt Nam). Bạn nên tham khảo luật sư hoặc cơ quan chuyên môn phù hợp với lĩnh vực câu hỏi.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+  "verify_rounds": 0
+}
+
+================================================================================
+d039 [ngoai_pham_vi] Tôi bị công an phạt vi phạm giao thông, muốn khiếu nại thì làm sao?
+--- ground_truth: Thuộc lĩnh vực giao thông/xử phạt hành chính, ngoài phạm vi Luật Lao động. Nên tham khảo quy định về xử lý vi phạm hành chính giao thông.
+--- dieu_can_trich: []
+
+{
+  "route": "out_of_scope",
+  "trace": [],
+  "final_answer": "Câu hỏi này nằm ngoài phạm vi tư vấn của tôi (chỉ hỗ trợ Luật Lao động\nViệt Nam). Bạn nên tham khảo luật sư hoặc cơ quan chuyên môn phù hợp với lĩnh vực câu hỏi.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+  "verify_rounds": 0
+}
+
