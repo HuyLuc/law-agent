@@ -45,6 +45,10 @@ def get_reranker() -> Reranker:
     return Reranker()
 
 
-def search_reranked(query: str, top_k: int = 5, prefetch_limit: int = 5) -> list[dict]:
-    candidates = search_hybrid(query, top_k=prefetch_limit, prefetch_limit=prefetch_limit)
+def search_reranked(
+    query: str, top_k: int = 5, prefetch_limit: int = 5, van_ban: str | None = None
+) -> list[dict]:
+    candidates = search_hybrid(
+        query, top_k=prefetch_limit, prefetch_limit=prefetch_limit, van_ban=van_ban
+    )
     return get_reranker().rerank(query, candidates, top_k=top_k)

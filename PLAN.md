@@ -380,7 +380,7 @@ Nhận xét: prefetch 20 vs 50 và rerank top 10 vs top 20 cho kết quả gần
 
 🎯 Agent chạy được từ đầu đến cuối với đủ công cụ.
 
-#### Buổi 1: Các hàm tính toán 💻 `src/tools/calculators.py`
+#### Buổi 1: Các hàm tính toán 💻 `src/tools/calculators.py` ✅
 
 **Viết test trước** (dùng `calc.jsonl`), code sau. Mọi hàm đều trả về:
 ```python
@@ -399,10 +399,10 @@ Nhận xét: prefetch 20 vs 50 và rerank top 10 vs top 20 cho kết quả gần
 | `tinh_ngay_phep_nam` | Điều 113–114: 12/14/16 ngày, cứ 5 năm cộng thêm 1 ngày |
 | `tinh_thoi_han_bao_truoc` | Điều 35–36: 45/30/3 ngày tùy loại hợp đồng |
 
-- [ ] Kiểm tra dữ liệu đầu vào bằng Pydantic (không nhận lương âm, số tháng âm…)
-- [ ] 🚦 Chạy qua **40/40** test
+- [x] Kiểm tra dữ liệu đầu vào bằng Pydantic (không nhận lương âm, số tháng âm, BHTN vượt quá tổng thời gian, loại ngày/lao động không hợp lệ…)
+- [x] 🚦 Chạy qua **40/40** test
 
-#### Buổi 2: Công cụ tra luật 💻 `src/tools/legal_lookup.py`
+#### Buổi 2: Công cụ tra luật 💻 `src/tools/legal_lookup.py` ✅
 
 | Công cụ | Chữ ký | Cách hoạt động |
 |---|---|---|
@@ -410,8 +410,8 @@ Nhận xét: prefetch 20 vs 50 và rerank top 10 vs top 20 cho kết quả gần
 | `get_article` | `(van_ban: str, dieu: int, khoan: int \| None = None)` | **Lọc chính xác theo metadata**, không dùng tìm kiếm ngữ nghĩa |
 | `follow_references` | `(chunk_id: str)` | Trả về các điều nằm trong `dan_chieu` |
 
-- [ ] Viết **docstring kỹ** cho mỗi công cụ, vì LLM đọc docstring để quyết định gọi công cụ nào
-- [ ] Mỗi kết quả trả về được lưu vào `state["evidence"]` để bước kiểm tra trích dẫn dùng lại
+- [x] Viết **docstring kỹ** cho mỗi công cụ, vì LLM đọc docstring để quyết định gọi công cụ nào
+- [ ] Mỗi kết quả trả về được lưu vào `state["evidence"]` — sẽ làm ở Buổi 3-4 khi dựng `AgentState`/graph (chưa có state lúc này)
 
 #### Buổi 3–4: Dựng graph bằng LangGraph 💻 `src/agent/`
 
