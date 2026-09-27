@@ -413,7 +413,7 @@ Nhận xét: prefetch 20 vs 50 và rerank top 10 vs top 20 cho kết quả gần
 - [x] Viết **docstring kỹ** cho mỗi công cụ, vì LLM đọc docstring để quyết định gọi công cụ nào
 - [ ] Mỗi kết quả trả về được lưu vào `state["evidence"]` — sẽ làm ở Buổi 3-4 khi dựng `AgentState`/graph (chưa có state lúc này)
 
-#### Buổi 3–4: Dựng graph bằng LangGraph 💻 `src/agent/`
+#### Buổi 3–4: Dựng graph bằng LangGraph 💻 `src/agent/` ✅
 
 ```python
 class AgentState(TypedDict):
@@ -434,8 +434,9 @@ class AgentState(TypedDict):
 | `contract_review` | Rà soát hợp đồng | Xem tuần 4 |
 | `out_of_scope` | Từ chối lịch sự | Câu trả lời mẫu |
 
-- [ ] Viết `graph.py`, vẽ graph bằng `graph.get_graph().draw_mermaid()` để đưa vào README
-- [ ] Viết CLI đơn giản (`python -m src.agent.graph "câu hỏi"`) để thử nhanh
+- [x] Viết `graph.py`, vẽ graph bằng `graph.get_graph().draw_mermaid()` (lưu ở `src/agent/graph.mmd`, đưa vào README ở Tuần 5)
+- [x] Viết CLI đơn giản (`python -m src.agent.graph "câu hỏi"`) để thử nhanh
+- [x] Đã thử cả 3 kịch bản mẫu: tra luật (đúng, có trích dẫn), tính toán (gọi đúng hàm `tinh_tro_cap_thoi_viec`, không tự tính), hỏi lại + resume qua `ask_user`/`interrupt()` (agent hỏi đúng 3 trường còn thiếu, resume tính đúng sau khi có câu trả lời)
 
 #### Buổi 5: Prompt và thử nghiệm 💻 `src/agent/prompts.py`
 
