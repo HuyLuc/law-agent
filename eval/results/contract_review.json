@@ -1,0 +1,303 @@
+{
+  "precision": 1.0,
+  "recall": 1.0,
+  "tp": 14,
+  "fp": 0,
+  "fn": 0,
+  "per_file": {
+    "contract_01_dung.docx": {
+      "expected": [],
+      "found": [],
+      "extracted_info": {
+        "loai_hop_dong": "khong_xac_dinh_thoi_han",
+        "thoi_han_hop_dong_thang": null,
+        "vi_tri_cong_viec": "Nhân viên kinh doanh",
+        "trinh_do_yeu_cau": "trung_cap",
+        "so_ngay_thu_viec": 25,
+        "luong_thu_viec": 8500000.0,
+        "luong_chinh": 10000000.0,
+        "vung_luong_toi_thieu": "I",
+        "gio_lam_ngay": 8.0,
+        "gio_lam_tuan": 44.0,
+        "co_thong_tin_cac_ben": true,
+        "co_cong_viec_dia_diem": true,
+        "co_thoi_han": true,
+        "co_muc_luong": true,
+        "co_che_do_nang_luong": true,
+        "co_thoi_gio_lam_viec_nghi_ngoi": true,
+        "co_trang_bi_bao_ho": true,
+        "co_bhxh": true,
+        "co_dao_tao": true
+      }
+    },
+    "contract_02_dung.docx": {
+      "expected": [],
+      "found": [],
+      "extracted_info": {
+        "loai_hop_dong": "xac_dinh_thoi_han",
+        "thoi_han_hop_dong_thang": 24,
+        "vi_tri_cong_viec": "Kế toán trưởng",
+        "trinh_do_yeu_cau": "cao_dang_tro_len",
+        "so_ngay_thu_viec": 55,
+        "luong_thu_viec": 12000000.0,
+        "luong_chinh": 14000000.0,
+        "vung_luong_toi_thieu": "II",
+        "gio_lam_ngay": 8.0,
+        "gio_lam_tuan": 48.0,
+        "co_thong_tin_cac_ben": true,
+        "co_cong_viec_dia_diem": true,
+        "co_thoi_han": true,
+        "co_muc_luong": true,
+        "co_che_do_nang_luong": true,
+        "co_thoi_gio_lam_viec_nghi_ngoi": true,
+        "co_trang_bi_bao_ho": true,
+        "co_bhxh": true,
+        "co_dao_tao": true
+      }
+    },
+    "contract_03_loi_thu_viec.docx": {
+      "expected": [
+        "thoi_gian_thu_viec"
+      ],
+      "found": [
+        "thoi_gian_thu_viec"
+      ],
+      "extracted_info": {
+        "loai_hop_dong": "xac_dinh_thoi_han",
+        "thoi_han_hop_dong_thang": 12,
+        "vi_tri_cong_viec": "Nhân viên bảo vệ",
+        "trinh_do_yeu_cau": "khac",
+        "so_ngay_thu_viec": 20,
+        "luong_thu_viec": 5500000.0,
+        "luong_chinh": 6000000.0,
+        "vung_luong_toi_thieu": "I",
+        "gio_lam_ngay": 8.0,
+        "gio_lam_tuan": 48.0,
+        "co_thong_tin_cac_ben": true,
+        "co_cong_viec_dia_diem": true,
+        "co_thoi_han": true,
+        "co_muc_luong": true,
+        "co_che_do_nang_luong": true,
+        "co_thoi_gio_lam_viec_nghi_ngoi": true,
+        "co_trang_bi_bao_ho": true,
+        "co_bhxh": true,
+        "co_dao_tao": true
+      }
+    },
+    "contract_04_loi_luong_thu_viec.docx": {
+      "expected": [
+        "luong_thu_viec"
+      ],
+      "found": [
+        "luong_thu_viec"
+      ],
+      "extracted_info": {
+        "loai_hop_dong": "khong_xac_dinh_thoi_han",
+        "thoi_han_hop_dong_thang": null,
+        "vi_tri_cong_viec": "Nhân viên vận hành máy",
+        "trinh_do_yeu_cau": "trung_cap",
+        "so_ngay_thu_viec": 25,
+        "luong_thu_viec": 6300000.0,
+        "luong_chinh": 9000000.0,
+        "vung_luong_toi_thieu": "I",
+        "gio_lam_ngay": 8.0,
+        "gio_lam_tuan": 48.0,
+        "co_thong_tin_cac_ben": true,
+        "co_cong_viec_dia_diem": true,
+        "co_thoi_han": true,
+        "co_muc_luong": true,
+        "co_che_do_nang_luong": true,
+        "co_thoi_gio_lam_viec_nghi_ngoi": true,
+        "co_trang_bi_bao_ho": true,
+        "co_bhxh": true,
+        "co_dao_tao": true
+      }
+    },
+    "contract_05_loi_luong_toi_thieu.docx": {
+      "expected": [
+        "luong_toi_thieu_vung"
+      ],
+      "found": [
+        "luong_toi_thieu_vung"
+      ],
+      "extracted_info": {
+        "loai_hop_dong": "xac_dinh_thoi_han",
+        "thoi_han_hop_dong_thang": 12,
+        "vi_tri_cong_viec": "Công nhân may",
+        "trinh_do_yeu_cau": "trung_cap",
+        "so_ngay_thu_viec": 20,
+        "luong_thu_viec": 3700000.0,
+        "luong_chinh": 4200000.0,
+        "vung_luong_toi_thieu": "I",
+        "gio_lam_ngay": 8.0,
+        "gio_lam_tuan": 48.0,
+        "co_thong_tin_cac_ben": true,
+        "co_cong_viec_dia_diem": true,
+        "co_thoi_han": true,
+        "co_muc_luong": true,
+        "co_che_do_nang_luong": true,
+        "co_thoi_gio_lam_viec_nghi_ngoi": true,
+        "co_trang_bi_bao_ho": true,
+        "co_bhxh": true,
+        "co_dao_tao": true
+      }
+    },
+    "contract_06_loi_gio_ngay.docx": {
+      "expected": [
+        "gio_lam_ngay",
+        "gio_lam_tuan"
+      ],
+      "found": [
+        "gio_lam_ngay",
+        "gio_lam_tuan"
+      ],
+      "extracted_info": {
+        "loai_hop_dong": "xac_dinh_thoi_han",
+        "thoi_han_hop_dong_thang": 12,
+        "vi_tri_cong_viec": "Kỹ thuật viên công trình",
+        "trinh_do_yeu_cau": "trung_cap",
+        "so_ngay_thu_viec": 20,
+        "luong_thu_viec": 7000000.0,
+        "luong_chinh": 8000000.0,
+        "vung_luong_toi_thieu": "II",
+        "gio_lam_ngay": 10.0,
+        "gio_lam_tuan": 50.0,
+        "co_thong_tin_cac_ben": true,
+        "co_cong_viec_dia_diem": true,
+        "co_thoi_han": true,
+        "co_muc_luong": true,
+        "co_che_do_nang_luong": true,
+        "co_thoi_gio_lam_viec_nghi_ngoi": true,
+        "co_trang_bi_bao_ho": true,
+        "co_bhxh": true,
+        "co_dao_tao": true
+      }
+    },
+    "contract_07_loi_gio_tuan.docx": {
+      "expected": [
+        "gio_lam_ngay",
+        "gio_lam_tuan"
+      ],
+      "found": [
+        "gio_lam_ngay",
+        "gio_lam_tuan"
+      ],
+      "extracted_info": {
+        "loai_hop_dong": "xac_dinh_thoi_han",
+        "thoi_han_hop_dong_thang": 12,
+        "vi_tri_cong_viec": "Nhân viên bán hàng",
+        "trinh_do_yeu_cau": "khac",
+        "so_ngay_thu_viec": 6,
+        "luong_thu_viec": 5700000.0,
+        "luong_chinh": 6500000.0,
+        "vung_luong_toi_thieu": "I",
+        "gio_lam_ngay": 9.0,
+        "gio_lam_tuan": 54.0,
+        "co_thong_tin_cac_ben": true,
+        "co_cong_viec_dia_diem": true,
+        "co_thoi_han": true,
+        "co_muc_luong": true,
+        "co_che_do_nang_luong": true,
+        "co_thoi_gio_lam_viec_nghi_ngoi": true,
+        "co_trang_bi_bao_ho": true,
+        "co_bhxh": true,
+        "co_dao_tao": true
+      }
+    },
+    "contract_08_loi_thieu_noi_dung.docx": {
+      "expected": [
+        "noi_dung_bat_buoc"
+      ],
+      "found": [
+        "noi_dung_bat_buoc"
+      ],
+      "extracted_info": {
+        "loai_hop_dong": "khong_xac_dinh_thoi_han",
+        "thoi_han_hop_dong_thang": null,
+        "vi_tri_cong_viec": "Lập trình viên",
+        "trinh_do_yeu_cau": "cao_dang_tro_len",
+        "so_ngay_thu_viec": 50,
+        "luong_thu_viec": 15000000.0,
+        "luong_chinh": 17000000.0,
+        "vung_luong_toi_thieu": "I",
+        "gio_lam_ngay": 8.0,
+        "gio_lam_tuan": 40.0,
+        "co_thong_tin_cac_ben": true,
+        "co_cong_viec_dia_diem": false,
+        "co_thoi_han": true,
+        "co_muc_luong": false,
+        "co_che_do_nang_luong": false,
+        "co_thoi_gio_lam_viec_nghi_ngoi": true,
+        "co_trang_bi_bao_ho": true,
+        "co_bhxh": false,
+        "co_dao_tao": false
+      }
+    },
+    "contract_09_nhieu_loi_1.docx": {
+      "expected": [
+        "luong_thu_viec",
+        "thoi_gian_thu_viec"
+      ],
+      "found": [
+        "luong_thu_viec",
+        "thoi_gian_thu_viec"
+      ],
+      "extracted_info": {
+        "loai_hop_dong": "xac_dinh_thoi_han",
+        "thoi_han_hop_dong_thang": 6,
+        "vi_tri_cong_viec": "Lái xe",
+        "trinh_do_yeu_cau": "khac",
+        "so_ngay_thu_viec": 15,
+        "luong_thu_viec": 4000000.0,
+        "luong_chinh": 6500000.0,
+        "vung_luong_toi_thieu": "III",
+        "gio_lam_ngay": 8.0,
+        "gio_lam_tuan": 48.0,
+        "co_thong_tin_cac_ben": true,
+        "co_cong_viec_dia_diem": true,
+        "co_thoi_han": true,
+        "co_muc_luong": true,
+        "co_che_do_nang_luong": true,
+        "co_thoi_gio_lam_viec_nghi_ngoi": true,
+        "co_trang_bi_bao_ho": true,
+        "co_bhxh": true,
+        "co_dao_tao": true
+      }
+    },
+    "contract_10_nhieu_loi_2.docx": {
+      "expected": [
+        "gio_lam_ngay",
+        "gio_lam_tuan",
+        "luong_toi_thieu_vung",
+        "noi_dung_bat_buoc"
+      ],
+      "found": [
+        "gio_lam_ngay",
+        "gio_lam_tuan",
+        "luong_toi_thieu_vung",
+        "noi_dung_bat_buoc"
+      ],
+      "extracted_info": {
+        "loai_hop_dong": "xac_dinh_thoi_han",
+        "thoi_han_hop_dong_thang": 12,
+        "vi_tri_cong_viec": "Công nhân chế biến",
+        "trinh_do_yeu_cau": "khac",
+        "so_ngay_thu_viec": 6,
+        "luong_thu_viec": 3200000.0,
+        "luong_chinh": 3500000.0,
+        "vung_luong_toi_thieu": "IV",
+        "gio_lam_ngay": 9.0,
+        "gio_lam_tuan": 54.0,
+        "co_thong_tin_cac_ben": true,
+        "co_cong_viec_dia_diem": false,
+        "co_thoi_han": true,
+        "co_muc_luong": false,
+        "co_che_do_nang_luong": true,
+        "co_thoi_gio_lam_viec_nghi_ngoi": true,
+        "co_trang_bi_bao_ho": true,
+        "co_bhxh": false,
+        "co_dao_tao": false
+      }
+    }
+  }
+}

@@ -78,9 +78,13 @@ def _save_dead_keys(dead_indices: set[int]) -> None:
 _dead_gemini_keys: set[int] = _load_dead_keys()
 
 
-def _is_quota_error(exc: Exception) -> bool:
+def _is_key_unusable_error(exc: Exception) -> bool:
+    """Loi ma retry lai cung key nay se khong bao gio thanh cong: het quota
+    (429), model khong kha dung cho key nay (404), hoac tai khoan bi tu
+    choi quyen (403). Danh dau key chet ngay, khong lang phi thoi gian thu
+    lai."""
     msg = str(exc)
-    return "RESOURCE_EXHAUSTED" in msg or "429" in msg
+    return any(code in msg for code in ["RESOURCE_EXHAUSTED", "429", "NOT_FOUND", "404", "PERMISSION_DENIED", "403"])
 
 
 class _ChainWithKeyMemory:
@@ -97,7 +101,7 @@ class _ChainWithKeyMemory:
                 return model.invoke(*args, **kwargs)
             except Exception as e:  # noqa: BLE001 -- can bat moi loi de thu key/Groq tiep theo
                 last_err = e
-                if _is_quota_error(e) and i not in _dead_gemini_keys:
+                if _is_key_unusable_error(e) and i not in _dead_gemini_keys:
                     _dead_gemini_keys.add(i)
                     _save_dead_keys(_dead_gemini_keys)
         try:

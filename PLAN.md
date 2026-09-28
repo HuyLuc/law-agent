@@ -128,7 +128,7 @@ Toàn bộ được chứng minh bằng **số liệu đánh giá trên tập te
 | Thành phần | Lựa chọn | Ghi chú |
 |---|---|---|
 | Ngôn ngữ | Python 3.11 | |
-| LLM chính | **Gemini 2.5 Flash** | Kiểm tra giới hạn gói miễn phí tại thời điểm làm |
+| LLM chính | **Gemini 3.8 Flash** (đổi từ Gemini 2.5 Flash ở Tuần 4 vì Google ngừng cấp 2.5 cho tài khoản mới) | Kiểm tra giới hạn gói miễn phí tại thời điểm làm |
 | LLM dự phòng | Groq | |
 | Agent | **LangGraph** | **Cố định phiên bản** trong `requirements.txt` |
 | Embedding | **BAAI/bge-m3** qua `FlagEmbedding` | Tạo cả vector dày 1024 chiều và vector thưa |
@@ -492,10 +492,10 @@ Các quy tắc bắt buộc trong system prompt:
   - suy luận sai (lấy đúng điều nhưng hiểu sai)
   - trích dẫn sai
 
-#### Buổi 3–4: Rà soát hợp đồng 💻 `src/tools/contract_rules.py`
-1. [ ] Đọc PDF/DOCX dạng chữ bằng `pypdf` hoặc `python-docx`
-2. [ ] LLM **trích thông tin có cấu trúc** (Pydantic): loại hợp đồng, vị trí, số ngày thử việc, lương thử việc, lương chính, giờ làm, BHXH, thời hạn
-3. [ ] **Kiểm tra bằng quy tắc lập trình sẵn** (không để LLM tự đánh giá):
+#### Buổi 3–4: Rà soát hợp đồng 💻 `src/tools/contract_rules.py` ✅
+1. [x] Đọc PDF/DOCX dạng chữ bằng `pypdf` hoặc `python-docx`
+2. [x] LLM **trích thông tin có cấu trúc** (Pydantic): loại hợp đồng, vị trí, số ngày thử việc, lương thử việc, lương chính, giờ làm, BHXH, thời hạn
+3. [x] **Kiểm tra bằng quy tắc lập trình sẵn** (không để LLM tự đánh giá):
 
    | Quy tắc | Căn cứ |
    |---|---|
@@ -505,9 +505,11 @@ Các quy tắc bắt buộc trong system prompt:
    | Giờ làm bình thường không quá 8 giờ/ngày, 48 giờ/tuần | Điều 105 |
    | Hợp đồng có đủ các nội dung bắt buộc | Điều 21 |
 
-4. [ ] Mỗi cảnh báo ⚠️ kèm trích dẫn nguyên văn điều luật lấy qua `get_article`
-- [ ] Tự tạo **10 hợp đồng mẫu** (8 hợp đồng có cài lỗi, 2 hợp đồng đúng), đo precision/recall của việc phát hiện lỗi
-- [ ] Viết `tests/test_contract_rules.py`
+4. [x] Mỗi cảnh báo ⚠️ kèm trích dẫn nguyên văn điều luật lấy qua `get_article`
+- [x] Tự tạo **10 hợp đồng mẫu** (8 hợp đồng có cài lỗi, 2 hợp đồng đúng), đo precision/recall của việc phát hiện lỗi — **kết quả: precision = recall = 1.0** (10/10, xem `eval/results/contract_review.json`)
+- [x] Viết `tests/test_contract_rules.py` — 10 test, mock `get_article` để không cần Qdrant/LLM khi test
+
+**Phát hiện quan trọng khi làm phần này:** model `gemini-2.5-flash` đã bị Google **ngừng cấp cho tài khoản mới** (lỗi 404 "no longer available to new users"), phải đổi sang `gemini-3.8-flash`. Đồng thời phát hiện cơ chế xoay vòng key trước đó lãng phí 30-50s/lần gọi khi tất cả key đã hết quota (thử lại cả 5 key chết mỗi lần) — đã sửa để nhớ key chết vào file `.gemini_dead_keys.json` (tự reset mỗi ngày), nhanh hơn nhiều.
 
 #### Buổi 5: Tổng hợp bảng kết quả
 

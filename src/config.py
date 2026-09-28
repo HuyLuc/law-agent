@@ -17,7 +17,7 @@ class Settings(BaseSettings):
     GROQ_API_KEY: str = ""
     QDRANT_URL: str = "http://localhost:6333"
     QDRANT_COLLECTION: str = "labor_law"
-    LLM_MODEL: str = "gemini-2.5-flash"
+    LLM_MODEL: str = "gemini-3.8-flash"
     GROQ_MODEL: str = "openai/gpt-oss-20b"
 
     @property
