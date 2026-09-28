@@ -14,7 +14,7 @@ from src.agent.prompts import (
 )
 from src.agent.state import AgentState, RouteDecision
 from src.agent.tools import ALL_TOOLS
-from src.llm import build_llm_chain
+from src.llm import build_llm_chain, message_text
 
 MAX_TOOL_CALLS = 6
 MAX_VERIFY_ROUNDS = 2
@@ -22,20 +22,6 @@ MAX_VERIFY_ROUNDS = 2
 _tool_node = ToolNode(ALL_TOOLS)
 _DIEU_RE = re.compile(r"Điều\s+(\d+)")
 _CHUNK_ID_DIEU_RE = re.compile(r"_D(\d+)_K")
-
-
-def message_text(message) -> str:
-    """Lay phan text thuan tuy tu AIMessage.content (co the la str hoac list block)."""
-    content = message.content
-    if isinstance(content, str):
-        return content
-    parts = []
-    for block in content:
-        if isinstance(block, dict) and block.get("type") == "text":
-            parts.append(block["text"])
-        elif isinstance(block, str):
-            parts.append(block)
-    return "\n".join(parts)
 
 
 def router(state: AgentState) -> dict:

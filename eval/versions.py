@@ -7,8 +7,7 @@ rong doi voi V0 (khong tra cuu).
 from langchain_core.messages import HumanMessage
 
 from src.agent.graph import build_graph
-from src.agent.nodes import message_text
-from src.llm import invoke_with_fallback
+from src.llm import invoke_with_fallback, message_text
 from src.retrieval.hybrid import search_dense, search_hybrid
 from src.retrieval.reranker import search_reranked
 
@@ -42,13 +41,13 @@ def _format_context(chunks: list[dict]) -> str:
 def _answer_with_context(question: str, chunks: list[dict]) -> tuple[str, list[dict]]:
     context = _format_context(chunks)
     prompt = f"{RAG_SYSTEM_PROMPT}\n\nNgữ cảnh:\n{context}\n\nCâu hỏi: {question}"
-    answer = invoke_with_fallback(prompt).content
+    answer = message_text(invoke_with_fallback(prompt))
     return answer, chunks
 
 
 def answer_v0(question: str) -> tuple[str, list[dict]]:
     prompt = f"{V0_SYSTEM_PROMPT}\n\nCau hoi: {question}"
-    return invoke_with_fallback(prompt).content, []
+    return message_text(invoke_with_fallback(prompt)), []
 
 
 def answer_v1(question: str) -> tuple[str, list[dict]]:

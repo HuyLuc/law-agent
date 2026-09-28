@@ -126,3 +126,18 @@ def build_llm_chain(transform: Callable[[BaseChatModel], Runnable] = lambda m: m
 def invoke_with_fallback(prompt: str) -> BaseMessage:
     """Goi lan luot tung Gemini key, het quota/loi thi chuyen sang Groq."""
     return build_llm_chain().invoke(prompt)
+
+
+def message_text(message: BaseMessage) -> str:
+    """Lay phan text thuan tuy tu AIMessage.content (co the la str hoac list
+    block -- Gemini 3.x tra ve list block thuong xuyen hon 2.x)."""
+    content = message.content
+    if isinstance(content, str):
+        return content
+    parts = []
+    for block in content:
+        if isinstance(block, dict) and block.get("type") == "text":
+            parts.append(block["text"])
+        elif isinstance(block, str):
+            parts.append(block)
+    return "\n".join(parts)
