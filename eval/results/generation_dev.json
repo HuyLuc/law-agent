@@ -1,45 +1,43 @@
 {
   "v0": {
-    "citation_precision": 0.8,
-    "citation_recall": 0.11428571428571428,
-    "avg_judge_score": 2.85,
+    "citation_precision": 0.75,
+    "citation_recall": 0.08571428571428572,
+    "avg_judge_score": 3.025,
     "refusal_accuracy": 0.0,
-    "latency_p50_s": 7.95,
-    "latency_p95_s": 11.89,
+    "latency_p50_s": 115.2,
+    "latency_p95_s": 121.84,
     "n": 40,
     "per_item": [
       {
         "id": "d001",
         "loai": "tra_cuu",
-        "answer": "Theo Điều 25 Bộ luật Lao động 2019, thời gian thử việc tối đa được quy định như sau:\n\n* **Tối đa 180 ngày:** Đối với công việc của người quản lý doanh nghiệp.\n* **Tối đa 60 ngày:** Đối với công việc cần trình độ chuyên môn, kỹ thuật từ cao đẳng trở lên.\n* **Tối đa 30 ngày:** Đối với công việc cần trình độ chuyên môn, kỹ thuật trung cấp, công nhân kỹ thuật, nhân viên nghiệp vụ.\n* **Tối đa 06 ngày làm việc:** Đối với các công việc khác.\n\n*Lưu ý: Chỉ được thử việc 01 lần đối với một công việc.*\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "answer": "Thời gian thử việc tối đa là 180 ngày.\n\nTuy nhiên, tùy thuộc vào tính chất và mức độ phức tạp của công việc, thời gian thử việc không được vượt quá các mức sau:\n*   **Không quá 180 ngày** đối với công việc của doanh nghiệp hoạt động trong lĩnh vực khoa học, công nghệ có trình độ chuyên môn, kỹ thuật cao.\n*   **Không quá 60 ngày** đối với công việc có chức danh nghề nghiệp cần trình độ chuyên môn, kỹ thuật từ bậc đại học trở lên.\n*   **Không quá 30 ngày** đối với công việc có chức danh nghề nghiệp cần trình độ chuyên môn, kỹ thuật trung cấp, công nhân kỹ thuật, nhân viên nghiệp vụ.\n*   **Không quá 06 ngày làm việc** đối với công việc khác.\n\nCăn cứ Điều 25 Bộ luật Lao động 2019.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
         "cited_dieu": [
           25
         ],
         "truth_dieu": [
           25
         ],
-        "judge_score": 5,
-        "latency_s": 7.48,
+        "judge_score": 3,
+        "latency_s": 9.17,
         "interrupted": false
       },
       {
         "id": "d002",
         "loai": "tra_cuu",
-        "answer": "Theo quy định tại Điều 26 Bộ luật Lao động 2019, tiền lương của người lao động trong thời gian thử việc do hai bên thỏa thuận nhưng **ít nhất phải bằng 85%** mức lương của công việc đó.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
-        "cited_dieu": [
-          26
-        ],
+        "answer": "Tiền lương thử việc không được thấp hơn 85% mức lương của công việc đó (lương chính thức).\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [],
         "truth_dieu": [
           26
         ],
         "judge_score": 5,
-        "latency_s": 7.95,
+        "latency_s": 9.69,
         "interrupted": false
       },
       {
         "id": "d003",
         "loai": "tra_cuu",
-        "answer": "**Có.**\n\nTheo khoản 2 Điều 27 Bộ luật Lao động 2019, trong thời gian thử việc, mỗi bên (bao gồm cả người lao động) có quyền hủy bỏ hợp đồng thử việc hoặc hợp đồng lao động đã giao kết mà **không cần báo trước** và **không phải bồi thường**.\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "answer": "Có. Theo Điều 27 Bộ luật Lao động 2019, trong thời gian thử việc, người lao động có quyền hủy bỏ hợp đồng thử việc hoặc hợp đồng lao động đã giao kết mà không cần báo trước và không phải bồi thường.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
         "cited_dieu": [
           27
         ],
@@ -47,141 +45,139 @@
           27
         ],
         "judge_score": 5,
-        "latency_s": 6.98,
+        "latency_s": 8.28,
         "interrupted": false
       },
       {
         "id": "d004",
         "loai": "tra_cuu",
-        "answer": "Theo Điều 105 Bộ luật Lao động 2019, thời giờ làm việc bình thường tối đa được quy định như sau:\n\n* **Mỗi ngày:** Không quá **08 giờ** (trường hợp áp dụng thời giờ làm việc theo tuần thì không quá **10 giờ**).\n* **Mỗi tuần:** Không quá **48 giờ**.\n\n*(Nhà nước khuyến khích người sử dụng lao động thực hiện tuần làm việc 40 giờ).*\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
-        "cited_dieu": [
-          105
-        ],
+        "answer": "Tối đa 08 giờ mỗi ngày và 48 giờ mỗi tuần.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [],
         "truth_dieu": [
           105
         ],
-        "judge_score": 5,
-        "latency_s": 19.7,
+        "judge_score": 3,
+        "latency_s": 11.96,
         "interrupted": false
       },
       {
         "id": "d005",
         "loai": "tra_cuu",
-        "answer": "Làm thêm giờ vào ngày thường được trả lương ít nhất bằng **125%** của lương bình thường.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "answer": "Làm thêm giờ vào ngày thường được trả lương ít nhất bằng 150% tiền lương giờ thực trả của ngày làm việc bình thường.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
         "cited_dieu": [],
         "truth_dieu": [
           98
         ],
-        "judge_score": 1,
-        "latency_s": 7.55,
+        "judge_score": 5,
+        "latency_s": 15.73,
         "interrupted": false
       },
       {
         "id": "d006",
         "loai": "tra_cuu",
-        "answer": "Người lao động làm đủ 12 tháng trong điều kiện lao động bình thường được nghỉ phép năm 12 ngày.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "answer": "Người lao động làm đủ 12 tháng trong điều kiện lao động bình thường được nghỉ 12 ngày làm việc.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
         "cited_dieu": [],
         "truth_dieu": [
           113
         ],
-        "judge_score": 4,
-        "latency_s": 8.16,
+        "judge_score": 5,
+        "latency_s": 12.86,
         "interrupted": false
       },
       {
         "id": "d007",
         "loai": "tra_cuu",
-        "answer": "5 năm.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "answer": "Cứ đủ 05 năm làm việc thì người lao động được cộng thêm 01 ngày phép năm.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
         "cited_dieu": [],
         "truth_dieu": [
           114
         ],
-        "judge_score": 5,
-        "latency_s": 7.97,
+        "judge_score": 3,
+        "latency_s": 17.63,
         "interrupted": false
       },
       {
         "id": "d008",
         "loai": "tra_cuu",
-        "answer": "7 ngày.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "answer": "Vào dịp Tết Âm lịch, người lao động được nghỉ 05 ngày hưởng nguyên lương.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
         "cited_dieu": [],
         "truth_dieu": [
           112
         ],
-        "judge_score": 1,
-        "latency_s": 8.15,
+        "judge_score": 5,
+        "latency_s": 50.64,
         "interrupted": false
       },
       {
         "id": "d009",
         "loai": "tra_cuu",
-        "answer": "Mỗi tuần người lao động phải được nghỉ ít nhất 24 giờ liên tục.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "answer": "Mỗi tuần, người lao động phải được nghỉ ít nhất 24 giờ liên tục.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
         "cited_dieu": [],
         "truth_dieu": [
           111
         ],
-        "judge_score": 5,
-        "latency_s": 6.78,
+        "judge_score": 4,
+        "latency_s": 20.82,
         "interrupted": false
       },
       {
         "id": "d010",
         "loai": "tra_cuu",
-        "answer": "Bộ luật Lao động quy định các hình thức xử lý kỷ luật lao động gồm:  \n1. Cảnh cáo (định văn hoặc không định văn).  \n2. Hạ bậc chức vụ.  \n3. Cấm làm một số công việc.  \n4. Giảm lương.  \n5. Kỷ luật tạm thời (đình công).  \n6. Kỷ luật vĩnh viễn (đình công).  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "answer": "Bộ luật Lao động năm 2019 quy định 03 hình thức xử lý kỷ luật lao động sau đây:\n1.  Khiển trách.\n2.  Kéo dài thời hạn nâng lương không quá 06 tháng hoặc cách chức.\n3.  Sa thải.\n\nNội dung chi mang tinh tham khao, khong thay the tu van phap ly.",
         "cited_dieu": [],
         "truth_dieu": [
           124
         ],
-        "judge_score": 1,
-        "latency_s": 7.25,
+        "judge_score": 3,
+        "latency_s": 47.12,
         "interrupted": false
       },
       {
         "id": "d011",
         "loai": "tra_cuu",
-        "answer": "Mức lương tối thiểu Vùng I hiện nay (áp dụng từ 01/01/2026) là 4 500 000 VND.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "answer": "Mức lương tối thiểu Vùng I áp dụng từ 01/01/2026 hiện chưa được công bố.\n\nMức lương tối thiểu Vùng I đang áp dụng (từ 01/07/2024) là 4.960.000 VNĐ/tháng.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
         "cited_dieu": [],
         "truth_dieu": [
           3
         ],
-        "judge_score": 1,
-        "latency_s": 8.71,
+        "judge_score": 2,
+        "latency_s": 49.35,
         "interrupted": false
       },
       {
         "id": "d012",
         "loai": "tra_cuu",
-        "answer": "Trợ cấp mất việc làm tối thiểu là 1 tháng lương.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "answer": "Trợ cấp mất việc làm tối thiểu là 02 tháng tiền lương.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
         "cited_dieu": [],
         "truth_dieu": [
           47
         ],
-        "judge_score": 1,
-        "latency_s": 9.21,
+        "judge_score": 5,
+        "latency_s": 48.08,
         "interrupted": false
       },
       {
         "id": "d013",
         "loai": "tra_cuu",
-        "answer": "Người lao động làm việc theo hợp đồng không xác định thời hạn muốn đơn phương nghỉ việc phải báo trước **30 ngày**.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "answer": "Người lao động làm việc theo hợp đồng không xác định thời hạn muốn đơn phương nghỉ việc phải báo trước ít nhất 45 ngày.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
         "cited_dieu": [],
         "truth_dieu": [
           35
         ],
-        "judge_score": 1,
-        "latency_s": 8.07,
+        "judge_score": 5,
+        "latency_s": 65.21,
         "interrupted": false
       },
       {
         "id": "d014",
         "loai": "tra_cuu",
-        "answer": "Hợp đồng lao động bắt buộc phải ghi rõ các nội dung chính sau:  \n1. Thông tin các bên (tên, địa chỉ, số CMND/CCCD/đại diện);  \n2. Chức vụ, công việc, mô tả công việc;  \n3. Thời gian làm việc, giờ làm, ngày nghỉ, ngày lễ;  \n4. Thù lao, chế độ phụ cấp, thưởng, bảo hiểm xã hội, y tế, thất nghiệp;  \n5. Điều kiện làm việc, môi trường, trang thiết bị;  \n6. Quyền và nghĩa vụ của người lao động và người sử dụng lao động;  \n7. Thời hạn hợp đồng (định kỳ, không định kỳ, cố định, không xác định);  \n8. Điều kiện chấm dứt hợp đồng, lý do, thủ tục, thời hạn thông báo.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "answer": "",
         "cited_dieu": [],
         "truth_dieu": [
           21
         ],
-        "judge_score": 3,
-        "latency_s": 7.56,
+        "judge_score": 1,
+        "latency_s": 52.34,
         "interrupted": false
       },
       {
@@ -193,7 +189,7 @@
           8
         ],
         "judge_score": 2,
-        "latency_s": 7.23,
+        "latency_s": 120.58,
         "interrupted": false
       },
       {
@@ -205,7 +201,7 @@
           25
         ],
         "judge_score": 1,
-        "latency_s": 11.57,
+        "latency_s": 116.39,
         "interrupted": false
       },
       {
@@ -217,19 +213,21 @@
           25
         ],
         "judge_score": 1,
-        "latency_s": 7.46,
+        "latency_s": 117.45,
         "interrupted": false
       },
       {
         "id": "d018",
         "loai": "tinh_huong",
-        "answer": "Theo Luật Lao động 2019, thời hạn thử việc trong hợp đồng lao động có thời hạn không được vượt quá **30 ngày**. Chỉ trong một số vị trí đặc biệt (được quy định trong luật) mới được phép thử việc tối đa **90 ngày**.  \n\nNếu vị trí của bạn không thuộc danh sách các vị trí đặc biệt, thì 90 ngày thử việc là không hợp pháp. Nếu thuộc danh sách, thì có thể hợp pháp.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
-        "cited_dieu": [],
+        "answer": "Đúng luật.\n\nTheo khoản 2 Điều 25 Bộ luật Lao động 2019, thời gian thử việc đối với công việc của doanh nghiệp quản lý, điều hành không quá 180 ngày.\n\nDo đó, việc công ty thử việc bạn 90 ngày là phù hợp với quy định pháp luật.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          25
+        ],
         "truth_dieu": [
           25
         ],
-        "judge_score": 3,
-        "latency_s": 9.17,
+        "judge_score": 4,
+        "latency_s": 94.56,
         "interrupted": false
       },
       {
@@ -241,7 +239,7 @@
           26
         ],
         "judge_score": 2,
-        "latency_s": 8.09,
+        "latency_s": 120.54,
         "interrupted": false
       },
       {
@@ -253,7 +251,7 @@
           109
         ],
         "judge_score": 1,
-        "latency_s": 7.21,
+        "latency_s": 117.62,
         "interrupted": false
       },
       {
@@ -265,7 +263,7 @@
           105
         ],
         "judge_score": 5,
-        "latency_s": 7.62,
+        "latency_s": 118.97,
         "interrupted": false
       },
       {
@@ -277,7 +275,7 @@
           98
         ],
         "judge_score": 1,
-        "latency_s": 7.03,
+        "latency_s": 118.93,
         "interrupted": false
       },
       {
@@ -289,19 +287,19 @@
           113
         ],
         "judge_score": 1,
-        "latency_s": 7.69,
+        "latency_s": 114.29,
         "interrupted": false
       },
       {
         "id": "d024",
         "loai": "tinh_huong",
-        "answer": "Theo Luật Lao động Việt Nam, một công ty có thể sa thải nhân viên vì vi phạm nghiêm trọng, trong đó có việc đánh bạc trong giờ làm việc, nếu:\n\n1. **Có bằng chứng rõ ràng**: Công ty phải có tài liệu, chứng cứ chứng minh hành vi của bạn (ví dụ: ghi âm, video, lời khai nhân viên khác, v.v.).\n2. **Tuân thủ thủ tục**: Công ty phải thực hiện đúng quy trình sa thải: thông báo, lắng nghe phản hồi, ghi nhận biên bản, và cấp giấy tờ sa thải.\n3. **Đánh giá mức độ vi phạm**: Việc đánh bạc trong giờ làm việc thường được coi là vi phạm nghiêm trọng, có thể dẫn đến sa thải ngay lập tức nếu không có điều kiện giảm nhẹ.\n\nNếu công ty không tuân thủ thủ tục hoặc không có bằng chứng đủ mạnh, bạn có thể khởi kiện để bảo vệ quyền lợi. Tuy nhiên, quyết định cuối cùng phụ thuộc vào từng trường hợp cụ thể và quyết định của tòa án.\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "answer": "Việc sa thải này **có thể đúng luật**.\n\nTheo Bộ luật Lao động 2019, hành vi đánh bạc trong giờ làm việc tại nơi làm việc được xem là vi phạm kỷ luật lao động nghiêm trọng. Công ty có quyền áp dụng hình thức xử lý kỷ luật sa thải đối với người lao động nếu hành vi này được quy định cụ thể là một hành vi vi phạm nghiêm trọng trong Nội quy lao động của công ty hoặc được xem là vi phạm nghiêm trọng theo quy định của pháp luật.\n\nTuy nhiên, công ty phải tuân thủ đúng trình tự, thủ tục xử lý kỷ luật lao động theo quy định của pháp luật.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
         "cited_dieu": [],
         "truth_dieu": [
           125
         ],
-        "judge_score": 5,
-        "latency_s": 11.89,
+        "judge_score": 4,
+        "latency_s": 16.91,
         "interrupted": false
       },
       {
@@ -313,7 +311,7 @@
           126
         ],
         "judge_score": 1,
-        "latency_s": 7.28,
+        "latency_s": 117.5,
         "interrupted": false
       },
       {
@@ -325,7 +323,7 @@
           21
         ],
         "judge_score": 1,
-        "latency_s": 7.28,
+        "latency_s": 117.87,
         "interrupted": false
       },
       {
@@ -337,7 +335,7 @@
           111
         ],
         "judge_score": 5,
-        "latency_s": 8.44,
+        "latency_s": 115.36,
         "interrupted": false
       },
       {
@@ -351,7 +349,7 @@
           46
         ],
         "judge_score": 1,
-        "latency_s": 7.53,
+        "latency_s": 113.09,
         "interrupted": false
       },
       {
@@ -364,7 +362,7 @@
           40
         ],
         "judge_score": 3,
-        "latency_s": 7.2,
+        "latency_s": 112.11,
         "interrupted": false
       },
       {
@@ -377,7 +375,7 @@
           46
         ],
         "judge_score": 2,
-        "latency_s": 7.36,
+        "latency_s": 114.66,
         "interrupted": false
       },
       {
@@ -393,7 +391,7 @@
           47
         ],
         "judge_score": 5,
-        "latency_s": 8.35,
+        "latency_s": 115.69,
         "interrupted": false
       },
       {
@@ -407,7 +405,7 @@
           41
         ],
         "judge_score": 3,
-        "latency_s": 8.08,
+        "latency_s": 115.2,
         "interrupted": false
       },
       {
@@ -420,7 +418,7 @@
           137
         ],
         "judge_score": 5,
-        "latency_s": 7.59,
+        "latency_s": 121.42,
         "interrupted": false
       },
       {
@@ -433,7 +431,7 @@
           109
         ],
         "judge_score": 3,
-        "latency_s": 7.55,
+        "latency_s": 121.84,
         "interrupted": false
       },
       {
@@ -446,7 +444,7 @@
           90
         ],
         "judge_score": 3,
-        "latency_s": 8.17,
+        "latency_s": 124.22,
         "interrupted": false
       },
       {
@@ -456,7 +454,7 @@
         "cited_dieu": [],
         "truth_dieu": [],
         "judge_score": 1,
-        "latency_s": 8.62,
+        "latency_s": 117.19,
         "interrupted": false
       },
       {
@@ -466,7 +464,7 @@
         "cited_dieu": [],
         "truth_dieu": [],
         "judge_score": 5,
-        "latency_s": 9.09,
+        "latency_s": 117.38,
         "interrupted": false
       },
       {
@@ -476,7 +474,7 @@
         "cited_dieu": [],
         "truth_dieu": [],
         "judge_score": 1,
-        "latency_s": 6.8,
+        "latency_s": 118.34,
         "interrupted": false
       },
       {
@@ -486,7 +484,7 @@
         "cited_dieu": [],
         "truth_dieu": [],
         "judge_score": 5,
-        "latency_s": 11.37,
+        "latency_s": 118.05,
         "interrupted": false
       },
       {
@@ -495,37 +493,39 @@
         "answer": "**Thủ tục đăng ký kết hôn với người nước ngoài (đối với công dân Việt Nam)**  \n\n| Tài liệu | Nội dung | Ghi chú |\n|----------|----------|---------|\n| 1. Hộ chiếu (đối với cả hai bên) | Giấy tờ chứng minh danh tính, quốc tịch | |\n| 2. Giấy khai sinh | Chứng minh ngày, nơi sinh | |\n| 3. Giấy chứng nhận tình trạng hôn nhân (Certificate of No Impediment / Single Status) | Xác nhận chưa kết hôn hoặc đã ly hôn / tử vong | Đối với người nước ngoài phải có bản dịch tiếng Việt, công chứng |\n| 4. Giấy chứng nhận ly hôn hoặc giấy tử vong (nếu đã từng kết hôn) | Xác nhận tình trạng hôn nhân trước | |\n| 5. Giấy xác nhận cư trú (nếu cư trú tại Việt Nam) | Địa chỉ, thời gian cư trú | |\n| 6. Đơn đăng ký kết hôn | Điền đầy đủ thông tin, ký tên | |\n| 7. Bản dịch tiếng Việt (đối với tài liệu nước ngoài) | Được công chứng, xác nhận | |\n| 8. Giấy xác nhận không có tội phạm (nếu yêu cầu) | | |\n\n**Quy trình:**\n\n1. Chuẩn bị đầy đủ tài liệu trên.  \n2. Đăng ký tại Sở Tư pháp (hoặc Phòng Đăng ký chính quyền địa phương) nơi cư trú.  \n3. Nộp hồ sơ, chờ xét duyệt (thường 1–2 tuần).  \n4. Khi được duyệt, nhận giấy chứng nhận đăng ký kết hôn và tiến hành lễ cưới.\n\n> *Noi dung chi mang tinh tham khao, khong thay the tu van phap ly.*",
         "cited_dieu": [],
         "truth_dieu": [],
-        "judge_score": 5,
-        "latency_s": 8.52,
+        "judge_score": 1,
+        "latency_s": 121.29,
         "interrupted": false
       }
     ]
   },
   "v1": {
-    "citation_precision": 0.6195652173913044,
-    "citation_recall": 0.5714285714285714,
-    "avg_judge_score": 2.475,
+    "citation_precision": 0.6442307692307693,
+    "citation_recall": 0.6571428571428571,
+    "avg_judge_score": 2.775,
     "refusal_accuracy": 0.2,
-    "latency_p50_s": 14.56,
-    "latency_p95_s": 30.84,
+    "latency_p50_s": 116.86,
+    "latency_p95_s": 136.1,
     "n": 40,
     "per_item": [
       {
         "id": "d001",
         "loai": "tra_cuu",
-        "answer": "không tìm thấy cán cục  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
-        "cited_dieu": [],
+        "answer": "Thời gian thử việc tối đa phụ thuộc vào tính chất và mức độ phức tạp của công việc, cụ thể như sau:\n1.  Không quá 180 ngày đối với công việc của người quản lý doanh nghiệp theo quy định của Luật Doanh nghiệp, Luật Quản lý, sử dụng vốn nhà nước đầu tư vào sản xuất, kinh doanh tại doanh nghiệp [Khoản 1 Điều 25, Bộ luật Lao động 2019].\n2.  Không quá 60 ngày đối với công việc có chức danh nghề nghiệp cần trình độ chuyên môn, kỹ thuật từ cao đẳng trở lên [Khoản 2 Điều 25, Bộ luật Lao động 2019].\n3.  Không quá 30 ngày đối với công việc có chức danh nghề nghiệp cần trình độ chuyên môn, kỹ thuật trung cấp, công nhân kỹ thuật, nhân viên nghiệp vụ [Khoản 3 Điều 25, Bộ luật Lao động 2019].\n4.  Không quá 06 ngày làm việc đối với công việc khác [Khoản 4 Điều 25, Bộ luật Lao động 2019].\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          25
+        ],
         "truth_dieu": [
           25
         ],
-        "judge_score": 1,
-        "latency_s": 32.12,
+        "judge_score": 5,
+        "latency_s": 44.26,
         "interrupted": false
       },
       {
         "id": "d002",
         "loai": "tra_cuu",
-        "answer": "[Điều 26, Bộ luật Lao động 2019]  \nTiền lương thử việc phải ít nhất bằng 85 % mức lương chính thức.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "answer": "Tiền lương của người lao động trong thời gian thử việc ít nhất phải bằng 85% mức lương của công việc đó [Điều 26, Bộ luật Lao động 2019].\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
         "cited_dieu": [
           26
         ],
@@ -533,19 +533,21 @@
           26
         ],
         "judge_score": 5,
-        "latency_s": 9.02,
+        "latency_s": 11.97,
         "interrupted": false
       },
       {
         "id": "d003",
         "loai": "tra_cuu",
-        "answer": "không tìm thấy căn cứ\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
-        "cited_dieu": [],
+        "answer": "Trong thời gian thử việc, người lao động có quyền hủy bỏ hợp đồng thử việc hoặc hợp đồng lao động đã giao kết mà không cần báo trước và không phải bồi thường [Khoản 2 Điều 27, Bộ luật Lao động 2019].\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          27
+        ],
         "truth_dieu": [
           27
         ],
-        "judge_score": 1,
-        "latency_s": 9.15,
+        "judge_score": 5,
+        "latency_s": 11.85,
         "interrupted": false
       },
       {
@@ -559,7 +561,7 @@
           105
         ],
         "judge_score": 5,
-        "latency_s": 9.61,
+        "latency_s": 120.43,
         "interrupted": false
       },
       {
@@ -574,7 +576,7 @@
           98
         ],
         "judge_score": 5,
-        "latency_s": 11.03,
+        "latency_s": 117.43,
         "interrupted": false
       },
       {
@@ -588,7 +590,7 @@
           113
         ],
         "judge_score": 5,
-        "latency_s": 10.18,
+        "latency_s": 116.75,
         "interrupted": false
       },
       {
@@ -603,7 +605,7 @@
           114
         ],
         "judge_score": 5,
-        "latency_s": 8.09,
+        "latency_s": 117.88,
         "interrupted": false
       },
       {
@@ -615,7 +617,7 @@
           112
         ],
         "judge_score": 1,
-        "latency_s": 10.48,
+        "latency_s": 120.63,
         "interrupted": false
       },
       {
@@ -629,7 +631,7 @@
           111
         ],
         "judge_score": 4,
-        "latency_s": 8.99,
+        "latency_s": 118.9,
         "interrupted": false
       },
       {
@@ -641,7 +643,7 @@
           124
         ],
         "judge_score": 1,
-        "latency_s": 8.86,
+        "latency_s": 116.89,
         "interrupted": false
       },
       {
@@ -656,19 +658,22 @@
           3
         ],
         "judge_score": 5,
-        "latency_s": 13.18,
+        "latency_s": 115.24,
         "interrupted": false
       },
       {
         "id": "d012",
         "loai": "tra_cuu",
-        "answer": "Không tìm thấy căn cứ.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
-        "cited_dieu": [],
+        "answer": "Trợ cấp mất việc làm tối thiểu là 02 tháng tiền lương [Khoản 1 Điều 47, Bộ luật Lao động 2019], [Khoản 2 Điều 8, Nghị định 145/2020/NĐ-CP].\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          8,
+          47
+        ],
         "truth_dieu": [
           47
         ],
-        "judge_score": 1,
-        "latency_s": 11.59,
+        "judge_score": 5,
+        "latency_s": 88.81,
         "interrupted": false
       },
       {
@@ -680,7 +685,7 @@
           35
         ],
         "judge_score": 1,
-        "latency_s": 24.84,
+        "latency_s": 117.23,
         "interrupted": false
       },
       {
@@ -694,7 +699,7 @@
           21
         ],
         "judge_score": 1,
-        "latency_s": 18.9,
+        "latency_s": 119.22,
         "interrupted": false
       },
       {
@@ -708,7 +713,7 @@
           8
         ],
         "judge_score": 5,
-        "latency_s": 24.78,
+        "latency_s": 117.39,
         "interrupted": false
       },
       {
@@ -722,7 +727,7 @@
           25
         ],
         "judge_score": 1,
-        "latency_s": 11.61,
+        "latency_s": 115.88,
         "interrupted": false
       },
       {
@@ -736,7 +741,7 @@
           25
         ],
         "judge_score": 5,
-        "latency_s": 14.8,
+        "latency_s": 118.25,
         "interrupted": false
       },
       {
@@ -748,7 +753,7 @@
           25
         ],
         "judge_score": 1,
-        "latency_s": 22.9,
+        "latency_s": 117.29,
         "interrupted": false
       },
       {
@@ -760,7 +765,7 @@
           26
         ],
         "judge_score": 1,
-        "latency_s": 11.3,
+        "latency_s": 117.03,
         "interrupted": false
       },
       {
@@ -777,7 +782,7 @@
           109
         ],
         "judge_score": 1,
-        "latency_s": 16.74,
+        "latency_s": 117.71,
         "interrupted": false
       },
       {
@@ -793,7 +798,7 @@
           105
         ],
         "judge_score": 1,
-        "latency_s": 17.8,
+        "latency_s": 117.11,
         "interrupted": false
       },
       {
@@ -808,7 +813,7 @@
           98
         ],
         "judge_score": 5,
-        "latency_s": 20.24,
+        "latency_s": 120.42,
         "interrupted": false
       },
       {
@@ -823,7 +828,7 @@
           113
         ],
         "judge_score": 1,
-        "latency_s": 14.05,
+        "latency_s": 139.35,
         "interrupted": false
       },
       {
@@ -840,7 +845,7 @@
           125
         ],
         "judge_score": 5,
-        "latency_s": 17.14,
+        "latency_s": 136.1,
         "interrupted": false
       },
       {
@@ -854,7 +859,7 @@
           126
         ],
         "judge_score": 5,
-        "latency_s": 13.58,
+        "latency_s": 114.06,
         "interrupted": false
       },
       {
@@ -868,7 +873,7 @@
           21
         ],
         "judge_score": 1,
-        "latency_s": 14.56,
+        "latency_s": 117.28,
         "interrupted": false
       },
       {
@@ -880,7 +885,7 @@
           111
         ],
         "judge_score": 1,
-        "latency_s": 19.63,
+        "latency_s": 116.72,
         "interrupted": false
       },
       {
@@ -894,7 +899,7 @@
           46
         ],
         "judge_score": 1,
-        "latency_s": 23.0,
+        "latency_s": 116.17,
         "interrupted": false
       },
       {
@@ -912,7 +917,7 @@
           40
         ],
         "judge_score": 1,
-        "latency_s": 19.87,
+        "latency_s": 114.05,
         "interrupted": false
       },
       {
@@ -925,7 +930,7 @@
           46
         ],
         "judge_score": 1,
-        "latency_s": 20.09,
+        "latency_s": 112.55,
         "interrupted": false
       },
       {
@@ -944,7 +949,7 @@
           47
         ],
         "judge_score": 1,
-        "latency_s": 16.7,
+        "latency_s": 119.73,
         "interrupted": false
       },
       {
@@ -963,7 +968,7 @@
           41
         ],
         "judge_score": 1,
-        "latency_s": 16.93,
+        "latency_s": 116.86,
         "interrupted": false
       },
       {
@@ -976,7 +981,7 @@
           137
         ],
         "judge_score": 1,
-        "latency_s": 17.58,
+        "latency_s": 116.43,
         "interrupted": false
       },
       {
@@ -993,7 +998,7 @@
           109
         ],
         "judge_score": 5,
-        "latency_s": 11.16,
+        "latency_s": 115.56,
         "interrupted": false
       },
       {
@@ -1010,7 +1015,7 @@
           90
         ],
         "judge_score": 5,
-        "latency_s": 13.48,
+        "latency_s": 111.25,
         "interrupted": false
       },
       {
@@ -1020,7 +1025,7 @@
         "cited_dieu": [],
         "truth_dieu": [],
         "judge_score": 5,
-        "latency_s": 24.41,
+        "latency_s": 113.57,
         "interrupted": false
       },
       {
@@ -1030,7 +1035,7 @@
         "cited_dieu": [],
         "truth_dieu": [],
         "judge_score": 1,
-        "latency_s": 30.84,
+        "latency_s": 112.2,
         "interrupted": false
       },
       {
@@ -1040,7 +1045,7 @@
         "cited_dieu": [],
         "truth_dieu": [],
         "judge_score": 1,
-        "latency_s": 11.5,
+        "latency_s": 112.12,
         "interrupted": false
       },
       {
@@ -1050,7 +1055,7 @@
         "cited_dieu": [],
         "truth_dieu": [],
         "judge_score": 1,
-        "latency_s": 13.05,
+        "latency_s": 110.43,
         "interrupted": false
       },
       {
@@ -1060,7 +1065,7 @@
         "cited_dieu": [],
         "truth_dieu": [],
         "judge_score": 1,
-        "latency_s": 13.05,
+        "latency_s": 112.93,
         "interrupted": false
       }
     ]
