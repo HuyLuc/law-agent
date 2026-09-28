@@ -77,7 +77,6 @@ Trên 10 hợp đồng mẫu tự tạo (2 đúng, 8 có lỗi cài cắm có ch
 - **Đánh giá sinh câu trả lời chưa đầy đủ** (xem phần Kết quả ở trên) — cần chạy lại V0-V4 khi quota ổn định, lý tưởng là dùng một provider trong suốt một lượt chạy để so sánh công bằng.
 - **RAGAS faithfulness** (đo trong PLAN.md) chưa triển khai — bị hoãn có chủ đích do giới hạn thời gian, ưu tiên các chỉ số citation precision/recall và giám khảo LLM trước.
 - **Reranker chậm trên CPU** (~30s/query trên i7-8565U dù đã giới hạn `max_length=384` và giảm ứng viên) — khả thi cho demo/đánh giá offline, chưa khả thi cho sản phẩm thời gian thực; hướng khắc phục (chuyển ONNX INT8) đã lên kế hoạch ở Tuần 6 nhưng chưa làm.
-- **`contract_review` trong LangGraph agent còn là stub** — endpoint `POST /review-contract` của FastAPI gọi thẳng `src/tools/contract_rules.py` (hoạt động đầy đủ, đã test), nhưng nếu người dùng hỏi rà soát hợp đồng *qua chat* thay vì tab riêng, node `contract_review` trong graph mới chỉ trả về thông báo tĩnh, chưa nối vào logic thật.
 - **Dữ liệu nguồn giới hạn 3 văn bản** (Bộ luật Lao động 2019, NĐ 145/2020, NĐ 293/2025) — chưa có Luật BHXH 2024, chưa xử lý hiệu lực theo thời gian khi văn bản có nhiều đợt sửa đổi.
 
 ## Cách chạy

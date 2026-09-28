@@ -2,12 +2,12 @@
 
 import re
 
-from langchain_core.messages import AIMessage, SystemMessage, ToolMessage
+from langchain_core.messages import AIMessage, HumanMessage, SystemMessage, ToolMessage
 from langgraph.prebuilt import ToolNode
 
 from src.agent.prompts import (
     AGENT_SYSTEM_PROMPT,
-    CONTRACT_STUB_MESSAGE,
+    CONTRACT_NO_TEXT_MESSAGE,
     OUT_OF_SCOPE_MESSAGE,
     ROUTER_PROMPT,
     VERIFY_FEEDBACK_TEMPLATE,
@@ -15,6 +15,9 @@ from src.agent.prompts import (
 from src.agent.state import AgentState, RouteDecision
 from src.agent.tools import ALL_TOOLS
 from src.llm import build_llm_chain, message_text
+from src.tools.contract_rules import check_contract, extract_contract_info
+
+MIN_CONTRACT_TEXT_LEN = 200  # duoi muc nay coi nhu nguoi dung chua dan noi dung hop dong that
 
 MAX_TOOL_CALLS = 6
 MAX_VERIFY_ROUNDS = 2
@@ -119,8 +122,25 @@ def should_retry_verify(state: AgentState) -> str:
     return "end"
 
 
-def contract_review(_state: AgentState) -> dict:
-    return {"messages": [AIMessage(content=CONTRACT_STUB_MESSAGE)]}
+def _format_contract_warnings(warnings: list[dict]) -> str:
+    if not warnings:
+        body = "Không phát hiện vi phạm nào theo các quy tắc đã kiểm tra."
+    else:
+        lines = [f"Phát hiện {len(warnings)} cảnh báo:"]
+        lines += [f"- {w['canh_bao']} (căn cứ: [{w['can_cu']}])" for w in warnings]
+        body = "\n".join(lines)
+    return f"{body}\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý."
+
+
+def contract_review(state: AgentState) -> dict:
+    text = "\n".join(
+        message_text(m) for m in state["messages"] if isinstance(m, HumanMessage)
+    ).strip()
+    if len(text) < MIN_CONTRACT_TEXT_LEN:
+        return {"messages": [AIMessage(content=CONTRACT_NO_TEXT_MESSAGE)]}
+    info = extract_contract_info(text)
+    warnings = check_contract(info)
+    return {"messages": [AIMessage(content=_format_contract_warnings(warnings))]}
 
 
 def out_of_scope(_state: AgentState) -> dict:

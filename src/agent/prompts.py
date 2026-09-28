@@ -36,7 +36,8 @@ Việt Nam). Bạn nên tham khảo luật sư hoặc cơ quan chuyên môn phù
 
 Nội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý."""
 
-CONTRACT_STUB_MESSAGE = """Tính năng rà soát hợp đồng lao động sẽ được hoàn thiện ở giai đoạn
-tiếp theo của dự án (Tuần 4). Hiện tại tôi chưa thể rà soát hợp đồng bạn cung cấp.
+CONTRACT_NO_TEXT_MESSAGE = """Tôi chưa thấy nội dung hợp đồng trong tin nhắn của bạn. Hãy dán
+toàn bộ nội dung hợp đồng vào đây, hoặc dùng tab "Rà soát hợp đồng" trên giao diện để tải file
+PDF/DOCX lên.
 
 Nội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý."""
