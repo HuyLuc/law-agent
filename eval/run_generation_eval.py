@@ -140,15 +140,22 @@ def main() -> None:
     parser.add_argument("--dataset", choices=["dev", "test"], default="dev")
     parser.add_argument("--versions", default="v0,v1,v2,v3,v4")
     parser.add_argument("--limit", type=int, default=None)
+    parser.add_argument(
+        "--ids", default=None, help="Danh sach id cach nhau boi dau phay (vd d001,d016), bo qua --limit"
+    )
+    parser.add_argument("--out-suffix", default="", help="Them hau to vao ten file ket qua (vd _sample)")
     args = parser.parse_args()
 
     data_path = ROOT / "data" / "eval" / f"{args.dataset}.jsonl"
     dataset = [json.loads(line) for line in data_path.open(encoding="utf-8")]
-    if args.limit:
+    if args.ids:
+        wanted = set(args.ids.split(","))
+        dataset = [item for item in dataset if item["id"] in wanted]
+    elif args.limit:
         dataset = dataset[: args.limit]
 
     results = {}
-    out_path = ROOT / "eval" / "results" / f"generation_{args.dataset}.json"
+    out_path = ROOT / "eval" / "results" / f"generation_{args.dataset}{args.out_suffix}.json"
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
     for name in args.versions.split(","):

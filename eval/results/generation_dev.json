@@ -1,0 +1,1068 @@
+{
+  "v0": {
+    "citation_precision": 0.8,
+    "citation_recall": 0.11428571428571428,
+    "avg_judge_score": 2.85,
+    "refusal_accuracy": 0.0,
+    "latency_p50_s": 7.95,
+    "latency_p95_s": 11.89,
+    "n": 40,
+    "per_item": [
+      {
+        "id": "d001",
+        "loai": "tra_cuu",
+        "answer": "Theo Điều 25 Bộ luật Lao động 2019, thời gian thử việc tối đa được quy định như sau:\n\n* **Tối đa 180 ngày:** Đối với công việc của người quản lý doanh nghiệp.\n* **Tối đa 60 ngày:** Đối với công việc cần trình độ chuyên môn, kỹ thuật từ cao đẳng trở lên.\n* **Tối đa 30 ngày:** Đối với công việc cần trình độ chuyên môn, kỹ thuật trung cấp, công nhân kỹ thuật, nhân viên nghiệp vụ.\n* **Tối đa 06 ngày làm việc:** Đối với các công việc khác.\n\n*Lưu ý: Chỉ được thử việc 01 lần đối với một công việc.*\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          25
+        ],
+        "truth_dieu": [
+          25
+        ],
+        "judge_score": 5,
+        "latency_s": 7.48,
+        "interrupted": false
+      },
+      {
+        "id": "d002",
+        "loai": "tra_cuu",
+        "answer": "Theo quy định tại Điều 26 Bộ luật Lao động 2019, tiền lương của người lao động trong thời gian thử việc do hai bên thỏa thuận nhưng **ít nhất phải bằng 85%** mức lương của công việc đó.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          26
+        ],
+        "truth_dieu": [
+          26
+        ],
+        "judge_score": 5,
+        "latency_s": 7.95,
+        "interrupted": false
+      },
+      {
+        "id": "d003",
+        "loai": "tra_cuu",
+        "answer": "**Có.**\n\nTheo khoản 2 Điều 27 Bộ luật Lao động 2019, trong thời gian thử việc, mỗi bên (bao gồm cả người lao động) có quyền hủy bỏ hợp đồng thử việc hoặc hợp đồng lao động đã giao kết mà **không cần báo trước** và **không phải bồi thường**.\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          27
+        ],
+        "truth_dieu": [
+          27
+        ],
+        "judge_score": 5,
+        "latency_s": 6.98,
+        "interrupted": false
+      },
+      {
+        "id": "d004",
+        "loai": "tra_cuu",
+        "answer": "Theo Điều 105 Bộ luật Lao động 2019, thời giờ làm việc bình thường tối đa được quy định như sau:\n\n* **Mỗi ngày:** Không quá **08 giờ** (trường hợp áp dụng thời giờ làm việc theo tuần thì không quá **10 giờ**).\n* **Mỗi tuần:** Không quá **48 giờ**.\n\n*(Nhà nước khuyến khích người sử dụng lao động thực hiện tuần làm việc 40 giờ).*\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          105
+        ],
+        "truth_dieu": [
+          105
+        ],
+        "judge_score": 5,
+        "latency_s": 19.7,
+        "interrupted": false
+      },
+      {
+        "id": "d005",
+        "loai": "tra_cuu",
+        "answer": "Làm thêm giờ vào ngày thường được trả lương ít nhất bằng **125%** của lương bình thường.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          98
+        ],
+        "judge_score": 1,
+        "latency_s": 7.55,
+        "interrupted": false
+      },
+      {
+        "id": "d006",
+        "loai": "tra_cuu",
+        "answer": "Người lao động làm đủ 12 tháng trong điều kiện lao động bình thường được nghỉ phép năm 12 ngày.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          113
+        ],
+        "judge_score": 4,
+        "latency_s": 8.16,
+        "interrupted": false
+      },
+      {
+        "id": "d007",
+        "loai": "tra_cuu",
+        "answer": "5 năm.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          114
+        ],
+        "judge_score": 5,
+        "latency_s": 7.97,
+        "interrupted": false
+      },
+      {
+        "id": "d008",
+        "loai": "tra_cuu",
+        "answer": "7 ngày.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          112
+        ],
+        "judge_score": 1,
+        "latency_s": 8.15,
+        "interrupted": false
+      },
+      {
+        "id": "d009",
+        "loai": "tra_cuu",
+        "answer": "Mỗi tuần người lao động phải được nghỉ ít nhất 24 giờ liên tục.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          111
+        ],
+        "judge_score": 5,
+        "latency_s": 6.78,
+        "interrupted": false
+      },
+      {
+        "id": "d010",
+        "loai": "tra_cuu",
+        "answer": "Bộ luật Lao động quy định các hình thức xử lý kỷ luật lao động gồm:  \n1. Cảnh cáo (định văn hoặc không định văn).  \n2. Hạ bậc chức vụ.  \n3. Cấm làm một số công việc.  \n4. Giảm lương.  \n5. Kỷ luật tạm thời (đình công).  \n6. Kỷ luật vĩnh viễn (đình công).  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          124
+        ],
+        "judge_score": 1,
+        "latency_s": 7.25,
+        "interrupted": false
+      },
+      {
+        "id": "d011",
+        "loai": "tra_cuu",
+        "answer": "Mức lương tối thiểu Vùng I hiện nay (áp dụng từ 01/01/2026) là 4 500 000 VND.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          3
+        ],
+        "judge_score": 1,
+        "latency_s": 8.71,
+        "interrupted": false
+      },
+      {
+        "id": "d012",
+        "loai": "tra_cuu",
+        "answer": "Trợ cấp mất việc làm tối thiểu là 1 tháng lương.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          47
+        ],
+        "judge_score": 1,
+        "latency_s": 9.21,
+        "interrupted": false
+      },
+      {
+        "id": "d013",
+        "loai": "tra_cuu",
+        "answer": "Người lao động làm việc theo hợp đồng không xác định thời hạn muốn đơn phương nghỉ việc phải báo trước **30 ngày**.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          35
+        ],
+        "judge_score": 1,
+        "latency_s": 8.07,
+        "interrupted": false
+      },
+      {
+        "id": "d014",
+        "loai": "tra_cuu",
+        "answer": "Hợp đồng lao động bắt buộc phải ghi rõ các nội dung chính sau:  \n1. Thông tin các bên (tên, địa chỉ, số CMND/CCCD/đại diện);  \n2. Chức vụ, công việc, mô tả công việc;  \n3. Thời gian làm việc, giờ làm, ngày nghỉ, ngày lễ;  \n4. Thù lao, chế độ phụ cấp, thưởng, bảo hiểm xã hội, y tế, thất nghiệp;  \n5. Điều kiện làm việc, môi trường, trang thiết bị;  \n6. Quyền và nghĩa vụ của người lao động và người sử dụng lao động;  \n7. Thời hạn hợp đồng (định kỳ, không định kỳ, cố định, không xác định);  \n8. Điều kiện chấm dứt hợp đồng, lý do, thủ tục, thời hạn thông báo.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          21
+        ],
+        "judge_score": 3,
+        "latency_s": 7.56,
+        "interrupted": false
+      },
+      {
+        "id": "d015",
+        "loai": "tra_cuu",
+        "answer": "Thời gian làm việc được tính theo ngày. Khi tính trợ cấp thôi việc hoặc trợ cấp thất nghiệp, nếu trong một tháng nhân viên làm việc > 15 ngày thì tháng đó được tính là một tháng đầy đủ; nếu < 15 ngày thì không tính. Sau đó, số năm công tác được tính bằng cách đếm mỗi năm có ≥ 6 tháng làm việc là một năm; các năm có < 6 tháng không được tính.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          8
+        ],
+        "judge_score": 2,
+        "latency_s": 7.23,
+        "interrupted": false
+      },
+      {
+        "id": "d016",
+        "loai": "tinh_huong",
+        "answer": "Theo Luật Lao động Việt Nam, công ty có thể áp dụng thời gian thử việc tối đa 3 tháng cho nhân viên mới. Trong thời gian này, bạn vẫn được trả lương (ít nhất mức lương tối thiểu) và hợp đồng phải được lập thành văn bản, ghi rõ thời gian thử việc. Nếu bạn không đáp ứng yêu cầu, công ty có thể chấm dứt hợp đồng trong thời gian thử việc.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          25
+        ],
+        "judge_score": 1,
+        "latency_s": 11.57,
+        "interrupted": false
+      },
+      {
+        "id": "d017",
+        "loai": "tinh_huong",
+        "answer": "Theo Luật Lao động Việt Nam, thời gian thử việc tối đa được quy định là 30 ngày đối với các vị trí công việc có tính chất chuyên môn hoặc yêu cầu trình độ. Đối với công việc phổ thông như rửa xe, thời gian thử việc 15 ngày là hợp pháp và nằm trong giới hạn cho phép.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          25
+        ],
+        "judge_score": 1,
+        "latency_s": 7.46,
+        "interrupted": false
+      },
+      {
+        "id": "d018",
+        "loai": "tinh_huong",
+        "answer": "Theo Luật Lao động 2019, thời hạn thử việc trong hợp đồng lao động có thời hạn không được vượt quá **30 ngày**. Chỉ trong một số vị trí đặc biệt (được quy định trong luật) mới được phép thử việc tối đa **90 ngày**.  \n\nNếu vị trí của bạn không thuộc danh sách các vị trí đặc biệt, thì 90 ngày thử việc là không hợp pháp. Nếu thuộc danh sách, thì có thể hợp pháp.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          25
+        ],
+        "judge_score": 3,
+        "latency_s": 9.17,
+        "interrupted": false
+      },
+      {
+        "id": "d019",
+        "loai": "tinh_huong",
+        "answer": "Theo Luật Lao động Việt Nam, trong thời gian thử việc, mức lương tối thiểu phải là 70% mức lương chính thức. Do đó, việc công ty trả 70% là hợp pháp.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          26
+        ],
+        "judge_score": 2,
+        "latency_s": 8.09,
+        "interrupted": false
+      },
+      {
+        "id": "d020",
+        "loai": "tinh_huong",
+        "answer": "Theo Bộ luật Lao động Việt Nam, nếu ca làm việc kéo dài **trên 6 giờ** thì người lao động phải được nghỉ ngơi ít nhất 15 phút. Nếu ca chính xác 6 giờ thì theo quy định hiện hành không bắt buộc nghỉ ngơi, tuy nhiên nhiều doanh nghiệp vẫn cung cấp nghỉ ngơi để bảo vệ sức khỏe. Nếu ca của bạn thực sự kéo dài hơn 6 giờ mà không có nghỉ ngơi, công ty có thể vi phạm quy định.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          109
+        ],
+        "judge_score": 1,
+        "latency_s": 7.21,
+        "interrupted": false
+      },
+      {
+        "id": "d021",
+        "loai": "tinh_huong",
+        "answer": "Không, theo Luật Lao động Việt Nam giờ làm việc tối đa là 8 giờ/ngày và 48 giờ/tuần. 6 ngày × 9 giờ = 54 giờ, vượt quá giới hạn quy định. Nếu công ty áp dụng, phải tính lương làm thêm và tuân thủ các quy định về giờ làm việc.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          105
+        ],
+        "judge_score": 5,
+        "latency_s": 7.62,
+        "interrupted": false
+      },
+      {
+        "id": "d022",
+        "loai": "tinh_huong",
+        "answer": "Theo Luật Lao động Việt Nam, khi làm thêm giờ vào ngày Tết Dương lịch (ngày lễ được nghỉ hưởng nguyên lương), bạn được trả ít nhất **200%** mức lương bình thường.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          98
+        ],
+        "judge_score": 1,
+        "latency_s": 7.03,
+        "interrupted": false
+      },
+      {
+        "id": "d023",
+        "loai": "tinh_huong",
+        "answer": "Theo Luật Lao động Việt Nam, ngày phép năm được tính khi đã làm việc ít nhất 12 tháng. Với 8 tháng làm việc, bạn không được hưởng ngày phép năm.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          113
+        ],
+        "judge_score": 1,
+        "latency_s": 7.69,
+        "interrupted": false
+      },
+      {
+        "id": "d024",
+        "loai": "tinh_huong",
+        "answer": "Theo Luật Lao động Việt Nam, một công ty có thể sa thải nhân viên vì vi phạm nghiêm trọng, trong đó có việc đánh bạc trong giờ làm việc, nếu:\n\n1. **Có bằng chứng rõ ràng**: Công ty phải có tài liệu, chứng cứ chứng minh hành vi của bạn (ví dụ: ghi âm, video, lời khai nhân viên khác, v.v.).\n2. **Tuân thủ thủ tục**: Công ty phải thực hiện đúng quy trình sa thải: thông báo, lắng nghe phản hồi, ghi nhận biên bản, và cấp giấy tờ sa thải.\n3. **Đánh giá mức độ vi phạm**: Việc đánh bạc trong giờ làm việc thường được coi là vi phạm nghiêm trọng, có thể dẫn đến sa thải ngay lập tức nếu không có điều kiện giảm nhẹ.\n\nNếu công ty không tuân thủ thủ tục hoặc không có bằng chứng đủ mạnh, bạn có thể khởi kiện để bảo vệ quyền lợi. Tuy nhiên, quyết định cuối cùng phụ thuộc vào từng trường hợp cụ thể và quyết định của tòa án.\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          125
+        ],
+        "judge_score": 5,
+        "latency_s": 11.89,
+        "interrupted": false
+      },
+      {
+        "id": "d025",
+        "loai": "tinh_huong",
+        "answer": "Theo quy định của Luật Lao động Việt Nam, hành động kỷ luật có thể được xóa bỏ sau 3 năm nếu không có vi phạm tiếp theo, nhưng người sử dụng lao động vẫn có thể giữ hồ sơ. Vì vậy, nếu đã 4 tháng qua và không tái phạm, bạn có thể yêu cầu xóa hồ sơ, nhưng quyết định cuối cùng thuộc về nhà tuyển dụng.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          126
+        ],
+        "judge_score": 1,
+        "latency_s": 7.28,
+        "interrupted": false
+      },
+      {
+        "id": "d026",
+        "loai": "tinh_huong",
+        "answer": "Theo Luật Lao động Việt Nam, hợp đồng lao động phải được lập thành văn bản. Nếu mức lương chỉ được thoả thuận miệng mà không ghi rõ trong văn bản, hợp đồng vẫn có thể được công nhận nếu có bằng chứng chứng minh thoả thuận đó, nhưng việc thiếu ghi rõ mức lương trong văn bản làm tăng rủi ro khi thực thi và có thể dẫn đến tranh chấp khó giải quyết.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          21
+        ],
+        "judge_score": 1,
+        "latency_s": 7.28,
+        "interrupted": false
+      },
+      {
+        "id": "d027",
+        "loai": "tinh_huong",
+        "answer": "Theo Luật Lao động Việt Nam, người lao động phải được nghỉ tối thiểu 1 ngày trong 7 ngày. Nếu công ty không cho nghỉ ngày nào trong tuần, đó là vi phạm quy định về thời gian nghỉ. Ngoài ra, giờ làm việc tối đa là 8 giờ/ngày và 48 giờ/tuần; nếu vượt quá, phải được trả tiền làm thêm.  \n\n**Noi dung chi mang tinh tham khao, khong thay the tu van phap ly.**",
+        "cited_dieu": [],
+        "truth_dieu": [
+          111
+        ],
+        "judge_score": 5,
+        "latency_s": 8.44,
+        "interrupted": false
+      },
+      {
+        "id": "d028",
+        "loai": "nhieu_dieu",
+        "answer": "Theo Luật Lao động Việt Nam, trợ cấp thôi việc (trợ cấp thôi việc) chỉ được trả khi nhà tuyển dụng chấm dứt hợp đồng lao động. Khi bạn tự ý nghỉ việc và đã thông báo trước 45 ngày theo hợp đồng không xác định thời hạn, bạn không được hưởng trợ cấp thôi việc. Bạn chỉ được thanh toán lương cuối cùng, tiền nghỉ phép chưa sử dụng và các khoản thanh toán khác theo quy định.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          34,
+          35,
+          46
+        ],
+        "judge_score": 1,
+        "latency_s": 7.53,
+        "interrupted": false
+      },
+      {
+        "id": "d029",
+        "loai": "nhieu_dieu",
+        "answer": "Nếu bạn tự ý nghỉ việc ngay lập tức mà không báo trước và không thuộc trường hợp được miễn báo trước, theo Luật Lao động Việt Nam bạn có thể mất quyền lợi sau:\n\n1. **Tiền trợ cấp thôi việc (severance pay)** – Bạn sẽ không được hưởng tiền trợ cấp thôi việc vì đã không báo trước.  \n2. **Tiền công và các khoản khấu trừ** – Người sử dụng lao động có thể khấu trừ tiền công chưa thanh toán hoặc các khoản khác từ tiền cuối cùng của bạn.  \n3. **Chứng nhận công việc** – Bạn vẫn có thể yêu cầu nhận chứng nhận công việc, nhưng nếu công ty không đồng ý, bạn có thể cần thực hiện thủ tục pháp lý.\n\n**Noi dung chi mang tinh tham khao, khong thay the tu van phap ly.**",
+        "cited_dieu": [],
+        "truth_dieu": [
+          35,
+          40
+        ],
+        "judge_score": 3,
+        "latency_s": 7.2,
+        "interrupted": false
+      },
+      {
+        "id": "d030",
+        "loai": "nhieu_dieu",
+        "answer": "Theo Luật Lao động Việt Nam, khi công ty giải thể (chấm dứt hoạt động) và bạn đã làm việc liên tục 3 năm, bạn có quyền nhận:\n\n1. **Trợ cấp thôi việc**: 1 tháng lương cho mỗi năm công tác (tổng 3 tháng lương).  \n2. **Trợ cấp nghỉ phép chưa sử dụng**: tiền lương tương ứng với số ngày nghỉ phép chưa được hưởng.  \n3. **Tiền lương chưa trả**: bao gồm lương, phụ cấp, tiền thưởng, và các khoản đã nợ khác.  \n4. **Bảo hiểm xã hội**: công ty phải chuyển giao đầy đủ hồ sơ bảo hiểm xã hội cho bạn.  \n5. **Hỗ trợ tìm việc**: nếu bạn đăng ký thất nghiệp, có thể được hưởng trợ cấp thất nghiệp theo quy định của Bộ Lao động.\n\nNếu công ty được thanh lý, bạn sẽ được xem như là nhân viên của đơn vị thanh lý và sẽ nhận các khoản trợ cấp tương tự như trên.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          34,
+          46
+        ],
+        "judge_score": 2,
+        "latency_s": 7.36,
+        "interrupted": false
+      },
+      {
+        "id": "d031",
+        "loai": "nhieu_dieu",
+        "answer": "Theo Luật Lao động Việt Nam (đặc biệt là Điều 61), khi công ty thay đổi công nghệ và cắt giảm nhân sự mà không vi phạm quy định của bạn, bạn được hưởng:\n\n| Khoản | Nội dung | Điều kiện |\n|-------|----------|-----------|\n| **Tiền trợ cấp thôi việc** | 1 tháng lương cho mỗi năm công tác (đến tối đa 12 tháng). | Công ty chấm dứt hợp đồng vì lý do công ty. |\n| **Tiền lương thông báo** | 1 tháng lương nếu công ty không thông báo trước 30 ngày. | Nếu không có thời gian thông báo. |\n| **Tiền nghỉ phép chưa sử dụng** | Lương tương ứng với số ngày nghỉ phép chưa được hưởng. | Khi thôi việc. |\n| **Tiền lương chưa trả** | Lương, phụ cấp, thưởng, bảo hiểm xã hội chưa được thanh toán. | Khi thôi việc. |\n\nNếu công ty đang trong tình trạng thanh lý hoặc phá sản, bạn còn có thể được hưởng **tiền trợ cấp thanh lý** theo quy định của Luật Thanh lý và Phá sản.\n\n> **Lưu ý:** Nội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          61
+        ],
+        "truth_dieu": [
+          34,
+          42,
+          47
+        ],
+        "judge_score": 5,
+        "latency_s": 8.35,
+        "interrupted": false
+      },
+      {
+        "id": "d032",
+        "loai": "nhieu_dieu",
+        "answer": "Theo Luật Lao động Việt Nam, hợp đồng lao động xác định thời hạn (24 tháng) không thể chấm dứt một cách đơn phương khi chưa hết thời hạn, trừ khi có lý do hợp pháp được quy định trong hợp đồng hoặc pháp luật (ví dụ: vi phạm nghiêm trọng, không thể thực hiện công việc, hoặc có thỏa thuận chấm dứt hợp đồng).  \n\nNếu công ty chấm dứt hợp đồng mà không có lý do hợp pháp, hành động đó vi phạm pháp luật. Công ty phải:  \n\n1. **Thông báo** cho người lao động bằng văn bản, nêu rõ lý do và thời hạn chấm dứt.  \n2. **Thanh toán** tiền công, tiền thưởng (nếu có) và các khoản bồi thường theo quy định (thường là 1–3 tháng lương, tùy theo thời gian làm việc và điều kiện trong hợp đồng).  \n3. **Cấp giấy tờ** xác nhận chấm dứt hợp đồng và các giấy tờ liên quan (giấy tờ công việc, chứng nhận công tác, v.v.).  \n\nNếu công ty không thực hiện các bước trên, người lao động có thể khiếu nại tới cơ quan công an lao động hoặc khởi kiện tòa án.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          36,
+          39,
+          41
+        ],
+        "judge_score": 3,
+        "latency_s": 8.08,
+        "interrupted": false
+      },
+      {
+        "id": "d033",
+        "loai": "nhieu_dieu",
+        "answer": "Việc chấm dứt hợp đồng vì “năng suất giảm do phải chăm con” là không hợp pháp theo Luật Lao động Việt Nam. Luật cấm sa thải người lao động vì lý do liên quan đến thai sản, chăm sóc con, và yêu cầu doanh nghiệp phải bảo đảm quyền lợi của người lao động trong trường hợp này.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          36,
+          137
+        ],
+        "judge_score": 5,
+        "latency_s": 7.59,
+        "interrupted": false
+      },
+      {
+        "id": "d034",
+        "loai": "nhieu_dieu",
+        "answer": "Theo Luật Lao động Việt Nam, thời gian làm việc tối đa liên tục là 8 giờ/ngày và 48 giờ/tuần. Nếu bạn làm 7 giờ liên tục thì không vượt quá giới hạn này. Tuy nhiên, theo quy định, sau mỗi 4 giờ làm việc phải có thời gian nghỉ ít nhất 1 giờ, và phải có ngày nghỉ ít nhất 1 ngày/tuần. Nếu công ty không cung cấp thời gian nghỉ giữa ca hoặc không cho phép nghỉ ngày, thì có thể vi phạm quy định về thời gian làm việc và nghỉ ngơi.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          105,
+          109
+        ],
+        "judge_score": 3,
+        "latency_s": 7.55,
+        "interrupted": false
+      },
+      {
+        "id": "d035",
+        "loai": "nhieu_dieu",
+        "answer": "Theo Luật Lao động Việt Nam, mức lương tối thiểu theo vùng được điều chỉnh hàng năm.  \n- **Vùng II (đối với năm 2024)**: 4 400 000 đồng/tháng.  \n- **Vùng II (đối với năm 2023)**: 4 200 000 đồng/tháng.\n\nNếu hợp đồng của bạn được ký vào năm 2024, mức lương 4 200 000 đồng/tháng sẽ thấp hơn mức lương tối thiểu và có thể không tuân thủ quy định. Nếu hợp đồng là năm 2023, mức lương đó đúng với mức tối thiểu. Bạn nên kiểm tra ngày ký hợp đồng và so sánh với mức lương tối thiểu áp dụng trong năm đó để xác định tính hợp pháp.\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          3,
+          90
+        ],
+        "judge_score": 3,
+        "latency_s": 8.17,
+        "interrupted": false
+      },
+      {
+        "id": "d036",
+        "loai": "ngoai_pham_vi",
+        "answer": "**Thủ tục ly hôn tại Việt Nam (tóm tắt):**\n\n| Kiểu ly hôn | Các bước chính |\n|-------------|----------------|\n| **Ly hôn bằng thỏa thuận** | 1. Hai vợ chồng ký thỏa thuận ly hôn.<br>2. Chuẩn bị hồ sơ: giấy khai sinh, chứng minh nhân dân, giấy đăng ký kết hôn, thỏa thuận tài sản, nuôi con (nếu có).<br>3. Nộp hồ sơ tại Tòa án Nhân dân quận/huyện nơi cư trú.<br>4. Tòa án xét duyệt và ra quyết định ly hôn.<br>5. Đăng ký kết quả tại Sở Tư pháp. |\n| **Ly hôn bằng tòa án (không thống nhất)** | 1. Nộp đơn khởi kiện ly hôn (đơn, giấy khai sinh, chứng minh nhân dân, giấy đăng ký kết hôn, tài liệu chứng minh tranh chấp).<br>2. Tòa án điều trần, tổ chức phiên tòa.<br>3. Tòa án xét xử, ra quyết định ly hôn (đối với tranh chấp tài sản, nuôi con).<br>4. Đăng ký kết quả tại Sở Tư pháp. |\n\n**Lưu ý:**  \n- Thời gian xét duyệt thường từ 30–90 ngày tùy trường hợp.  \n- Nếu có con, cần quyết định nuôi dưỡng, hỗ trợ chi phí.  \n- Sau khi tòa án ra quyết định, kết quả được đăng ký tại Sở Tư pháp để có hiệu lực pháp lý.\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [],
+        "judge_score": 1,
+        "latency_s": 8.62,
+        "interrupted": false
+      },
+      {
+        "id": "d037",
+        "loai": "ngoai_pham_vi",
+        "answer": "Để khởi kiện hàng xóm vì lấn chiếm đất, bạn cần thực hiện các bước sau:\n\n1. **Thu thập chứng cứ**  \n   - Bản sao giấy đăng ký đất đai (đăng ký quyền sử dụng đất, quyền sở hữu).  \n   - Hình ảnh, bản vẽ, bản đồ hiện trạng, giấy tờ chứng minh vị trí lấn chiếm.  \n   - Biên bản ghi nhận sự việc (nếu có).  \n   - Thư từ, thông báo, hoặc bất kỳ tài liệu nào chứng minh mối quan hệ pháp lý.\n\n2. **Thử nghiệm hòa giải**  \n   - Gửi thư yêu cầu giải quyết hòa bình (điều 70 Luật Tố tụng dân sự).  \n   - Nếu không thành công, tiếp tục với thủ tục tố tụng.\n\n3. **Nộp đơn khởi kiện**  \n   - Đơn khởi kiện (điều 71 Luật Tố tụng dân sự).  \n   - Phụ lục: bản sao giấy đăng ký đất, chứng cứ, biên bản hòa giải (nếu có).  \n   - Nộp tại tòa án có thẩm quyền (tòa án quận/huyện nơi bị lấn chiếm).\n\n4. **Quá trình tố tụng**  \n   - Tòa án xem xét, ra quyết định nhận vụ.  \n   - Hai bên trình bày, cung cấp chứng cứ, tham gia phiên tòa.  \n   - Tòa án ra phán quyết (định mức bồi thường, lệnh rút lấn chiếm, v.v.).\n\n5. **Hành động sau phán quyết**  \n   - Nếu phán quyết có lợi, thực hiện theo quyết định.  \n   - Nếu không hài lòng, có thể kháng cáo (điều 73 Luật Tố tụng dân sự).\n\n**Lưu ý**:  \n- Đối với tranh chấp đất đai, tòa án thường là tòa án quận/huyện nơi bị lấn chiếm.  \n- Nếu tranh chấp liên quan đến quyền sử dụng đất, bạn cần có giấy đăng ký quyền sử dụng đất hợp lệ.  \n- Việc tham khảo ý kiến luật sư chuyên về luật đất đai sẽ giúp bạn chuẩn bị hồ sơ chính xác và tăng cơ hội thành công.\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [],
+        "judge_score": 5,
+        "latency_s": 9.09,
+        "interrupted": false
+      },
+      {
+        "id": "d038",
+        "loai": "ngoai_pham_vi",
+        "answer": "Thuế thu nhập cá nhân (TNCN) năm nay được tính theo biểu thuế lũy tiến từng phần:  \n- 5 % cho thu nhập chịu thuế từ 0 đến 5 một triệu đồng;  \n- 10 % cho 5 một triệu – 10 một triệu;  \n- 15 % cho 10 một triệu – 18 một triệu;  \n- 20 % cho 18 một triệu – 32 một triệu;  \n- 25 % cho 32 một triệu – 52 một triệu;  \n- 30 % cho 52 một triệu – 80 một triệu;  \n- 35 % cho trên 80 một triệu.  \n\nThu nhập chịu thuế = thu nhập trước thuế – các khoản giảm trừ (giảm trừ gia cảnh, chi phí hợp lý, các khoản giảm trừ khác).  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [],
+        "judge_score": 1,
+        "latency_s": 6.8,
+        "interrupted": false
+      },
+      {
+        "id": "d039",
+        "loai": "ngoai_pham_vi",
+        "answer": "Bạn có thể khiếu nại bằng cách:\n\n1. **Thu thập tài liệu**: Bản sao biên bản phạt, hình ảnh, chứng cứ liên quan.  \n2. **Nộp đơn khiếu nại**:  \n   - Đi trực tiếp tới cơ quan công an nơi đã phạt và nộp đơn bằng văn bản (định dạng mẫu “Đơn khiếu nại vi phạm giao thông”).  \n   - Hoặc nộp qua cổng điện tử “e-traffic” (https://e-traffic.gov.vn) nếu cơ quan hỗ trợ.  \n3. **Theo dõi hồ sơ**: Sau khi nộp, cơ quan sẽ xem xét và trả lời trong vòng 15–30 ngày.  \n4. **Nếu không hài lòng**: Bạn có thể nộp đơn kháng cáo lên cấp trên (Cục giao thông, Bộ Giao thông vận tải) hoặc yêu cầu xét xử tại tòa án.\n\nLưu ý: Đảm bảo nộp đầy đủ giấy tờ và giữ bản sao của mọi tài liệu.\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [],
+        "judge_score": 5,
+        "latency_s": 11.37,
+        "interrupted": false
+      },
+      {
+        "id": "d040",
+        "loai": "ngoai_pham_vi",
+        "answer": "**Thủ tục đăng ký kết hôn với người nước ngoài (đối với công dân Việt Nam)**  \n\n| Tài liệu | Nội dung | Ghi chú |\n|----------|----------|---------|\n| 1. Hộ chiếu (đối với cả hai bên) | Giấy tờ chứng minh danh tính, quốc tịch | |\n| 2. Giấy khai sinh | Chứng minh ngày, nơi sinh | |\n| 3. Giấy chứng nhận tình trạng hôn nhân (Certificate of No Impediment / Single Status) | Xác nhận chưa kết hôn hoặc đã ly hôn / tử vong | Đối với người nước ngoài phải có bản dịch tiếng Việt, công chứng |\n| 4. Giấy chứng nhận ly hôn hoặc giấy tử vong (nếu đã từng kết hôn) | Xác nhận tình trạng hôn nhân trước | |\n| 5. Giấy xác nhận cư trú (nếu cư trú tại Việt Nam) | Địa chỉ, thời gian cư trú | |\n| 6. Đơn đăng ký kết hôn | Điền đầy đủ thông tin, ký tên | |\n| 7. Bản dịch tiếng Việt (đối với tài liệu nước ngoài) | Được công chứng, xác nhận | |\n| 8. Giấy xác nhận không có tội phạm (nếu yêu cầu) | | |\n\n**Quy trình:**\n\n1. Chuẩn bị đầy đủ tài liệu trên.  \n2. Đăng ký tại Sở Tư pháp (hoặc Phòng Đăng ký chính quyền địa phương) nơi cư trú.  \n3. Nộp hồ sơ, chờ xét duyệt (thường 1–2 tuần).  \n4. Khi được duyệt, nhận giấy chứng nhận đăng ký kết hôn và tiến hành lễ cưới.\n\n> *Noi dung chi mang tinh tham khao, khong thay the tu van phap ly.*",
+        "cited_dieu": [],
+        "truth_dieu": [],
+        "judge_score": 5,
+        "latency_s": 8.52,
+        "interrupted": false
+      }
+    ]
+  },
+  "v1": {
+    "citation_precision": 0.6195652173913044,
+    "citation_recall": 0.5714285714285714,
+    "avg_judge_score": 2.475,
+    "refusal_accuracy": 0.2,
+    "latency_p50_s": 14.56,
+    "latency_p95_s": 30.84,
+    "n": 40,
+    "per_item": [
+      {
+        "id": "d001",
+        "loai": "tra_cuu",
+        "answer": "không tìm thấy cán cục  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          25
+        ],
+        "judge_score": 1,
+        "latency_s": 32.12,
+        "interrupted": false
+      },
+      {
+        "id": "d002",
+        "loai": "tra_cuu",
+        "answer": "[Điều 26, Bộ luật Lao động 2019]  \nTiền lương thử việc phải ít nhất bằng 85 % mức lương chính thức.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          26
+        ],
+        "truth_dieu": [
+          26
+        ],
+        "judge_score": 5,
+        "latency_s": 9.02,
+        "interrupted": false
+      },
+      {
+        "id": "d003",
+        "loai": "tra_cuu",
+        "answer": "không tìm thấy căn cứ\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          27
+        ],
+        "judge_score": 1,
+        "latency_s": 9.15,
+        "interrupted": false
+      },
+      {
+        "id": "d004",
+        "loai": "tra_cuu",
+        "answer": "Thời giờ làm việc bình thường tối đa là **08 giờ mỗi ngày** và **48 giờ mỗi tuần**.  \nNếu người sử dụng lao động áp dụng quy định theo tuần, thời giờ làm việc bình thường không quá **10 giờ mỗi ngày** và vẫn giới hạn 48 giờ mỗi tuần.  \n\n**Căn cứ:**\n\n- [Điều 105, Bộ luật Lao động 2019] – Thời giờ làm việc bình thường không quá 08 giờ trong 01 ngày và không quá 48 giờ trong 01 tuần.  \n- [Điều 105, Bộ luật Lao động 2019] – Khi quy định theo tuần, thời giờ làm việc bình thường không quá 10 giờ trong 01 ngày và không quá 48 giờ trong 01 tuần.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          105
+        ],
+        "truth_dieu": [
+          105
+        ],
+        "judge_score": 5,
+        "latency_s": 9.61,
+        "interrupted": false
+      },
+      {
+        "id": "d005",
+        "loai": "tra_cuu",
+        "answer": "Làm thêm giờ vào ngày thường được trả lương ít nhất bằng **150%** của tiền lương giờ thực trả của công việc đang làm.  \n[Điều 98, Bộ luật Lao động 2019]  \n[Điều 55, Nghị định 145/2020/NĐ-CP]  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          55,
+          98
+        ],
+        "truth_dieu": [
+          98
+        ],
+        "judge_score": 5,
+        "latency_s": 11.03,
+        "interrupted": false
+      },
+      {
+        "id": "d006",
+        "loai": "tra_cuu",
+        "answer": "[Điều 113, Bộ luật Lao động 2019]  \nNgười lao động làm đủ 12 tháng trong điều kiện lao động bình thường được nghỉ phép năm **12 ngày**.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          113
+        ],
+        "truth_dieu": [
+          113
+        ],
+        "judge_score": 5,
+        "latency_s": 10.18,
+        "interrupted": false
+      },
+      {
+        "id": "d007",
+        "loai": "tra_cuu",
+        "answer": "Người lao động được cộng thêm 1 ngày phép năm **mỗi 5 năm làm việc** cho một người sử dụng lao động.  \n[Điều 114, Bộ luật Lao động 2019]  \n[Điều 113, Bộ luật Lao động 2019]  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          113,
+          114
+        ],
+        "truth_dieu": [
+          114
+        ],
+        "judge_score": 5,
+        "latency_s": 8.09,
+        "interrupted": false
+      },
+      {
+        "id": "d008",
+        "loai": "tra_cuu",
+        "answer": "không tìm thấy cán cục\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          112
+        ],
+        "judge_score": 1,
+        "latency_s": 10.48,
+        "interrupted": false
+      },
+      {
+        "id": "d009",
+        "loai": "tra_cuu",
+        "answer": "[Điều 111, Bộ luật Lao động 2019]  \nMỗi tuần, người lao động được nghỉ ít nhất **24 giờ liên tục**.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          111
+        ],
+        "truth_dieu": [
+          111
+        ],
+        "judge_score": 4,
+        "latency_s": 8.99,
+        "interrupted": false
+      },
+      {
+        "id": "d010",
+        "loai": "tra_cuu",
+        "answer": "không tìm thấy cán cục\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          124
+        ],
+        "judge_score": 1,
+        "latency_s": 8.86,
+        "interrupted": false
+      },
+      {
+        "id": "d011",
+        "loai": "tra_cuu",
+        "answer": "Mức lương tối thiểu Vùng I hiện nay (áp dụng từ 01/01/2026) là **5 310 000 đồng/tháng** (tương đương 25 500 đồng/giờ).\n\n[Điều 3, Nghị định 293/2025/NĐ‑CP]  \n[Điều 5, Nghị định 293/2025/NĐ‑CP]  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          3,
+          5
+        ],
+        "truth_dieu": [
+          3
+        ],
+        "judge_score": 5,
+        "latency_s": 13.18,
+        "interrupted": false
+      },
+      {
+        "id": "d012",
+        "loai": "tra_cuu",
+        "answer": "Không tìm thấy căn cứ.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          47
+        ],
+        "judge_score": 1,
+        "latency_s": 11.59,
+        "interrupted": false
+      },
+      {
+        "id": "d013",
+        "loai": "tra_cuu",
+        "answer": "không tìm thấy căn cứ.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          35
+        ],
+        "judge_score": 1,
+        "latency_s": 24.84,
+        "interrupted": false
+      },
+      {
+        "id": "d014",
+        "loai": "tra_cuu",
+        "answer": "không tìm thấy cán cục [Điều 21, Bộ luật Lao động 2019]  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          21
+        ],
+        "truth_dieu": [
+          21
+        ],
+        "judge_score": 1,
+        "latency_s": 18.9,
+        "interrupted": false
+      },
+      {
+        "id": "d015",
+        "loai": "tra_cuu",
+        "answer": "Theo quy định tại **ND145_2020_D8_K3**, thời gian làm việc để tính trợ cấp thôi việc, trợ cấp mất việc làm được tính theo năm (đủ 12 tháng). Khi thời gian làm việc có tháng lẻ, cách tính như sau:  \n\n- Nếu tháng lẻ ≤ 06 tháng, tính bằng **1/2 năm**.  \n- Nếu tháng lẻ > 06 tháng, tính bằng **01 năm** làm việc.  \n\n[ND145_2020_D8_K3, Điều 8 Khoản 3]  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          8
+        ],
+        "truth_dieu": [
+          8
+        ],
+        "judge_score": 5,
+        "latency_s": 24.78,
+        "interrupted": false
+      },
+      {
+        "id": "d016",
+        "loai": "tinh_huong",
+        "answer": "không tìm thấy căn cứ  \n[Điều 25, Bộ luật Lao động 2019]  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          25
+        ],
+        "truth_dieu": [
+          25
+        ],
+        "judge_score": 1,
+        "latency_s": 11.61,
+        "interrupted": false
+      },
+      {
+        "id": "d017",
+        "loai": "tinh_huong",
+        "answer": "Theo Điều 25 Bộ luật Lao động 2019, thời gian thử việc cho công việc phổ thông, không yêu cầu bằng cấp (công việc “khác”) được quy định là **không quá 06 ngày làm việc**.  \nDo đó, yêu cầu thử việc 15 ngày làm việc vượt quá giới hạn quy định và không hợp pháp.  \n\n[Điều 25, BLLD2019_D25_K0]  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          25
+        ],
+        "truth_dieu": [
+          25
+        ],
+        "judge_score": 5,
+        "latency_s": 14.8,
+        "interrupted": false
+      },
+      {
+        "id": "d018",
+        "loai": "tinh_huong",
+        "answer": "Không tìm thấy can cu.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          25
+        ],
+        "judge_score": 1,
+        "latency_s": 22.9,
+        "interrupted": false
+      },
+      {
+        "id": "d019",
+        "loai": "tinh_huong",
+        "answer": "Không tìm thấy can cu.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          26
+        ],
+        "judge_score": 1,
+        "latency_s": 11.3,
+        "interrupted": false
+      },
+      {
+        "id": "d020",
+        "loai": "tinh_huong",
+        "answer": "không tìm thấy can cu\n\n[Điều 109, Bộ luật Lao động 2019]  \n[Điều 64, Nghị định 145/2020/NĐ-CP]  \n[Điều 63, Nghị định 145/2020/NĐ-CP]  \n[Điều 58, Nghị định 145/2020/NĐ-CP]  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          58,
+          63,
+          64,
+          109
+        ],
+        "truth_dieu": [
+          109
+        ],
+        "judge_score": 1,
+        "latency_s": 16.74,
+        "interrupted": false
+      },
+      {
+        "id": "d021",
+        "loai": "tinh_huong",
+        "answer": "Không tìm thấy can cu.  \n\n[Điều 105, Bộ luật Lao động 2019]  \n[Điều 107, Bộ luật Lao động 2019]  \n[Điều 69, Nghị định 145/2020/NĐ-CP]  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          69,
+          105,
+          107
+        ],
+        "truth_dieu": [
+          105
+        ],
+        "judge_score": 1,
+        "latency_s": 17.8,
+        "interrupted": false
+      },
+      {
+        "id": "d022",
+        "loai": "tinh_huong",
+        "answer": "Bạn được trả thêm **ít nhất 300 %** tiền lương giờ thực trả của công việc đang làm khi làm thêm giờ vào ngày lễ (Tết Dương lịch) – mức này áp dụng cho giờ làm thêm vào ngày nghỉ lễ, tết, ngày nghỉ có hưởng lương, chưa kể tiền lương ngày lễ, tết, ngày nghỉ có hưởng lương đối với người lao động hưởng lương ngày.  \n\n[Điều 98, Bộ luật Lao động 2019]  \n[Điều 55, Nghị định 145/2020/NĐ-CP]  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          55,
+          98
+        ],
+        "truth_dieu": [
+          98
+        ],
+        "judge_score": 5,
+        "latency_s": 20.24,
+        "interrupted": false
+      },
+      {
+        "id": "d023",
+        "loai": "tinh_huong",
+        "answer": "Không tìm thấy căn cứ.  \n\n[Điều 113, Bộ luật Lao động 2019]  \n[Điều 66, Nghị định 145/2020/NĐ-CP]  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          66,
+          113
+        ],
+        "truth_dieu": [
+          113
+        ],
+        "judge_score": 1,
+        "latency_s": 14.05,
+        "interrupted": false
+      },
+      {
+        "id": "d024",
+        "loai": "tinh_huong",
+        "answer": "Công ty có thể sa thải bạn vì hành vi đánh bạc trong giờ làm việc tại nơi làm việc, vì điều này nằm trong danh sách các hành vi được quy định là lý do sa thải theo pháp luật lao động Việt Nam.\n\n**Cơ sở pháp lý:**\n\n- [Điều 125, Bộ luật Lao động 2019] – “Người lao động có hành vi đánh bạc” là một trong những trường hợp được người sử dụng lao động áp dụng hình thức xử lý kỷ luật sa thải.  \n- [Điều 8, Bộ luật Lao động 2019] – “Quấy rối tình dục tại nơi làm việc” và các hành vi vi phạm nghiêm cấm khác được liệt kê, trong đó “đánh bạc” được xem là hành vi vi phạm nghiêm cấm trong giờ làm việc.  \n- [Điều 127, Bộ luật Lao động 2019] – Xác định các hành vi bị nghiêm cấm khi xử lý kỷ luật lao động, trong đó “đánh bạc” thuộc phạm vi hành vi vi phạm không được quy định trong nội quy lao động hoặc hợp đồng lao động.  \n\n**Điều kiện thực hiện:**\n\n- Công ty phải tuân thủ thủ tục, quy trình xử lý kỷ luật sa thải theo quy định tại Điều 124, 125, 127 của Bộ luật Lao động.  \n- Nếu công ty đã thực hiện đầy đủ các bước (thông báo, ghi nhận vi phạm, cho phép lao động khẳng định, v.v.) thì quyết định sa thải là hợp pháp.  \n\n**Kết luận:**  \nVì hành vi đánh bạc trong giờ làm việc thuộc danh sách lý do sa thải theo Điều 125, việc sa thải của công ty là đúng luật, miễn là công ty đã tuân thủ thủ tục pháp lý quy định.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          8,
+          124,
+          125,
+          127
+        ],
+        "truth_dieu": [
+          125
+        ],
+        "judge_score": 5,
+        "latency_s": 17.14,
+        "interrupted": false
+      },
+      {
+        "id": "d025",
+        "loai": "tinh_huong",
+        "answer": "[Điều 126, Bộ luật Lao động 2019]  \nTheo quy định này, người lao động bị khiển trách trong vòng 3 tháng, nếu không tiếp tục vi phạm, kỷ luật sẽ được xóa. Vì bạn đã bị khiển trách cách đây 4 tháng và chưa tái phạm, kỷ luật của bạn đã được xóa theo quy định pháp luật.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          126
+        ],
+        "truth_dieu": [
+          126
+        ],
+        "judge_score": 5,
+        "latency_s": 13.58,
+        "interrupted": false
+      },
+      {
+        "id": "d026",
+        "loai": "tinh_huong",
+        "answer": "Không tìm thấy can cu. [Điều 13, Bộ luật Lao động 2019]  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          13
+        ],
+        "truth_dieu": [
+          21
+        ],
+        "judge_score": 1,
+        "latency_s": 14.56,
+        "interrupted": false
+      },
+      {
+        "id": "d027",
+        "loai": "tinh_huong",
+        "answer": "không tìm thấy cán cục\n\n[Dieu 111, BLLD2019_D111_K0]  \n[Dieu 89, ND145_2020_D89_K3]  \n[Dieu 105, BLLD2019_D105_K0]  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          111
+        ],
+        "judge_score": 1,
+        "latency_s": 19.63,
+        "interrupted": false
+      },
+      {
+        "id": "d028",
+        "loai": "nhieu_dieu",
+        "answer": "không tìm thấy cán cục\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          34,
+          35,
+          46
+        ],
+        "judge_score": 1,
+        "latency_s": 23.0,
+        "interrupted": false
+      },
+      {
+        "id": "d029",
+        "loai": "nhieu_dieu",
+        "answer": "Không tìm thấy can cu.  \n\n[Điều 35, Bộ luật Lao động 2019]  \n[Điều 36, Bộ luật Lao động 2019]  \n[Điều 40, Bộ luật Lao động 2019]  \n[Điều 89, Nghị định 145/2020/NĐ-CP]  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          35,
+          36,
+          40,
+          89
+        ],
+        "truth_dieu": [
+          35,
+          40
+        ],
+        "judge_score": 1,
+        "latency_s": 19.87,
+        "interrupted": false
+      },
+      {
+        "id": "d030",
+        "loai": "nhieu_dieu",
+        "answer": "không tìm thấy cán cục\n\n[Dieu X, ND145_2020_D8_K1]  \n[Dieu X, BLLD2019_D46_K0]  \n[Dieu X, BLLD2019_D47_K0]  \n[Dieu X, ND145_2020_D8_K4]  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          34,
+          46
+        ],
+        "judge_score": 1,
+        "latency_s": 20.09,
+        "interrupted": false
+      },
+      {
+        "id": "d031",
+        "loai": "nhieu_dieu",
+        "answer": "không tìm thấy cán cục\n\n[Điều 42, Bộ luật Lao động 2019]  \n[Điều 99, Bộ luật Lao động 2019]  \n[Điều 102, Bộ luật Lao động 2019]  \n[Điều 8 Khoản 4, Nghị định 145/2020/NĐ-CP]\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          8,
+          42,
+          99,
+          102
+        ],
+        "truth_dieu": [
+          34,
+          42,
+          47
+        ],
+        "judge_score": 1,
+        "latency_s": 16.7,
+        "interrupted": false
+      },
+      {
+        "id": "d032",
+        "loai": "nhieu_dieu",
+        "answer": "Không tìm thấy can cu.  \n\n[Điều 36, Bộ luật Lao động 2019]  \n[Điều 37, Bộ luật Lao động 2019]  \n[Điều 41, Bộ luật Lao động 2019]  \n[Điều 48, Bộ luật Lao động 2019]  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          36,
+          37,
+          41,
+          48
+        ],
+        "truth_dieu": [
+          36,
+          39,
+          41
+        ],
+        "judge_score": 1,
+        "latency_s": 16.93,
+        "interrupted": false
+      },
+      {
+        "id": "d033",
+        "loai": "nhieu_dieu",
+        "answer": "không tìm thấy cán cục\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          36,
+          137
+        ],
+        "judge_score": 1,
+        "latency_s": 17.58,
+        "interrupted": false
+      },
+      {
+        "id": "d034",
+        "loai": "nhieu_dieu",
+        "answer": "Công ty vi phạm quy định về thời giờ làm việc/nghỉ ngơi.  \nTheo **Điều 109, Bộ luật Lao động 2019**: người lao động làm việc theo ca liên tục từ 06:00 trở lên, đặc biệt là ca làm việc ban đêm, phải được nghỉ giữa giờ ít nhất 45 phút liên tục.  \nTheo **Điều 64, Nghị định 145/2020/NĐ-CP**: thời gian nghỉ giữa giờ ít nhất 45 phút liên tục được áp dụng đối với người lao động làm việc từ 06:00 trở lên trong một ngày, trong đó có ít nhất 03 giờ làm việc trong khung giờ làm việc ban đêm.  \nTheo **Điều 63, Nghị định 145/2020/NĐ-CP**: khi làm việc theo ca liên tục, thời gian nghỉ giữa giờ được tính vào giờ làm việc, nhưng vẫn phải đáp ứng yêu cầu tối thiểu 45 phút cho ca ban đêm.  \n\nVì bạn làm việc liên tục 7 giờ ban đêm mà không nghỉ, công ty không đáp ứng yêu cầu nghỉ giữa giờ tối thiểu 45 phút, do đó vi phạm quy định trên.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          63,
+          64,
+          109
+        ],
+        "truth_dieu": [
+          105,
+          109
+        ],
+        "judge_score": 5,
+        "latency_s": 11.16,
+        "interrupted": false
+      },
+      {
+        "id": "d035",
+        "loai": "nhieu_dieu",
+        "answer": "**Nhận định pháp lý**\n\n1. **Điều 3 Nghị định 293/2025/NĐ-CP** quy định mức lương tối thiểu tháng cho Vùng II là **4 730 000 đồng**.  \n   - [ND293_2025_D3_K0] Điều 3. Mức lương tối thiểu tháng (Vùng II: 4 730 000 đồng).\n\n2. **Điều 4 Nghị định 293/2025/NĐ-CP** quy định mức lương tối thiểu tháng là mức lương thấp nhất làm cơ sở để thỏa thuận và trả lương cho người lao động làm việc theo hợp đồng lao động.  \n   - [ND293_2025_D4_K0] Điều 4. Áp dụng mức lương tối thiểu.\n\n3. **Điều 2 Nghị định 293/2025/NĐ-CP** xác định đối tượng áp dụng mức lương tối thiểu là người lao động làm việc theo hợp đồng lao động.  \n   - [ND293_2025_D2_K0] Điều 2. Đối tượng áp dụng.\n\n**Kết luận**  \nVới mức lương theo công việc trong hợp đồng là **4 200 000 đồng/tháng**, mức này **không đạt** mức lương tối thiểu quy định cho Vùng II (4 730 000 đồng). Do đó, hợp đồng của bạn vi phạm quy định về lương tối thiểu và bạn có quyền yêu cầu người sử dụng lao động điều chỉnh lương lên mức tối thiểu hoặc thực hiện các biện pháp bảo vệ quyền lợi theo quy định của Bộ luật Lao động.\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          2,
+          3,
+          4
+        ],
+        "truth_dieu": [
+          3,
+          90
+        ],
+        "judge_score": 5,
+        "latency_s": 13.48,
+        "interrupted": false
+      },
+      {
+        "id": "d036",
+        "loai": "ngoai_pham_vi",
+        "answer": "Không tìm thấy can cu.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [],
+        "judge_score": 5,
+        "latency_s": 24.41,
+        "interrupted": false
+      },
+      {
+        "id": "d037",
+        "loai": "ngoai_pham_vi",
+        "answer": "Không tìm thấy cán cục.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [],
+        "judge_score": 1,
+        "latency_s": 30.84,
+        "interrupted": false
+      },
+      {
+        "id": "d038",
+        "loai": "ngoai_pham_vi",
+        "answer": "Không tìm thấy can cu.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [],
+        "judge_score": 1,
+        "latency_s": 11.5,
+        "interrupted": false
+      },
+      {
+        "id": "d039",
+        "loai": "ngoai_pham_vi",
+        "answer": "Không tìm thấy cán cục.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [],
+        "judge_score": 1,
+        "latency_s": 13.05,
+        "interrupted": false
+      },
+      {
+        "id": "d040",
+        "loai": "ngoai_pham_vi",
+        "answer": "Không tìm thấy căn cứ.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [],
+        "judge_score": 1,
+        "latency_s": 13.05,
+        "interrupted": false
+      }
+    ]
+  }
+}
