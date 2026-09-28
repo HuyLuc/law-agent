@@ -56,6 +56,8 @@ def _stream_graph_events(graph_input, config: dict, thread_id: str):
                 yield _sse("interrupt", payload)
                 return
             step: dict = {"node": node_name}
+            if "evidence" in node_output:
+                step["evidence"] = node_output["evidence"]
             for msg in node_output.get("messages", []):
                 if getattr(msg, "tool_calls", None):
                     step.setdefault("tool_calls", []).extend(
