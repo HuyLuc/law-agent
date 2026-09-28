@@ -530,7 +530,7 @@ Các quy tắc bắt buộc trong system prompt:
 
 🎯 Người khác chạy được, nhà tuyển dụng hiểu dự án trong 2 phút.
 
-#### Buổi 1: FastAPI 💻 `src/api/main.py`
+#### Buổi 1: FastAPI 💻 `src/api/main.py` ✅
 
 | Endpoint | Chức năng |
 |---|---|
@@ -539,10 +539,12 @@ Các quy tắc bắt buộc trong system prompt:
 | `POST /review-contract` | Tải hợp đồng lên và nhận danh sách cảnh báo |
 | `GET /health` | Kiểm tra API, Qdrant và LLM |
 
-#### Buổi 2: Streamlit 💻 `src/ui/app.py`
-- [ ] Khung chat và ô tải hợp đồng lên
-- [ ] **Thanh bên hiển thị các điều luật đã trích** (bấm vào để xem nguyên văn)
-- [ ] Hiển thị các bước agent đã làm (đã gọi công cụ nào). Phần này rất ấn tượng khi demo
+- Đã kiểm tra trực tiếp: `/health` trả `{"api":"ok","qdrant":"ok","llm_configured":true}`, `/openapi.json` xác nhận đủ 4 route.
+
+#### Buổi 2: Streamlit 💻 `src/ui/app.py` ✅
+- [x] Khung chat và ô tải hợp đồng lên
+- [x] **Thanh bên hiển thị các điều luật đã trích** (bấm vào để xem nguyên văn) — cần bổ sung `evidence` vào SSE "step" event trong `main.py` để UI nhận được
+- [x] Hiển thị các bước agent đã làm (đã gọi công cụ nào). Phần này rất ấn tượng khi demo — đã xác nhận bằng ảnh chụp màn hình qua Playwright (cả 2 tab Hỏi đáp + Rà soát hợp đồng), không lỗi runtime
 
 #### Buổi 3: Docker 💻
 - [ ] `docker-compose.yml` gồm 3 service: `qdrant`, `api`, `ui`
