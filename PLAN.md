@@ -576,7 +576,7 @@ Các quy tắc bắt buộc trong system prompt:
 
 Ưu tiên theo thứ tự:
 1. [x] Sửa lỗi, `ruff`, type hints, tăng test coverage — đã thiết lập `pyproject.toml` với bộ rule ruff thật (trước đó dùng mặc định gần như rỗng), sửa hết lỗi phát hiện được, nối `contract_review` (từng là stub) vào logic thật kèm test mock. Type hints hiện đã dùng nhất quán (`str | None` kiểu mới) trong toàn bộ code hiện có nên không cần sửa thêm; tăng coverage cho các module cần Qdrant/LLM thật (retrieval, graph, api) để dành vì cần integration test riêng, chưa làm
-2. [ ] ☁️ `03_onnx_reranker.ipynb`: chuyển reranker sang ONNX INT8, đo **độ trễ trên CPU trước/sau** và Hit@5 (đảm bảo không giảm nhiều)
+2. [x] Chuyển reranker sang ONNX, đo **độ trễ trên CPU trước/sau** và Hit@5 — làm local (không cần Kaggle GPU vì mục tiêu chính là đo tốc độ CPU, môi trường deploy thật) qua `scripts/export_onnx_reranker.py` + `eval/run_onnx_benchmark.py`. Kết quả (`eval/results/onnx_reranker.json`, 15 câu dev, 5 candidate/câu): FlagEmbedding gốc 26.7s/query (Hit@5=0.971, MRR@5=0.914) → **ONNX fp32 12.9s/query (nhanh gấp đôi, Hit@5 và MRR@5 giữ nguyên y hệt)** → ONNX INT8 10.7s/query (nhanh nhất nhưng MRR@5 giảm 0.914→0.871). Đã đổi `RERANKER_BACKEND` mặc định sang `onnx_fp32` (an toàn nhất — không đổi chất lượng), tự fallback về FlagEmbedding nếu chưa chạy script export
 3. [ ] Demo trên Hugging Face Spaces (CPU miễn phí)
 4. [ ] Langfuse Cloud để theo dõi từng lần chạy agent
 5. [ ] Thêm Luật BHXH 2024 và chọn phiên bản luật theo thời gian

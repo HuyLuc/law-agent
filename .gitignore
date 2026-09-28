@@ -8,6 +8,7 @@ kaggle.json
 
 # Data (large / generated)
 data/embeddings/
+data/models/
 
 # Python
 __pycache__/

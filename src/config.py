@@ -19,6 +19,10 @@ class Settings(BaseSettings):
     QDRANT_COLLECTION: str = "labor_law"
     LLM_MODEL: str = "gemini-3.8-flash"
     GROQ_MODEL: str = "openai/gpt-oss-20b"
+    # "flagembedding" (goc, cham nhat) | "onnx_fp32" (nhanh gap doi, cung chat luong,
+    # can chay `python -m scripts.export_onnx_reranker` truoc) | "onnx_int8" (nhanh nhat,
+    # MRR@5 giam nhe). Xem eval/results/onnx_reranker.json va PLAN.md Tuan 6 muc 2.
+    RERANKER_BACKEND: str = "onnx_fp32"
 
     @property
     def gemini_api_keys(self) -> list[str]:

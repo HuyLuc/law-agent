@@ -5,6 +5,8 @@ langchain>=0.3
 langchain-google-genai
 langchain-groq
 FlagEmbedding
+onnxruntime
+optimum[onnxruntime]
 qdrant-client
 ragas==0.4.3
 pydantic>=2

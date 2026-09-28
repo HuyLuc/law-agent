@@ -76,7 +76,7 @@ Trên 10 hợp đồng mẫu tự tạo (2 đúng, 8 có lỗi cài cắm có ch
 
 - **Đánh giá sinh câu trả lời chưa đầy đủ** (xem phần Kết quả ở trên) — cần chạy lại V0-V4 khi quota ổn định, lý tưởng là dùng một provider trong suốt một lượt chạy để so sánh công bằng.
 - **RAGAS faithfulness** (đo trong PLAN.md) chưa triển khai — bị hoãn có chủ đích do giới hạn thời gian, ưu tiên các chỉ số citation precision/recall và giám khảo LLM trước.
-- **Reranker chậm trên CPU** (~30s/query trên i7-8565U dù đã giới hạn `max_length=384` và giảm ứng viên) — khả thi cho demo/đánh giá offline, chưa khả thi cho sản phẩm thời gian thực; hướng khắc phục (chuyển ONNX INT8) đã lên kế hoạch ở Tuần 6 nhưng chưa làm.
+- **Reranker vẫn chậm trên CPU dù đã chuyển ONNX** (~13s/query với backend mặc định `onnx_fp32`, giảm từ ~27s/query của bản gốc — xem `eval/results/onnx_reranker.json`) — khả thi hơn nhiều cho demo nhưng vẫn chưa đủ nhanh cho sản phẩm thời gian thực có nhiều người dùng đồng thời trên CPU.
 - **Dữ liệu nguồn giới hạn 3 văn bản** (Bộ luật Lao động 2019, NĐ 145/2020, NĐ 293/2025) — chưa có Luật BHXH 2024, chưa xử lý hiệu lực theo thời gian khi văn bản có nhiều đợt sửa đổi.
 
 ## Cách chạy
@@ -94,6 +94,7 @@ make docker-index                  # nạp chunks + embeddings vào Qdrant trong
 
 - API: http://localhost:8000 (`/health`, `/chat`, `/chat/resume`, `/review-contract`, docs tại `/docs`)
 - UI: http://localhost:8501
+- Container `api` chưa có sẵn model ONNX đã export (không nằm trong image) nên tự fallback về reranker gốc (chậm hơn nhưng vẫn đúng); muốn có tốc độ ONNX trong Docker thì chạy `docker compose exec api python -m scripts.export_onnx_reranker` sau khi `up` (cần mount thêm volume nếu muốn giữ qua lần restart).
 
 ### Chạy trực tiếp trên máy (không Docker)
 
@@ -103,6 +104,8 @@ python -m venv .venv
 pip install -r requirements.txt
 docker run -p 6333:6333 qdrant/qdrant   # hoặc dùng Qdrant Cloud, sửa QDRANT_URL trong .env
 make index                          # nạp dữ liệu vào Qdrant
+python -m scripts.export_onnx_reranker  # tuỳ chọn: xuất ONNX cho reranker nhanh gấp đôi
+                                         # (bỏ qua bước này cũng chạy được, tự fallback về bản gốc)
 uvicorn src.api.main:app --reload   # terminal 1
 streamlit run src/ui/app.py         # terminal 2
 ```
