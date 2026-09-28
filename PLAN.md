@@ -575,7 +575,7 @@ Các quy tắc bắt buộc trong system prompt:
 ### 🛟 Tuần 6: Dự phòng và phần mở rộng
 
 Ưu tiên theo thứ tự:
-1. [ ] Sửa lỗi, `ruff`, type hints, tăng test coverage
+1. [x] Sửa lỗi, `ruff`, type hints, tăng test coverage — đã thiết lập `pyproject.toml` với bộ rule ruff thật (trước đó dùng mặc định gần như rỗng), sửa hết lỗi phát hiện được, nối `contract_review` (từng là stub) vào logic thật kèm test mock. Type hints hiện đã dùng nhất quán (`str | None` kiểu mới) trong toàn bộ code hiện có nên không cần sửa thêm; tăng coverage cho các module cần Qdrant/LLM thật (retrieval, graph, api) để dành vì cần integration test riêng, chưa làm
 2. [ ] ☁️ `03_onnx_reranker.ipynb`: chuyển reranker sang ONNX INT8, đo **độ trễ trên CPU trước/sau** và Hit@5 (đảm bảo không giảm nhiều)
 3. [ ] Demo trên Hugging Face Spaces (CPU miễn phí)
 4. [ ] Langfuse Cloud để theo dõi từng lần chạy agent
