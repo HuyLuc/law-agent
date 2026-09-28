@@ -546,11 +546,11 @@ Các quy tắc bắt buộc trong system prompt:
 - [x] **Thanh bên hiển thị các điều luật đã trích** (bấm vào để xem nguyên văn) — cần bổ sung `evidence` vào SSE "step" event trong `main.py` để UI nhận được
 - [x] Hiển thị các bước agent đã làm (đã gọi công cụ nào). Phần này rất ấn tượng khi demo — đã xác nhận bằng ảnh chụp màn hình qua Playwright (cả 2 tab Hỏi đáp + Rà soát hợp đồng), không lỗi runtime
 
-#### Buổi 3: Docker 💻
-- [ ] `docker-compose.yml` gồm 3 service: `qdrant`, `api`, `ui`
-- [ ] Tải sẵn mô hình vào image hoặc dùng volume cache của Hugging Face để không phải tải lại mỗi lần chạy
-- [ ] `make ingest`: đưa file embedding parquet vào Qdrant
-- [ ] 🚦 **Clone repo vào thư mục mới và chạy lại từ đầu**
+#### Buổi 3: Docker 💻 ✅
+- [x] `docker-compose.yml` gồm 3 service: `qdrant`, `api`, `ui`
+- [x] Tải sẵn mô hình vào image hoặc dùng volume cache của Hugging Face để không phải tải lại mỗi lần chạy — dùng volume `hf_cache` (không bake vào image để tránh ảnh quá nặng khi build lại)
+- [x] Đưa file embedding parquet vào Qdrant trong container — dùng `make docker-index` (chạy `index_qdrant.py` bên trong container `api`, khác với `make index` ở Tuần 1 vốn chạy trên host); `data/embeddings/embeddings.parquet` bị gitignore (file lớn, sinh từ Kaggle) nên cần tải về trước khi build (xem Tuần 2 Buổi 1)
+- [x] 🚦 **Clone repo vào thư mục mới và chạy lại từ đầu** — đã build + up + index 379 chunk vào Qdrant rỗng (volume mới), gọi thử `/chat`: agent gọi đúng `get_article_tool` tra Điều 25 BLLĐ 2019 và trả lời chính xác kèm trích dẫn; chụp màn hình Streamlit qua Playwright xác nhận UI render đúng khi chạy qua Docker
 
 #### Buổi 4: README 💻
 1. [ ] Giới thiệu 1 câu + GIF demo
