@@ -1,0 +1,34 @@
+{
+  "contract_01_dung.docx": [],
+  "contract_02_dung.docx": [],
+  "contract_03_loi_thu_viec.docx": [
+    "thoi_gian_thu_viec"
+  ],
+  "contract_04_loi_luong_thu_viec.docx": [
+    "luong_thu_viec"
+  ],
+  "contract_05_loi_luong_toi_thieu.docx": [
+    "luong_toi_thieu_vung"
+  ],
+  "contract_06_loi_gio_ngay.docx": [
+    "gio_lam_ngay",
+    "gio_lam_tuan"
+  ],
+  "contract_07_loi_gio_tuan.docx": [
+    "gio_lam_ngay",
+    "gio_lam_tuan"
+  ],
+  "contract_08_loi_thieu_noi_dung.docx": [
+    "noi_dung_bat_buoc"
+  ],
+  "contract_09_nhieu_loi_1.docx": [
+    "thoi_gian_thu_viec",
+    "luong_thu_viec"
+  ],
+  "contract_10_nhieu_loi_2.docx": [
+    "luong_toi_thieu_vung",
+    "gio_lam_ngay",
+    "gio_lam_tuan",
+    "noi_dung_bat_buoc"
+  ]
+}

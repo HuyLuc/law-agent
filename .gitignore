@@ -3,6 +3,9 @@
 *.db
 kaggle.json
 
+# Runtime state (khong phai du lieu du an)
+.gemini_dead_keys.json
+
 # Data (large / generated)
 data/embeddings/
 
