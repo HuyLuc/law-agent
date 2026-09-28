@@ -1,4 +1,4 @@
-.PHONY: ingest index test eval up down docker-index
+.PHONY: ingest index test lint eval up down docker-index
 
 ingest:
 	python -m src.ingestion.parser
@@ -8,6 +8,9 @@ index:
 
 test:
 	pytest
+
+lint:
+	ruff check .
 
 eval:
 	python -m eval.run_generation_eval

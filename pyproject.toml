@@ -1,0 +1,19 @@
+[tool.ruff]
+line-length = 130
+target-version = "py311"
+# kaggle/*.ipynb: notebook mot lan, chay tren Kaggle GPU va da co output luu san;
+# khong dua vao gate lint (sua truc tiep trong notebook de rui ro sai lech output).
+extend-exclude = ["kaggle"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "BLE", "C4", "SIM", "ARG", "RUF"]
+ignore = [
+    "RUF001", "RUF002", "RUF003",  # dau tieng Viet bi coi nham la ambiguous unicode
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Script sinh du lieu mot lan, chua nhieu chuoi tieng Viet dai (cau hoi/dap an) -- khong dang viet lai.
+"scripts/*.py" = ["E501"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

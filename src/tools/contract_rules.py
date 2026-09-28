@@ -43,10 +43,10 @@ class ContractInfo(BaseModel):
     gio_lam_ngay: float | None = Field(default=None, description="So gio lam viec binh thuong moi ngay")
     gio_lam_tuan: float | None = Field(default=None, description="So gio lam viec binh thuong moi tuan")
 
-    co_thong_tin_cac_ben: bool = Field(default=True, description="HDLD co ghi ten/dia chi nguoi su dung lao dong va ho ten nguoi lao dong khong")
+    co_thong_tin_cac_ben: bool = Field(default=True, description="HDLD co ghi ten/dia chi cac ben khong")
     co_cong_viec_dia_diem: bool = Field(default=True, description="HDLD co ghi ro cong viec va dia diem lam viec khong")
     co_thoi_han: bool = Field(default=True, description="HDLD co ghi ro thoi han hop dong khong")
-    co_muc_luong: bool = Field(default=True, description="HDLD co ghi ro muc luong, hinh thuc tra luong, thoi han tra luong khong")
+    co_muc_luong: bool = Field(default=True, description="HDLD co ghi ro muc luong, hinh thuc, thoi han tra luong khong")
     co_che_do_nang_luong: bool = Field(default=True, description="HDLD co ghi che do nang bac, nang luong khong")
     co_thoi_gio_lam_viec_nghi_ngoi: bool = Field(default=True, description="HDLD co ghi thoi gio lam viec, nghi ngoi khong")
     co_trang_bi_bao_ho: bool = Field(default=True, description="HDLD co ghi trang bi bao ho lao dong khong")

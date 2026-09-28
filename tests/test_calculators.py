@@ -48,7 +48,7 @@ def test_all_40_cases_present():
     counts: dict[str, int] = {}
     for c in cases:
         counts[c["tool"]] = counts.get(c["tool"], 0) + 1
-    assert counts == {name: 8 for name in FUNCS}
+    assert counts == dict.fromkeys(FUNCS, 8)
 
 
 def test_tro_cap_thoi_viec_rejects_negative_salary():

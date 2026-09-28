@@ -114,8 +114,8 @@ Xem `kaggle/01_embed_chunks.ipynb` (tạo `embeddings.parquet` từ `data/proces
 ### Test và lint
 
 ```bash
-pytest
-ruff check src/ eval/ tests/
+make test    # pytest
+make lint    # ruff check . (kaggle/*.ipynb loại trừ — xem pyproject.toml)
 ```
 
 ## Lời lưu ý pháp lý

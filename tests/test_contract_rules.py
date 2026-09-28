@@ -10,7 +10,7 @@ from src.tools.contract_rules import ContractInfo, check_contract
 @pytest.fixture(autouse=True)
 def _mock_get_article(monkeypatch):
     monkeypatch.setattr(
-        cr, "get_article", lambda van_ban, dieu, khoan=None: [{"noi_dung": f"[noi dung Dieu {dieu}]"}]
+        cr, "get_article", lambda _van_ban, dieu, _khoan=None: [{"noi_dung": f"[noi dung Dieu {dieu}]"}]
     )
 
 

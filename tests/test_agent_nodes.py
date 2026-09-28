@@ -30,7 +30,9 @@ def test_contract_review_co_vi_pham_liet_ke_canh_bao(monkeypatch):
     monkeypatch.setattr(
         nodes,
         "check_contract",
-        lambda info: [{"quy_tac": "gio_lam_ngay", "canh_bao": "Giờ làm việc vượt quá 8 giờ/ngày.", "can_cu": "Điều 105"}],
+        lambda _info: [
+            {"quy_tac": "gio_lam_ngay", "canh_bao": "Giờ làm việc vượt quá 8 giờ/ngày.", "can_cu": "Điều 105"}
+        ],
     )
     state = {"messages": [HumanMessage(long_text)]}
 
@@ -45,7 +47,7 @@ def test_contract_review_khong_vi_pham(monkeypatch):
     long_text = "Hợp đồng lao động " + "nội dung chi tiết " * 20
 
     monkeypatch.setattr(nodes, "extract_contract_info", lambda _text: ContractInfo())
-    monkeypatch.setattr(nodes, "check_contract", lambda info: [])
+    monkeypatch.setattr(nodes, "check_contract", lambda _info: [])
     state = {"messages": [HumanMessage(long_text)]}
 
     result = nodes.contract_review(state)
