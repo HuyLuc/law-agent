@@ -14,7 +14,7 @@ from src.agent.prompts import (
 )
 from src.agent.state import AgentState, RouteDecision
 from src.agent.tools import ALL_TOOLS
-from src.llm import get_fallback_llm, get_primary_llm
+from src.llm import build_llm_chain
 
 MAX_TOOL_CALLS = 6
 MAX_VERIFY_ROUNDS = 2
@@ -38,25 +38,14 @@ def message_text(message) -> str:
     return "\n".join(parts)
 
 
-def _with_fallback(primary, fallback):
-    """Goi Gemini truoc; tu dong chuyen sang Groq neu Gemini loi (vd het quota)."""
-    return primary.with_fallbacks([fallback])
-
-
 def router(state: AgentState) -> dict:
-    llm = _with_fallback(
-        get_primary_llm().with_structured_output(RouteDecision),
-        get_fallback_llm().with_structured_output(RouteDecision),
-    )
+    llm = build_llm_chain(lambda m: m.with_structured_output(RouteDecision))
     decision = llm.invoke([SystemMessage(ROUTER_PROMPT), *state["messages"]])
     return {"route": decision.route}
 
 
 def agent_loop(state: AgentState) -> dict:
-    llm = _with_fallback(
-        get_primary_llm().bind_tools(ALL_TOOLS),
-        get_fallback_llm().bind_tools(ALL_TOOLS),
-    )
+    llm = build_llm_chain(lambda m: m.bind_tools(ALL_TOOLS))
     messages = [SystemMessage(AGENT_SYSTEM_PROMPT), *state["messages"]]
     response = llm.invoke(messages)
     return {"messages": [response]}
