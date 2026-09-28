@@ -552,14 +552,14 @@ Các quy tắc bắt buộc trong system prompt:
 - [x] Đưa file embedding parquet vào Qdrant trong container — dùng `make docker-index` (chạy `index_qdrant.py` bên trong container `api`, khác với `make index` ở Tuần 1 vốn chạy trên host); `data/embeddings/embeddings.parquet` bị gitignore (file lớn, sinh từ Kaggle) nên cần tải về trước khi build (xem Tuần 2 Buổi 1)
 - [x] 🚦 **Clone repo vào thư mục mới và chạy lại từ đầu** — đã build + up + index 379 chunk vào Qdrant rỗng (volume mới), gọi thử `/chat`: agent gọi đúng `get_article_tool` tra Điều 25 BLLĐ 2019 và trả lời chính xác kèm trích dẫn; chụp màn hình Streamlit qua Playwright xác nhận UI render đúng khi chạy qua Docker
 
-#### Buổi 4: README 💻
-1. [ ] Giới thiệu 1 câu + GIF demo
-2. [ ] Sơ đồ kiến trúc (Mermaid từ LangGraph)
-3. [ ] **Bảng kết quả V0 → V4** kèm giải thích ngắn
-4. [ ] Các quyết định thiết kế: chia theo Điều · hybrid + rerank · không để LLM tính toán · kiểm tra trích dẫn bằng code · chia dev/test
-5. [ ] Phân tích lỗi và hạn chế
-6. [ ] Cách chạy (Docker và Kaggle)
-7. [ ] Lời lưu ý pháp lý và ngày cập nhật dữ liệu
+#### Buổi 4: README 💻 ✅ (trừ GIF demo — sẽ làm cùng video ở Buổi 5)
+1. [x] Giới thiệu 1 câu — GIF demo để dành làm cùng video Buổi 5
+2. [x] Sơ đồ kiến trúc (Mermaid từ LangGraph)
+3. [x] **Bảng kết quả V0 → V4** kèm giải thích ngắn — retrieval V1-V3 đầy đủ (dev+test); sinh câu trả lời chỉ có V0/V1 do quota cạn giữa chừng, đã ghi chú rõ là chưa đầy đủ/chưa nên coi là kết luận cuối
+4. [x] Các quyết định thiết kế: chia theo Điều · hybrid + rerank · không để LLM tính toán · kiểm tra trích dẫn bằng code · chia dev/test
+5. [x] Phân tích lỗi và hạn chế
+6. [x] Cách chạy (Docker, chạy trực tiếp, và Kaggle)
+7. [x] Lời lưu ý pháp lý và ngày cập nhật dữ liệu
 
 #### Buổi 5: Video demo 2 phút
 - [ ] Tra luật
