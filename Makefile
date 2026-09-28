@@ -1,4 +1,4 @@
-.PHONY: ingest index test eval up down
+.PHONY: ingest index test eval up down docker-index
 
 ingest:
 	python -m src.ingestion.parser
@@ -17,3 +17,6 @@ up:
 
 down:
 	docker compose down
+
+docker-index:
+	docker compose exec api python -m src.ingestion.index_qdrant

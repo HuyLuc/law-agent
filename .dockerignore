@@ -1,0 +1,13 @@
+.venv
+.git
+.pytest_cache
+.ruff_cache
+.langchain_cache.db
+.gemini_dead_keys.json
+.env
+data/raw
+data/eval
+kaggle
+scripts
+tests
+eval/results

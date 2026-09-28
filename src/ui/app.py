@@ -5,12 +5,13 @@ Chay: streamlit run src/ui/app.py
 """
 
 import json
+import os
 import uuid
 
 import requests
 import streamlit as st
 
-API_URL = "http://localhost:8000"
+API_URL = os.environ.get("API_URL", "http://localhost:8000")
 
 st.set_page_config(page_title="Tư vấn Luật Lao động Việt Nam", page_icon="⚖️", layout="wide")
 
