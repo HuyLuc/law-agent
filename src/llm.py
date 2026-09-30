@@ -25,12 +25,23 @@ set_llm_cache(SQLiteCache(database_path=str(CACHE_PATH)))
 
 DEAD_KEYS_PATH = ROOT / ".gemini_dead_keys.json"
 
+# Quota free-tier tinh RIENG cho tung model (khong chi rieng tung key), nen
+# khi het quota model chinh (settings.LLM_MODEL) o TAT CA key, van con co the
+# goi duoc cac model flash khac cung key do. Danh sach nay la cac ban flash
+# on dinh (khong phai "-preview"/"-lite"/"-image"/"-tts") con ton tai tai
+# thoi diem lam du an (kiem tra qua genai Client.models.list()).
+GEMINI_MODEL_FALLBACKS = ["gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-2.5-flash"]
+
 
 def get_gemini_llms() -> list[BaseChatModel]:
-    """Mot ChatGoogleGenerativeAI cho MOI key trong settings.gemini_api_keys,
-    de xoay vong khi 1 key het quota (free tier chi ~20 request/ngay)."""
+    """Mot ChatGoogleGenerativeAI cho MOI to hop (model, key): thu het cac
+    key voi model chinh (settings.LLM_MODEL) truoc -- giu nguyen hanh vi cu
+    khi quota con -- roi moi sang cac model du phong o GEMINI_MODEL_FALLBACKS
+    khi ca 5 key deu da het quota voi model chinh."""
+    models = [settings.LLM_MODEL, *[m for m in GEMINI_MODEL_FALLBACKS if m != settings.LLM_MODEL]]
     return [
-        ChatGoogleGenerativeAI(model=settings.LLM_MODEL, google_api_key=key, temperature=0)
+        ChatGoogleGenerativeAI(model=model_name, google_api_key=key, temperature=0)
+        for model_name in models
         for key in settings.gemini_api_keys
     ]
 
@@ -48,9 +59,10 @@ def get_fallback_llm() -> BaseChatModel:
     )
 
 
-# Index (trong settings.gemini_api_keys) da biet het quota HOM NAY. Dung
-# .with_fallbacks() cua LangChain se thu lai het ca 5 key moi lan goi du da
-# biet chet (lang phi ~30-50s/lan khi quota het het ca ngay) -- nho lai o day
+# Index (trong danh sach tra ve boi get_gemini_llms(), tuc tung to hop
+# key x model) da biet het quota HOM NAY. Dung .with_fallbacks() cua
+# LangChain se thu lai het moi to hop moi lan goi du da biet chet (lang phi
+# ~30-50s/lan khi quota het het ca ngay) -- nho lai o day
 # (ca trong bo nho va ghi ra file) de bo qua thang tu process khac trong
 # cung ngay, chi con Groq la fallback thuc su huu ich luc do. Tu dong reset
 # khi sang ngay moi (quota Gemini free tier tinh theo ngay).
@@ -109,7 +121,7 @@ class _ChainWithKeyMemory:
         except Exception as e:
             con_lai = len(self._gemini_models) - len(_dead_gemini_keys)
             raise RuntimeError(
-                f"Tat ca Gemini con hoat dong ({con_lai} key) va Groq deu loi. "
+                f"Tat ca to hop Gemini (key x model) con hoat dong ({con_lai}) va Groq deu loi. "
                 f"Loi Gemini gan nhat: {last_err}. Loi Groq: {e}"
             ) from e
 
