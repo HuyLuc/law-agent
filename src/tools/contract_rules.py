@@ -9,7 +9,7 @@ from typing import Literal
 
 from pydantic import BaseModel, Field
 
-from src.llm import build_llm_chain
+from src.llm import build_llm_chain, structured_output_transform
 from src.tools.legal_lookup import get_article
 
 TrinhDo = Literal["quan_ly", "cao_dang_tro_len", "trung_cap", "khac"]
@@ -79,7 +79,7 @@ def extract_text_from_file(path: Path) -> str:
 
 
 def extract_contract_info(text: str) -> ContractInfo:
-    llm = build_llm_chain(lambda m: m.with_structured_output(ContractInfo))
+    llm = build_llm_chain(structured_output_transform(ContractInfo))
     return llm.invoke(EXTRACTION_PROMPT.format(text=text))
 
 

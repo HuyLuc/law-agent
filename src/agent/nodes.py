@@ -14,7 +14,7 @@ from src.agent.prompts import (
 )
 from src.agent.state import AgentState, RouteDecision
 from src.agent.tools import ALL_TOOLS
-from src.llm import build_llm_chain, message_text
+from src.llm import build_llm_chain, message_text, structured_output_transform
 from src.tools.contract_rules import check_contract, extract_contract_info
 
 MIN_CONTRACT_TEXT_LEN = 200  # duoi muc nay coi nhu nguoi dung chua dan noi dung hop dong that
@@ -28,7 +28,7 @@ _CHUNK_ID_DIEU_RE = re.compile(r"_D(\d+)_K")
 
 
 def router(state: AgentState) -> dict:
-    llm = build_llm_chain(lambda m: m.with_structured_output(RouteDecision))
+    llm = build_llm_chain(structured_output_transform(RouteDecision))
     decision = llm.invoke([SystemMessage(ROUTER_PROMPT), *state["messages"]])
     return {"route": decision.route}
 

@@ -22,7 +22,7 @@ from eval.citation_metrics import (
     extract_truth_dieu,
 )
 from eval.versions import answer_v0, answer_v1, answer_v2, answer_v3, answer_v4
-from src.llm import build_llm_chain
+from src.llm import build_llm_chain, structured_output_transform
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -65,7 +65,7 @@ Chấm điểm 1-5:
 
 
 def judge_answer(question: str, ground_truth: str, answer: str) -> int:
-    llm = build_llm_chain(lambda m: m.with_structured_output(JudgeScore))
+    llm = build_llm_chain(structured_output_transform(JudgeScore))
     result = llm.invoke(JUDGE_PROMPT.format(question=question, ground_truth=ground_truth, answer=answer))
     return result.diem
 

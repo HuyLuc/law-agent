@@ -135,6 +135,21 @@ def build_llm_chain(transform: Callable[[BaseChatModel], Runnable] = lambda m: m
     return _ChainWithKeyMemory(gemini_models, groq_model)
 
 
+def structured_output_transform(schema: type) -> Callable[[BaseChatModel], Runnable]:
+    """Transform dung cho build_llm_chain khi can output co cau truc (Pydantic
+    schema). Groq (model openai/gpt-oss-20b) hay loi "Tool choice is required,
+    but model did not call a tool" voi method mac dinh (function_calling) --
+    dung json_schema cho rieng Groq de tranh loi nay; Gemini van dung mac dinh
+    (da kiem chung hoat dong tot qua nhieu lan goi that)."""
+
+    def _transform(model: BaseChatModel) -> Runnable:
+        if isinstance(model, ChatGroq):
+            return model.with_structured_output(schema, method="json_schema")
+        return model.with_structured_output(schema)
+
+    return _transform
+
+
 def invoke_with_fallback(prompt: str) -> BaseMessage:
     """Goi lan luot tung Gemini key, het quota/loi thi chuyen sang Groq."""
     return build_llm_chain().invoke(prompt)
