@@ -48,14 +48,19 @@ Pipeline dữ liệu: `vbpl.vn` (Playwright, vượt chặn WAF) → parser tác
 
 → Rerank cải thiện rõ nhất ở MRR (thứ hạng kết quả đúng cao hơn), quan trọng khi top-1 được dùng làm ngữ cảnh chính.
 
-### Sinh câu trả lời (giám khảo LLM 1-5, trích dẫn precision/recall)
+### Sinh câu trả lời (giám khảo LLM 1-5, trích dẫn precision/recall, bộ dev n=40)
 
-| Phiên bản | n | Judge (1-5) | Citation P | Citation R | Độ trễ p50 |
-|---|---|---|---|---|---|
-| V0 — không RAG | 40 | 3.03 | 0.75 | 0.09 | 115s |
-| V1 — dense RAG | 40 | 2.78 | 0.64 | 0.66 | 117s |
+| Phiên bản | Judge (1-5) | Citation P | Citation R | Từ chối đúng* | Độ trễ p50 | p95 |
+|---|---|---|---|---|---|---|
+| V0 — không RAG | 4.85 | 0.91 | 0.80 | 0.20 | 47s | 194s |
+| V1 — dense RAG | 4.70 | 0.66 | 0.81 | 0.20 | 48s | 90s |
+| V2 — hybrid RAG (dense+sparse, RRF) | 4.60 | 0.70 | 0.82 | 0.60 | 79s | 133s |
+| V3 — hybrid + rerank RAG | 3.00 | 0.79 | 0.67 | 0.40 | 55s | 148s |
+| V4 — agent đầy đủ (tool-calling + verify_citation) | **4.76** | 0.75 | **0.86** | **1.00** | 175s | 352s |
 
-⚠️ **Chưa hoàn thành**: V2/V3 (hybrid, rerank) và V4 (agent đầy đủ) chưa chạy được trên bộ dev/test đầy đủ — trong quá trình đánh giá, quota Gemini (5 key) và Groq (200k token/ngày) đều cạn cùng lúc (một phần do một tiến trình chạy nền bị trùng không phát hiện kịp), nên không đủ dữ liệu để so sánh công bằng. Độ trễ p50 ~115s cũng bất thường cao — phần lớn thời gian là chờ retry giữa các key Gemini hết quota, không phản ánh tốc độ thực khi quota còn đủ. Số liệu V0/V1 ở trên giữ lại để tham khảo xu hướng (RAG tăng recall trích dẫn rõ rệt: 0.09 → 0.66) nhưng **không nên coi là kết luận cuối cùng**.
+\* Tỷ lệ từ chối đúng trên nhóm câu hỏi `ngoai_pham_vi` (câu hỏi không thuộc phạm vi luật lao động, agent phải biết từ chối thay vì bịa câu trả lời).
+
+→ V4 là bản duy nhất từ chối đúng 100% câu ngoài phạm vi (router + `agent_loop` không ép phải dùng RAG context như V1-V3) và có citation recall cao nhất, đổi lại độ trễ cao hơn hẳn (nhiều vòng tool-call + verify, cộng thời gian retry khi gặp quota Gemini cạn giữa chừng — xem Hạn chế bên dưới). V3 có judge score thấp bất thường so với V1/V2 dù retrieval tốt hơn (xem bảng Retrieval) — rerank cải thiện ngữ cảnh truy xuất nhưng không nhất thiết cải thiện câu trả lời cuối, đáng đào sâu thêm nếu có thời gian (xem Hạn chế).
 
 Bộ câu hỏi: 40 câu dev / 100 câu test, chia 4 nhóm — `tra_cuu` (tra 1 điều), `nhieu_dieu` (cần gộp nhiều điều), `tinh_huong` (cần tính toán), `ngoai_pham_vi` (phải từ chối).
 
@@ -74,8 +79,10 @@ Trên 10 hợp đồng mẫu tự tạo (2 đúng, 8 có lỗi cài cắm có ch
 
 ## Hạn chế và lỗi đã biết
 
-- **Đánh giá sinh câu trả lời chưa đầy đủ** (xem phần Kết quả ở trên) — cần chạy lại V0-V4 khi quota ổn định, lý tưởng là dùng một provider trong suốt một lượt chạy để so sánh công bằng.
+- **Độ trễ V0-V4 đo được bị ảnh hưởng bởi retry quota** — khi chạy, quota Gemini free-tier (nhiều key x nhiều model) cạn dần giữa chừng và phải rơi xuống Groq; số liệu p50/p95 vì vậy cao hơn tốc độ thực khi quota còn đủ, đặc biệt rõ ở V4 (175s/352s). Chưa đo lại trong điều kiện quota ổn định hoàn toàn.
+- **V3 (rerank) có judge score thấp hơn V1/V2 dù retrieval tốt hơn** — chưa phân tích nguyên nhân cụ thể (xem bảng Sinh câu trả lời), cần xem lại 10 câu sai để phân loại lỗi.
 - **RAGAS faithfulness** (đo trong PLAN.md) chưa triển khai — bị hoãn có chủ đích do giới hạn thời gian, ưu tiên các chỉ số citation precision/recall và giám khảo LLM trước.
+- **Chưa chạy đánh giá sinh câu trả lời trên bộ test (100 câu)** — mới hoàn thành đầy đủ V0-V4 trên bộ dev (40 câu).
 - **Reranker vẫn chậm trên CPU dù đã chuyển ONNX** (~13s/query với backend mặc định `onnx_fp32`, giảm từ ~27s/query của bản gốc — xem `eval/results/onnx_reranker.json`) — khả thi hơn nhiều cho demo nhưng vẫn chưa đủ nhanh cho sản phẩm thời gian thực có nhiều người dùng đồng thời trên CPU.
 - **Dữ liệu nguồn giới hạn 3 văn bản** (Bộ luật Lao động 2019, NĐ 145/2020, NĐ 293/2025) — chưa có Luật BHXH 2024, chưa xử lý hiệu lực theo thời gian khi văn bản có nhiều đợt sửa đổi.
 

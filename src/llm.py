@@ -5,6 +5,7 @@ va chuyen sang Groq khi Gemini loi lien tuc.
 """
 
 import json
+import time
 from collections.abc import Callable
 from datetime import datetime
 from pathlib import Path
@@ -99,6 +100,23 @@ def _is_key_unusable_error(exc: Exception) -> bool:
     return any(code in msg for code in ["RESOURCE_EXHAUSTED", "429", "NOT_FOUND", "404", "PERMISSION_DENIED", "403"])
 
 
+GROQ_RETRY_ATTEMPTS = 3  # Groq la tuyen cuoi khi Gemini het sach quota: mot lan JSON
+# sinh sai dinh dang (glitch thoang qua cua model, khong phai loi logic) khong nen
+# lam sap ca batch eval nhieu gio chay -- thu lai vai lan truoc khi bo cuoc.
+
+
+def _invoke_groq_with_retry(groq_model: Runnable, *args, **kwargs):
+    last_err: Exception | None = None
+    for attempt in range(GROQ_RETRY_ATTEMPTS):
+        try:
+            return groq_model.invoke(*args, **kwargs)
+        except Exception as e:  # noqa: BLE001 -- can bat moi loi de thu lai
+            last_err = e
+            if attempt < GROQ_RETRY_ATTEMPTS - 1:
+                time.sleep(3)
+    raise last_err
+
+
 class _ChainWithKeyMemory:
     def __init__(self, gemini_models: list[Runnable], groq_model: Runnable) -> None:
         self._gemini_models = gemini_models
@@ -117,7 +135,7 @@ class _ChainWithKeyMemory:
                     _dead_gemini_keys.add(i)
                     _save_dead_keys(_dead_gemini_keys)
         try:
-            return self._groq_model.invoke(*args, **kwargs)
+            return _invoke_groq_with_retry(self._groq_model, *args, **kwargs)
         except Exception as e:
             con_lai = len(self._gemini_models) - len(_dead_gemini_keys)
             raise RuntimeError(

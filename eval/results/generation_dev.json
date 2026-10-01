@@ -2297,5 +2297,586 @@
         "interrupted": false
       }
     ]
+  },
+  "v4": {
+    "citation_precision": 0.7494623655913978,
+    "citation_recall": 0.8571428571428571,
+    "avg_judge_score": 4.7631578947368425,
+    "refusal_accuracy": 1.0,
+    "latency_p50_s": 174.79,
+    "latency_p95_s": 352.12,
+    "n": 40,
+    "per_item": [
+      {
+        "id": "d001",
+        "loai": "tra_cuu",
+        "answer": "Căn cứ theo **[Điều 25, Bộ luật Lao động 2019]**, thời gian thử việc do người sử dụng lao động và người lao động thỏa thuận căn cứ vào tính chất và mức độ phức tạp của công việc, nhưng **chỉ được thử việc 01 lần đối với một công việc** và thời gian tối đa được quy định như sau:\n\n1. **Không quá 180 ngày:** Đối với công việc của người quản lý doanh nghiệp theo quy định của Luật Doanh nghiệp, Luật Quản lý, sử dụng vốn nhà nước đầu tư vào sản xuất, kinh doanh tại doanh nghiệp;\n2. **Không quá 60 ngày:** Đối với công việc có chức danh nghề nghiệp cần trình độ chuyên môn, kỹ thuật từ cao đẳng trở lên;\n3. **Không quá 30 ngày:** Đối với công việc có chức danh nghề nghiệp cần trình độ chuyên môn, kỹ thuật trung cấp, công nhân kỹ thuật, nhân viên nghiệp vụ;\n4. **Không quá 06 ngày làm việc:** Đối với các công việc khác.\n\n*Lưu ý thêm:* Không áp dụng thử việc đối với người lao động giao kết hợp đồng lao động có thời hạn dưới 01 tháng **[Khoản 3 Điều 24, Bộ luật Lao động 2019]**.\n\n---\n*Nội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.*",
+        "cited_dieu": [
+          24,
+          25
+        ],
+        "truth_dieu": [
+          25
+        ],
+        "judge_score": 5,
+        "latency_s": 193.77,
+        "interrupted": false
+      },
+      {
+        "id": "d002",
+        "loai": "tra_cuu",
+        "answer": "Theo quy định tại [Điều 26, Bộ luật Lao động 2019], tiền lương của người lao động trong thời gian thử việc do hai bên thỏa thuận nhưng **ít nhất phải bằng 85%** mức lương của công việc đó.\n\n---\n*Nội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.*",
+        "cited_dieu": [
+          26
+        ],
+        "truth_dieu": [
+          26
+        ],
+        "judge_score": 5,
+        "latency_s": 111.6,
+        "interrupted": false
+      },
+      {
+        "id": "d003",
+        "loai": "tra_cuu",
+        "answer": "**Có**, trong thời gian thử việc, người lao động hoàn toàn **có quyền nghỉ việc ngay mà không cần báo trước**.\n\nCụ thể, theo quy định tại **[Khoản 2 Điều 27, Bộ luật Lao động 2019]**:\n> *\"Trong thời gian thử việc, mỗi bên có quyền hủy bỏ hợp đồng thử việc hoặc hợp đồng lao động đã giao kết mà không cần báo trước và không phải bồi thường.\"*\n\nDo đó, dù bạn thỏa thuận thử việc bằng **hợp đồng thử việc** hay **thỏa thuận thử việc ghi trong hợp đồng lao động**, trong thời gian đang thử việc:\n- Bạn có quyền dừng công việc ngay lập tức mà không phải tuân thủ thời hạn báo trước.\n- Không phải chịu trách nhiệm bồi thường chi phí do việc nghỉ việc này gây ra (trừ trường hợp hai bên có cam kết, thỏa thuận hợp pháp khác về đào tạo nghề...).\n- Người sử dụng lao động có trách nhiệm thanh toán tiền lương cho những ngày bạn đã làm việc thực tế trong thời gian thử việc.\n\n---\n*Nội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.*",
+        "cited_dieu": [
+          27
+        ],
+        "truth_dieu": [
+          27
+        ],
+        "judge_score": 5,
+        "latency_s": 162.12,
+        "interrupted": false
+      },
+      {
+        "id": "d004",
+        "loai": "tra_cuu",
+        "answer": "Căn cứ theo [Điều 105, Bộ luật Lao động 2019], thời giờ làm việc bình thường được quy định như sau:\n\n1. **Giới hạn chung:**\n   - Không quá **08 giờ** trong 01 ngày.\n   - Không quá **48 giờ** trong 01 tuần.\n\n2. **Trường hợp làm việc theo tuần:**\n   - Người sử dụng lao động có quyền quy định thời giờ làm việc theo ngày hoặc theo tuần nhưng phải thông báo cho người lao động biết.\n   - Nếu thực hiện thời giờ làm việc theo tuần thì thời giờ làm việc bình thường không quá **10 giờ** trong 01 ngày và không quá **48 giờ** trong 01 tuần.\n\n3. **Khuyến khích và bảo đảm an toàn:**\n   - Nhà nước khuyến khích người sử dụng lao động thực hiện tuần làm việc 40 giờ.\n   - Người sử dụng lao động có trách nhiệm bảo đảm giới hạn thời gian làm việc tiếp xúc với yếu tố nguy hiểm, yếu tố có hại đúng theo quy chuẩn kỹ thuật quốc gia và pháp luật có liên quan.\n\n*Nội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.*",
+        "cited_dieu": [
+          105
+        ],
+        "truth_dieu": [
+          105
+        ],
+        "judge_score": 5,
+        "latency_s": 129.61,
+        "interrupted": false
+      },
+      {
+        "id": "d005",
+        "loai": "tra_cuu",
+        "answer": "Theo quy định tại điểm a khoản 1 [Điều 98, Bộ luật Lao động 2019], người lao động làm thêm giờ vào ngày thường được trả lương tính theo đơn giá tiền lương hoặc tiền lương thực trả theo công việc đang làm **ít nhất bằng 150%**.\n\n*Lưu ý: Nếu làm thêm giờ vào ban đêm của ngày thường, người lao động còn được trả thêm tiền lương làm việc vào ban đêm và tiền lương làm thêm giờ vào\n ban đêm theo quy định tại khoản 2 và khoản 3 [Điều 98, Bộ luật Lao động 2019].*\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          98
+        ],
+        "truth_dieu": [
+          98
+        ],
+        "judge_score": 5,
+        "latency_s": 121.8,
+        "interrupted": false
+      },
+      {
+        "id": "d006",
+        "loai": "tra_cuu",
+        "answer": "Theo quy định tại điểm a khoản 1 [Điều 113, Bộ luật Lao động 2019], người lao động làm việc đủ 12 tháng cho một người sử dụng lao động trong điều kiện bình thường thì được nghỉ hằng năm hưởng nguyên lương theo hợp đồng lao động là **12 ngày làm việc**.\n\n- **Kết quả tính:** 12 ngày làm việc.\n- **Cách tính:** 12 ngày cơ bản = 12 ngày [Điều 113, Bộ luật Lao động 2019].\n\n*(Lưu ý: Theo [Điều 114, Bộ luật Lao động 2019], cứ đủ 05 năm làm việc cho một người sử dụng lao động thì số ngày nghỉ hằng năm của người lao động sẽ được tăng thêm tương ứng 01 ngày).*\n\nNội dung chỉ mang tính tham khảo,\n không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          113,
+          114
+        ],
+        "truth_dieu": [
+          113
+        ],
+        "judge_score": 5,
+        "latency_s": 128.42,
+        "interrupted": false
+      },
+      {
+        "id": "d007",
+        "loai": "tra_cuu",
+        "answer": "Theo quy định tại [Điều 114, Bộ luật Lao động 2019], cứ **đủ 05 năm làm việc** cho một người sử dụng lao động thì số ngày nghỉ hằng năm (phép năm) của người lao động được tăng thêm tương ứng **01 ngày**.\n\n---\n*Nội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.*",
+        "cited_dieu": [
+          114
+        ],
+        "truth_dieu": [
+          114
+        ],
+        "judge_score": 5,
+        "latency_s": 190.2,
+        "interrupted": false
+      },
+      {
+        "id": "d008",
+        "loai": "tra_cuu",
+        "answer": "Theo quy định tại điểm b khoản 1 và khoản 3 Điều 112 [Điều 112, Bộ luật Lao động 2019]:\n\n- Dịp **Tết Âm lịch**, người lao động được nghỉ làm việc và hưởng nguyên lương **05 ngày**.\n- Căn cứ vào điều kiện thực tế hằng năm, Thủ tướng Chính phủ sẽ quyết định cụ thể lịch nghỉ Tết Âm lịch.\n- Ngoài ra, đối với lao động là người nước ngoài làm việc tại Việt Nam, bên cạnh 05 ngày nghỉ nêu trên, người lao động còn được nghỉ thêm **01 ngày Tết cổ truyền dân tộc** của nước họ và được hưởng nguyên lương [Điều 112, Bộ luật Lao động 2019].\n\n*Nội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.*",
+        "cited_dieu": [
+          112
+        ],
+        "truth_dieu": [
+          112
+        ],
+        "judge_score": 5,
+        "latency_s": 118.16,
+        "interrupted": false
+      },
+      {
+        "id": "d009",
+        "loai": "tra_cuu",
+        "answer": "Theo quy định tại [Điều 111, Bộ luật Lao động 2019], thời gian nghỉ hằng tuần của người lao động được quy định như sau:\n\n- **Mỗi tuần, người lao động được nghỉ ít nhất 24 giờ liên tục**.\n- Trong trường hợp đặc biệt do chu kỳ lao động không thể bố trí nghỉ hằng tuần, người sử dụng lao động có trách nhiệm bảo đảm cho người lao động được nghỉ tính bình quân 01 tháng ít nhất 04 ngày.\n- Người sử dụng lao động có quyền quyết định sắp xếp ngày nghỉ hằng tuần vào ngày Chủ nhật hoặc một ngày xác định khác trong tuần nhưng phải ghi rõ vào nội quy lao động.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          111
+        ],
+        "truth_dieu": [
+          111
+        ],
+        "judge_score": 5,
+        "latency_s": 147.76,
+        "interrupted": false
+      },
+      {
+        "id": "d010",
+        "loai": "tra_cuu",
+        "answer": "Theo quy định tại **[Điều 124, Bộ luật Lao động 2019]**, có 04 hình thức xử lý kỷ luật lao động bao gồm:\n\n1. **Khiển trách.**\n2. **Kéo dài thời hạn nâng lương không quá 06 tháng.**\n3. **Cách chức.**\n4. **Sa thải.**\n\n**Lưu ý thêm:**\n- Người sử dụng lao động không được áp dụng các hình thức xử lý kỷ luật khác ngoài 04 hình thức nêu trên.\n- Nghiêm cấm hành vi phạt tiền, cắt lương thay việc xử lý kỷ luật lao động **[Khoản 2 Điều 127, Bộ luật Lao động 2019]**.\n- Không được áp dụng nhiều hình thức xử lý kỷ luật lao động đối với một hành vi vi phạm kỷ luật lao động **[Khoản 2 Điều 122, Bộ luật Lao động 2019]**.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          122,
+          124,
+          127
+        ],
+        "truth_dieu": [
+          124
+        ],
+        "judge_score": 5,
+        "latency_s": 152.44,
+        "interrupted": false
+      },
+      {
+        "id": "d011",
+        "loai": "tra_cuu",
+        "answer": "Căn cứ theo quy định tại [Khoản 1 Điều 3, Nghị định 293/2025/NĐ-CP] và [Khoản 1 Điều 5, Nghị định 293/2025/NĐ-CP] (có hiệu lực thi hành từ ngày 01/01/2026), mức lương tối thiểu đối với người lao động làm việc theo hợp đồng lao động tại **Vùng I** được quy định như sau:\n\n* **Mức lương tối thiểu tháng:** **5.310.000 đồng/tháng**\n* **Mức lương tối thiểu giờ:** **25.500 đồng/giờ**\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          3,
+          5
+        ],
+        "truth_dieu": [
+          3
+        ],
+        "judge_score": 5,
+        "latency_s": 149.67,
+        "interrupted": false
+      },
+      {
+        "id": "d012",
+        "loai": "tra_cuu",
+        "answer": "Căn cứ theo quy định tại Khoản 1 [Điều 47, Bộ luật Lao động 2019], người sử dụng lao động trả trợ cấp mất việc làm cho người lao động đã làm việc thường xuyên cho mình từ đủ 12 tháng trở lên mà bị mất việc làm, cứ mỗi năm làm việc trả 01 tháng tiền lương nhưng **ít nhất bằng 02 tháng tiền lương**.\n\nNhư vậy, mức trợ cấp mất việc làm tối thiểu theo luật định là **02 tháng tiền lương** (đối với người lao động đủ điều kiện hưởng trợ cấp mất việc làm).\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          47
+        ],
+        "truth_dieu": [
+          47
+        ],
+        "judge_score": 5,
+        "latency_s": 131.28,
+        "interrupted": false
+      },
+      {
+        "id": "d013",
+        "loai": "tra_cuu",
+        "answer": "Theo quy định tại điểm a khoản 1 Điều 35 [Điều 35, Bộ luật Lao động 2019], người lao động làm việc theo hợp đồng lao động không xác định thời hạn có quyền đơn phương chấm dứt hợp đồng lao động nhưng phải báo trước cho người sử dụng lao động:\n\n* **Ít nhất 45 ngày** (trừ trường hợp ngành, nghề, công việc đặc thù thực hiện theo quy định riêng của Chính phủ: ít nhất 120 ngày).\n\n---\n\n**Một số lưu ý:**\n1. **Các trường hợp không cần báo trước:** Người lao động có quyền đơn phương chấm dứt hợp đồng lao động mà không cần báo trước trong các trường hợp quy định tại khoản 2 Điều 35 [Điều 35, Bộ luật Lao động 2019], bao gồm:\n   - Không được bố trí đúng công việc, địa điểm làm việc hoặc không được bảo đảm điều kiện làm việc đã thỏa thuận (trừ trường hợp điều chuyển tạm thời theo luật);\n   - Không được trả đủ lương hoặc trả lương không đúng thời hạn;\n   - Bị người sử dụng lao động ngược đãi, đánh đập, nhục mạ hoặc có hành vi ảnh hưởng đến sức khỏe, nhân phẩm, danh dự; bị cưỡng bức lao động;\n   - Bị quấy rối tình dục tại nơi làm việc;\n   - Lao động nữ mang thai phải nghỉ việc theo chỉ định của cơ sở khám chữa bệnh có thẩm quyền;\n   - Đủ tuổi nghỉ hưu theo quy định, trừ khi có thỏa thuận khác;\n   - Người sử dụng lao động cung cấp thông tin không trung thực làm ảnh hưởng đến việc thực hiện hợp đồng.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          35
+        ],
+        "truth_dieu": [
+          35
+        ],
+        "judge_score": 5,
+        "latency_s": 125.59,
+        "interrupted": false
+      },
+      {
+        "id": "d014",
+        "loai": "tra_cuu",
+        "answer": "Theo quy định tại [Khoản 1 Điều 21, Bộ luật Lao động 2019], hợp đồng lao động bắt buộc phải có những nội dung chủ yếu sau đây:\n\n1. **Thông tin người sử dụng lao động:** Tên, địa chỉ của người sử dụng lao động và họ tên, chức danh của người giao kết hợp đồng lao động bên phía người sử dụng lao động.\n2. **Thông tin người lao động:** Họ tên, ngày tháng năm sinh, giới tính, nơi cư trú, số thẻ Căn cước công dân, Chứng minh nhân dân hoặc hộ chiếu của người giao kết hợp đồng lao động bên phía người lao động.\n3. **Công việc và địa điểm làm việc.**\n4. **Thời hạn của hợp đồng lao động.**\n5. **Tiền lương và các chế độ liên quan:** Mức lương theo công việc hoặc chức danh, hình thức trả lương, thời hạn trả lương, phụ cấp lương và các khoản bổ sung khác.\n6. **Chế độ nâng bậc, nâng lương.**\n7. **Thời giờ làm việc, thời giờ nghỉ ngơi.**\n8. **Trang bị bảo hộ lao động cho người lao động.**\n9. **Bảo hiểm:** Bảo hiểm xã hội, bảo hiểm y tế và bảo hiểm thất nghiệp.\n10. **Đào tạo, bồi dưỡng, nâng cao trình độ, kỹ năng nghề.**\n\n*Lưu ý thêm:*\n- Đối với người lao động làm việc liên quan trực tiếp đến bí mật kinh doanh, bí mật công nghệ, người sử dụng lao động có quyền thỏa thuận bằng văn bản về bảo vệ bí mật và bồi thường thiệt hại nếu vi phạm [Khoản 2 Điều 21, Bộ luật Lao động 2019].\n- Đối với lao động trong lĩnh vực nông nghiệp, lâm nghiệp, ngư nghiệp, diêm nghiệp, hai bên có thể giảm một số nội dung chủ yếu tùy theo tính chất công việc [Khoản 3 Điều 21, Bộ luật Lao động 2019].\n\n---\n*Nội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.*",
+        "cited_dieu": [
+          21
+        ],
+        "truth_dieu": [
+          21
+        ],
+        "judge_score": 5,
+        "latency_s": 206.61,
+        "interrupted": false
+      },
+      {
+        "id": "d015",
+        "loai": "tra_cuu",
+        "answer": "Theo quy định tại\n [Điểm c Khoản 3 Điều 8, Nghị định 145/2020/NĐ-CP], thời gian làm việc để tính trợ cấp thôi việc, trợ cấp mất việc làm của người lao động được tính theo năm (đủ 12 tháng) và việc xử lý tháng lẻ được quy định như sau:\n\n* Trường hợp có tháng lẻ **từ đủ 01 tháng đến 06 tháng (ít hơn hoặc bằng 06 tháng)**: được tính bằng **1/2 năm** (0,5 năm).\n* Trường hợp có tháng lẻ **trên 06 tháng** (từ 07 tháng đến 11 tháng): được tính bằng **01 năm** làm việc.\n\n*Lưu ý:* Thời gian làm việc để tính trợ cấp thôi việc, trợ cấp mất việc làm là khoảng thời gian sau khi lấy tổng thời gian làm việc thực tế trừ đi thời gian người lao động đã tham gia bảo hiểm thất nghiệp và thời gian đã được người sử dụng lao động chi trả trợ cấp thôi việc/mất việc làm trước đó [Khoản 2 Điều 46, Bộ luật Lao động 2019; Khoản 2 Điều 47, Bộ luật Lao động 2019; Khoản 3 Điều 8, Nghị định 145/2020/NĐ-CP].\n\n---\n*Nội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.*",
+        "cited_dieu": [
+          8,
+          46,
+          47
+        ],
+        "truth_dieu": [
+          8
+        ],
+        "judge_score": 5,
+        "latency_s": 352.12,
+        "interrupted": false
+      },
+      {
+        "id": "d016",
+        "loai": "tinh_huong",
+        "answer": "Việc công ty yêu cầu bạn thử việc **3 tháng** cho vị trí kế toán là **không đúng quy định của pháp luật**.\n\nCăn cứ theo **[Điều 25, Bộ luật Lao động 2019]**, thời gian thử việc do hai bên thỏa thuận căn cứ vào tính chất, mức độ phức tạp của công việc nhưng chỉ được thử việc 01 lần đối với một công việc và phải bảo đảm các giới hạn sau:\n\n1. **Không quá 180 ngày:** Đối với công việc của người quản lý doanh nghiệp theo quy định của Luật Doanh nghiệp, Luật Quản lý, sử dụng vốn nhà nước đầu tư vào sản xuất, kinh doanh tại doanh nghiệp.\n2. **Không quá 60 ngày:** Đối với công việc có chức danh nghề nghiệp cần trình độ chuyên môn, kỹ thuật từ **cao đẳng trở lên**.\n3. **Không quá 30 ngày:** Đối với công việc có chức danh nghề nghiệp cần trình độ chuyên môn, kỹ thuật **trung cấp**, công nhân kỹ thuật, nhân viên nghiệp vụ.\n4. **Không quá 06 ngày làm việc:** Đối với các công việc khác.\n\n---\n\n### **Kết luận và khuyến nghị:**\n- Vị trí kế toán là công việc đòi hỏi chuyên môn nghiệp vụ. Tùy thuộc vào yêu cầu trình độ tuyển dụng:\n  - Nếu yêu cầu trình độ từ cao đẳng trở lên: Thời gian thử việc **tối đa không quá 60 ngày** (khoảng 2 tháng).\n  - Nếu yêu cầu trình độ trung cấp: Thời gian thử việc **tối đa không quá 30 ngày** (khoảng 1 tháng).\n- Do đó, việc công ty yêu cầu thử việc **3 tháng** (khoảng 90 ngày) đã vượt quá thời gian tối đa luật cho phép.\n- Bạn có quyền trao đổi lại với người sử dụng lao động để điều chỉnh thời gian thử việc trong hợp đồng thử việc theo đúng quy định (tối đa không quá 60 ngày).\n\n*Nội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.*",
+        "cited_dieu": [
+          25
+        ],
+        "truth_dieu": [
+          25
+        ],
+        "judge_score": 5,
+        "latency_s": 201.66,
+        "interrupted": false
+      },
+      {
+        "id": "d017",
+        "loai": "tinh_huong",
+        "answer": "Việc công ty yêu cầu bạn thử việc **15 ngày làm việc** đối với vị trí nhân viên rửa xe (công việc phổ thông, không yêu cầu bằng cấp) là **không đúng quy định của pháp luật**.\n\n### Căn cứ pháp lý:\nTheo quy định tại [Điều 25, Bộ luật Lao động 2019] về thời gian thử việc:\n> *\"Thời gian thử việc do hai bên thỏa thuận căn cứ vào tính chất và mức độ phức tạp của công việc nhưng chỉ được thử việc một lần đối với một công việc và bảo đảm điều kiện sau đây:*\n> *1. Không quá 180 ngày đối với công việc của người quản lý doanh nghiệp...*\n> *2. Không quá 60 ngày đối với công việc có chức danh nghề nghiệp cần trình độ chuyên môn, kỹ thuật từ cao đẳng trở lên;*\n> *3. Không quá 30 ngày đối với công việc có chức danh nghề nghiệp cần trình độ chuyên môn, kỹ thuật trung cấp, công nhân kỹ thuật, nhân viên nghiệp vụ;*\n> *4. **Không quá 06 ngày làm việc đối với công việc khác**.\"*\n\n### Kết luận:\n- Công việc nhân viên rửa xe thuộc nhóm **\"công việc khác\"** (lao động phổ thông, không yêu cầu trình độ chuyên môn kỹ thuật hay bằng cấp).\n- Do đó, thời gian thử việc tối đa mà người sử dụng lao động được phép thỏa thuận với bạn là **không quá 06 ngày làm việc**. Việc yêu cầu thử việc 15 ngày làm việc đã vượt quá giới hạn luật định.\n\n---\n*Nội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.*",
+        "cited_dieu": [
+          25
+        ],
+        "truth_dieu": [
+          25
+        ],
+        "judge_score": 5,
+        "latency_s": 274.79,
+        "interrupted": false
+      },
+      {
+        "id": "d018",
+        "loai": "tinh_huong",
+        "answer": "Căn cứ theo quy định của pháp luật lao động hiện hành, việc công ty áp dụng thời gian thử việc **90 ngày** đối với bạn có đúng luật hay không phụ thuộc vào vị trí chức danh quản lý cụ thể của bạn:\n\n### 1. Căn cứ pháp lý về thời gian thử việc\nTheo [Khoản 1 và Khoản 2 Điều 25, Bộ luật Lao động 2019], thời gian thử việc do hai bên thỏa thuận căn cứ vào tính chất, mức độ phức tạp của công việc nhưng chỉ được thử việc một lần đối với một công việc và bảo đảm:\n- **Không quá 180 ngày**: Đối với công việc của **người quản lý doanh nghiệp** theo quy định của Luật Doanh nghiệp, Luật Quản lý, sử dụng vốn nhà nước đầu tư vào sản xuất, kinh doanh tại doanh nghiệp.\n- **Không quá 60 ngày**: Đối với công việc có chức danh nghề nghiệp cần trình độ chuyên môn, kỹ thuật từ cao đẳng trở lên.\n- **Không quá 30 ngày**: Đối với công việc có chức danh nghề nghiệp cần trình độ chuyên môn, kỹ thuật trung cấp, công nhân kỹ thuật, nhân viên nghiệp vụ.\n- **Không quá 06 ngày làm việc**: Đối với công việc khác.\n\n---\n\n### 2. Đánh giá trường hợp của bạn\n\n* **Trường hợp 1: Bạn là \"Người quản lý doanh nghiệp\" theo Luật Doanh nghiệp**\n  * Theo Luật Doanh nghiệp, người quản lý doanh nghiệp bao gồm: Chủ doanh nghiệp tư nhân, Thành viên hợp danh, Chủ tịch Hội đồng thành viên, Thành viên Hội đồng thành viên, Chủ tịch công ty, Chủ tịch Hội đồng quản trị, Thành viên Hội đồng quản trị, Giám đốc hoặc Tổng giám đốc và cá nhân giữ chức danh quản lý khác có thẩm quyền nhân danh công ty ký kết giao dịch của công ty theo quy định tại Điều lệ công ty.\n  * **Kết luận:** Nếu bạn giữ một trong các chức danh nêu trên, thời hạn thử việc tối đa được phép lên tới **180 ngày**. Do đó, việc thỏa thuận thử việc **90 ngày là ĐÚNG LUẬT**.\n\n* **Trường hợp 2: Bạn là quản lý cấp cao nhưng KHÔNG thuộc diện \"Người quản lý doanh nghiệp\" theo Luật Doanh nghiệp/Điều lệ công ty**\n  * Ví dụ: Bạn làm Trưởng phòng, Phó Trưởng phòng, Giám đốc khối/bộ phận... nhưng Điều lệ công ty không quy định chức danh này có thẩm quyền đại diện/nhân danh công ty ký kết giao dịch.\n  * Khi đó, công việc của bạn chỉ thuộc nhóm công việc cần trình độ chuyên môn, kỹ thuật từ cao đẳng trở lên với thời gian thử việc tối đa **không quá 60 ngày** [Khoản 2 Điều 25, Bộ luật Lao động 2019].\n  * **Kết luận:** Trong trường hợp này, việc công ty áp dụng thử việc **90 ngày là TRÁI LUẬT** (vượt quá 30 ngày so với mức tối đa cho phép).\n\n---\n\n*Nội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.*",
+        "cited_dieu": [
+          25
+        ],
+        "truth_dieu": [
+          25
+        ],
+        "judge_score": 5,
+        "latency_s": 231.64,
+        "interrupted": false
+      },
+      {
+        "id": "d019",
+        "loai": "tinh_huong",
+        "answer": "Căn cứ theo quy định của pháp luật lao động hiện hành, việc công ty chỉ trả **70% mức lương chính thức** trong thời gian thử việc là **KHÔNG ĐÚNG LUẬT**.\n\n### Căn cứ pháp lý:\nTheo **[Điều 26, Bộ luật Lao động 2019]** quy định về tiền lương thử việc:\n> *\"Tiền lương của người lao động trong thời gian thử việc do hai bên thỏa thuận nhưng **ít nhất phải bằng 85%** mức lương của công việc đó.\"*\n\nDo đó, mức lương thử việc hợp pháp mà công ty phải chi trả cho bạn phải đạt tối thiểu từ **85%** mức lương của công việc đó trở lên. Việc trả 70% là vi phạm quy định pháp luật về mức lương thử việc tối thiểu.\n\n---\n*Nội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.*",
+        "cited_dieu": [
+          26
+        ],
+        "truth_dieu": [
+          26
+        ],
+        "judge_score": 5,
+        "latency_s": 423.18,
+        "interrupted": false
+      },
+      {
+        "id": "d020",
+        "loai": "tinh_huong",
+        "answer": "Theo quy định của pháp luật lao động hiện hành, **việc công ty bắt bạn làm việc liên tục 6 tiếng trong một ca mà không bố trí thời gian nghỉ giữa giờ là vi phạm pháp luật.**\n\nCụ thể:\n\n1. **Quy định về thời gian nghỉ giữa giờ:**\n   - Người lao động làm việc từ **06 giờ trở lên trong một ngày** thì được nghỉ giữa giờ ít nhất **30 phút liên tục** (đối với ca làm việc ban ngày) hoặc ít nhất **45 phút liên tục** (đối với ca làm việc ban đêm hoặc có ít nhất 03 giờ làm việc trong khung giờ ban đêm) [Khoản 1 Điều 109, Bộ luật Lao động 2019; Khoản 1 Điều 64, Nghị định 145/2020/NĐ-CP].\n   - Đối với trường hợp làm việc theo ca liên tục từ 06 giờ trở lên, thời gian nghỉ giữa giờ này còn được **tính vào giờ làm việc** [Khoản 1 Điều 109, Bộ luật Lao động 2019; Khoản 2 Điều 64, Nghị định 145/2020/NĐ-CP].\n\n2. **Quy định về thời điểm nghỉ giữa giờ:**\n   - Người sử dụng lao động có quyền quyết định thời điểm nghỉ trong giờ làm việc, nhưng **không được bố trí thời gian nghỉ này vào thời điểm bắt đầu hoặc kết thúc ca làm việc** [Khoản 3 Điều 64, Nghị định 145/2020/NĐ-CP].\n\nDo đó, công ty bắt buộc phải bố trí thời gian nghỉ giữa giờ (ít nhất 30 phút hoặc 45 phút tùy ca) cho bạn. Việc không cho nghỉ giữa giờ phút nào trong ca làm việc từ 6 tiếng trở lên là không tuân thủ quy định pháp luật.\n\n---\n*Nội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.*",
+        "cited_dieu": [
+          64,
+          109
+        ],
+        "truth_dieu": [
+          109
+        ],
+        "judge_score": 5,
+        "latency_s": 339.17,
+        "interrupted": false
+      },
+      {
+        "id": "d021",
+        "loai": "tinh_huong",
+        "answer": "Quy định của công ty làm việc 6 ngày/tuần, mỗi ngày 9 giờ dưới dạng thời giờ làm việc bình thường là **KHÔNG đúng quy định của pháp luật**.\n\nCăn cứ pháp lý và phân tích cụ thể như sau:\n\n**1. Về thời giờ làm việc bình thường:**\n* Theo [Điều 105, Bộ luật Lao động 2019]:\n  * Thời giờ làm việc bình thường không quá 08 giờ trong 01 ngày và không quá 48 giờ trong 01 tuần [Khoản 1, Điều 105, Bộ luật Lao động 2019].\n  * Trường hợp người sử dụng lao động quy định thời giờ làm việc theo tuần thì thời giờ làm việc bình thường không quá 10 giờ trong 01 ngày và **không quá 48 giờ trong 01 tuần** [Khoản 2, Điều 105, Bộ luật Lao động 2019].\n\n* Đối chiếu với quy định của công ty:\n  * Tổng thời giờ làm việc trong 1 tuần: $6 \\text{ ngày} \\times 9 \\text{ giờ/ngày} = 54 \\text{ giờ/tuần}$.\n  * Mặc dù mức 9 giờ/ngày không vượt quá 10 giờ/ngày (nếu công ty áp dụng chế độ thời giờ làm việc theo tuần), nhưng tổng số giờ làm việc 54 giờ/tuần đã **vượt quá giới hạn tối đa 48 giờ/tuần** theo quy định của pháp luật.\n\n**2. Về việc tổ chức làm thêm giờ (nếu có):**\n* Khoảng thời gian làm việc vượt quá 48 giờ/tuần (hoặc vượt quá 8 giờ/ngày nếu áp dụng làm việc theo ngày) phải được tính là **thời gian làm thêm giờ** [Điều 107, Bộ luật Lao động 2019].\n* Công ty chỉ được phép yêu cầu người lao động làm việc vượt quá thời giờ làm việc bình thường khi đáp ứng đầy đủ các điều kiện sau:\n  1. Phải được sự **đồng ý của người lao động** [Điểm a Khoản 2, Điều 107, Bộ luật Lao động 2019].\n  2. Bảo đảm giới hạn số giờ làm thêm (không quá 50% số giờ làm việc bình thường/ngày; tổng số giờ làm việc bình thường và làm thêm không quá 12 giờ/ngày nếu theo tuần; không quá 40 giờ/tháng và không quá 200 giờ/năm, trừ một số trường hợp đặc biệt được làm thêm đến 300 giờ/năm) [Khoản 2, Khoản 3, Điều 107, Bộ luật Lao động 2019].\n  3. Phải thanh toán **tiền lương làm thêm giờ** theo quy định.\n\n*Nội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.*",
+        "cited_dieu": [
+          105,
+          107
+        ],
+        "truth_dieu": [
+          105
+        ],
+        "judge_score": 5,
+        "latency_s": 174.79,
+        "interrupted": false
+      },
+      {
+        "id": "d022",
+        "loai": "tinh_huong",
+        "answer": "Theo quy định tại điểm c khoản 1 Điều 98 [Bộ luật Lao động 2019], người lao động làm thêm giờ vào ngày nghỉ lễ, tết (bao gồm Tết Dương lịch) thì được trả lương làm thêm giờ ít nhất bằng **300%** đơn giá tiền lương hoặc tiền lương thực trả theo công việc đang làm (chưa kể tiền lương ngày lễ, tết, ngày nghỉ có hưởng lương đối với người lao động hưởng lương ngày).\n\nTrường hợp làm thêm giờ vào ban đêm ngày lễ, tết, ngoài mức ít nhất 300% nêu trên, người lao động còn được trả thêm [Điều 98, Bộ luật Lao động 2019]:\n- Ít nhất 30% tiền lương tính theo đơn giá tiền lương hoặc tiền lương thực trả theo công việc của ngày làm việc bình thường (do làm việc vào ban đêm).\n- Thêm 20% tiền lương tính theo đơn giá tiền lương hoặc tiền lương theo công việc làm vào ban ngày của ngày nghỉ lễ, tết (do làm thêm giờ vào ban đêm ngày lễ, tết).\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          98
+        ],
+        "truth_dieu": [
+          98
+        ],
+        "judge_score": 5,
+        "latency_s": 153.35,
+        "interrupted": false
+      },
+      {
+        "id": "d023",
+        "loai": "tinh_huong",
+        "answer": "Theo quy định tại khoản 2 Điều 113 [Bộ luật Lao động 2019], người lao động làm việc chưa đủ 12 tháng cho một người sử dụng lao động thì số ngày nghỉ hằng năm được tính theo tỷ lệ tương ứng với số tháng làm việc.\n\n**Kết quả tính số ngày phép năm:**\n- **Số ngày phép năm được hưởng:** **8 ngày**\n- **Căn cứ và cách tính:** Chưa làm đủ 12 tháng: 12 ngày × 8/12 tháng = 8,0 ngày [Điều 113, Bộ luật Lao động 2019].\n\nTrường hợp xin nghỉ việc mà chưa nghỉ hết số ngày phép năm này, bạn sẽ được người sử dụng lao động thanh toán tiền lương cho những ngày chưa nghỉ theo quy định tại khoản 3 Điều 113 [Bộ luật Lao động 2019].\n\n*Nội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.*",
+        "cited_dieu": [
+          113
+        ],
+        "truth_dieu": [
+          113
+        ],
+        "judge_score": 5,
+        "latency_s": 108.06,
+        "interrupted": false
+      },
+      {
+        "id": "d024",
+        "loai": "tinh_huong",
+        "answer": "Theo quy định của pháp luật lao động Việt Nam, việc sa thải người lao động vì hành vi đánh bạc tại nơi làm việc được xem xét dưới hai góc độ: **Căn cứ xử lý kỷ luật** và **Thủ tục thực hiện kỷ luật**.\n\n### 1. Về căn cứ áp dụng hình thức sa thải\nHành vi đánh bạc tại nơi làm việc là căn cứ hợp pháp để người sử dụng lao động áp dụng hình thức xử lý kỷ luật sa thải. \nCụ thể, người sử dụng lao động được áp dụng hình thức xử lý kỷ luật sa thải đối với người lao động có hành vi trộm cắp, tham ô, **đánh bạc**, cố ý gây thương tích, sử dụng ma túy tại nơi làm việc [Khoản 1 Điều 125, Bộ luật Lao động 2019].\n\n### 2. Điều kiện để quyết định sa thải bảo đảm đúng luật\nDù người lao động có hành vi đánh bạc tại nơi làm việc, việc sa thải chỉ thực sự **đúng luật** khi người sử dụng lao động tuân thủ đầy đủ các nguyên tắc và trình tự, thủ tục xử lý kỷ luật lao động:\n\n* **Chứng minh lỗi:** Người sử dụng lao động phải chứng minh được hành vi vi phạm (đánh bạc tại nơi làm việc) của người lao động [Điểm a Khoản 1 Điều 122, Bộ luật Lao động 2019].\n* **Thành phần tham dự cuộc họp xử lý kỷ luật:**\n  * Phải có sự tham gia của tổ chức đại diện người lao động tại cơ sở (nếu người lao động là thành viên) [Điểm b Khoản 1 Điều 122, Bộ luật Lao động 2019].\n  * Người lao động phải có mặt và có quyền tự bào chữa, nhờ luật sư hoặc tổ chức đại diện người lao động bào chữa [Điểm c Khoản 1 Điều 122, Bộ luật Lao động 2019].\n* **Lập biên bản:** Việc xử lý kỷ luật lao động phải được ghi thành biên bản [Điểm d Khoản 1 Điều 122, Bộ luật Lao động 2019].\n* **Thời điểm xử lý kỷ luật:** Người sử dụng lao động **không được** xử lý kỷ luật đối với người lao động đang trong các khoảng thời gian như: nghỉ ốm đau, điều dưỡng; đang bị tạm giữ, tạm giam; lao động nữ đang mang thai, nghỉ thai sản hoặc đang nuôi con dưới 12 tháng tuổi... [Khoản 4 Điều 122, Bộ luật Lao động 2019].\n\n**Tóm lại:** Xét về mặt hành vi, công ty có quyền sa thải bạn vì vi phạm quy định về đánh bạc tại nơi làm việc. Tuy nhiên, nếu công ty không tuân thủ đúng trình tự, thủ tục họp xử lý kỷ luật hoặc ra quyết định sa thải trong thời gian cấm xử lý kỷ luật thì quyết định sa thải đó vẫn bị coi là trái pháp luật.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          122,
+          125
+        ],
+        "truth_dieu": [
+          125
+        ],
+        "judge_score": 5,
+        "latency_s": 162.6,
+        "interrupted": false
+      },
+      {
+        "id": "d025",
+        "loai": "tinh_huong",
+        "answer": "Căn cứ theo quy định của pháp luật lao động hiện hành, kỷ luật của bạn **đã được đương nhiên xóa**.\n\n### Căn cứ pháp lý:\nTheo **[Khoản 1 Điều 126, Bộ luật Lao động 2019]**, người lao động bị khiển trách sau **03 tháng** kể từ ngày bị xử lý kỷ luật, nếu không tiếp tục vi phạm kỷ luật lao động thì **đương nhiên được xóa kỷ luật**.\n\n### Trường hợp của bạn:\n* Hình thức kỷ luật: Khiển trách.\n* Thời gian đã trôi qua: 04 tháng (đã vượt quá thời hạn 03 tháng theo quy định).\n* Điều kiện vi phạm: Bạn không tái phạm / không tiếp tục vi phạm kỷ luật lao động.\n\nDo đó, hình thức kỷ luật khiển trách của bạn đã đủ điều kiện và **đương nhiên được xóa kỷ luật** [Khoản 1 Điều 126, Bộ luật Lao động 2019].\n\n---\n*Nội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.*",
+        "cited_dieu": [
+          126
+        ],
+        "truth_dieu": [
+          126
+        ],
+        "judge_score": 5,
+        "latency_s": 190.98,
+        "interrupted": false
+      },
+      {
+        "id": "d026",
+        "loai": "tinh_huong",
+        "answer": "Theo quy định của pháp luật lao động hiện hành, việc hợp đồng lao động (HĐLĐ) bằng văn bản **không ghi rõ mức lương mà chỉ thỏa thuận miệng là không đúng quy định pháp luật**. Cụ thể:\n\n### 1. Quy định về nội dung bắt buộc của Hợp đồng lao động\n* **Mức lương là nội dung chủ yếu bắt buộc phải có:** Theo điểm đ khoản 1 [Điều 21, Bộ luật Lao động 2019], hợp đồng lao động phải bao gồm nội dung chủ yếu về *\"Mức lương theo công việc hoặc chức danh, hình thức trả lương, thời hạn trả lương, phụ cấp lương và các khoản bổ sung khác\"*.\n* **Yêu cầu ghi rõ tiền lương:** Khoản 2 [Điều 95, Bộ luật Lao động 2019] quy định tiền lương phải được ghi rõ trong hợp đồng lao động.\n* **Hình thức hợp đồng:** Hợp đồng lao động phải được giao kết bằng văn bản (trừ hợp đồng dưới 01 tháng theo quy định tại [Điều 14, Bộ luật Lao động 2019]).\n\n### 2. Tính hợp lệ và hậu quả pháp lý\n* **Tính hợp lệ:** Việc không ghi nhận mức lương vào HĐLĐ bằng văn bản là hành vi vi phạm quy định về nội dung chủ yếu của hợp đồng lao động. Nội dung thỏa thuận tiền lương bằng miệng này không đáp ứng hình thức/nội dung do luật định.\n* **Tuyên bố vô hiệu:** Theo [Điều 49, Bộ luật Lao động 2019] và [Điều 50, Bộ luật Lao động 2019], nội dung vi phạm quy định pháp luật có thể bị Tòa án nhân dân tuyên bố **vô hiệu từng phần**.\n* **Trách nhiệm của Người sử dụng lao động:** Người sử dụng lao động có nghĩa vụ ghi đầy đủ các nội dung chủ yếu vào hợp đồng. Nếu không thực hiện, người sử dụng lao động có thể bị xử phạt vi phạm hành chính theo quy định của pháp luật về xử phạt trong lĩnh vực lao động.\n\n### 3. Khuyến nghị ứng xử\nĐể bảo vệ quyền lợi của mình và tránh tranh chấp sau này:\n* Bạn nên yêu cầu người sử dụng lao động ký **Phụ lục hợp đồng lao động** hoặc **Hợp đồng lao động bổ sung/mới**, trong đó ghi rõ mức lương, phụ cấp và hình thức trả lương bằng văn bản theo đúng quy định tại [Điều 21, Bộ luật Lao động 2019].\n* Lưu giữ các bằng chứng chứng minh mức lương thực tế đã thỏa thuận và chi trả (sao kê tài khoản ngân hàng, bảng kê lương, phiếu chi...).\n\n---\n*Nội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.*",
+        "cited_dieu": [
+          14,
+          21,
+          49,
+          50,
+          95
+        ],
+        "truth_dieu": [
+          21
+        ],
+        "judge_score": 5,
+        "latency_s": 218.15,
+        "interrupted": false
+      },
+      {
+        "id": "d027",
+        "loai": "tinh_huong",
+        "answer": "Theo quy định của pháp luật lao động hiện hành, việc công ty xếp lịch làm việc 6 ngày trong tuần được xem xét qua các khía cạnh sau:\n\n### 1. Về ngày nghỉ hằng tuần\n* Một tuần có 7 ngày. Việc làm việc 6 ngày trong tuần đồng nghĩa với việc người lao động được nghỉ 1 ngày còn lại trong tuần (đảm bảo nghỉ ít nhất 24 giờ liên tục).\n* Căn cứ [Khoản 1 Điều 111, Bộ luật Lao động 2019], mỗi tuần người lao động được nghỉ ít nhất 24 giờ liên tục. Trong trường hợp đặc biệt do chu kỳ lao động không thể nghỉ hằng tuần thì người sử dụng lao động có trách nhiệm bảo đảm cho người lao động được nghỉ tính bình quân 01 tháng ít nhất 04 ngày.\n* Người sử dụng lao động có quyền quyết định sắp xếp ngày nghỉ hằng tuần vào ngày Chủ nhật hoặc ngày xác định khác trong tuần nhưng phải ghi vào nội quy lao động [Khoản 2 Điều 111, Bộ luật Lao động 2019].\n* Do đó, nếu công ty bố trí cho bạn làm việc 6 ngày/tuần và nghỉ 1 ngày còn lại trong tuần (24 giờ liên tục), công ty **không vi phạm** quy định về ngày nghỉ hằng tuần.\n\n---\n\n### 2. Về giới hạn thời giờ làm việc\n* Theo [Khoản 1 Điều 105, Bộ luật Lao động 2019], thời giờ làm việc bình thường không quá 08 giờ trong 01 ngày và không quá 48 giờ trong 01 tuần.\n* Trường hợp quy định theo tuần thì thời giờ làm việc bình thường không quá 10 giờ trong 01 ngày và không quá 48 giờ trong 01 tuần [Khoản 2 Điều 105, Bộ luật Lao động 2019].\n\n**Như vậy:**\n* Nếu bạn làm việc 6 ngày/tuần và **tổng thời gian làm việc không vượt quá 48 giờ/tuần** (ví dụ: làm 8 giờ/ngày x 6 ngày = 48 giờ/tuần) thì công ty **đúng quy định**.\n* Nếu tổng thời gian làm việc vượt quá 48 giờ/tuần, số giờ vượt quá đó phải được tính là làm thêm giờ và công ty chỉ được sử dụng lao động làm thêm giờ khi có sự đồng ý của bạn, bảo đảm các giới hạn làm thêm giờ và phải trả tiền lương làm thêm giờ theo quy định [Điều 98, Điều 107, Bộ luật Lao động 2019]. Nếu không tuân thủ các điều kiện này, công ty mới vi phạm pháp luật.\n\n---\n\n### 3. Trường hợp đối với lao động chưa thành niên\n* Nếu người lao động từ đủ 15 tuổi đến chưa đủ 18 tuổi, thời giờ làm việc không được quá 08 giờ trong 01 ngày và không quá 40 giờ trong 01 tuần [Khoản 2 Điều 146, Bộ luật Lao động 2019].\n\n---\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          98,
+          105,
+          107,
+          111,
+          146
+        ],
+        "truth_dieu": [
+          111
+        ],
+        "judge_score": 4,
+        "latency_s": 205.96,
+        "interrupted": false
+      },
+      {
+        "id": "d028",
+        "loai": "nhieu_dieu",
+        "answer": "Về câu hỏi của bạn, câu trả lời cụ thể như sau:\n\n**1. Về điều kiện hưởng trợ cấp thôi việc:**\nBạn **đủ điều kiện được hưởng trợ cấp thôi việc** từ người sử dụng lao động. \n\n**Căn cứ pháp lý:**\n* Bạn ký hợp đồng lao động không xác định thời hạn và đã báo trước đủ 45 ngày khi xin nghỉ việc. Đây là trường hợp đơn phương chấm dứt hợp đồng lao động đúng pháp luật [Điểm a Khoản 1 Điều 35, Bộ luật Lao động 2019].\n* Khi chấm dứt hợp đồng lao động đúng pháp luật theo Điều 35, người sử dụng lao động có trách nhiệm trả trợ cấp thôi việc cho người lao động đã làm việc thường xuyên từ đủ 12 tháng trở lên [Khoản 9 Điều 34, Bộ luật Lao động 2019; Khoản 1 Điều 46, Bộ luật Lao động 2019]. Thời gian bạn làm việc (4,5 năm) đã đáp ứng điều kiện từ đủ 12 tháng trở lên.\n\n---\n\n**2. Về việc thực tế công ty có phải chi trả tiền trợ cấp thôi việc hay không:**\nTheo quy định, thời gian làm việc để tính trợ cấp thôi việc là tổng thời gian người lao động đã làm việc thực tế cho người sử dụng lao động trừ đi thời gian đã tham gia bảo hiểm thất nghiệp và thời gian đã được người sử dụng lao động chi trả trợ cấp thôi việc, trợ cấp mất việc làm [Khoản 2 Điều 46, Bộ luật Lao động 2019].\n\nDo đó:\n* **Nếu trong suốt 4,5 năm làm việc, bạn đã tham gia Bảo hiểm thất nghiệp (BHTN) đầy đủ:** Thời gian tính trợ cấp thôi việc do công ty chi trả sẽ bằng 0. Khi đó, công ty không phải trả tiền trợ cấp thôi việc. Thay vào đó, bạn có thể làm thủ tục hưởng **trợ cấp thất nghiệp** do Quỹ Bảo hiểm thất nghiệp (cơ quan BHXH) chi trả nếu đáp ứng các điều kiện theo quy định của Luật Việc làm.\n* **Nếu có thời gian bạn làm việc thực tế mà chưa/không tham gia BHTN** (và chưa được chi trả trợ cấp thôi việc, trợ cấp mất việc làm trước đó): Công ty có trách nhiệm chi trả trợ cấp thôi việc cho khoảng thời gian này.\n\n*(Nếu bạn có khoảng thời gian không tham gia BHTN và muốn tính chính xác số tiền trợ cấp thôi việc, vui lòng cung cấp thêm thông tin về số tháng làm việc không đóng BHTN và mức tiền lương bình quân 6 tháng liền kề trước khi nghỉ việc).*\n\n---\n\n*Nội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.*",
+        "cited_dieu": [
+          34,
+          35,
+          46
+        ],
+        "truth_dieu": [
+          34,
+          35,
+          46
+        ],
+        "judge_score": 5,
+        "latency_s": 215.76,
+        "interrupted": false
+      },
+      {
+        "id": "d029",
+        "loai": "nhieu_dieu",
+        "answer": "",
+        "cited_dieu": [],
+        "truth_dieu": [
+          35,
+          40
+        ],
+        "judge_score": 1,
+        "latency_s": 233.28,
+        "interrupted": false
+      },
+      {
+        "id": "d030",
+        "loai": "nhieu_dieu",
+        "answer": "[AGENT_INTERRUPTED]",
+        "cited_dieu": [],
+        "truth_dieu": [
+          34,
+          46
+        ],
+        "judge_score": null,
+        "latency_s": 201.37,
+        "interrupted": true
+      },
+      {
+        "id": "d031",
+        "loai": "nhieu_dieu",
+        "answer": "[AGENT_INTERRUPTED]",
+        "cited_dieu": [],
+        "truth_dieu": [
+          34,
+          42,
+          47
+        ],
+        "judge_score": null,
+        "latency_s": 227.88,
+        "interrupted": true
+      },
+      {
+        "id": "d032",
+        "loai": "nhieu_dieu",
+        "answer": "",
+        "cited_dieu": [],
+        "truth_dieu": [
+          36,
+          39,
+          41
+        ],
+        "judge_score": 1,
+        "latency_s": 179.38,
+        "interrupted": false
+      },
+      {
+        "id": "d033",
+        "loai": "nhieu_dieu",
+        "answer": "Việc công ty sa thải lao động nữ đang nuôi con 8 tháng tuổi với lý do \"năng suất giảm do phải chăm con\" là **HOÀN TOÀN BẤT HỢP PHÁP (TRÁI PHÁP LUẬT)**.\n\nCụ thể, việc sa thải này vi phạm nghiêm trọng các quy định của Bộ luật Lao động 2019 như sau:\n\n1. **Cấm sa thải hoặc đơn phương chấm dứt hợp đồng lao động vì lý do nuôi con dưới 12 tháng tuổi:**\n   - Theo quy định tại Khoản 3 [Điều 137, Bộ luật Lao động 2019], người sử dụng lao động không được sa thải hoặc đơn phương chấm dứt hợp đồng lao động đối với người lao động vì lý do kết hôn, mang thai, nghỉ thai sản, nuôi con dưới 12 tháng tuổi (trừ trường hợp người sử dụng lao động là cá nhân chết/mất tích/mất năng lực hành vi dân sự hoặc không phải là cá nhân thì chấm dứt hoạt động).\n\n2. **Cấm xử lý kỷ luật lao động đối với người lao động nuôi con dưới 12 tháng tuổi:**\n   - Theo điểm d khoản 4 [Điều 122, Bộ luật Lao động 2019], người sử dụng lao động không được xử lý kỷ luật lao động (bao gồm hình thức sa thải) đối với người lao động đang trong thời gian mang thai, nghỉ thai sản, hoặc nuôi con dưới 12 tháng tuổi.\n\n3. **Áp dụng hình thức sa thải không đúng căn cứ pháp luật:**\n   - [Điều 125, Bộ luật Lao động 2019] quy định hình thức kỷ luật sa thải chỉ được áp dụng trong 04 trường hợp cụ thể (như: trộm cắp, tham ô, tiết lộ bí mật kinh doanh, tự ý bỏ việc 05 ngày cộng dồn trong 30 ngày mà không có lý do chính đáng...).\n   - Lý do \"năng suất giảm do phải chăm con\" không nằm trong các trường hợp được phép xử lý kỷ luật sa thải theo quy định của pháp luật.\n\n---\n\n*Nội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.*",
+        "cited_dieu": [
+          122,
+          125,
+          137
+        ],
+        "truth_dieu": [
+          36,
+          137
+        ],
+        "judge_score": 5,
+        "latency_s": 209.6,
+        "interrupted": false
+      },
+      {
+        "id": "d034",
+        "loai": "nhieu_dieu",
+        "answer": "Việc công ty yêu cầu bạn làm việc theo ca đêm liên tục **7 giờ không nghỉ** là **vi phạm quy định của pháp luật lao động** về thời giờ nghỉ ngơi. \n\nCụ thể như sau:\n\n1. **Khung giờ làm việc ban đêm:**\n   Giờ làm việc ban đêm được tính từ 22 giờ đến 06 giờ sáng ngày hôm sau [Điều 106, Bộ luật Lao động 2019].\n\n2. **Quyền được nghỉ giữa giờ khi làm việc ban đêm:**\n   - Người lao động làm việc từ 06 giờ trở lên trong một ngày/ca làm việc, trong đó có ít nhất 03 giờ làm việc trong khung giờ ban đêm thì phải được nghỉ giữa giờ ít nhất **45 phút liên tục** [Khoản 1 Điều 109, Bộ luật Lao động 2019] và [Khoản 1 Điều 64, Nghị định 145/2020/NĐ-CP].\n   - Trường hợp làm việc theo ca liên tục từ 06 giờ trở lên thì thời gian nghỉ giữa giờ ít nhất 45 phút này **được tính vào giờ làm việc** [Khoản 1 Điều 109, Bộ luật Lao động 2019] và [Khoản 2 Điều 64, Nghị định 145/2020/NĐ-CP].\n   - Người sử dụng lao động có quyền quyết định thời điểm nghỉ trong giờ làm việc, nhưng **không được** bố trí thời gian nghỉ này vào thời điểm bắt đầu hoặc kết thúc ca làm việc [Khoản 3 Điều 64, Nghị định 145/2020/NĐ-CP].\n\nVì bạn làm việc 7 giờ (từ 06 giờ trở lên) trong ca đêm nhưng công ty không bố trí cho bạn nghỉ giữa giờ ít nhất 45 phút liên tục, hành vi này đã vi phạm quy định pháp luật về thời giờ nghỉ ngơi của người lao động.\n\n*Nội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.*",
+        "cited_dieu": [
+          64,
+          106,
+          109
+        ],
+        "truth_dieu": [
+          105,
+          109
+        ],
+        "judge_score": 5,
+        "latency_s": 141.55,
+        "interrupted": false
+      },
+      {
+        "id": "d035",
+        "loai": "nhieu_dieu",
+        "answer": "Mức lương theo công việc **4.200.000 đồng/tháng** đối với người lao động làm việc toàn thời gian tại Vùng II là **KHÔNG ĐÚNG quy định pháp luật** về mức lương tối thiểu.\n\nCăn cứ pháp lý cụ thể như sau:\n\n1. **Về mức lương theo công việc:**\n   - Mức lương theo công việc hoặc chức danh ghi trong hợp đồng lao động không được thấp hơn mức lương tối thiểu [Khoản 2 Điều 90, Bộ luật Lao động 2019].\n   - Mức lương theo công việc hoặc chức danh của người lao động làm việc đủ thời giờ làm việc bình thường trong tháng và hoàn thành định mức lao động/công việc đã thỏa thuận không được thấp hơn mức lương tối thiểu tháng [Khoản 1 Điều 4, Nghị định 293/2025/NĐ-CP].\n\n2. **Mức lương tối thiểu tháng tại Vùng II:**\n   - Theo quy định tại Điều 3 Nghị định 293/2025/NĐ-CP, mức lương tối thiểu tháng áp dụng đối với người lao động làm việc cho người sử dụng lao động tại **Vùng II là 4.730.000 đồng/tháng** *(trước đó, theo Nghị định 74/2024/NĐ-CP áp dụng từ ngày 01/07/2024, mức lương tối thiểu Vùng II đã là **4.410.000 đồng/tháng**)* [Điều 3, Nghị định 293/2025/NĐ-CP].\n\n**Kết luận:** \nMức lương ghi trong hợp đồng của bạn là **4.200.000 đồng/tháng** thấp hơn so với mức lương tối thiểu vùng quy định cho Vùng II. Do đó, doanh nghiệp có trách nhiệm rà soát, điều chỉnh lại mức lương trong hợp đồng lao động để bảo đảm không thấp hơn mức lương tối thiểu vùng theo quy định hiện hành [Khoản 4 Điều 5, Nghị định 293/2025/NĐ-CP].\n\n*Nội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.*",
+        "cited_dieu": [
+          3,
+          4,
+          5,
+          90
+        ],
+        "truth_dieu": [
+          3,
+          90
+        ],
+        "judge_score": 5,
+        "latency_s": 233.06,
+        "interrupted": false
+      },
+      {
+        "id": "d036",
+        "loai": "ngoai_pham_vi",
+        "answer": "Câu hỏi này nằm ngoài phạm vi tư vấn của tôi (chỉ hỗ trợ Luật Lao động\nViệt Nam). Bạn nên tham khảo luật sư hoặc cơ quan chuyên môn phù hợp với lĩnh vực câu hỏi.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [],
+        "truth_dieu": [],
+        "judge_score": 5,
+        "latency_s": 36.96,
+        "interrupted": false
+      },
+      {
+        "id": "d037",
+        "loai": "ngoai_pham_vi",
+        "answer": "Câu hỏi này nằm ngoài phạm vi tư vấn của tôi (chỉ hỗ trợ Luật Lao động\nViệt Nam). Bạn nên tham khảo luật sư hoặc cơ quan chuyên môn phù hợp với lĩnh vực câu hỏi.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [],
+        "truth_dieu": [],
+        "judge_score": 5,
+        "latency_s": 40.5,
+        "interrupted": false
+      },
+      {
+        "id": "d038",
+        "loai": "ngoai_pham_vi",
+        "answer": "Câu hỏi này nằm ngoài phạm vi tư vấn của tôi (chỉ hỗ trợ Luật Lao động\nViệt Nam). Bạn nên tham khảo luật sư hoặc cơ quan chuyên môn phù hợp với lĩnh vực câu hỏi.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [],
+        "truth_dieu": [],
+        "judge_score": 5,
+        "latency_s": 48.03,
+        "interrupted": false
+      },
+      {
+        "id": "d039",
+        "loai": "ngoai_pham_vi",
+        "answer": "Câu hỏi này nằm ngoài phạm vi tư vấn của tôi (chỉ hỗ trợ Luật Lao động\nViệt Nam). Bạn nên tham khảo luật sư hoặc cơ quan chuyên môn phù hợp với lĩnh vực câu hỏi.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [],
+        "truth_dieu": [],
+        "judge_score": 5,
+        "latency_s": 80.18,
+        "interrupted": false
+      },
+      {
+        "id": "d040",
+        "loai": "ngoai_pham_vi",
+        "answer": "Câu hỏi này nằm ngoài phạm vi tư vấn của tôi (chỉ hỗ trợ Luật Lao động\nViệt Nam). Bạn nên tham khảo luật sư hoặc cơ quan chuyên môn phù hợp với lĩnh vực câu hỏi.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [],
+        "truth_dieu": [],
+        "judge_score": 5,
+        "latency_s": 42.01,
+        "interrupted": false
+      }
+    ]
   }
 }

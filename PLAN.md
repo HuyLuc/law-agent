@@ -485,8 +485,9 @@ Các quy tắc bắt buộc trong system prompt:
 | Tỷ lệ từ chối đúng | Trên nhóm `ngoai_pham_vi` | V0–V4 |
 | Độ trễ p50/p95, số lần gọi công cụ trung bình | Ghi lại khi chạy | V3, V4 |
 
-- [ ] **Kiểm chứng giám khảo:** tự chấm tay 30 câu, tính mức độ trùng khớp với điểm LLM chấm và ghi vào README
-- [ ] Tối ưu trên dev → chạy trên **test 1 lần** → lưu `eval/results/v0.json … v4.json`
+- [x] Chạy V0-V4 đầy đủ trên tập **dev** (40 câu), lưu `eval/results/generation_dev.json` — xem bảng kết quả trong README. V4 (agent đầy đủ) từ chối đúng 100% câu ngoài phạm vi và có citation recall cao nhất; độ trễ đo được bị ảnh hưởng bởi retry khi quota Gemini cạn giữa chừng (xem Hạn chế trong README).
+- [ ] **Kiểm chứng giám khảo:** tự chấm tay 30 câu, tính mức độ trùng khớp với điểm LLM chấm và ghi vào README — **cần người dùng làm, không tự động hoá được**
+- [ ] Chạy trên **test (100 câu) 1 lần** → `eval/results/generation_test.json` (dùng `--dataset test`)
 - [ ] **Phân tích lỗi:** chọn 10 câu agent sai, phân loại nguyên nhân và ghi vào README:
   - tra cứu sai (không lấy được điều cần thiết)
   - suy luận sai (lấy đúng điều nhưng hiểu sai)
