@@ -89,6 +89,19 @@ def _save_dead_keys(dead_indices: set[int]) -> None:
 
 
 _dead_gemini_keys: set[int] = _load_dead_keys()
+_dead_gemini_keys_date: str = datetime.now().astimezone().date().isoformat()
+
+
+def _refresh_dead_keys_if_new_day() -> None:
+    """_dead_gemini_keys chi duoc nap 1 lan luc import module -- tien trinh
+    chay lau (vd eval hang gio) bang qua nua dem se khong tu nhan ra sang
+    ngay moi, dan den hieu nham cac key chet TU HOM QUA van con chet HOM NAY
+    khi ghi lai file. Kiem tra lai moi lan invoke() de tu reset dung luc."""
+    global _dead_gemini_keys, _dead_gemini_keys_date
+    today = datetime.now().astimezone().date().isoformat()
+    if today != _dead_gemini_keys_date:
+        _dead_gemini_keys = set()
+        _dead_gemini_keys_date = today
 
 
 def _is_key_unusable_error(exc: Exception) -> bool:
@@ -123,6 +136,7 @@ class _ChainWithKeyMemory:
         self._groq_model = groq_model
 
     def invoke(self, *args, **kwargs):
+        _refresh_dead_keys_if_new_day()
         last_err: Exception | None = None
         for i, model in enumerate(self._gemini_models):
             if i in _dead_gemini_keys:
