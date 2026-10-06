@@ -1,0 +1,1565 @@
+{
+  "v1": {
+    "citation_precision": 0.7901234567901234,
+    "citation_recall": 0.8725490196078431,
+    "avg_judge_score": 4.784090909090909,
+    "refusal_accuracy": 1.0,
+    "latency_p50_s": 55.11,
+    "latency_p95_s": 209.84,
+    "n": 100,
+    "per_item": [
+      {
+        "id": "t001",
+        "loai": "tra_cuu",
+        "answer": "Căn cứ theo quy định tại ngữ cảnh, hợp đồng lao động được định nghĩa như sau:\n\n- Hợp đồng lao động là sự thỏa thuận giữa người lao động và người sử dụng lao động về việc làm có trả công, tiền lương, điều kiện lao động, quyền và nghĩa vụ của mỗi bên trong quan hệ lao động [Điều 13, Bộ luật Lao động 2019].\n- Trường hợp hai bên thỏa thuận bằng tên gọi khác nhưng có nội dung thể hiện về việc làm có trả công, tiền lương và sự quản lý, điều hành, giám sát của một bên thì cũng được coi là hợp đồng lao động [Điều 13, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          13
+        ],
+        "truth_dieu": [
+          13
+        ],
+        "judge_score": 5,
+        "latency_s": 498.53,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t002",
+        "loai": "tra_cuu",
+        "answer": "Căn cứ theo quy định tại ngữ cảnh được cung cấp, khi giao kết hợp đồng lao động, người sử dụng lao động có nghĩa vụ cung cấp thông tin cho người lao động như sau:\n\n**1. Quy định chung khi giao kết hợp đồng lao động:**\nNgười sử dụng lao động phải cung cấp thông tin trung thực cho người lao động về:\n- Công việc;\n- Địa điểm làm việc;\n- Điều kiện làm việc;\n- Thời giờ làm việc, thời giờ nghỉ ngơi;\n- An toàn, vệ sinh lao động;\n- Tiền lương, hình thức trả lương;\n- Bảo hiểm xã hội, bảo hiểm y tế, bảo hiểm thất nghiệp;\n- Quy định về bảo vệ bí mật kinh doanh, bảo vệ bí mật công nghệ;\n- Các vấn đề khác liên quan trực tiếp đến việc giao kết hợp đồng lao động mà người lao động yêu cầu.\n[Điều 16, Bộ luật Lao động 2019]\n\n**2. Quy định riêng đối với lao động là người giúp việc gia đình:**\nNgoài nghĩa vụ cung cấp thông tin theo Điều 16 của Bộ luật Lao động nêu trên, trước khi ký kết hợp đồng lao động, người sử dụng lao động còn phải cung cấp rõ:\n- Phạm vi công việc phải làm;\n- Điều kiện ăn, ở của người lao động tại gia đình người sử dụng lao động;\n- Những thông tin cần thiết khác liên quan đến việc bảo đảm an toàn sức khỏe trong việc thực hiện công việc mà người lao động yêu cầu.\n[Điều 89, Nghị định 145/2020/NĐ-CP]\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          16,
+          89
+        ],
+        "truth_dieu": [
+          16
+        ],
+        "judge_score": 5,
+        "latency_s": 189.31,
+        "interrupted": false,
+        "citation_p": 0.5,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t003",
+        "loai": "tra_cuu",
+        "answer": "Khi giao kết, thực hiện hợp đồng lao động, người sử dụng lao động không được thực hiện các hành vi sau:\n\n1. Giữ bản chính giấy tờ tùy thân, văn bằng, chứng chỉ của người lao động [Dieu 17, Bộ luật Lao động 2019].\n2. Yêu cầu người lao động phải thực hiện biện pháp bảo đảm bằng tiền hoặc tài sản khác cho việc thực hiện hợp đồng lao động [Dieu 17, Bộ luật Lao động 2019].\n3. Buộc người lao động thực hiện hợp đồng lao động để trả nợ cho người sử dụng lao động [Dieu 17, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          17
+        ],
+        "judge_score": 5,
+        "latency_s": 298.24,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t004",
+        "loai": "tra_cuu",
+        "answer": "Căn cứ theo [Điều 18, Bộ luật Lao động 2019], một nhóm người lao động được ủy quyền cho một người lao động trong nhóm ký hợp đồng lao động khi đáp ứng các điều kiện sau:\n\n- **Trường hợp áp dụng:** Đối với công việc theo mùa vụ, công việc nhất định có thời hạn dưới 12 tháng [Điều 18, Bộ luật Lao động 2019].\n- **Đối tượng ủy quyền:** Nhóm người lao động phải từ đủ 18 tuổi trở lên và ủy quyền cho một người lao động trong chính nhóm đó để giao kết hợp đồng lao động [Điều 18, Bộ luật Lao động 2019].\n\nNgoài ra, việc giao kết này phải tuân thủ các quy định sau:\n- Hợp đồng lao động phải được giao kết bằng văn bản và có hiệu lực như giao kết với từng người lao động [Điều 18, Bộ luật Lao động 2019].\n- Hợp đồng lao động do người được ủy quyền ký kết phải kèm theo danh sách ghi rõ họ tên, ngày tháng năm sinh, giới tính, nơi cư trú và chữ ký của từng người lao động [Điều 18, Bộ luật Lao động 2019].\n- Người được ủy quyền giao kết hợp đồng lao động không được ủy quyền lại cho người khác giao kết hợp đồng lao động [Điều 18, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          18
+        ],
+        "truth_dieu": [
+          18
+        ],
+        "judge_score": 5,
+        "latency_s": 44.59,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t005",
+        "loai": "tra_cuu",
+        "answer": "Căn cứ theo quy định của pháp luật, người lao động **có thể** giao kết nhiều hợp đồng lao động với nhiều người sử dụng lao động, nhưng phải bảo đảm thực hiện đầy đủ các nội dung đã giao kết [Điều 19, Bộ luật Lao động 2019]. \n\nTrong trường hợp người lao động đồng thời giao kết nhiều hợp đồng lao động với nhiều người sử dụng lao động thì việc tham gia bảo hiểm xã hội, bảo hiểm y tế, bảo hiểm thất nghiệp được thực hiện theo quy định của pháp luật về bảo hiểm xã hội, bảo hiểm y tế, bảo hiểm thất nghiệp và an toàn, vệ sinh lao động [Điều 19, Bộ luật Lao động 2019].\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          19
+        ],
+        "truth_dieu": [
+          19
+        ],
+        "judge_score": 5,
+        "latency_s": 330.27,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t006",
+        "loai": "tra_cuu",
+        "answer": "Theo quy định, hợp đồng lao động xác định thời hạn là hợp đồng mà trong đó hai bên xác định thời hạn, thời điểm chấm dứt hiệu lực của hợp đồng trong thời gian không quá 36 tháng kể từ thời điểm có hiệu lực của hợp đồng [Điều 20, Bộ luật Lao động 2019].\n\nNhư vậy, thời hạn tối đa của hợp đồng lao động xác định thời hạn là 36 tháng [Điều 20, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          20
+        ],
+        "truth_dieu": [
+          20
+        ],
+        "judge_score": 5,
+        "latency_s": 209.84,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t007",
+        "loai": "tra_cuu",
+        "answer": "Theo quy định tại [Điều 29, Bộ luật Lao động 2019], người sử dụng lao động được quyền tạm thời chuyển người lao động làm công việc khác so với hợp đồng lao động tối đa **không quá 60 ngày làm việc cộng dồn trong 01 năm** mà không cần sự đồng ý bằng văn bản của người lao động. Trường hợp chuyển quá 60 ngày làm việc cộng dồn trong 01 năm thì chỉ được thực hiện khi có sự đồng ý bằng văn bản của người lao động.\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          29
+        ],
+        "truth_dieu": [
+          29
+        ],
+        "judge_score": 5,
+        "latency_s": 176.36,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t008",
+        "loai": "tra_cuu",
+        "answer": "Căn cứ theo quy định tại [Điều 30, Bộ luật Lao động 2019], các trường hợp tạm hoãn thực hiện hợp đồng lao động bao gồm:\n\n1. Người lao động thực hiện nghĩa vụ quân sự, nghĩa vụ tham gia Dân quân tự vệ [Điều 30, Bộ luật Lao động 2019].\n2. Người lao động bị tạm giữ, tạm giam theo quy định của pháp luật về tố tụng hình sự [Điều 30, Bộ luật Lao động 2019].\n3. Người lao động phải chấp hành quyết định áp dụng biện pháp đưa vào trường giáo dưỡng, cơ sở cai nghiện bắt buộc hoặc cơ sở giáo dục bắt buộc [Điều 30, Bộ luật Lao động 2019].\n4. Lao động nữ mang thai nếu có xác nhận của cơ sở khám bệnh, chữa bệnh có thẩm quyền về việc tiếp tục làm việc sẽ ảnh hưởng xấu tới thai nhi [Điều 30, Bộ luật Lao động 2019], [Điều 138, Bộ luật Lao động 2019].\n5. Người lao động được bổ nhiệm làm người quản lý doanh nghiệp của công ty trách nhiệm hữu hạn một thành viên do Nhà nước nắm giữ 100% vốn điều lệ [Điều 30, Bộ luật Lao động 2019].\n6. Người lao động được ủy quyền để thực hiện quyền, trách nhiệm của đại diện chủ sở hữu nhà nước đối với phần vốn nhà nước tại doanh nghiệp [Điều 30, Bộ luật Lao động 2019].\n7. Người lao động được ủy quyền để thực hiện quyền, trách nhiệm của doanh nghiệp đối với phần vốn của doanh nghiệp đầu tư tại doanh nghiệp khác [Điều 30, Bộ luật Lao động 2019].\n8. Trường hợp khác do hai bên thỏa thuận [Điều 30, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          30,
+          138
+        ],
+        "truth_dieu": [
+          30
+        ],
+        "judge_score": 5,
+        "latency_s": 303.13,
+        "interrupted": false,
+        "citation_p": 0.5,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t009",
+        "loai": "tra_cuu",
+        "answer": "Theo quy định, trong thời hạn 15 ngày kể từ ngày hết thời hạn tạm hoãn thực hiện hợp đồng lao động, người lao động phải có mặt tại nơi làm việc, trừ trường hợp hai bên có thỏa thuận hoặc pháp luật có quy định khác [Điều 31, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          31
+        ],
+        "truth_dieu": [
+          31
+        ],
+        "judge_score": 5,
+        "latency_s": 52.89,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t010",
+        "loai": "tra_cuu",
+        "answer": "Theo quy định tại **Điều 32, Bộ luật Lao động 2019**, làm việc không trọn thời gian được quy định như sau:\n\n- **Khái niệm:** Người lao động làm việc không trọn thời gian là người lao động có thời gian làm việc ngắn hơn so với thời gian làm việc bình thường theo ngày hoặc theo tuần hoặc theo tháng được quy định trong pháp luật về lao động, thỏa ước lao động tập thể hoặc nội quy lao động [Điều 32, Bộ luật Lao động 2019].\n- **Thỏa thuận:** Người lao động thỏa thuận với người sử dụng lao động làm việc không trọn thời gian khi giao kết hợp đồng lao động [Điều 32, Bộ luật Lao động 2019].\n- **Quyền lợi và nghĩa vụ:** Người lao động làm việc không trọn thời gian được hưởng lương; bình đẳng trong thực hiện quyền và nghĩa vụ với người lao động làm việc trọn thời gian; bình đẳng về cơ hội, không bị phân biệt đối xử, bảo đảm an toàn, vệ sinh lao động [Điều 32, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          32
+        ],
+        "truth_dieu": [
+          32
+        ],
+        "judge_score": 5,
+        "latency_s": 141.58,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t011",
+        "loai": "tra_cuu",
+        "answer": "Theo quy định của pháp luật, trong quá trình thực hiện hợp đồng lao động, nếu bên nào có yêu cầu sửa đổi, bổ sung nội dung hợp đồng lao động thì phải báo cho bên kia biết trước **ít nhất 03 ngày làm việc** về nội dung cần sửa đổi, bổ sung [Điều 33, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          33
+        ],
+        "truth_dieu": [
+          33
+        ],
+        "judge_score": 5,
+        "latency_s": 131.59,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t012",
+        "loai": "tra_cuu",
+        "answer": "Căn cứ theo quy định tại [Điều 49, Bộ luật Lao động 2019], hợp đồng lao động vô hiệu toàn bộ trong các trường hợp sau đây:\n\n1. Toàn bộ nội dung của hợp đồng lao động vi phạm pháp luật [Điều 49, Bộ luật Lao động 2019];\n2. Người giao kết hợp đồng lao động không đúng thẩm quyền hoặc vi phạm nguyên tắc giao kết hợp đồng lao động quy định tại khoản 1 Điều 15 của Bộ luật Lao động [Điều 49, Bộ luật Lao động 2019];\n3. Công việc đã giao kết trong hợp đồng lao động là công việc mà pháp luật cấm [Điều 49, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          15,
+          49
+        ],
+        "truth_dieu": [
+          49
+        ],
+        "judge_score": 5,
+        "latency_s": 87.21,
+        "interrupted": false,
+        "citation_p": 0.5,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t013",
+        "loai": "tra_cuu",
+        "answer": "Căn cứ vào các quy định tại ngữ cảnh được cung cấp, doanh nghiệp muốn hoạt động cho thuê lại lao động cần đáp ứng các điều kiện sau:\n\n1. **Điều kiện chung:**\n- Là doanh nghiệp được thành lập theo quy định của Luật Doanh nghiệp [Điều 12, Nghị định 145/2020/NĐ-CP].\n- Phải được cấp Giấy phép hoạt động cho thuê lại lao động và thực hiện ký quỹ [Khoản 1 Điều 54, Bộ luật Lao động 2019], [Khoản 2 Điều 52, Bộ luật Lao động 2019].\n\n2. **Điều kiện để được cấp Giấy phép hoạt động cho thuê lại lao động:**\n- **Điều kiện đối với Người đại diện theo pháp luật của doanh nghiệp** [Khoản 1 Điều 21, Nghị định 145/2020/NĐ-CP]:\n  + Là người quản lý doanh nghiệp theo quy định của Luật Doanh nghiệp;\n  + Không có án tích;\n  + Đã có thời gian trực tiếp làm chuyên môn hoặc quản lý về cho thuê lại lao động hoặc cung ứng lao động từ đủ 03 năm (36 tháng) trở lên trong thời hạn 05 năm liền kề trước khi đề nghị cấp giấy phép.\n- **Điều kiện về ký quỹ** [Khoản 2 Điều 21, Nghị định 145/2020/NĐ-CP]:\n  + Doanh nghiệp đã thực hiện ký quỹ 2.000.000.000 đồng (hai tỷ đồng).\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          12,
+          21,
+          52,
+          54
+        ],
+        "truth_dieu": [
+          54
+        ],
+        "judge_score": 5,
+        "latency_s": 55.03,
+        "interrupted": false,
+        "citation_p": 0.25,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t014",
+        "loai": "tra_cuu",
+        "answer": "Căn cứ theo quy định của pháp luật, thời hạn tập nghề để làm việc cho người sử dụng lao động là **không quá 03 tháng** [Điều 61, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          61
+        ],
+        "truth_dieu": [
+          61
+        ],
+        "judge_score": 5,
+        "latency_s": 48.84,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t015",
+        "loai": "tra_cuu",
+        "answer": "Căn cứ theo quy định tại [Điều 62, Bộ luật Lao động 2019], hợp đồng đào tạo nghề phải có các nội dung chủ yếu sau đây:\n\n1. Nghề đào tạo;\n2. Địa điểm, thời gian và tiền lương trong thời gian đào tạo;\n3. Thời hạn cam kết phải làm việc sau khi được đào tạo;\n4. Chi phí đào tạo và trách nhiệm hoàn trả chi phí đào tạo;\n5. Trách nhiệm của người sử dụng lao động;\n6. Trách nhiệm của người lao động.\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          62
+        ],
+        "truth_dieu": [
+          62
+        ],
+        "judge_score": 5,
+        "latency_s": 55.52,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t016",
+        "loai": "tra_cuu",
+        "answer": "Căn cứ theo quy định tại [Điều 78, Bộ luật Lao động 2019], thời điểm có hiệu lực của thỏa ước lao động tập thể được xác định như sau:\n\n- Ngày có hiệu lực của thỏa ước lao động tập thể do các bên thỏa thuận và được ghi trong thỏa ước.\n- Trường hợp các bên không thỏa thuận ngày có hiệu lực thì thỏa ước lao động tập thể có hiệu lực kể từ ngày ký kết.\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          78
+        ],
+        "truth_dieu": [
+          78
+        ],
+        "judge_score": 5,
+        "latency_s": 53.43,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t017",
+        "loai": "tra_cuu",
+        "answer": "Theo quy định của pháp luật lao động, mức lương tối thiểu được hiểu như sau:\n\n1. **Khái niệm chung:**\n   * Mức lương tối thiểu là mức lương thấp nhất được trả cho người lao động làm công việc giản đơn nhất trong điều kiện lao động bình thường nhằm bảo đảm mức sống tối thiểu của người lao động và gia đình họ, phù hợp với điều kiện phát triển kinh tế - xã hội [Điều 91, Bộ luật Lao động 2019].\n   * Mức lương tối thiểu được xác lập theo vùng, ấn định theo tháng, giờ [Điều 91, Bộ luật Lao động 2019].\n\n2. **Mức lương tối thiểu tháng:**\n   * Là mức lương thấp nhất làm cơ sở để thỏa thuận và trả lương đối với người lao động áp dụng hình thức trả lương theo tháng, bảo đảm mức lương theo công việc hoặc chức danh của người lao động làm việc đủ thời giờ làm việc bình thường trong tháng và hoàn thành định mức lao động hoặc công việc đã thỏa thuận không được thấp hơn mức lương tối thiểu tháng [Điều 4, Nghị định 293/2025/NĐ-CP].\n\n3. **Mức lương tối thiểu giờ:**\n   * Là mức lương thấp nhất làm cơ sở để thỏa thuận và trả lương đối với người lao động áp dụng hình thức trả lương theo giờ, bảo đảm mức lương theo công việc hoặc chức danh của người lao động làm việc trong một giờ và hoàn thành định mức lao động hoặc công việc đã thỏa thuận không được thấp hơn mức lương tối thiểu giờ [Điều 4, Nghị định 293/2025/NĐ-CP].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          4,
+          91
+        ],
+        "truth_dieu": [
+          91
+        ],
+        "judge_score": 5,
+        "latency_s": 118.01,
+        "interrupted": false,
+        "citation_p": 0.5,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t018",
+        "loai": "tra_cuu",
+        "answer": "Căn cứ theo quy định tại [Điều 94, Bộ luật Lao động 2019], nguyên tắc trả lương cho người lao động gồm có:\n\n1. Người sử dụng lao động phải trả lương trực tiếp, đầy đủ, đúng hạn cho người lao động. Trường hợp người lao động không thể nhận lương trực tiếp thì người sử dụng lao động có thể trả lương cho người được người lao động ủy quyền hợp pháp [Điều 94, Bộ luật Lao động 2019].\n2. Người sử dụng lao động không được hạn chế hoặc can thiệp vào quyền tự quyết chi tiêu lương của người lao động; không được ép buộc người lao động chi tiêu lương vào việc mua hàng hóa, sử dụng dịch vụ của người sử dụng lao động hoặc của đơn vị khác mà người sử dụng lao động chỉ định [Điều 94, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          94
+        ],
+        "truth_dieu": [
+          94
+        ],
+        "judge_score": 5,
+        "latency_s": 43.76,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t019",
+        "loai": "tra_cuu",
+        "answer": "Căn cứ theo quy định tại [Điều 95, Bộ luật Lao động 2019], mỗi lần trả lương, người sử dụng lao động phải:\n\n- Thông báo bảng kê trả lương cho người lao động, trong đó ghi rõ:\n  + Tiền lương;\n  + Tiền lương làm thêm giờ;\n  + Tiền lương làm việc vào ban đêm;\n  + Nội dung và số tiền bị khấu trừ (nếu có).\n\nBên cạnh đó, người sử dụng lao động phải trả lương trực tiếp, đầy đủ, đúng hạn cho người lao động; trường hợp người lao động không thể nhận lương trực tiếp thì có thể trả cho người được người lao động ủy quyền hợp pháp [Điều 94, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          94,
+          95
+        ],
+        "truth_dieu": [
+          95
+        ],
+        "judge_score": 5,
+        "latency_s": 57.66,
+        "interrupted": false,
+        "citation_p": 0.5,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t020",
+        "loai": "tra_cuu",
+        "answer": "Dựa vào thông tin trong ngữ cảnh được cung cấp, tiền lương có thể được trả theo các hình thức sau:\n\n1. **Theo căn cứ/cách thức tính lương:** \n   - Tr\nả lương theo thời gian (theo tháng, tuần, ngày, giờ).\n   - Trả lương theo sản phẩm.\n   - Trả lương khoán.\n   *(Hình thức này do người sử dụng lao động và người lao động thỏa thuận trong hợp đồng lao động)* [Điều 96, Bộ luật Lao động 2019], [Điều 54, Nghị định 145/2020/NĐ-CP].\n\n2. **Theo phương thức thanh toán:** \n   - Trả bằng tiền mặt.\n   - Trả qua tài khoản cá nhân của người lao động được mở tại ngân hàng [Điều 96, Bộ luật Lao động 2019], [Điều 54, Nghị định 145/2020/NĐ-CP].\n\n3. **Theo loại tiền tệ:** \n   - Trả bằng tiền Đồng Việt Nam.\n   - Trả bằng ngoại tệ (áp dụng đối với người lao động là người nước ngoài tại Việt Nam) [Điều 95, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          54,
+          95,
+          96
+        ],
+        "truth_dieu": [
+          96
+        ],
+        "judge_score": 4,
+        "latency_s": 161.55,
+        "interrupted": false,
+        "citation_p": 0.3333333333333333,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t021",
+        "loai": "tra_cuu",
+        "answer": "Theo quy định của pháp luật, người lao động hưởng lương theo tháng được trả **một tháng một lần** hoặc **nửa tháng một lần** [Điều 97, Bộ luật Lao động 2019]. \n\nThời điểm trả lương cụ thể do hai bên thỏa thuận và phải được ấn định vào một thời điểm có tính chu kỳ [Điều 97, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          97
+        ],
+        "truth_dieu": [
+          97
+        ],
+        "judge_score": 5,
+        "latency_s": 51.36,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t022",
+        "loai": "tra_cuu",
+        "answer": "Trong trường hợp thông thường, số giờ làm thêm tối đa của người lao động được quy định như sau:\n\n- **Trong 01 tháng:** Không quá **40 giờ** [Điều 107, Bộ luật Lao động 2019].\n- **Trong 01 năm:** Không quá **200 giờ** [Điều 107, Bộ luật Lao động 2019].\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          107
+        ],
+        "truth_dieu": [
+          107
+        ],
+        "judge_score": 5,
+        "latency_s": 176.29,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t023",
+        "loai": "tra_cuu",
+        "answer": "Theo quy định của pháp luật, người lao động không được từ chối làm thêm giờ trong các trường hợp đặc biệt sau đây:\n\n1. Thực hiện lệnh động viên, huy động bảo đảm nhiệm vụ quốc phòng, an ninh theo quy định của pháp luật [Điều 108, Bộ luật Lao động 2019].\n2. Thực hiện các công việc nhằm bảo vệ tính mạng con người, tài sản của cơ quan, tổ chức, cá nhân trong phòng ngừa, khắc phục hậu quả thiên tai, hỏa hoạn, dịch bệnh nguy hiểm và thảm họa, trừ trường hợp có nguy cơ ảnh hưởng đến tính mạng, sức khỏe của người lao động theo quy định của pháp luật về an toàn, vệ sinh lao động [Điều 108, Bộ luật Lao động 2019].\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          108
+        ],
+        "truth_dieu": [
+          108
+        ],
+        "judge_score": 5,
+        "latency_s": 60.85,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t024",
+        "loai": "tra_cuu",
+        "answer": "Theo quy định tại Bộ luật Lao động 2019, thời gian nghỉ thai sản của lao động nữ trước và sau khi sinh được quy định như sau:\n\n- Lao động nữ được nghỉ thai sản trước và sau khi sinh con là **06 tháng**; trong đó, thời gian nghỉ trước khi sinh không quá **02 tháng**.\n- Trường hợp lao động nữ sinh đôi trở lên thì tính từ con thứ 02 trở đi, cứ mỗi con, người mẹ được nghỉ thêm **01 tháng**.\n\n[Điều 139, Bộ luật Lao động 2019]\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          139
+        ],
+        "truth_dieu": [
+          139
+        ],
+        "judge_score": 5,
+        "latency_s": 55.5,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t025",
+        "loai": "tra_cuu",
+        "answer": "Theo quy định tại Bộ luật Lao động 2019, lao động chưa thành niên là người lao động chưa đủ 18 tuổi [Điều 143, Bộ luật Lao động 2019].\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          143
+        ],
+        "truth_dieu": [
+          143
+        ],
+        "judge_score": 5,
+        "latency_s": 50.67,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t026",
+        "loai": "tra_cuu",
+        "answer": "Khi sử dụng người chưa đủ 15 tuổi làm việc, người sử dụng lao động phải tuân theo các quy định sau đây:\n\n1. **Các quy định cụ thể khi sử dụng người chưa đủ 15 tuổi làm việc:**\n   - Phải giao kết hợp đồng lao động bằng văn bản với người chưa đủ 15 tuổi và người đại diện theo pháp luật của người đó [Điều 145, Bộ luật Lao động 2019].\n   - Bố trí giờ làm việc không ảnh hưởng đến thời gian học tập của người chưa đủ 15 tuổi [Điều 145, Bộ luật Lao động 2019].\n   - Phải có giấy khám sức khỏe của cơ sở khám bệnh, chữa bệnh có thẩm quyền xác nhận sức khỏe của người chưa đủ 15 tuổi phù hợp với công việc và tổ chức kiểm tra sức khỏe định kỳ ít nhất một lần trong 06 tháng [Điều 145, Bộ luật Lao động 2019].\n   - Bảo đảm điều kiện làm việc, an toàn, vệ sinh lao động phù hợp với lứa tuổi [Điều 145, Bộ luật Lao động 2019].\n   - **Về độ tuổi và loại công việc được làm:**\n     - Người từ đủ 13 tuổi đến chưa đủ 15 tuổi: Chỉ được tuyển dụng và sử dụng làm các công việc nhẹ theo danh mục do Bộ trưởng Bộ Lao động - Thương binh và Xã hội ban hành [Điều 143, Bộ luật Lao động 2019; Điều 145, Bộ luật Lao động 2019].\n     - Người chưa đủ 13 tuổi: Không được tuyển dụng và sử dụng làm việc, trừ các công việc nghệ thuật, thể dục, thể thao nhưng không làm tổn hại đến sự phát triển thể lực, trí lực, nhân cách của người chưa đủ 13 tuổi và phải có sự đồng ý của cơ quan chuyên môn về lao động thuộc Ủy ban nhân dân cấp tỉnh [Điều 145, Bộ luật Lao động 2019].\n\n2. **Các nguyên tắc chung khi sử dụng lao động chưa thành niên (chưa đủ 18 tuổi):**\n   - Chỉ được giao công việc phù hợp với sức khỏe để bảo đảm sự phát triển thể lực, trí lực, nhân cách [Điều 144, Bộ luật Lao động 2019].\n   - Có trách nhiệm quan tâm chăm sóc người lao động về các mặt lao động, sức khỏe, học tập trong quá trình lao động [Điều 144, Bộ luật Lao động 2019].\n   - Phải có sự đồng ý của cha, mẹ hoặc người giám hộ; lập sổ theo dõi riêng (ghi đầy đủ họ tên, ngày tháng năm sinh, công việc đang làm, kết quả những lần kiểm tra sức khỏe định kỳ) và xuất trình khi cơ quan nhà nước có thẩm quyền yêu cầu [Điều 144, Bộ luật Lao động 2019].\n   - Tạo cơ hội để lao động chưa thành niên được học văn hóa, giáo dục nghề nghiệp, đào tạo, bồi dưỡng, nâng cao trình độ kỹ năng nghề [Điều 144, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          143,
+          144,
+          145
+        ],
+        "truth_dieu": [
+          145
+        ],
+        "judge_score": 5,
+        "latency_s": 64.58,
+        "interrupted": false,
+        "citation_p": 0.3333333333333333,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t027",
+        "loai": "tra_cuu",
+        "answer": "Căn cứ theo quy định, thời giờ làm việc tối đa của người chưa đủ 15 tuổi cụ thể như sau:\n\n- Không được quá **04 giờ trong 01 ngày** và không được quá **20 giờ trong 01 tuần** [Điều 146, Bộ luật Lao động 2019].\n- Không được làm thêm giờ, làm việc vào ban đêm [Điều 146, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          146
+        ],
+        "truth_dieu": [
+          146
+        ],
+        "judge_score": 5,
+        "latency_s": 60.7,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t028",
+        "loai": "tra_cuu",
+        "answer": "Khi sử dụng lao động là người khuyết tật, người sử dụng lao động phải bảo đảm các trách nhiệm sau:\n\n1. Phải bảo đảm về điều kiện lao động, công cụ lao động, an toàn, vệ sinh lao động và tổ chức khám sức khỏe định kỳ phù hợp với người lao động là người khuyết tật [Điều 159, Bộ luật Lao động 2019].\n2. Phải tham khảo ý kiến của người lao động là người khuyết tật khi quyết định những vấn đề liên quan đến quyền và lợi ích của họ [Điều 159, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          159
+        ],
+        "truth_dieu": [
+          159
+        ],
+        "judge_score": 5,
+        "latency_s": 54.16,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t029",
+        "loai": "tra_cuu",
+        "answer": "Căn cứ theo quy định tại Điều 160 Bộ luật Lao động 2019, các hành vi bị nghiêm cấm khi sử dụng lao động là người khuyết tật nặng bao gồm:\n\n1. Sử dụng người lao động là người khuyết tật nặng làm thêm giờ, làm việc vào ban đêm, trừ trường hợp người lao động là người khuyết tật đồng ý [Điều 160, Bộ luật Lao động 2019].\n2. Sử dụng người lao động là người khuyết tật làm công việc nặng nhọc, độc hại, nguy hiểm theo danh mục do Bộ trưởng Bộ Lao động - Thương binh và Xã hội ban hành mà không có sự đồng ý của người khuyết tật sau khi đã được người sử dụng lao động cung cấp đầy đủ thông tin về công việc đó [Điều 160, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          160
+        ],
+        "truth_dieu": [
+          160
+        ],
+        "judge_score": 5,
+        "latency_s": 46.57,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t030",
+        "loai": "tra_cuu",
+        "answer": "Trong thời gian người lao động nghỉ việc hưởng chế độ bảo hiểm xã hội, người sử dụng lao động **không phải trả lương** cho người lao động, trừ trường hợp hai bên có thỏa thuận khác [Điều 168, Bộ luật Lao động 2019].\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          168
+        ],
+        "truth_dieu": [
+          168
+        ],
+        "judge_score": 5,
+        "latency_s": 42.79,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t031",
+        "loai": "tra_cuu",
+        "answer": "Theo quy định, cơ quan, tổ chức, cá nhân có thẩm quyền giải quyết tranh chấp lao động cá nhân bao gồm:\n\n1. Hòa giải viên lao động [Điều 187, Bộ luật Lao động 2019];\n2. Hội đồng trọng tài lao động [Điều 187, Bộ luật Lao động 2019];\n3. Tòa án nhân dân [Điều 187, Bộ luật Lao động 2019].\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          187
+        ],
+        "truth_dieu": [
+          187
+        ],
+        "judge_score": 5,
+        "latency_s": 45.72,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t032",
+        "loai": "tra_cuu",
+        "answer": "Căn cứ quy định tại khoản 1 Điều 188 và điểm a khoản 2 Điều 219 Bộ luật Lao động 2019, các tranh chấp lao động cá nhân không bắt buộc phải qua thủ tục hòa giải của hòa giải viên lao động trước khi yêu cầu Tòa án hoặc Hội đồng trọng tài lao động giải quyết bao gồm các trường hợp sau:\n\n1. Tranh chấp về xử lý kỷ luật lao động theo hình thức sa thải hoặc về trường hợp bị đơn phương chấm dứt hợp đồng lao động [Điều 188, Bộ luật Lao động 2019]; [Điều 219, Bộ luật Lao động 2019].\n2. Tranh chấp về bồi thường thiệt hại, trợ cấp khi chấm dứt hợp đồng lao động [Điều 188, Bộ luật Lao động 2019]; [Điều 219, Bộ luật Lao động 2019].\n3. Tranh chấp giữa người giúp việc gia đình với người sử dụng lao động [Điều 188, Bộ luật Lao động 2019]; [Điều 219, Bộ luật Lao động 2019].\n4. Tranh chấp về bảo hiểm xã hội theo quy định của pháp luật về bảo hiểm xã hội, về bảo hiểm y tế theo quy định của pháp luật về bảo hiểm y tế, về bảo hiểm thất nghiệp theo quy định của pháp luật về việc làm, về bảo hiểm tai nạn lao động, bệnh nghề nghiệp theo quy định của pháp luật về an toàn, vệ sinh lao động [Điều 188, Bộ luật Lao động 2019]; [Điều 219, Bộ luật Lao động 2019].\n5. Tranh chấp về bồi thường thiệt hại giữa người lao động với doanh nghiệp, tổ chức đưa người lao động đi làm việc ở nước ngoài theo hợp đồng [Điều 188, Bộ luật Lao động 2019]; [Điều 219, Bộ luật Lao động 2019].\n6. Tranh chấp giữa người lao động thuê lại với người sử dụng lao động thuê lại [Điều 188, Bộ luật Lao động 2019]; [Điều 219, Bộ luật Lao động 2019].\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          188,
+          219
+        ],
+        "truth_dieu": [
+          188
+        ],
+        "judge_score": 5,
+        "latency_s": 59.69,
+        "interrupted": false,
+        "citation_p": 0.5,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t033",
+        "loai": "tra_cuu",
+        "answer": "Đình công là sự ngừng việc tạm thời, tự nguyện và có tổ chức của người lao động nhằm đạt được yêu cầu trong quá trình giải quyết tranh chấp lao động và do tổ chức đại diện người lao động có quyền thương lượng tập thể là một bên tranh chấp lao động tập thể tổ chức và lãnh đạo [Điều 198, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          198
+        ],
+        "truth_dieu": [
+          198
+        ],
+        "judge_score": 5,
+        "latency_s": 106.0,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t034",
+        "loai": "tra_cuu",
+        "answer": "Trong thời hạn **30 ngày** kể từ ngày bắt đầu hoạt động, người sử dụng lao động phải lập sổ quản lý lao động ở nơi đặt trụ sở, chi nhánh, văn phòng đại diện [Điều 3, Nghị định 145/2020/NĐ-CP].\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          3
+        ],
+        "truth_dieu": [
+          3
+        ],
+        "judge_score": 5,
+        "latency_s": 59.79,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t035",
+        "loai": "tra_cuu",
+        "answer": "Theo quy định của pháp luật lao động, người sử dụng lao động phải định kỳ báo cáo tình hình thay đổi lao động vào các thời điểm sau:\n\n- **Định kỳ 06 tháng:** Trước ngày 05 tháng 6 [Điều 4, Nghị định 145/2020/NĐ-CP].\n- **Hằng năm:** Trước ngày 05 tháng 12 [Điều 4, Nghị định 145/2020/NĐ-CP].\n\nBáo cáo này được gửi đến Sở Lao động - Thương binh và Xã hội (thông qua Cổng Dịch vụ công Quốc gia hoặc bằng bản giấy nếu không thể gửi qua Cổng) và thông báo đến cơ quan bảo hiểm xã hội cấp huyện nơi đặt trụ sở, chi nhánh, văn phòng đại diện [Điều 12, Bộ luật Lao động 2019] và [Điều 4, Nghị định 145/2020/NĐ-CP].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          4,
+          12
+        ],
+        "truth_dieu": [
+          4
+        ],
+        "judge_score": 5,
+        "latency_s": 167.6,
+        "interrupted": false,
+        "citation_p": 0.5,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h001",
+        "loai": "tinh_huong",
+        "answer": "Việc Công ty ký hợp đồng lao động xác định thời hạn 40 tháng với bạn là **không đúng quy định của pháp luật**.\n\nCăn cứ quy định tại điểm b khoản 1 Điều 20 Bộ luật Lao động 2019, hợp đồng lao động xác định thời hạn là hợp đồng mà trong đó hai bên xác định thời hạn, thời điểm chấm dứt hiệu lực của hợp đồng trong thời gian **không quá 36 tháng** kể từ thời điểm có hiệu lực của hợp đồng [Điều 20, Bộ luật Lao động 2019].\n\nDo đó, việc ký hợp đồng lao động xác định thời hạn với thời gian 40 tháng là đã vượt quá thời hạn tối đa 36 tháng cho phép theo quy định [Điều 20, Bộ luật Lao động 2019].\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          20
+        ],
+        "truth_dieu": [
+          20
+        ],
+        "judge_score": 5,
+        "latency_s": 44.53,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h002",
+        "loai": "tinh_huong",
+        "answer": "Trường hợp của bạn, hợp đồng lao động hiện tại đã trở thành **hợp đồng lao động không xác định thời hạn** [Dieu 20, Bộ luật Lao động 2019].\n\nCăn cứ theo quy định tại điểm b khoản 2 Điều 20 Bộ luật Lao động 2019 [Dieu 20, Bộ luật Lao động 2019]:\n- Khi hợp đồng lao động xác định thời hạn hết hạn mà người lao động vẫn tiếp tục làm việc, trong thời hạn 30 ngày kể từ ngày hết hạn, hai bên phải ký kết hợp đồng lao động mới [Dieu 20, Bộ luật Lao động 2019].\n- Nếu hết thời hạn 30 ngày kể từ ngày hợp đồng lao động hết hạn mà hai bên không ký kết hợp đồng lao động mới thì hợp đồng đã giao kết trở thành hợp đồng lao động không xác định thời hạn [Dieu 20, Bộ luật Lao động 2019].\n\nDo bạn đã tiếp tục làm việc 35 ngày (vượt quá thời hạn 30 ngày) kể từ khi hợp đồng hết hạn và công ty vẫn chưa ký hợp đồng mới, nên hợp đồng lao động xác định thời hạn 24 tháng trước đó của bạn đã tự động chuyển thành hợp đồng lao động không xác định thời hạn [Dieu 20, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          20
+        ],
+        "truth_dieu": [
+          20
+        ],
+        "judge_score": 5,
+        "latency_s": 105.44,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h003",
+        "loai": "tinh_huong",
+        "answer": "Việc công ty chuyển bạn làm công việc khác so với hợp đồng lao động 70 ngày cộng dồn trong năm mà không có sự đồng ý bằng văn bản của bạn là **không đúng quy định của pháp luật**.\n\nCăn cứ theo quy định:\n- Người sử dụng lao động chỉ được quyền tạm thời chuyển người lao động làm công việc khác so với hợp đồng lao động nhưng không được quá 60 ngày làm việc cộng dồn trong 01 năm [Điều 29, Bộ luật Lao động 2019].\n- Trường hợp chuyển người lao động làm công việc khác so với hợp đồng lao động **quá 60 ngày làm việc cộng dồn trong 01 năm thì chỉ được thực hiện khi người lao động đồng ý bằng văn bản** [Điều 29, Bộ luật Lao động 2019].\n\nDo đó, việc công ty tự ý chuyển bạn làm công việc khác đến 70 ngày (vượt quá hạn mức 60 ngày) mà không hỏi ý kiến và không có sự đồng ý bằng văn bản của bạn là vi phạm quy định pháp luật.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          29
+        ],
+        "truth_dieu": [
+          29
+        ],
+        "judge_score": 5,
+        "latency_s": 76.43,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h004",
+        "loai": "tinh_huong",
+        "answer": "Căn cứ theo [Điều 31, Bộ luật Lao động 2019], trong thời hạn **15 ngày** kể từ ngày hết thời hạn tạm hoãn thực hiện hợp đồng lao động, người lao động phải có mặt tại nơi làm việc và người sử dụng lao động phải nhận người lao động trở lại làm công việc theo hợp đồng lao động đã giao kết nếu hợp đồng còn thời hạn (trừ trường hợp hai bên có thỏa thuận hoặc pháp luật có quy định khác).\n\nTrường hợp của bạn là đến công ty sau 20 ngày kể từ ngày hết thời hạn tạm hoãn (đã vượt quá thời hạn 15 ngày nêu trên). Tuy nhiên, về việc công ty có quyền không nhận lại bạn trong trường hợp quá hạn này hay không thì trong ngữ cảnh được cung cấp **không tìm thấy căn cứ** để trả lời.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          31
+        ],
+        "truth_dieu": [
+          31
+        ],
+        "judge_score": 3,
+        "latency_s": 43.18,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h005",
+        "loai": "tinh_huong",
+        "answer": "Việc công ty muốn sửa đổi nội dung mức lương trong hợp đồng lao động nhưng chỉ báo trước cho bạn 01 ngày là **không đúng quy định pháp luật**.\n\nCăn cứ theo quy định về sửa đổi, bổ sung hợp đồng lao động:\n\n1. **Thời hạn báo trước:** Trong quá trình thực hiện hợp đồng lao động, khi một bên có yêu cầu sửa đổi, bổ sung nội dung hợp đồng lao động thì phải báo cho bên kia biết trước **ít nhất 03 ngày làm việc** về nội dung cần sửa đổi, bổ sung [Điều 33, Bộ luật Lao động 2019]. Do đó, việc công ty chỉ báo trước 01 ngày là vi phạm thời hạn báo trước tối thiểu.\n\n2. **Nguyên tắc thỏa thuận:** Việc sửa đổi, bổ sung nội dung hợp đồng lao động phải dựa trên sự thỏa thuận của hai bên (bằng việc ký kết phụ lục hợp đồng lao động hoặc giao kết hợp đồng lao động mới) [Điều 33, Bộ luật Lao động 2019]. \n\n3. **Trường hợp không thỏa thuận được:** Nếu bạn và công ty không thỏa thuận được về việc sửa đổi nội dung mức lương thì hai bên tiếp tục thực hiện hợp đồng lao động đã giao kết [Điều 33, Bộ luật Lao động 2019].\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          33
+        ],
+        "truth_dieu": [
+          33
+        ],
+        "judge_score": 5,
+        "latency_s": 69.24,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h006",
+        "loai": "tinh_huong",
+        "answer": "Viec công ty giữ bằng đại học gốc của bạn để \"bảo đảm\" bạn không nghỉ việc giữa chừng là **không đúng quy định của pháp luật**.\n\nCăn cứ theo quy định tại [Dieu 17, Bo luat Lao dong 2019], các hành vi người sử dụng lao động không được làm khi giao kết, thực hiện hợp đồng lao động bao gồm:\n1. Giữ bản chính giấy tờ tùy thân, văn bằng, chứng chỉ của người lao động [Dieu 17, Bo luat Lao dong 2019].\n2. Yêu cầu người lao động phải thực hiện biện pháp bảo đảm bằng tiền hoặc tài sản khác cho việc thực hiện hợp đồng lao động [Dieu 17, Bo luat Lao dong 2019].\n\nVì vậy, công ty không có quyền giữ bằng đại học gốc của bạn dưới bất kỳ hình thức nào.\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          17
+        ],
+        "judge_score": 5,
+        "latency_s": 44.55,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h007",
+        "loai": "tinh_huong",
+        "answer": "Chào bạn, dựa trên thông tin được cung cấp trong phần ngữ cảnh, nhóm 5 người của bạn hoàn toàn **có thể** ủy quyền cho một người trong nhóm để ký hợp đồng lao động chung. \n\nCác quy định pháp lý cụ thể như sau:\n\n1. **Điều kiện ủy quyền:** Đối với công việc theo mùa vụ hoặc công việc nhất định có thời hạn dưới 12 tháng (trường hợp của bạn là làm việc mùa vụ 8 tháng), nhóm người lao động từ đủ 18 tuổi trở lên có thể ủy quyền cho một người lao động trong nhóm để giao kết hợp đồng lao động [Khoản 2 Điều 18, Bộ luật Lao động 2019]. Người lao động được những người lao động trong nhóm ủy quyền hợp pháp là người có thẩm quyền giao kết hợp đồng lao động bên phía người lao động [Khoản 4 Điều 18, Bộ luật Lao động 2019].\n\n2. **Hình thức và hiệu lực của hợp đồng:** Trong trường hợp này, hợp đồng lao động phải được giao kết bằng văn bản và có hiệu lực như giao kết với từng người lao động [Khoản 2 Điều 18, Bộ luật Lao động 2019].\n\n3. **Yêu cầu về hồ sơ kèm theo:** Hợp đồng lao động do người được ủy quyền ký kết phải kèm theo danh sách ghi rõ họ tên, ngày tháng năm sinh, giới tính, nơi cư trú và chữ ký của từng người lao động trong nhóm [Khoản 2 Điều 18, Bộ luật Lao động 2019].\n\n4. **Lưu ý quan trọng:** Người được ủy quyền giao kết hợp đồng lao động không được ủy quyền lại cho người khác giao kết hợp đồng lao động [Khoản 5 Điều 18, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          18
+        ],
+        "truth_dieu": [
+          18
+        ],
+        "judge_score": 5,
+        "latency_s": 59.13,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h008",
+        "loai": "tinh_huong",
+        "answer": "Việc công ty nhận bạn vào tập nghề với thời hạn 4 tháng là **không đúng** quy định của pháp luật.\n\nTheo quy định, tập nghề để làm việc cho người sử dụng lao động là việc tuyển người vào để hướng dẫn thực hành công việc, tập làm nghề theo vị trí việc làm tại nơi làm việc, và thời hạn tập nghề này **không quá 03 tháng** [Điều 61, Bộ luật Lao động 2019]. Do đó, việc công ty cho bạn tập nghề kéo dài đến 4 tháng là vượt quá thời hạn tối đa cho phép của pháp luật.\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          61
+        ],
+        "truth_dieu": [
+          61
+        ],
+        "judge_score": 5,
+        "latency_s": 46.36,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h009",
+        "loai": "tinh_huong",
+        "answer": "Việc công ty cử bạn đi đào tạo ở nước ngoài bằng chi phí của công ty nhưng chỉ thỏa thuận miệng và không ký kết hợp đồng đào tạo nghề là **không đúng quy định của pháp luật**.\n\nTheo quy định pháp luật lao động:\n* Hai bên **phải ký kết hợp đồng đào tạo nghề** trong trường hợp người lao động được đào tạo nâng cao trình độ, kỹ năng nghề, đào tạo lại ở trong nước hoặc nước ngoài từ kinh phí của người sử dụng lao động, kể cả kinh phí do đối tác tài trợ cho người sử dụng lao động [Điều 62, Bộ luật Lao động 2019].\n* Hợp đồng đào tạo nghề bắt buộc phải được lập thành **02 bản**, mỗi bên giữ 01 bản [Điều 62, Bộ luật Lao động 2019].\n\nDo đó, việc công ty không lập hợp đồng đào tạo nghề bằng văn bản mà chỉ thỏa thuận miệng là trái với quy định nêu trên.\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          62
+        ],
+        "truth_dieu": [
+          62
+        ],
+        "judge_score": 5,
+        "latency_s": 44.61,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h010",
+        "loai": "tinh_huong",
+        "answer": "Việc công ty trả lương cho bạn 2 tháng một lần là **không đúng quy định của pháp luật**.\n\nCăn cứ theo quy định pháp luật về kỳ hạn trả lương:\n* Người lao động hưởng lương theo tháng được trả một tháng một lần hoặc nửa tháng một lần [Điều 97, BLLD2019_D97_K0].\n* Thời điểm trả lương do hai bên thỏa thuận và phải được ấn định vào một thời điểm có tính chu kỳ [Điều 97, BLLD2019_D97_K0].\n* Ngay cả trong trường hợp vì lý do bất khả kháng mà người sử dụng lao động đã tìm mọi biện pháp khắc phục nhưng không thể trả lương đúng hạn thì cũng không được chậm quá 30 ngày [Điều 97, BLLD2019_D97_K0].\n\nDo đó, công ty không được phép tự ý hoặc thỏa thuận trả lương định kỳ 2 tháng một lần cho bạn.\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          97
+        ],
+        "truth_dieu": [
+          97
+        ],
+        "judge_score": 5,
+        "latency_s": 43.99,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h011",
+        "loai": "tinh_huong",
+        "answer": "Việc công ty bắt bạn tự trả phí mở tài khoản và phí chuyển tiền lương là **không đúng** quy định của pháp luật.\n\nTheo quy định, trong trường hợp trả lương qua tài khoản cá nhân của người lao động được mở tại ngân hàng thì người sử dụng lao động phải trả các loại phí liên quan đến việc mở tài khoản và chuyển tiền lương [Điều 96, BLLD2019_D96_K0].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          96
+        ],
+        "truth_dieu": [
+          96
+        ],
+        "judge_score": 5,
+        "latency_s": 42.04,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h012",
+        "loai": "tinh_huong",
+        "answer": "Dựa trên thông tin được cung cấp trong ngữ cảnh, việc công ty muốn bạn tiếp tục làm thêm giờ trong tháng này là **không đúng quy định pháp luật** (trừ trường hợp đặc biệt), cụ thể như sau:\n\n1. **Giới hạn giờ làm thêm trong tháng:**\n   Theo quy định, người sử dụng lao động được sử dụng người lao động làm thêm giờ khi đáp ứng yêu cầu bảo đảm số giờ làm thêm của người lao động không quá 40 giờ trong 01 tháng [Điều 107, BLLD2019_D107_K0]. \n   Vì bạn đã làm thêm 45 giờ trong tháng này, số giờ làm thêm của bạn đã vượt quá giới hạn tối đa cho phép trong một tháng theo quy định thông thường.\n\n2. **Trường hợp ngoại lệ không bị giới hạn giờ làm thêm:**\n   Công ty chỉ có quyền yêu cầu bạn làm thêm giờ không bị giới hạn số giờ (không áp dụng giới hạn tại Điều 107) và bạn không được từ chối trong các trường hợp đặc biệt sau:\n   - Thực hiện lệnh động viên, huy động bảo đảm nhiệm vụ quốc phòng, an ninh theo quy định của pháp luật [Điều 108, BLLD2019_D108_K0].\n   - Thực hiện các công việc nhằm bảo vệ tính mạng con người, tài sản của cơ quan, tổ chức, cá nhân trong phòng ngừa, khắc phục hậu quả thiên tai, hỏa hoạn, dịch bệnh nguy hiểm và thảm họa, trừ trường hợp có nguy cơ ảnh hưởng đến tính mạng, sức khỏe của người lao động theo quy định của pháp luật về an toàn, vệ sinh lao động [Điều 108, BLLD2019_D108_K0].\n\nNếu không thuộc các trường hợp đặc biệt nêu trên, việc công ty yêu cầu bạn tiếp tục làm thêm giờ khi đã vượt quá 40 giờ trong tháng là không đúng quy định pháp luật.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          107,
+          108
+        ],
+        "truth_dieu": [
+          107
+        ],
+        "judge_score": 5,
+        "latency_s": 45.09,
+        "interrupted": false,
+        "citation_p": 0.5,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h013",
+        "loai": "tinh_huong",
+        "answer": "Dựa trên các quy định tại phần \"Ngự cảnh\", tôi xin tư vấn cho bạn như sau:\n\nBạn **không có quyền từ chối** yêu cầu làm thêm giờ của công ty trong trường hợp này, trừ một số ngoại lệ đặc biệt. Cụ thể:\n\n1. **Trường hợp không được từ chối làm thêm giờ:**\n   Việc khắc phục hậu quả bão lũ khẩn cấp được xếp vào nhóm công việc nhằm bảo vệ tính mạng con người, tài sản của cơ quan, tổ chức, cá nhân trong phòng ngừa, khắc phục hậu quả thiên tai. Theo quy định, người sử dụng lao động có quyền yêu cầu người lao động làm thêm giờ vào bất kỳ ngày nào mà không bị giới hạn về số giờ làm thêm và người lao động không được từ chối [BLLD2019_D108_K0]. \n\n2. **Trường hợp ngoại lệ được phép từ chối:**\n   Bạn chỉ có quyền từ chối làm thêm giờ trong trường hợp công việc khắc phục hậu quả bão lũ đó có nguy cơ ảnh hưởng đến tính mạng, sức khỏe của bạn theo quy định của pháp luật về an toàn, vệ sinh lao động [BLLD2019_D108_K0].\n\n3. **Về sự đồng ý của người lao động:**\n   Thông thường, việc tổ chức làm thêm giờ phải được sự đồng ý của người lao động [BLLD2019_D107_K0], [ND145_2020_D59_K0]. Tuy nhiên, trường hợp khắc phục hậu quả thiên tai (bão lũ) nêu trên là trường hợp đặc biệt ngoại lệ, người sử dụng lao động không cần phải có sự đồng ý của người lao động [ND145_2020_D59_K0].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          108
+        ],
+        "judge_score": 5,
+        "latency_s": 43.8,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h014",
+        "loai": "tinh_huong",
+        "answer": "Theo quy định của pháp luật lao động:\n\n* Lao động nữ được nghỉ thai sản trước và sau khi sinh con là 06 tháng [Dieu 139, Bo luat Lao dong 2019].\n* Trường hợp lao động nữ sinh đôi trở lên thì tính từ con thứ 02 trở đi, cứ mỗi con, người mẹ được nghỉ thêm 01 tháng [Dieu 139, Bo luat Lao dong 2019].\n\nNhư vậy, đối với trường hợp bạn sinh đôi, bạn sẽ được nghỉ thêm 01 tháng cho con thứ hai. Tổng thời gian nghỉ thai sản của bạn là **07 tháng** [Dieu 139, Bo luat Lao dong 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          139
+        ],
+        "judge_score": 5,
+        "latency_s": 46.91,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h015",
+        "loai": "tinh_huong",
+        "answer": "Việc Công ty nhận một em 14 tuổi (thuộc đối tượng người chưa đủ 15 tuổi) vào làm việc nhưng chỉ ký hợp đồng lao động với em đó mà không ký với cha mẹ hoặc người giám hộ (người đại diện theo pháp luật) là **không đúng quy định của pháp luật**.\n\nCăn cứ vào các quy định pháp lý sau đây:\n\n1. **Về nghĩa vụ khi giao kết hợp đồng lao động với người chưa đủ 15 tuổi:** \n   Khi sử dụng người chưa đủ 15 tuổi làm việc, người sử dụng lao động bắt buộc phải giao kết hợp đồng lao động bằng văn bản với người chưa đủ 15 tuổi **và** người đại diện theo pháp luật của người đó [Điều 145, Bộ luật Lao động 2019].\n\n2. **Về thẩm quyền giao kết hợp đồng lao động:** \n   Người giao kết hợp đồng lao động bên phía người lao động đối với trường hợp người chưa đủ 15 tuổi phải là người chưa đủ 15 tuổi **và** người đại diện theo pháp luật của người đó [Điều 18, Bộ luật Lao động 2019].\n\n3. **Về nguyên tắc sử dụng lao động chưa thành niên:** \n   Lao động chưa thành niên là người chưa đủ 18 tuổi [Điều 143, Bộ luật Lao động 2019]. Khi sử dụng lao động chưa thành niên, người sử dụng lao động bắt buộc phải có sự đồng ý của cha, mẹ hoặc người giám hộ [Điều 144, Bộ luật Lao động 2019].\n\nNhư vậy, việc Công ty chỉ ký hợp đồng lao động với riêng em 14 tuổi mà không có sự đồng ý và cùng ký kết của cha, mẹ hoặc người giám hộ (người đại diện theo pháp luật) là vi phạm quy định pháp luật lao động.\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          18,
+          143,
+          144,
+          145
+        ],
+        "truth_dieu": [
+          145
+        ],
+        "judge_score": 5,
+        "latency_s": 52.12,
+        "interrupted": false,
+        "citation_p": 0.25,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h016",
+        "loai": "tinh_huong",
+        "answer": "Việc một em 14 tuổi làm việc 5 giờ/ngày là **không đúng quy định của pháp luật**.\n\nCụ thể, pháp luật lao động Việt Nam quy định như sau:\n\n1. **Về thời giờ làm việc:** \nEm 14 tuổi thuộc nhóm lao động chưa đủ 15 tuổi. Theo quy định, thời giờ làm việc của người chưa đủ 15 tuổi không được quá 04 giờ trong 01 ngày và 20 giờ trong 01 tuần [Điều 146, Bộ luật Lao động 2019]. Do đó, việc xưởng bố trí em làm việc 5 giờ/ngày là vượt quá thời gian lao động tối đa cho phép.\n\n2. **Các điều kiện khác khi sử dụng lao động 14 tuổi:**\nĐể sử dụng lao động từ đủ 13 tuổi đến chưa đủ 15 tuổi (trong đó có em 14 tuổi) đúng pháp luật, người sử dụng lao động còn phải đáp ứng các điều kiện sau:\n* Chỉ được tuyển dụng và sử dụng vào làm các công việc nhẹ theo danh mục do Bộ trưởng Bộ Lao động - Thương binh và Xã hội ban hành [Điều 143, Bộ luật Lao động 2019] [Điều 145, Bộ luật Lao động 2019].\n* Phải có sự đồng ý của cha, mẹ hoặc người giám hộ [Điều 144, Bộ luật Lao động 2019].\n* Phải giao kết hợp đồng lao động bằng văn bản với người chưa đủ 15 tuổi và người đại diện theo pháp luật của người đó [Điều 145, Bộ luật Lao động 2019].\n* Bố trí giờ làm việc không ảnh hưởng đến thời gian học tập của em [Điều 145, Bộ luật Lao động 2019].\n* Phải có giấy khám sức khỏe của cơ sở khám bệnh, chữa bệnh có thẩm quyền xác nhận sức khỏe phù hợp với công việc và tổ chức kiểm tra sức khỏe định kỳ ít nhất một lần trong 06 tháng [Điều 145, Bộ luật Lao động 2019].\n\nNội dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          143,
+          144,
+          145,
+          146
+        ],
+        "truth_dieu": [
+          146
+        ],
+        "judge_score": 5,
+        "latency_s": 48.04,
+        "interrupted": false,
+        "citation_p": 0.25,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h017",
+        "loai": "tinh_huong",
+        "answer": "Việc công ty bắt nhân viên khuyết tật nặng làm ca đêm (làm việc vào ban đêm) mà không hỏi ý kiến và không được sự đồng ý của họ là **không đúng luật**.\n\nTheo quy định, hành vi sử dụng người lao động là người khuyết tật nặng làm việc vào ban đêm là bị nghiêm cấm, trừ trường hợp người lao động là người khuyết tật đồng ý [Điều 160, Bộ luật Lao động 2019]. Do đó, công ty bắt buộc phải có sự đồng ý của nhân viên khuyết tật nặng trước khi bố trí họ làm ca đêm.\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          160
+        ],
+        "truth_dieu": [
+          160
+        ],
+        "judge_score": 5,
+        "latency_s": 44.28,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h018",
+        "loai": "tinh_huong",
+        "answer": "Dựa trên các thông tin được cung cấp trong phần ngữ cảnh, tôi xin tư vấn cho bạn như sau:\n\nBạn **hoàn toàn có thể** khởi kiện thẳng ra Tòa án để giải quyết tranh chấp mà không bắt buộc phải qua thủ tục hòa giải của hòa giải viên lao động trước.\n\nCụ thể:\n* Theo quy định, tranh chấp lao động cá nhân thông thường phải được giải quyết thông qua thủ tục hòa giải của hòa giải viên lao động trước khi yêu cầu Tòa án giải quyết. Tuy nhiên, tranh chấp về xử lý kỷ luật lao động theo hình thức sa thải là trường hợp ngoại lệ **không bắt buộc phải qua thủ tục hòa giải** [Điều 188, Bộ luật Lao động 2019].\n* Đồng thời, quy định về thẩm quyền giải quyết của Tòa án cũng khẳng định tranh chấp lao động cá nhân về xử lý kỷ luật lao động theo hình thức sa thải không bắt buộc phải qua thủ tục hòa giải trước khi yêu cầu Tòa án giải quyết [Điều 219, Bộ luật Lao động 2019].\n\nDo đó, trường hợp bạn bị sa thải thuộc diện được khởi kiện trực tiếp ra Tòa án.\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          188,
+          219
+        ],
+        "truth_dieu": [
+          188
+        ],
+        "judge_score": 5,
+        "latency_s": 70.05,
+        "interrupted": false,
+        "citation_p": 0.5,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h019",
+        "loai": "tinh_huong",
+        "answer": "Dựa trên thông tin được cung cấp trong phần ngữ cảnh, câu trả lời cho câu hỏi của bạn như sau:\n\nTrong thời gian bạn nghỉ việc hưởng chế độ bảo hiểm xã hội (chế độ ốm đau do bảo hiểm xã hội chi trả), công ty (người sử dụng lao động) **không phải trả lương** cho bạn, trừ trường hợp hai bên có thỏa thuận khác [Điều 168, BLLD2019_D168_K0].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          168
+        ],
+        "truth_dieu": [
+          168
+        ],
+        "judge_score": 5,
+        "latency_s": 60.27,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h020",
+        "loai": "tinh_huong",
+        "answer": "Dựa vào ngữ cảnh được cung cấp, tôi xin tư vấn như sau:\n\n* **Về quyền được biết lý do khấu trừ:** Người lao động có quyền được biết lý do khấu trừ tiền lương của mình [Điều 102, Bộ luật Lao động 2019]. Do đó, nếu công ty thực hiện khấu trừ tiền lương của bạn mà không cho bạn biết lý do thì hành vi này là không đúng quy định pháp luật.\n* **Về việc bắt buộc phải cung cấp \"bảng kê chi tiết các khoản khấu trừ\":** Ngữ cảnh được cung cấp không có thông tin quy định về việc người sử dụng lao động có bắt buộc phải cung cấp \"bảng kê chi tiết\" các khoản khấu trừ khi trả lương hằng tháng hay không. Do đó, đối với nội dung này, **không tìm thấy căn cứ** để trả lời cụ thể là đúng hay sai luật.\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          102
+        ],
+        "truth_dieu": [
+          95
+        ],
+        "judge_score": 2,
+        "latency_s": 51.22,
+        "interrupted": false,
+        "citation_p": 0.0,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h021",
+        "loai": "tinh_huong",
+        "answer": "Việc công ty ép buộc bạn phải dùng một phần lương của mình để mua sản phẩm do công ty sản xuất là **không đúng luật**.\n\nTheo quy định pháp luật, người sử dụng lao động không được phép hạn chế hoặc can thiệp vào quyền tự quyết chi tiêu lương của người lao động. Đồng thời, người sử dụng lao động không được ép buộc người lao động chi tiêu lương vào việc mua hàng hóa, sử dụng dịch vụ của người sử dụng lao động hoặc của đơn vị khác mà người sử dụng lao động chỉ định [Điều 94, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          94
+        ],
+        "truth_dieu": [
+          94
+        ],
+        "judge_score": 5,
+        "latency_s": 52.82,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h022",
+        "loai": "tinh_huong",
+        "answer": "Dựa trên thông tin trong phần ngữ cảnh được cung cấp, tôi xin tư vấn cho bạn như sau:\n\nBạn hoàn toàn **được phép** ký thêm hợp đồng lao động bán thời gian với công ty B khi đang có hợp đồng lao động với công ty A. \n\nCụ thể, pháp luật quy định người lao động có thể giao kết nhiều hợp đồng lao động với nhiều người sử dụng lao động khác nhau, nhưng phải bảo đảm thực hiện đầy đủ các nội dung đã giao kết trong các hợp đồng [Điều 19, BLLD2019_D19_K0].\n\nĐồng thời, việc tham gia bảo hiểm xã hội, bảo hiểm y tế, bảo hiểm thất nghiệp khi bạn đồng thời giao kết nhiều hợp đồng lao động sẽ được thực hiện theo quy định của pháp luật về bảo hiểm xã hội, bảo hiểm y tế, bảo hiểm thất nghiệp và an toàn, vệ sinh lao động [Điều 19, BLLD2019_D19_K0].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          19
+        ],
+        "truth_dieu": [
+          19
+        ],
+        "judge_score": 5,
+        "latency_s": 52.65,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h023",
+        "loai": "tinh_huong",
+        "answer": "Chào bạn, dựa trên các quy định pháp luật lao động hiện hành trong ngữ cảnh được cung cấp, trường hợp bạn bị tạm giam để phục vụ điều tra hình sự thì hợp đồng lao động của bạn với công ty sẽ được xử lý như sau:\n\n1. **Tạm hoãn thực hiện hợp đồng lao động:**\n   Khi bạn bị tạm giam theo quy định của pháp luật về tố tụng hình sự, hợp đồng lao động của bạn với công ty sẽ thuộc trường hợp được tạm hoãn thực hiện [Điều 30, Bộ luật Lao động 2019].\n\n2. **Quyền lợi và lương trong thời gian tạm hoãn:**\n   Trong thời gian tạm hoãn thực hiện hợp đồng lao động, bạn sẽ không được hưởng lương và các quyền, lợi ích đã giao kết trong hợp đồng lao động, trừ trường hợp giữa bạn và công ty có thỏa thuận khác hoặc pháp luật có quy định khác [Điều 30, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          30
+        ],
+        "truth_dieu": [
+          30
+        ],
+        "judge_score": 5,
+        "latency_s": 51.57,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h024",
+        "loai": "tinh_huong",
+        "answer": "Theo quy định của pháp luật lao động, bạn **không bị đối xử bất bình đẳng** về quyền lợi so với người làm việc trọn thời gian. \n\nCụ thể như sau:\n- Việc bạn làm việc 4 giờ/ngày (ngắn hơn thời gian làm việc bình thường) theo thỏa thuận khi giao kết hợp đồng lao động được xác định là hình thức làm việc không trọn thời gian [Điều 32, BLLD2019_D32_K0].\n- Người lao động làm việc không trọn thời gian được hưởng lương; bình đẳng trong thực hiện quyền và nghĩa vụ với người lao động làm việc trọn thời gian; bình đẳng về cơ hội, không bị phân biệt đối xử, bảo đảm an toàn, vệ sinh lao động [Điều 32, BLLD2019_D32_K0].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          32
+        ],
+        "truth_dieu": [
+          32
+        ],
+        "judge_score": 5,
+        "latency_s": 54.17,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h025",
+        "loai": "tinh_huong",
+        "answer": "Một công ty muốn kinh doanh dịch vụ cho thuê lại lao động nhưng không ký quỹ và không xin giấy phép thì **không được phép hoạt động**. \n\nCăn cứ theo các quy định pháp luật trong ngữ cảnh:\n\n1. Doanh nghiệp cho thuê lại lao động bắt buộc phải thực hiện ký quỹ và phải được cấp Giấy phép hoạt động cho thuê lại lao động [Điều 54, Bộ luật Lao động 2019].\n2. Doanh nghiệp cho thuê lại lao động được định nghĩa là doanh nghiệp được thành lập theo quy định của Luật Doanh nghiệp, được cấp giấy phép hoạt động cho thuê lại lao động [Điều 12, Nghị định 145/2020/NĐ-CP].\n3. Để được cấp giấy phép hoạt động cho thuê lại lao động, doanh nghiệp bắt buộc phải đáp ứng điều kiện đã thực hiện ký quỹ 2.000.000.000 đồng (hai tỷ đồng) [Điều 21, Nghị định 145/2020/NĐ-CP].\n\nVì vậy, nếu không ký quỹ và không có giấy phép hoạt động, công ty không đủ điều kiện để hoạt động kinh doanh dịch vụ cho thuê lại lao động.\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          12,
+          21,
+          54
+        ],
+        "truth_dieu": [
+          54
+        ],
+        "judge_score": 5,
+        "latency_s": 51.38,
+        "interrupted": false,
+        "citation_p": 0.3333333333333333,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h026",
+        "loai": "tinh_huong",
+        "answer": "Theo quy định của pháp luật lao động, lao động chưa thành niên là người lao động chưa đủ 18 tuổi [Điều 143, Bộ luật Lao động 2019].\n\nVì bạn của bạn 17 tuổi (tức là chưa đủ 18 tuổi) và đi làm, nên bạn của bạn được xem là lao động chưa thành niên [Điều 143, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          143
+        ],
+        "truth_dieu": [
+          143
+        ],
+        "judge_score": 5,
+        "latency_s": 55.59,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h027",
+        "loai": "tinh_huong",
+        "answer": "Dựa trên thông tin trong phần \"Ngự cảnh\", giá trị pháp lý và việc xử lý đối với hợp đồng lao động được ký bởi người không có thẩm quyền đại diện cho công ty được quy định như sau:\n\n**1. Giá trị pháp lý của hợp đồng:**\nHợp đồng lao động được ký bởi người không đúng thẩm quyền bên phía người sử dụng lao động (không thuộc các trường hợp quy định tại Khoản 3 Điều 18 Bộ luật Lao động 2019) sẽ bị tuyên bố **vô hiệu toàn bộ** [Điều 18, Bộ luật Lao động 2019] và [Điều 10, Nghị định 145/2020/NĐ-CP].\n\n**2. Phương án xử lý khi hợp đồng bị tuyên bố vô hiệu toàn bộ:**\n*   **Ký lại hợp đồng:** Người lao động và người sử dụng lao động tiến hành ký lại hợp đồng lao động theo đúng quy định của pháp luật [Điều 10, Nghị định 145/2020/NĐ-CP].\n*   **Quyền, nghĩa vụ và lợi ích của người lao động** kể từ khi bắt đầu làm việc theo hợp đồng bị tuyên bố vô hiệu cho đến khi ký lại được thực hiện như sau:\n    *   Nếu quyền, lợi ích của mỗi bên trong hợp đồng không thấp hơn quy định của pháp luật, thỏa ước lao động tập thể đang áp dụng thì thực hiện theo nội dung hợp đồng lao động bị tuyên bố vô hiệu [Điều 10, Nghị định 145/2020/NĐ-CP].\n    *   Nếu hợp đồng có nội dung về quyền, nghĩa vụ, lợi ích vi phạm pháp luật nhưng không ảnh hưởng đến phần nội dung khác thì thực hiện theo quy định tại khoản 2 Điều 9 Nghị định 145/2020/NĐ-CP [Điều 10, Nghị định 145/2020/NĐ-CP].\n    *   Thời gian làm việc theo hợp đồng bị tuyên bố vô hiệu vẫn được tính là thời gian làm việc của người lao động cho người sử dụng lao động để làm căn cứ thực hiện chế độ theo quy định của pháp luật về lao động [Điều 10, Nghị định 145/2020/NĐ-CP].\n*   **Trường hợp không ký lại hợp đồng:**\n    *   Thực hiện chấm dứt hợp đồng lao động [Điều 10, Nghị định 145/2020/NĐ-CP].\n    *   Quyền, nghĩa vụ, lợi ích của người lao động kể từ khi bắt đầu làm việc cho đến khi chấm dứt hợp đồng được thực hiện theo nguyên tắc nêu trên [Điều 10, Nghị định 145/2020/NĐ-CP].\n    *   Giải quyết chế độ trợ cấp thôi việc theo quy định [Điều 10, Nghị định 145/2020/NĐ-CP].\n*   **Thẩm quyền giải quyết tranh chấp:** Các vấn đề khác liên quan đến việc xử lý hợp đồng lao động vô hiệu toàn bộ do người giao kết không đúng thẩm quyền thuộc thẩm quyền giải quyết của Tòa án theo quy định của Bộ luật Tố tụng dân sự [Điều 10, Nghị định 145/2020/NĐ-CP].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          9,
+          10,
+          18
+        ],
+        "truth_dieu": [
+          49
+        ],
+        "judge_score": 5,
+        "latency_s": 63.0,
+        "interrupted": false,
+        "citation_p": 0.0,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h028",
+        "loai": "tinh_huong",
+        "answer": "Dựa vào ngữ cảnh được cung cấp, việc một nhóm công nhân tự phát ngừng việc và không do tổ chức đại diện người lao động lãnh đạo **không được coi là đình công hợp pháp** (đây là trường hợp đình công bất hợp pháp). \n\nCụ thể:\n\n1. Theo quy định, đình công phải là sự ngừng việc tạm thời, tự nguyện và có tổ chức của người lao động, đồng thời phải **do tổ chức đại diện người lao động** có quyền thương lượng tập thể là một bên tranh chấp lao động tập thể tổ chức và lãnh đạo [Điều 198, Bộ luật Lao động 2019].\n2. Cuộc đình công bị coi là **bất hợp pháp** khi thuộc trường hợp: \"Không do tổ chức đại diện người lao động có quyền tổ chức và lãnh đạo đình công\" [Điều 204, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          198,
+          204
+        ],
+        "truth_dieu": [
+          198
+        ],
+        "judge_score": 5,
+        "latency_s": 54.63,
+        "interrupted": false,
+        "citation_p": 0.5,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h029",
+        "loai": "tinh_huong",
+        "answer": "Việc công ty tuyển dụng lao động là người khuyết tật nhưng không tổ chức khám sức khỏe định kỳ phù hợp cho họ là **không đúng quy định của pháp luật**.\n\nTheo quy định, người sử dụng lao động có trách nhiệm phải bảo đảm về điều kiện lao động, công cụ lao động, an toàn, vệ sinh lao động và bắt buộc phải tổ chức khám sức khỏe định kỳ phù hợp với người lao động là người khuyết tật [Điều 159, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          159
+        ],
+        "truth_dieu": [
+          159
+        ],
+        "judge_score": 5,
+        "latency_s": 78.29,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h030",
+        "loai": "tinh_huong",
+        "answer": "Việc công ty cho bạn làm việc với tổng thời gian làm việc bình thường và số giờ làm thêm lên tới 13 giờ trong một ngày là **không đúng quy định của pháp luật**.\n\nTheo quy định pháp luật lao động:\n* Đối với trường hợp áp dụng quy định thời giờ làm việc bình thường theo tuần, tổng số giờ làm việc bình thường và số giờ làm thêm **không được quá 12 giờ trong 01 ngày** [Điều 107, Bộ luật Lao động 2019] và [Điều 60, Nghị định 145/2020/NĐ-CP].\n\nDo đó, việc công ty yêu cầu bạn làm việc tổng cộng 13 giờ trong một ngày đã vượt quá giới hạn tối đa cho phép theo quy định nêu trên.\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          60,
+          107
+        ],
+        "truth_dieu": [
+          107
+        ],
+        "judge_score": 5,
+        "latency_s": 91.79,
+        "interrupted": false,
+        "citation_p": 0.5,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "n001",
+        "loai": "nhieu_dieu",
+        "answer": "Chào em, vì em 14 tuổi nên em thuộc nhóm người lao động chưa đủ 15 tuổi (cụ thể là từ đủ 13 tuổi đến chưa đủ 15 tuổi) [Điều 143, Bộ luật Lao động 2019]. \n\nDựa trên quy định pháp luật trong ngữ cảnh được cung cấp, dưới đây là các thông tin chi tiết dành cho em và công ty:\n\n### 1. Các giấy tờ, thủ tục công ty cần chuẩn bị:\nKhi tuyển dụng và sử dụng người chưa đủ 15 tuổi làm việc, công ty cần chuẩn bị và thực hiện các thủ tục, giấy tờ sau:\n*   **Hợp đồng lao động bằng văn bản:** Công ty phải giao kết hợp đồng lao động bằng văn bản với em và người đại diện theo pháp luật của em (cha, mẹ hoặc người giám hộ) [Điều 145, Bộ luật Lao động 2019].\n*   **Văn bản đồng ý của cha, mẹ hoặc người giám hộ:** Công ty phải có sự đồng ý của cha, mẹ hoặc người giám hộ của em [Điều 144, Bộ luật Lao động 2019].\n*   **Giấy khám sức khỏe:** Phải có giấy khám sức khỏe của cơ sở khám bệnh, chữa bệnh có thẩm quyền xác nhận sức khỏe của em phù hợp với công việc [Điều 145, Bộ luật Lao động 2019].\n*   **Sổ theo dõi riêng:** Công ty phải lập sổ theo dõi riêng, ghi đầy đủ họ tên, ngày tháng năm sinh, công việc đang làm, kết quả những lần kiểm tra sức khỏe định kỳ và xuất trình khi cơ quan nhà nước có thẩm quyền yêu cầu [Điều 144, Bộ luật Lao động 2019].\n\n*Lưu ý thêm:* Công ty chỉ được tuyển dụng và sử dụng em vào làm các công việc nhẹ theo danh mục do Bộ trưởng Bộ Lao động - Thương binh và Xã hội ban hành [Điều 145, Bộ luật Lao động 2019].\n\n### 2. Thời giờ làm việc tối đa trong ngày:\n*   Thời giờ làm việc của em **không được quá 04 giờ trong 01 ngày** và không được quá 20 giờ trong 01 tuần [Điều 146, Bộ luật Lao động 2019].\n*   Em **không được làm thêm giờ** và **không được làm việc vào ban đêm** [Điều 146, Bộ luật Lao động 2019].\n*   Công ty phải bố trí giờ làm việc không ảnh hưởng đến thời gian học tập của em [Điều 145, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          143,
+          144,
+          145,
+          146
+        ],
+        "truth_dieu": [
+          145,
+          146
+        ],
+        "judge_score": 5,
+        "latency_s": 58.22,
+        "interrupted": false,
+        "citation_p": 0.5,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "n002",
+        "loai": "nhieu_dieu",
+        "answer": "Dựa trên thông tin được cung cấp trong phần \"Ngữ cảnh\", tôi xin tư vấn cho bạn như sau:\n\n1. **Về việc tạm hoãn hợp đồng lao động:** \nViệc người lao động thực hiện nghĩa vụ quân sự là một trong các trường hợp được tạm hoãn thực hiện hợp đồng lao động [Điều 30, Bộ luật Lao động 2019].\n\n2. **Thời gian phải quay lại công ty sau khi xuất ngũ (hết thời hạn tạm hoãn):**\nBạn không bắt buộc phải quay lại công ty ngay lập tức vào ngày xuất ngũ, tuy nhiên phải tuân thủ thời hạn sau:\n* **Trong thời hạn 15 ngày** kể từ ngày hết thời hạn tạm hoãn thực hiện hợp đồng lao động, bạn phải có mặt tại nơi làm việc [Điều 31, Bộ luật Lao động 2019].\n* Người sử dụng lao động phải nhận bạn trở lại làm công việc theo hợp đồng lao động đã giao kết nếu hợp đồng lao động còn thời hạn, trừ trường hợp hai bên có thỏa thuận hoặc pháp luật có quy định khác [Điều 31, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          30,
+          31
+        ],
+        "truth_dieu": [
+          30,
+          31
+        ],
+        "judge_score": 5,
+        "latency_s": 48.74,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "n003",
+        "loai": "nhieu_dieu",
+        "answer": "Dựa trên các thông tin được cung cấp trong ngữ cảnh, việc bạn tự ý nghỉ việc ngay sau khóa học mà không báo trước đúng thời hạn quy định được coi là đơn phương chấm dứt hợp đồng lao động trái pháp luật. Khi đó, bạn phải chịu các trách nhiệm và nghĩa vụ sau đây:\n\n1. **Không được hưởng trợ cấp thôi việc** [Điều 40, Bộ luật Lao động 2019].\n\n2. **Bồi thường cho người sử dụng lao động**:\n   - Nửa tháng tiền lương theo hợp đồng lao động [Điều 40, Bộ luật Lao động 2019].\n   - Một khoản tiền tương ứng với tiền lương theo hợp đồng lao động trong những ngày không báo trước [Điều 40, Bộ luật Lao động 2019].\n\n3. **Hoàn trả chi phí đào tạo**: Bạn phải hoàn trả cho công ty chi phí đào tạo đã được thỏa thuận trong hợp đồng đào tạo nghề [Điều 40, Bộ luật Lao động 2019]. \n   \n   Theo quy định, chi phí đào tạo phải hoàn trả bao gồm:\n   - Các khoản chi có chứng từ hợp lệ về chi phí trả cho người dạy, tài liệu học tập, trường, lớp, máy, thiết bị, vật liệu thực hành [Điều 62, Bộ luật Lao động 2019].\n   - Các chi phí khác hỗ trợ cho người học [Điều 62, Bộ luật Lao động 2019].\n   - Tiền lương, tiền đóng bảo hiểm xã hội, bảo hiểm y tế, bảo hiểm thất nghiệp cho bạn trong thời gian đi học [Điều 62, Bộ luật Lao động 2019].\n   - Trường hợp bạn được cử đi đào tạo ở nước ngoài thì chi phí đào tạo còn bao gồm cả chi phí đi lại, chi phí sinh hoạt trong thời gian đào tạo [Điều 62, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          40,
+          62
+        ],
+        "truth_dieu": [
+          40,
+          62
+        ],
+        "judge_score": 5,
+        "latency_s": 52.28,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "n004",
+        "loai": "nhieu_dieu",
+        "answer": "Dựa trên thông tin trong phần \"Ngự cảnh\" được cung cấp, câu trả lời cho câu hỏi của bạn như sau:\n\nBạn làm việc không trọn thời gian (4 giờ/ngày) vẫn được **bình đẳng trong thực hiện quyền và nghĩa vụ** với người lao động làm việc trọn thời gian [Điều 32, Bộ luật Lao động 2019]. \n\nVề trách nhiệm đóng bảo hiểm xã hội (BHXH):\n1. Người sử dụng lao động và người lao động phải tham gia bảo hiểm xã hội bắt buộc, bảo hiểm y tế, bảo hiểm thất nghiệp [Điều 168, Bộ luật Lao động 2019]. Do đó, bạn và công ty vẫn phải tham gia BHXH bắt buộc như người làm trọn thời gian nếu thuộc đối tượng tham gia.\n2. Trong trường hợp bạn không thuộc đối tượng tham gia bảo hiểm xã hội bắt buộc, bảo hiểm y tế, bảo hiểm thất nghiệp thì người sử dụng lao động có trách nhiệm chi trả thêm cùng lúc với kỳ trả lương một khoản tiền tương đương với mức người sử dụng lao động đóng các loại bảo hiểm này cho bạn theo quy định của pháp luật [Điều 168, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          32,
+          168
+        ],
+        "truth_dieu": [
+          32,
+          168
+        ],
+        "judge_score": 5,
+        "latency_s": 47.27,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "n005",
+        "loai": "nhieu_dieu",
+        "answer": "Dựa trên các thông tin được cung cấp trong phần \"Ngữ cảnh\", tôi xin tư vấn cho bạn về điều kiện của công ty cho thuê lại lao động và nội dung của hợp đồng cho thuê lại lao động như sau:\n\n### 1. Điều kiện đối với công ty cho thuê lại lao động\nĐể có thể cho bạn làm việc theo hình thức thuê lại lao động tại một doanh nghiệp khác, công ty đó phải đáp ứng các điều kiện sau:\n* Là doanh nghiệp được thành lập theo quy định của Luật Doanh nghiệp [Điều 12, Nghị định 145/2020/NĐ-CP].\n* Phải thực hiện ký quỹ [Điều 54, Bộ luật Lao động 2019].\n* Được cấp Giấy phép hoạt động cho thuê lại lao động [Điều 52, Bộ luật Lao động 2019] [Điều 54, Bộ luật Lao động 2019] [Điều 12, Nghị định 145/2020/NĐ-CP].\n* Có tuyển dụng, giao kết hợp đồng lao động với bạn trước khi chuyển bạn sang làm việc và chịu sự điều hành của doanh nghiệp khác [Điều 12, Nghị định 145/2020/NĐ-CP].\n* Hoạt động cho thuê lại lao động này chỉ được áp dụng đối với một số công việc nhất định theo danh mục do Chính phủ quy định [Điều 52, Bộ luật Lao động 2019] [Điều 54, Bộ luật Lao động 2019].\n\n### 2. Nội dung của hợp đồng cho thuê lại lao động\nHợp đồng cho thuê lại lao động giữa doanh nghiệp cho thuê lại lao động và bên thuê lại lao động phải được ký kết bằng văn bản, lập thành 02 bản (mỗi bên giữ 01 bản) [Điều 55, Bộ luật Lao động 2019] và phải có các nội dung chủ yếu sau đây:\n* Địa điểm làm việc, vị trí việc làm cần sử dụng lao động thuê lại, nội dung cụ thể của công việc, yêu cầu cụ thể đối với người lao động thuê lại [Điều 55, Bộ luật Lao động 2019].\n* Thời hạn thuê lại lao động; thời gian bắt đầu làm việc của người lao động thuê lại [Điều 55, Bộ luật Lao động 2019].\n* Thời giờ làm việc, thời giờ nghỉ ngơi, điều kiện an toàn, vệ sinh lao động tại nơi làm việc [Điều 55, Bộ luật Lao động 2019].\n* Trách nhiệm bồi thường tai nạn lao động, bệnh nghề nghiệp [Điều 55, Bộ luật Lao động 2019].\n* Nghĩa vụ của mỗi bên đối với người lao động [Điều 55, Bộ luật Lao động 2019].\n\n**Lưu ý quan trọng:** Hợp đồng cho thuê lại lao động không được có những thỏa thuận về quyền, lợi ích của người lao động thấp hơn so với hợp đồng lao động mà doanh nghiệp cho thuê lại lao động đã ký với bạn [Điều 55, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          12,
+          52,
+          54,
+          55
+        ],
+        "truth_dieu": [
+          54,
+          55
+        ],
+        "judge_score": 5,
+        "latency_s": 49.72,
+        "interrupted": false,
+        "citation_p": 0.5,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "n006",
+        "loai": "nhieu_dieu",
+        "answer": "Dựa trên ngữ cảnh được cung cấp, việc công ty bố trí bạn (là lao động khuyết tật nặng) làm việc vào ban đêm khi bạn không đồng ý là hành vi vi phạm pháp luật lao động.\n\nCụ thể, công ty đã vi phạm quy định sau:\n- Vi phạm hành vi bị nghiêm cấm khi sử dụng lao động là người khuyết tật: Tự ý sử dụng người lao động là người khuyết tật nặng làm việc vào ban đêm khi chưa được sự đồng ý của người lao động đó [Điều 160, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          160
+        ],
+        "truth_dieu": [
+          109,
+          160
+        ],
+        "judge_score": 4,
+        "latency_s": 51.16,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 0.5,
+        "refusal_correct": null
+      },
+      {
+        "id": "n007",
+        "loai": "nhieu_dieu",
+        "answer": "Dựa trên ngữ cảnh được cung cấp, **không tìm thấy căn cứ** quy định về việc người sử dụng lao động giữ bằng đại học gốc của người lao động cũng như cách xử lý cụ thể đối với hành vi này. \n\nTuy nhiên, đối với các tranh chấp lao động cá nhân nói chung, ngữ cảnh có quy định về nơi giải quyết và thủ tục hòa giải như sau:\n\n**1. Về nơi giải quyết tranh chấp (Khởi kiện ở đâu):**\nBạn có quyền lựa chọn một trong các phương thức sau để giải quyết tranh chấp lao động cá nhân:\n* Yêu cầu Tòa án giải quyết [Điều 188 Khoản 7, Bộ luật Lao động 2019] hoặc [Điều 219 Khoản 2, Bộ luật Lao động 2019].\n* Yêu cầu Hội đồng trọng tài lao động giải quyết [Điều 188 Khoản 7, Bộ luật Lao động 2019].\n\n**2. Về việc có bắt buộc phải qua thủ tục hòa giải trước không:**\nThông thường, tranh chấp lao động cá nhân **bắt buộc phải được giải quyết thông qua thủ tục hòa giải** của hòa giải viên lao động trước khi yêu cầu Hội đồng trọng tài lao động hoặc Tòa án giải quyết [Điều 188 Khoản 1, Bộ luật Lao động 2019].\n\nTuy nhiên, có các trường hợp ngoại lệ **không bắt buộc phải qua thủ tục hòa giải** bao gồm:\n* Về xử lý kỷ luật lao động theo hình thức sa thải hoặc về trường hợp bị đơn phương chấm dứt hợp đồng lao động [Điều 188 Khoản 1 Điểm a, Bộ luật Lao động 2019];\n* Về bồi thường thiệt hại, trợ cấp khi chấm dứt hợp đồng lao động [Điều 188 Khoản 1 Điểm b, Bộ luật Lao động 2019];\n* Giữa người giúp việc gia đình với người sử dụng lao động [Điều 188 Khoản 1 Điểm c, Bộ luật Lao động 2019];\n* Về bảo hiểm xã hội, bảo hiểm y tế, bảo hiểm thất nghiệp, bảo hiểm tai nạn lao động, bệnh nghề nghiệp [Điều 188 Khoản 1 Điểm d, Bộ luật Lao động 2019];\n* Về bồi thường thiệt hại giữa người lao động với doanh nghiệp, tổ chức đưa người lao động đi làm việc ở nước ngoài theo hợp đồng [Điều 188 Khoản 1 Điểm đ, Bộ luật Lao động 2019];\n* Giữa người lao động thuê lại với người sử dụng lao động thuê lại [Điều 188 Khoản 1 Điểm e, Bộ luật Lao động 2019].\n\n*Lưu ý:* Do ngữ cảnh không cung cấp thông tin về việc tranh chấp đòi lại \"bằng đại học gốc\" có được xếp vào một trong các trường hợp ngoại lệ nêu trên hay không (ví dụ: tranh chấp về bồi thường thiệt hại khi chấm dứt hợp đồng lao động), nên **không tìm thấy căn cứ** để khẳng định chắc chắn tranh chấp cụ thể của bạn có bắt buộc phải hòa giải trước hay không.\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          188,
+          219
+        ],
+        "truth_dieu": [
+          17,
+          188
+        ],
+        "judge_score": 3,
+        "latency_s": 53.47,
+        "interrupted": false,
+        "citation_p": 0.5,
+        "citation_r": 0.5,
+        "refusal_correct": null
+      },
+      {
+        "id": "n008",
+        "loai": "nhieu_dieu",
+        "answer": "Việc ủy quyền này **không áp dụng được** đối với thành viên 17 tuổi trong nhóm của bạn. \n\nDưới đây là căn cứ pháp lý chi tiết:\n\n1. **Về điều kiện ủy quyền giao kết hợp đồng lao động theo nhóm:** \nPháp luật quy định đối với công việc theo mùa vụ hoặc công việc nhất định có thời hạn dưới 12 tháng, chỉ nhóm người lao động **từ đủ 18 tuổi trở lên** mới có thể ủy quyền cho một người lao động trong nhóm để giao kết hợp đồng lao động [Khoản 2 Điều 18, BLLD2019_D18_K0]. Do thành viên trong nhóm của bạn mới 17 tuổi (chưa đủ 18 tuổi) nên không thể tham gia vào việc ủy quyền nhóm này.\n\n2. **Về thẩm quyền giao kết hợp đồng của người 17 tuổi:**\nNgười lao động từ đủ 15 tuổi đến chưa đủ 18 tuổi phải trực tiếp giao kết hợp đồng lao động và phải có sự đồng ý bằng văn bản của người đại diện theo pháp luật của người đó [Khoản 4 Điều 18, BLLD2019_D18_K0].\n\nDo đó, bạn 17 tuổi trong nhóm phải tự mình ký hợp đồng lao động riêng (có kèm văn bản đồng ý của người đại diện theo pháp luật) chứ không thể gộp chung vào hợp đồng ủy quyền của nhóm.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          18
+        ],
+        "truth_dieu": [
+          18,
+          143
+        ],
+        "judge_score": 5,
+        "latency_s": 46.46,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 0.5,
+        "refusal_correct": null
+      },
+      {
+        "id": "n009",
+        "loai": "nhieu_dieu",
+        "answer": "Dựa trên ngữ cảnh được cung cấp, việc đóng bảo hiểm xã hội (BHXH), bảo hiểm y tế (BHYT), và bảo hiểm thất nghiệp (BHTN) khi bạn ký đồng thời nhiều hợp đồng lao động được quy định như sau:\n\n1. **Nguyên tắc chung:**\n   - Bạn có thể giao kết nhiều hợp đồng lao động với nhiều người sử dụng lao động nhưng phải bảo đảm thực hiện đầy đủ các nội dung đã giao kết [Điều 19, Bộ luật Lao động 2019].\n   - Khi đồng thời giao kết nhiều hợp đồng lao động với nhiều người sử dụng lao động, việc tham gia BHXH, BHYT, BHTN của bạn được thực hiện theo quy định của pháp luật về bảo hiểm xã hội, bảo hiểm y tế, bảo hiểm thất nghiệp và an toàn, vệ sinh lao động [Điều 19, Bộ luật Lao động 2019].\n\n2. **Trách nhiệm chi trả khoản tiền bảo hiểm:**\n   - Đối với người lao động không thuộc đối tượng tham gia BHXH bắt buộc, BHYT, BHTN (tại một trong các hợp đồng đã ký) thì người sử dụng lao động có trách nhiệm chi trả thêm cùng lúc với kỳ trả lương một khoản tiền tương đương với mức người sử dụng lao động đóng BHXH bắt buộc, BHYT, BHTN cho người lao động theo quy định [Điều 168, Bộ luật Lao động 2019].\n\n3. **Về cách thức xử lý chi tiết (như công ty nào chịu trách nhiệm đóng loại bảo hiểm nào, quy trình đóng cụ thể ra sao):**\n   - Trong ngữ cảnh được cung cấp, **không tìm thấy căn cứ** quy định chi tiết về việc phân chia trách nhiệm đóng cụ thể giữa các công ty đối với trường hợp người lao động ký hợp đồng với nhiều công ty khác nhau (ngữ cảnh chỉ có quy định riêng đối với trường hợp làm giúp việc gia đình tại [Điều 89 Khoản 4, Nghị định 145/2020/NĐ-CP]).\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          19,
+          89,
+          168
+        ],
+        "truth_dieu": [
+          19,
+          168
+        ],
+        "judge_score": 5,
+        "latency_s": 71.08,
+        "interrupted": false,
+        "citation_p": 0.6666666666666666,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "n010",
+        "loai": "nhieu_dieu",
+        "answer": "Dựa trên thông tin trong phần \"Ngự cảnh\" được cung cấp, công ty của bạn đã có những hành vi vi phạm quy định của pháp luật lao động như sau:\n\n**1. Vi phạm về việc tự ý chuyển người lao động làm công việc khác quá thời hạn quy định:**\n* Theo quy định, người sử dụng lao động chỉ được quyền tạm thời chuyển người lao động làm công việc khác so với hợp đồng lao động không quá 60 ngày làm việc cộng dồn trong 01 năm. Trường hợp chuyển quá 60 ngày làm việc cộng dồn trong 01 năm thì chỉ được thực hiện khi có sự đồng ý bằng văn bản của người lao động [Điều 29, Bộ luật Lao động 2019].\n* Việc công ty chuyển bạn làm công việc khác đến 70 ngày cộng dồn trong năm mà không được sự đồng ý bằng văn bản của bạn là vi phạm quy định nêu trên [Điều 29, Bộ luật Lao động 2019].\n\n**2. Vi phạm về quy trình cho người lao động thôi việc do thay đổi cơ cấu tổ chức:**\n* Việc công ty \"thay đổi cơ cấu tổ chức\" được xác định là trường hợp thay đổi cơ cấu, công nghệ [Điều 42, Bộ luật Lao động 2019]. \n* Khi cho người lao động thôi việc vì lý do thay đổi cơ cấu, công nghệ, công ty phải tuân thủ các nghĩa vụ pháp lý sau:\n  * Nếu ảnh hưởng đến việc làm của nhiều người lao động thì phải xây dựng và thực hiện phương án sử dụng lao động; trường hợp có chỗ làm việc mới thì ưu tiên đào tạo lại người lao động để tiếp tục sử dụng [Điều 42, Bộ luật Lao động 2019].\n  * Trường hợp không thể giải quyết được việc làm mà phải cho người lao động thôi việc thì phải trả trợ cấp mất việc làm cho người lao động [Điều 42, Bộ luật Lao động 2019].\n  * Việc cho thôi việc chỉ được tiến hành sau khi đã trao đổi ý kiến với tổ chức đại diện người lao động tại cơ sở (đối với nơi có tổ chức đại diện người lao động tại cơ sở mà người lao động là thành viên) và **phải thông báo trước 30 ngày** cho Ủy ban nhân dân cấp tỉnh và cho người lao động [Điều 42, Bộ luật Lao động 2019].\n* Việc công ty cho bạn \"thôi việc luôn\" với lý do \"không còn vị trí phù hợp\" mà không thực hiện đúng quy trình (như không thông báo trước 30 ngày cho bạn và Ủy ban nhân dân cấp tỉnh, không trao đổi với tổ chức đại diện người lao động tại cơ sở nếu có) là vi phạm nghiêm trọng nghĩa vụ của người sử dụng lao động khi thay đổi cơ cấu [Điều 42, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          29,
+          42
+        ],
+        "truth_dieu": [
+          29,
+          34,
+          42
+        ],
+        "judge_score": 5,
+        "latency_s": 58.44,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 0.6666666666666666,
+        "refusal_correct": null
+      },
+      {
+        "id": "n011",
+        "loai": "nhieu_dieu",
+        "answer": "Dựa trên thông tin được cung cấp trong phần Ngữ cảnh, hành vi của công ty bạn đã vi phạm các quy định và nguyên tắc về tiền lương sau đây:\n\n1. **Vi phạm quy định về việc thông báo bảng kê trả lương:**\n   Mỗi lần trả lương, người sử dụng lao động bắt buộc phải thông báo bảng kê trả lương cho người lao động, trong đó ghi rõ tiền lương, tiền lương làm thêm giờ, tiền lương làm việc vào ban đêm, nội dung và số tiền bị khấu trừ (nếu có). Việc công ty trả lương qua tài khoản ngân hàng nhưng không đưa bảng kê lương cho bạn là vi phạm quy định này [Điều 95, Bộ luật Lao động 2019].\n\n2. **Vi phạm nguyên tắc trả lương về quyền tự quyết chi tiêu:**\n   Người sử dụng lao động không được hạn chế hoặc can thiệp vào quyền tự quyết chi tiêu lương của người lao động. Đồng thời, không được ép buộc người lao động chi tiêu lương vào việc mua hàng hóa, sử dụng dịch vụ của người sử dụng lao động hoặc của đơn vị khác mà người sử dụng lao động chỉ định. Việc công ty yêu cầu bạn phải dùng một phần lương để mua sản phẩm của công ty là hành vi vi phạm trực tiếp nguyên tắc này [Điều 94, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          94,
+          95
+        ],
+        "truth_dieu": [
+          94,
+          95
+        ],
+        "judge_score": 5,
+        "latency_s": 85.87,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "n012",
+        "loai": "nhieu_dieu",
+        "answer": "Dựa trên thông tin được cung cấp trong phần \"Ngự cảnh\", câu trả lời cho trường hợp của bạn như sau:\n\nBạn **không có quyền từ chối** yêu cầu làm thêm giờ của công ty để khắc phục sự cố hỏa hoạn (cháy nổ) khẩn cấp, ngay cả khi số giờ làm thêm đã vượt quá 200 giờ trong một năm [Điều 108, Bộ luật Lao động 2019]. \n\nTuy nhiên, bạn **có quyền từ chối** nếu công việc làm thêm giờ đó có nguy cơ ảnh hưởng đến tính mạng, sức khỏe của bạn theo quy định của pháp luật về an toàn, vệ sinh lao động [Điều 108, Bộ luật Lao động 2019].\n\nCơ sở pháp lý cụ thể:\n- Người sử dụng lao động có quyền yêu cầu người lao động làm thêm giờ vào bất kỳ ngày nào mà không bị giới hạn về số giờ làm thêm theo quy định tại Điều 107 của Bộ luật Lao động (bao gồm cả giới hạn 200 giờ/năm) để thực hiện các công việc nhằm bảo vệ tính mạng con người, tài sản của cơ quan, tổ chức, cá nhân trong phòng ngừa, khắc phục hậu quả thiên tai, hỏa hoạn, dịch bệnh nguy hiểm và thảm họa [Điều 108, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          107,
+          108
+        ],
+        "truth_dieu": [
+          107,
+          108
+        ],
+        "judge_score": 5,
+        "latency_s": 98.86,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "n013",
+        "loai": "nhieu_dieu",
+        "answer": "Việc công ty sa thải bạn trong thời gian nghỉ thai sản với lý do \"tái cơ cấu nhân sự\" là **không đúng quy định của pháp luật**. \n\nDưới đây là các căn cứ pháp lý cụ thể dựa trên Bộ luật Lao động 2019:\n\n1. **Nghiêm cấm sa thải người lao động đang nghỉ thai sản:**\nNgười sử dụng lao động không được sa thải hoặc đơn phương chấm dứt hợp đồng lao động đối với người lao động vì lý do nghỉ thai sản. Việc sa thải/chấm dứt hợp đồng chỉ được phép xảy ra trong một số trường hợp đặc biệt (như người sử dụng lao động là cá nhân chết, bị Tòa án tuyên bố mất năng lực hành vi dân sự, mất tích hoặc đã chết; hoặc người sử dụng lao động không phải là cá nhân chấm dứt hoạt động...). Lý do \"tái cơ cấu nhân sự\" không thuộc các trường hợp ngoại lệ này [Điều 137, Bộ luật Lao động 2019].\n\n2. **\"Tái cơ cấu nhân sự\" không phải là căn cứ để sa thải:**\nHình thức xử lý kỷ luật sa thải chỉ được áp dụng đối với các hành vi vi phạm kỷ luật của người lao động được quy định cụ thể như: trộm cắp, tham ô, tiết lộ bí mật kinh doanh, tự ý bỏ việc không có lý do chính đáng... [Điều 125, Bộ luật Lao động 2019]. \nTrong khi đó, \"tái cơ cấu nhân sự\" (thay đổi cơ cấu tổ chức, tổ chức lại lao động) là trường hợp thay đổi cơ cấu, công nghệ [Điều 42, Bộ luật Lao động 2019]. Đây không phải là hành vi vi phạm kỷ luật của người lao động nên công ty không thể lấy lý do này để áp dụng hình thức kỷ luật \"sa thải\".\n\nDo đó, việc công ty ra quyết định sa thải bạn trong thời gian nghỉ thai sản với lý do trên là trái pháp luật.\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          42,
+          125,
+          137
+        ],
+        "truth_dieu": [
+          137,
+          139
+        ],
+        "judge_score": 5,
+        "latency_s": 65.8,
+        "interrupted": false,
+        "citation_p": 0.3333333333333333,
+        "citation_r": 0.5,
+        "refusal_correct": null
+      },
+      {
+        "id": "n014",
+        "loai": "nhieu_dieu",
+        "answer": "Dựa trên các quy định pháp luật lao động hiện hành trong ngữ cảnh được cung cấp, tôi xin tư vấn cho bạn như sau:\n\nBạn **không bắt buộc** phải thông qua thủ tục hòa giải của hòa giải viên lao động trước khi khởi kiện ra Tòa án.\n\nCụ thể, tranh chấp của bạn liên quan đến khoản bồi thường khi công ty đơn phương chấm dứt hợp đồng lao động trái luật thuộc vào các trường hợp ngoại lệ không bắt buộc phải qua thủ tục hòa giải trước khi yêu cầu Tòa án giải quyết, bao gồm:\n* Tranh chấp về trường hợp bị đơn phương chấm dứt hợp đồng lao động [Điều 188, Bộ luật Lao động 2019].\n* Tranh chấp về bồi thường thiệt hại, trợ cấp khi chấm dứt hợp đồng lao động [Điều 188, Bộ luật Lao động 2019].\n\nĐồng thời, quy định về thẩm quyền giải quyết tranh chấp lao động cá nhân của Tòa án cũng khẳng định các tranh chấp về đơn phương chấm dứt hợp đồng lao động và bồi thường thiệt hại, trợ cấp khi chấm dứt hợp đồng lao động không bắt buộc phải qua thủ tục hòa giải [Điều 219, Bộ luật Lao động 2019].\n\nDo đó, bạn hoàn toàn có quyền trực tiếp yêu cầu Tòa án giải quyết tranh chấp này mà không cần phải qua bước hòa giải viên lao động [Điều 188, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          188,
+          219
+        ],
+        "truth_dieu": [
+          187,
+          188
+        ],
+        "judge_score": 5,
+        "latency_s": 58.22,
+        "interrupted": false,
+        "citation_p": 0.5,
+        "citation_r": 0.5,
+        "refusal_correct": null
+      },
+      {
+        "id": "n015",
+        "loai": "nhieu_dieu",
+        "answer": "Dựa trên các thông tin trong phần ngữ cảnh được cung cấp, tôi xin tư vấn cho bạn như sau:\n\nBạn **không bắt buộc** phải trải qua thủ tục hòa giải trước khi khởi kiện ra Tòa án.\n\nCụ thể:\n* Tranh chấp lao động cá nhân giữa người giúp việc gia đình với người sử dụng lao động (chủ nhà) thuộc trường hợp **không bắt buộc** phải qua thủ tục hòa giải của hòa giải viên lao động trước khi yêu cầu Hội đồng trọng tài lao động hoặc Tòa án giải quyết [Điều 188, Bộ luật Lao động 2019].\n* Quy định này cũng được đồng bộ tại quy định về thẩm quyền giải quyết các tranh chấp về lao động của Tòa án, theo đó tranh chấp giữa người giúp việc gia đình với người sử dụng lao động không bắt buộc phải qua thủ tục hòa giải [Khoản 2 Điều 219, Bộ luật Lao động 2019].\n\nDo đó, bạn có quyền trực tiếp nộp đơn yêu cầu Tòa án giải quyết tranh chấp về tiền lương chưa trả với chủ nhà mà không cần phải thông qua thủ tục hòa giải của hòa giải viên lao động.\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          188,
+          219
+        ],
+        "truth_dieu": [
+          187,
+          188
+        ],
+        "judge_score": 5,
+        "latency_s": 55.11,
+        "interrupted": false,
+        "citation_p": 0.5,
+        "citation_r": 0.5,
+        "refusal_correct": null
+      },
+      {
+        "id": "n016",
+        "loai": "nhieu_dieu",
+        "answer": "Chào bạn, dựa trên các quy định pháp luật được cung cấp trong ngữ cảnh, tôi xin tư vấn cho bạn như sau:\n\n**1. Về việc công ty có phải trả lương cho bạn trong thời gian nghỉ điều trị tai nạn lao động:**\nDựa trên thông tin trong phần ngữ cảnh được cung cấp, **không tìm thấy căn cứ** để xác định việc công ty có trách nhiệm phải trả lương cho bạn trong thời gian nghỉ điều trị tai nạn lao động hưởng chế độ bảo hiểm xã hội hay không.\n\n**2. Về việc công ty có được lấy lý do nghỉ dài ngày để đơn phương chấm dứt hợp đồng với bạn ngay bây giờ hay không:**\nTheo quy định, người sử dụng lao động **không được thực hiện** quyền đơn phương chấm dứt hợp đồng lao động khi người lao động bị tai nạn đang điều trị, điều dưỡng theo chỉ định của cơ sở khám bệnh, chữa bệnh có thẩm quyền [Điều 37, BLLD2019_D37_K0].\n\nTuy nhiên, công ty chỉ có quyền đơn phương chấm dứt hợp đồng lao động nếu thời gian điều trị tai nạn của bạn đã kéo dài liên tục quá thời hạn quy định sau đây mà khả năng lao động vẫn chưa hồi phục [Điều 36, BLLD2019_D36_K0]:\n*   Đã điều trị **12 tháng liên tục** đối với người làm việc theo hợp đồng lao động không xác định thời hạn [Điều 36, BLLD2019_D36_K0]; hoặc\n*   Đã điều trị **06 tháng liên tục** đối với người làm việc theo hợp đồng lao động xác định thời hạn có thời hạn từ 12 tháng đến 36 tháng [Điều 36, BLLD2019_D36_K0]; hoặc\n*   Đã điều trị **quá nửa thời hạn hợp đồng** đối với người làm việc theo hợp đồng lao động xác định thời hạn có thời hạn dưới 12 tháng [Điều 36, BLLD2019_D36_K0].\n\nBên cạnh đó, nếu thuộc trường hợp được quyền đơn phương chấm dứt nêu trên, công ty phải tuân thủ nghĩa vụ báo trước cho bạn **ít nhất 03 ngày làm việc** [Điều 36, BLLD2019_D36_K0].\n\n**Tóm lại:** Nếu thời gian điều trị tai nạn lao động của bạn chưa liên tục vượt quá các mốc thời gian nêu trên, công ty **không được phép** đơn phương chấm dứt hợp đồng lao động với bạn ngay bây giờ [Điều 37, BLLD2019_D37_K0].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          36,
+          37
+        ],
+        "truth_dieu": [
+          36,
+          168
+        ],
+        "judge_score": 3,
+        "latency_s": 61.22,
+        "interrupted": false,
+        "citation_p": 0.5,
+        "citation_r": 0.5,
+        "refusal_correct": null
+      },
+      {
+        "id": "n017",
+        "loai": "nhieu_dieu",
+        "answer": "Dựa trên thông tin được cung cấp trong phần \"Ngự cảnh\", tôi xin tư vấn cho bạn như sau:\n\n**1. Về việc đưa em 14 tuổi vào nhóm ủy quyền ký hợp đồng lao động chung:**\n\nCông ty **không thể** để em 14 tuổi này nằm trong nhóm ủy quyền ký hợp đồng lao động chung. \n* *Cơ sở pháp lý:* Việc ủy quyền cho một người lao động trong nhóm để giao kết hợp đồng lao động đối với công việc theo mùa vụ chỉ áp dụng đối với nhóm người lao động **từ đủ 18 tuổi trở lên** [Khoản 2 Điều 18, Bộ luật Lao động 2019]. Do em này mới 14 tuổi, em không đủ điều kiện để tham gia vào nhóm ủy quyền này.\n\n**2. Những việc công ty phải làm đối với trường hợp của em 14 tuổi:**\n\nĐể sử dụng lao động 14 tuổi này làm việc hợp pháp, công ty phải thực hiện các công việc sau:\n\n* **Về giao kết hợp đồng lao động:** Công ty phải giao kết hợp đồng lao động bằng văn bản riêng với em 14 tuổi và người đại diện theo pháp luật của em đó [Điểm a Khoản 1 Điều 145, Bộ luật Lao động 2019] [Điểm c Khoản 4 Điều 18, Bộ luật Lao động 2019].\n* **Về sự đồng ý của người giám hộ:** Phải có sự đồng ý của cha, mẹ hoặc người giám hộ của em [Khoản 3 Điều 144, Bộ luật Lao động 2019].\n* **Về tính chất công việc:** Chỉ được tuyển dụng và sử dụng em vào làm các công việc nhẹ theo quy định tại khoản 3 Điều 143 của Bộ luật Lao động [Khoản 2 Điều 145, Bộ luật Lao động 2019].\n* **Về thời giờ làm việc:** Bố trí giờ làm việc không ảnh hưởng đến thời gian học tập của em [Điểm b Khoản 1 Điều 145, Bộ luật Lao động 2019].\n* **Về chăm sóc sức khỏe:** \n  * Phải có giấy khám sức khỏe của cơ sở khám bệnh, chữa bệnh có thẩm quyền xác nhận sức khỏe của em phù hợp với công việc [Điểm c Khoản 1 Điều 145, Bộ luật Lao động 2019].\n  * Tổ chức kiểm tra sức khỏe định kỳ cho em ít nhất một lần trong 06 tháng [Điểm c Khoản 1 Điều 145, Bộ luật Lao động 2019].\n* **Về điều kiện làm việc:** Bảo đảm điều kiện làm việc, an toàn, vệ sinh lao động phù hợp với lứa tuổi [Điểm d Khoản 1 Điều 145, Bộ luật Lao động 2019].\n* **Về quản lý sổ sách:** Phải lập sổ theo dõi riêng, ghi đầy đủ họ tên, ngày tháng năm sinh, công việc đang làm, kết quả những lần kiểm tra sức khỏe định kỳ và xuất trình khi cơ quan nhà nước có thẩm quyền yêu cầu [Khoản 3 Điều 144, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          18,
+          143,
+          144,
+          145
+        ],
+        "truth_dieu": [
+          18,
+          145
+        ],
+        "judge_score": 5,
+        "latency_s": 58.09,
+        "interrupted": false,
+        "citation_p": 0.5,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "n018",
+        "loai": "nhieu_dieu",
+        "answer": "Dựa trên các quy định pháp luật trong ngữ cảnh được cung cấp, tôi xin tư vấn cho bạn như sau:\n\n**Có**, công ty phải tạm ứng tiền lương hằng tháng cho bạn. \n\nTheo quy định, người lao động hưởng lương theo sản phẩm, theo khoán được trả lương theo thỏa thuận của hai bên. Tuy nhiên, trường hợp công việc phải làm trong nhiều tháng thì hằng tháng người lao động phải được tạm ứng tiền lương theo khối lượng công việc đã làm trong tháng đó [Điều 97, Bộ luật Lao động 2019].\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          97
+        ],
+        "truth_dieu": [
+          96,
+          97
+        ],
+        "judge_score": 5,
+        "latency_s": 54.97,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 0.5,
+        "refusal_correct": null
+      },
+      {
+        "id": "n019",
+        "loai": "nhieu_dieu",
+        "answer": "Dựa trên ngữ cảnh được cung cấp, tôi **không tìm thấy căn cứ** để xác định việc công ty đơn phương sửa đổi mức lương trong hợp đồng mà không thỏa thuận trước có giúp bạn được quyền nghỉ việc ngay lập tức hay không, do ngữ cảnh không có thông tin quy định về hành vi \"đơn phương sửa đổi mức lương\".\n\nTuy nhiên, ngữ cảnh có cung cấp các quy định liên quan để bạn tham khảo:\n\n1. **Quyền đơn phương chấm dứt hợp đồng lao động không cần báo trước của người lao động:**\nNgười lao động có quyền đơn phương chấm dứt hợp đồng lao động không cần báo trước trong một số trường hợp, bao gồm:\n* Không được bố trí theo đúng công việc, địa điểm làm việc hoặc không được bảo đảm điều kiện làm việc theo thỏa thuận (trừ trường hợp quy định tại Điều 29 của Bộ luật này) [Điều 35, Bộ luật Lao động 2019].\n* Không được trả đủ lương hoặc trả lương không đúng thời hạn (trừ trường hợp quy định tại khoản 4 Điều 97 của Bộ luật này) [Điều 35, Bộ luật Lao động 2019].\n\n2. **Thế nào là đơn phương chấm dứt hợp đồng lao động trái pháp luật:**\nĐơn phương chấm dứt hợp đồng lao động trái pháp luật là trường hợp chấm dứt hợp đồng lao động không đúng quy định tại các điều 35, 36 và 37 của Bộ luật này [Điều 39, Bộ luật Lao động 2019].\n\nDo ngữ cảnh được cung cấp không nêu rõ việc \"đơn phương sửa đổi mức lương\" có được xem là hành vi \"không được trả đủ lương\" hoặc vi phạm thỏa thuận về điều kiện làm việc để áp dụng quyền nghỉ việc không cần báo trước hay không, nên không thể kết luận bạn có bị coi là đơn phương chấm dứt hợp đồng trái luật hay không.\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          29,
+          35,
+          39,
+          97
+        ],
+        "truth_dieu": [
+          33,
+          35
+        ],
+        "judge_score": 2,
+        "latency_s": 55.74,
+        "interrupted": false,
+        "citation_p": 0.25,
+        "citation_r": 0.5,
+        "refusal_correct": null
+      },
+      {
+        "id": "n020",
+        "loai": "nhieu_dieu",
+        "answer": "Việc công ty nhận một em 16 tuổi vào làm việc nhưng không có sự đồng ý của cha mẹ, đồng thời không lập sổ theo dõi riêng là **không đúng pháp luật**. \n\nCăn cứ vào các quy định trong ngữ cảnh, lý do cụ thể như sau:\n\n1. **Xác định đối tượng lao động:** Người 16 tuổi là người chưa đủ 18 tuổi, do đó được xác định là lao động chưa thành niên [Khoản 1 Điều 143, Bộ luật Lao động 2019].\n2. **Nghĩa vụ của người sử dụng lao động:** Khi sử dụng lao động chưa thành niên, người sử dụng lao động bắt buộc phải:\n   - Có sự đồng ý của cha, mẹ hoặc người giám hộ [Khoản 3 Điều 144, Bộ luật Lao động 2019].\n   - Lập sổ theo dõi riêng, ghi đầy đủ họ tên, ngày tháng năm sinh, công việc đang làm, kết quả những lần kiểm tra sức khỏe định kỳ và xuất trình khi cơ quan nhà nước có thẩm quyền yêu cầu [Khoản 3 Điều 144, Bộ luật Lao động 2019].\n\nVì vậy, việc công ty không thực hiện cả hai yêu cầu trên đã vi phạm nguyên tắc sử dụng lao động chưa thành niên được quy định tại Bộ luật Lao động.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          143,
+          144
+        ],
+        "truth_dieu": [
+          143,
+          144
+        ],
+        "judge_score": 5,
+        "latency_s": 46.68,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "o001",
+        "loai": "ngoai_pham_vi",
+        "answer": "Không tìm thấy căn cứ.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [],
+        "truth_dieu": [],
+        "judge_score": 3,
+        "latency_s": 42.65,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": null,
+        "refusal_correct": true
+      },
+      {
+        "id": "o002",
+        "loai": "ngoai_pham_vi",
+        "answer": "Không tìm thấy căn cứ trong ngữ cảnh được cung cấp để trả lời cho câu hỏi về các giấy tờ cần thiết để đăng ký kinh doanh hộ cá thể.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [],
+        "truth_dieu": [],
+        "judge_score": 3,
+        "latency_s": 41.83,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": null,
+        "refusal_correct": true
+      },
+      {
+        "id": "o003",
+        "loai": "ngoai_pham_vi",
+        "answer": "Không tìm thấy căn cứ trong ngữ cảnh được cung cấp để trả lời câu hỏi về địa điểm công chứng hợp đồng mua bán nhà đất.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [],
+        "truth_dieu": [],
+        "judge_score": 4,
+        "latency_s": 36.5,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": null,
+        "refusal_correct": true
+      }
+    ]
+  }
+}
