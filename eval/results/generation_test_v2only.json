@@ -1,0 +1,1401 @@
+{
+  "v2": {
+    "citation_precision": 0.7220125786163523,
+    "citation_recall": 0.5946502057613169,
+    "avg_judge_score": 2.8641975308641974,
+    "refusal_accuracy": null,
+    "latency_p50_s": 36.97,
+    "latency_p95_s": 74.18,
+    "n": 100,
+    "per_item": [
+      {
+        "id": "t001",
+        "loai": "tra_cuu",
+        "answer": "Hợp đồng lao động được định nghĩa như sau:\n\nHợp đồng lao động là sự thỏa thuận giữa người lao động và người sử dụng lao động về việc làm có trả công, tiền lương, điều kiện lao động, quyền và nghĩa vụ của mỗi bên trong quan hệ lao động. Trường hợp hai bên thỏa thuận bằng tên gọi khác nhưng có nội dung thể hiện về việc làm có trả công, tiền lương và sự quản lý, điều hành, giám sát của một bên thì được coi là hợp đồng lao động [Khoản 1 Điều 13, Bộ luật Lao động 2019].\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          13
+        ],
+        "truth_dieu": [
+          13
+        ],
+        "judge_score": 5,
+        "latency_s": 74.18,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t002",
+        "loai": "tra_cuu",
+        "answer": "Khi giao kết hợp đồng lao động, người sử dụng lao động phải cung cấp thông tin trung thực cho người lao động về các nội dung sau:\n*   Công việc\n*   Địa điểm làm việc\n*   Điều kiện làm việc\n*   Thời giờ làm việc\n*   Thời giờ nghỉ ngơi\n*   An toàn, vệ sinh lao động\n*   Tiền lương\n*   Hình thức trả lương\n*   Bảo hiểm xã hội\n*   Bảo hiểm y tế\n*   Bảo hiểm thất nghiệp\n*   Quy định về bảo vệ bí mật kinh doanh\n*   Quy định về bảo vệ bí mật công nghệ\n*   Và vấn đề khác liên quan trực tiếp đến việc giao kết hợp đồng lao động mà người lao động yêu cầu.\n\n[Khoản 1 Điều 16, Bộ luật Lao động 2019]\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          16
+        ],
+        "truth_dieu": [
+          16
+        ],
+        "judge_score": 5,
+        "latency_s": 45.81,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t003",
+        "loai": "tra_cuu",
+        "answer": "Khi giao kết, thực hiện hợp đồng lao động, người sử dụng lao động không được thực hiện các hành vi sau đây:\n\n1.  Giữ bản chính giấy tờ tùy thân, văn bằng, chứng chỉ của người lao động. [Khoản 1 Điều 17, Bộ luật Lao động 2019]\n2.  Yêu cầu người lao động phải thực hiện biện pháp bảo đảm bằng tiền hoặc tài sản khác cho việc thực hiện hợp đồng lao động. [Khoản 2 Điều 17, Bộ luật Lao động 2019]\n3.  Buộc người lao động thực hiện hợp đồng lao động để trả nợ cho người sử dụng lao động. [Khoản 3 Điều 17, Bộ luật Lao động 2019]\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          17
+        ],
+        "truth_dieu": [
+          17
+        ],
+        "judge_score": 5,
+        "latency_s": 40.34,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t004",
+        "loai": "tra_cuu",
+        "answer": "Một nhóm người lao động được ủy quyền cho một người trong nhóm để giao kết hợp đồng lao động trong trường hợp sau:\n\n*   Đối với công việc theo mùa vụ, công việc nhất định có thời hạn dưới 12 tháng.\n*   Nhóm người lao động phải từ đủ 18 tuổi trở lên.\n*   Hợp đồng lao động phải được giao kết bằng văn bản và có hiệu lực như giao kết với từng người lao động.\n*   Hợp đồng lao động do người được ủy quyền ký kết phải kèm theo danh sách ghi rõ họ tên, ngày tháng năm sinh, giới tính, nơi cư trú và chữ ký của từng người lao động.\n\n[Khoản 2, Điều 18, Bộ luật Lao động 2019]\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          18
+        ],
+        "truth_dieu": [
+          18
+        ],
+        "judge_score": 5,
+        "latency_s": 45.74,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t005",
+        "loai": "tra_cuu",
+        "answer": "Có, người lao động được phép giao kết nhiều hợp đồng lao động cùng lúc với nhiều người sử dụng lao động. Tuy nhiên, người lao động phải bảo đảm thực hiện đầy đủ các nội dung đã giao kết trong tất cả các hợp đồng lao động đó [Khoản 1 Điều 19, Bộ luật Lao động 2019].\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          19
+        ],
+        "truth_dieu": [
+          19
+        ],
+        "judge_score": 5,
+        "latency_s": 44.68,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t006",
+        "loai": "tra_cuu",
+        "answer": "Hợp đồng lao động xác định thời hạn có thời hạn không quá 36 tháng kể từ thời điểm có hiệu lực của hợp đồng [Điều 20 khoản 1 điểm b, Bộ luật Lao động 2019].\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          20
+        ],
+        "truth_dieu": [
+          20
+        ],
+        "judge_score": 5,
+        "latency_s": 41.59,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t007",
+        "loai": "tra_cuu",
+        "answer": "Người sử dụng lao động được quyền tạm thời chuyển người lao động làm công việc khác so với hợp đồng lao động tối đa 60 ngày làm việc cộng dồn trong 01 năm mà không cần sự đồng ý bằng văn bản của người lao động [Khoản 1 Điều 29, Bộ luật Lao động 2019].\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          29
+        ],
+        "truth_dieu": [
+          29
+        ],
+        "judge_score": 5,
+        "latency_s": 42.08,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t008",
+        "loai": "tra_cuu",
+        "answer": "Các trường hợp được tạm hoãn thực hiện hợp đồng lao động bao gồm:\n\n1.  Người lao động thực hiện nghĩa vụ quân sự, nghĩa vụ tham gia Dân quân tự vệ [khoản 1a, Điều 30, Bộ luật Lao động 2019].\n2.  Người lao động bị tạm giữ, tạm giam theo quy định của pháp luật về tố tụng hình sự [khoản 1b, Điều 30, Bộ luật Lao động 2019].\n3.  Người lao động phải chấp hành quyết định áp dụng biện pháp đưa vào trường giáo dưỡng, cơ sở cai nghiện bắt buộc hoặc cơ sở giáo dục bắt buộc [khoản 1c, Điều 30, Bộ luật Lao động 2019].\n4.  Lao động nữ mang thai nếu có xác nhận của cơ sở khám bệnh, chữa bệnh có thẩm quyền về việc tiếp tục làm việc sẽ ảnh hưởng xấu tới thai nhi [khoản 1d, Điều 30, Bộ luật Lao động 2019; khoản 1, Điều 138, Bộ luật Lao động 2019].\n5.  Người lao động được bổ nhiệm làm người quản lý doanh nghiệp của công ty trách nhiệm hữu hạn một thành viên do Nhà nước nắm giữ 100% vốn điều lệ [khoản 1đ, Điều 30, Bộ luật Lao động 2019].\n6.  Người lao động được ủy quyền để thực hiện quyền, trách nhiệm của đại diện chủ sở hữu nhà nước đối với phần vốn nhà nước tại doanh nghiệp [khoản 1e, Điều 30, Bộ luật Lao động 2019].\n7.  Người lao động được ủy quyền để thực hiện quyền, trách nhiệm của doanh nghiệp đối với phần vốn của doanh nghiệp đầu tư tại doanh nghiệp khác [khoản 1g, Điều 30, Bộ luật Lao động 2019].\n8.  Trường hợp khác do hai bên thỏa thuận [khoản 1h, Điều 30, Bộ luật Lao động 2019].\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          30,
+          138
+        ],
+        "truth_dieu": [
+          30
+        ],
+        "judge_score": 5,
+        "latency_s": 42.01,
+        "interrupted": false,
+        "citation_p": 0.5,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t009",
+        "loai": "tra_cuu",
+        "answer": "Hết thời hạn tạm hoãn hợp đồng lao động, người lao động phải có mặt tại nơi làm việc trong thời hạn 15 ngày kể từ ngày hết thời hạn tạm hoãn thực hiện hợp đồng lao động [Điều 31, Bộ luật Lao động 2019].\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          31
+        ],
+        "truth_dieu": [
+          31
+        ],
+        "judge_score": 3,
+        "latency_s": 39.42,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t010",
+        "loai": "tra_cuu",
+        "answer": "Làm việc không trọn thời gian là người lao động có thời gian làm việc ngắn hơn so với thời gian làm việc bình thường theo ngày hoặc theo tuần hoặc theo tháng được quy định trong pháp luật về lao động, thỏa ước lao động tập thể hoặc nội quy lao động [Khoản 1 Điều 32, Bộ luật Lao động 2019].\n\nNgười lao động thỏa thuận với người sử dụng lao động làm việc không trọn thời gian khi giao kết hợp đồng lao động [Khoản 2 Điều 32, Bộ luật Lao động 2019].\n\nNgười lao động làm việc không trọn thời gian được hưởng lương; bình đẳng trong thực hiện quyền và nghĩa vụ với người lao động làm việc trọn thời gian; bình đẳng về cơ hội, không bị phân biệt đối xử, bảo đảm an toàn, vệ sinh lao động [Khoản 3 Điều 32, Bộ luật Lao động 2019].\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          32
+        ],
+        "truth_dieu": [
+          32
+        ],
+        "judge_score": 5,
+        "latency_s": 42.99,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t011",
+        "loai": "tra_cuu",
+        "answer": "Để sửa đổi, bổ sung nội dung hợp đồng lao động, bên có yêu cầu phải báo cho bên kia biết trước ít nhất 03 ngày làm việc về nội dung cần sửa đổi, bổ sung [Khoản 1 Điều 33, Bộ luật Lao động 2019].\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          33
+        ],
+        "truth_dieu": [
+          33
+        ],
+        "judge_score": 5,
+        "latency_s": 80.05,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t012",
+        "loai": "tra_cuu",
+        "answer": "Hợp đồng lao động vô hiệu toàn bộ trong những trường hợp sau đây:\n1.  Toàn bộ nội dung của hợp đồng lao động vi phạm pháp luật [khoản 1a Điều 49, Bộ luật Lao động 2019].\n2.  Người giao kết hợp đồng lao động không đúng thẩm quyền hoặc vi phạm nguyên tắc giao kết hợp đồng lao động quy định tại khoản 1 Điều 15 của Bộ luật này [khoản 1b Điều 49, Bộ luật Lao động 2019].\n3.  Công việc đã giao kết trong hợp đồng lao động là công việc mà pháp luật cấm [khoản 1c Điều 49, Bộ luật Lao động 2019].\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          15,
+          49
+        ],
+        "truth_dieu": [
+          49
+        ],
+        "judge_score": 5,
+        "latency_s": 40.84,
+        "interrupted": false,
+        "citation_p": 0.5,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t013",
+        "loai": "tra_cuu",
+        "answer": "Để hoạt động cho thuê lại lao động, doanh nghiệp cần đáp ứng các điều kiện sau:\n\n1.  **Doanh nghiệp phải được cấp Giấy phép hoạt động cho thuê lại lao động** [Điều 54 Khoản 1, Bộ luật Lao động 2019; Điều 52 Khoản 2, Bộ luật Lao động 2019].\n2.  **Điều kiện cấp giấy phép hoạt động cho thuê lại lao động:**\n    *   **Đối với người đại diện theo pháp luật của doanh nghiệp:**\n        *   Là người quản lý doanh nghiệp theo quy định của Luật Doanh nghiệp [Điều 21 Khoản 1a, Nghị định 145/2020/NĐ-CP].\n        *   Không có án tích [Điều 21 Khoản 1b, Nghị định 145/2020/NĐ-CP].\n        *   Đã có thời gian trực tiếp làm chuyên môn hoặc quản lý về cho thuê lại lao động hoặc cung ứng lao động từ đủ 03 năm (36 tháng) trở lên trong thời hạn 05 năm liền kề trước khi đề nghị cấp giấy phép [Điều 21 Khoản 1c, Nghị định 145/2020/NĐ-CP].\n    *   **Đối với doanh nghiệp:**\n        *   Đã thực hiện ký quỹ 2.000.000.000 đồng (hai tỷ đồng) [Điều 21 Khoản 2, Nghị định 145/2020/NĐ-CP].\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          21,
+          52,
+          54
+        ],
+        "truth_dieu": [
+          54
+        ],
+        "judge_score": 5,
+        "latency_s": 42.38,
+        "interrupted": false,
+        "citation_p": 0.3333333333333333,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t014",
+        "loai": "tra_cuu",
+        "answer": "Thời hạn tập nghề tối đa không quá 03 tháng [Điều 61 khoản 2, Bộ luật Lao động 2019].\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          61
+        ],
+        "truth_dieu": [
+          61
+        ],
+        "judge_score": 5,
+        "latency_s": 43.42,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t015",
+        "loai": "tra_cuu",
+        "answer": "Hợp đồng đào tạo nghề phải có các nội dung chủ yếu sau đây:\n*   Nghề đào tạo [Điểm a Khoản 2 Điều 62, Bộ luật Lao động 2019].\n*   Địa điểm, thời gian và tiền lương trong thời gian đào tạo [Điểm b Khoản 2 Điều 62, Bộ luật Lao động 2019].\n*   Thời hạn cam kết phải làm việc sau khi được đào tạo [Điểm c Khoản 2 Điều 62, Bộ luật Lao động 2019].\n*   Chi phí đào tạo và trách nhiệm hoàn trả chi phí đào tạo [Điểm d Khoản 2 Điều 62, Bộ luật Lao động 2019].\n*   Trách nhiệm của người sử dụng lao động [Điểm đ Khoản 2 Điều 62, Bộ luật Lao động 2019].\n*   Trách nhiệm của người lao động [Điểm e Khoản 2 Điều 62, Bộ luật Lao động 2019].\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          62
+        ],
+        "truth_dieu": [
+          62
+        ],
+        "judge_score": 5,
+        "latency_s": 41.67,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t016",
+        "loai": "tra_cuu",
+        "answer": "Thỏa ước lao động tập thể có hiệu lực kể từ khi:\n*   Ngày do các bên thỏa thuận và được ghi trong thỏa ước lao động tập thể [Khoản 1, Điều 78, Bộ luật Lao động 2019].\n*   Trường hợp các bên không thỏa thuận ngày có hiệu lực thì thỏa ước lao động tập thể có hiệu lực kể từ ngày ký kết [Khoản 1, Điều 78, Bộ luật Lao động 2019].\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          78
+        ],
+        "truth_dieu": [
+          78
+        ],
+        "judge_score": 5,
+        "latency_s": 41.43,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t017",
+        "loai": "tra_cuu",
+        "answer": "Mức lương tối thiểu được hiểu như sau:\n\nMức lương tối thiểu là mức lương thấp nhất được trả cho người lao động làm công việc giản đơn nhất trong điều kiện lao động bình thường nhằm bảo đảm mức sống tối thiểu của người lao động và gia đình họ, phù hợp với điều kiện phát triển kinh tế - xã hội [Điều 91 khoản 1, Bộ luật Lao động 2019].\n\nMức lương tối thiểu được xác lập theo vùng, ấn định theo tháng, giờ [Điều 91 khoản 2, Bộ luật Lao động 2019]. Mức lương theo công việc hoặc chức danh của người lao động không được thấp hơn mức lương tối thiểu [Điều 90 khoản 2, Bộ luật Lao động 2019].\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          90,
+          91
+        ],
+        "truth_dieu": [
+          91
+        ],
+        "judge_score": 5,
+        "latency_s": 45.44,
+        "interrupted": false,
+        "citation_p": 0.5,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t018",
+        "loai": "tra_cuu",
+        "answer": "Dựa trên ngữ cảnh được cung cấp, nguyên tắc trả lương cho người lao động được quy định như sau:\n\n1.  Người sử dụng lao động phải trả lương trực tiếp, đầy đủ, đúng hạn cho người lao động. Trong trường hợp người lao động không thể nhận lương trực tiếp, người sử dụng lao động có thể trả lương cho người được người lao động ủy quyền hợp pháp [Điều 94 Khoản 1, Bộ luật Lao động 2019].\n2.  Người sử dụng lao động không được hạn chế hoặc can thiệp vào quyền tự quyết chi tiêu lương của người lao động [Điều 94 Khoản 2, Bộ luật Lao động 2019].\n3.  Người sử dụng lao động không được ép buộc người lao động chi tiêu lương vào việc mua hàng hóa, sử dụng dịch vụ của người sử dụng lao động hoặc của đơn vị khác mà người sử dụng lao động chỉ định [Điều 94 Khoản 2, Bộ luật Lao động 2019].\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          94
+        ],
+        "truth_dieu": [
+          94
+        ],
+        "judge_score": 5,
+        "latency_s": 48.35,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t019",
+        "loai": "tra_cuu",
+        "answer": "Mỗi lần trả lương, người sử dụng lao động phải thông báo bảng kê trả lương cho người lao động, trong đó ghi rõ tiền lương, tiền lương làm thêm giờ, tiền lương làm việc vào ban đêm, nội dung và số tiền bị khấu trừ (nếu có) [Khoản 3 Điều 95, Bộ luật Lao động 2019].\n\nNgoài ra, người sử dụng lao động phải trả lương trực tiếp, đầy đủ, đúng hạn cho người lao động [Khoản 1 Điều 94, Bộ luật Lao động 2019].\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          94,
+          95
+        ],
+        "truth_dieu": [
+          95
+        ],
+        "judge_score": 5,
+        "latency_s": 53.94,
+        "interrupted": false,
+        "citation_p": 0.5,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t020",
+        "loai": "tra_cuu",
+        "answer": "Không tìm thấy can cu.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          96
+        ],
+        "judge_score": 1,
+        "latency_s": 77.16,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t021",
+        "loai": "tra_cuu",
+        "answer": "Người lao động hưởng lương theo tháng được trả lương **một lần trong tháng hoặc nửa tháng một lần** (tức là tối đa hai lần trong một tháng).  \n[Điều 97, BLLD2019_D97_K0]  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          97
+        ],
+        "truth_dieu": [
+          97
+        ],
+        "judge_score": 4,
+        "latency_s": 39.73,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t022",
+        "loai": "tra_cuu",
+        "answer": "không tìm thấy cán cục\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          107
+        ],
+        "judge_score": 1,
+        "latency_s": 40.82,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t023",
+        "loai": "tra_cuu",
+        "answer": "[Điều 108, BLLD2019_D108_K0]  \nNgười lao động không được từ chối làm thêm giờ trong trường hợp sau đây:  \n1. Thực hiện lệnh động viên, huy động bảo đảm nhiệm vụ quốc phòng, an ninh theo quy định của pháp luật;  \n2. Thực hiện các công việc nhằm bảo vệ tính mạng con người, tài sản của cơ quan, tổ chức, cá nhân trong phòng ngừa, khắc phục hậu quả thiên tai, hỏa hoạn, dịch bệnh nguy hiểm và thảm họa, trừ trường hợp có nguy cơ ảnh hưởng đến tính mạng, sức khỏe của người lao động theo quy định của pháp luật về an toàn, vệ sinh lao động.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          108
+        ],
+        "truth_dieu": [
+          108
+        ],
+        "judge_score": 5,
+        "latency_s": 41.54,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t024",
+        "loai": "tra_cuu",
+        "answer": "Lao động nữ được nghỉ thai sản trước và sau khi sinh con là **06 tháng**; thời gian nghỉ trước khi sinh không quá **02 tháng**.  \n[Điều 139, Bộ luật Lao động 2019]  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          139
+        ],
+        "truth_dieu": [
+          139
+        ],
+        "judge_score": 4,
+        "latency_s": 40.41,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t025",
+        "loai": "tra_cuu",
+        "answer": "[Điều 143, Bộ luật Lao động 2019]  \nLao động chưa thành niên là người lao động chưa đủ 18 tuổi.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          143
+        ],
+        "truth_dieu": [
+          143
+        ],
+        "judge_score": 5,
+        "latency_s": 39.55,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t026",
+        "loai": "tra_cuu",
+        "answer": "không tìm thấy can cu\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          145
+        ],
+        "judge_score": 1,
+        "latency_s": 39.58,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t027",
+        "loai": "tra_cuu",
+        "answer": "Thời giờ làm việc tối đa của người chưa đủ 15 tuổi là **4 giờ trong 1 ngày và 20 giờ trong 1 tuần**.  \n[Điều 146, Bộ luật Lao động 2019]  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          146
+        ],
+        "truth_dieu": [
+          146
+        ],
+        "judge_score": 4,
+        "latency_s": 104.87,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t028",
+        "loai": "tra_cuu",
+        "answer": "[Điều 159, Bộ luật Lao động 2019]  \nNgười sử dụng lao động khi sử dụng lao động là người khuyết tật phải bảo đảm:  \n1. Đảm bảo điều kiện lao động, công cụ lao động, an toàn, vệ sinh lao động và tổ chức khám sức khỏe định kỳ phù hợp với người lao động là người khuyết tật.  \n2. Tham khảo ý kiến của người lao động là người khuyết tật khi quyết định những vấn đề liên quan đến quyền và lợi ích của họ.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          159
+        ],
+        "truth_dieu": [
+          159
+        ],
+        "judge_score": 5,
+        "latency_s": 46.26,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t029",
+        "loai": "tra_cuu",
+        "answer": "[Điều 160, Bộ luật Lao động 2019]  \n- Sử dụng người lao động là người khuyết tật nặng làm thêm giờ hoặc làm việc vào ban đêm mà không có sự đồng ý của người lao động.  \n- Sử dụng người lao động là người khuyết tật nặng làm công việc nặng nhọc, độc hại, nguy hiểm theo danh mục do Bộ trưởng Bộ Lao động – Thương binh và Xã hội ban hành mà không có sự đồng ý của người lao động sau khi đã được người sử dụng lao động cung cấp đầy đủ thông tin về công việc đó.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          160
+        ],
+        "truth_dieu": [
+          160
+        ],
+        "judge_score": 5,
+        "latency_s": 44.55,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t030",
+        "loai": "tra_cuu",
+        "answer": "Không tìm thấy căn cứ.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          168
+        ],
+        "judge_score": 1,
+        "latency_s": 40.14,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t031",
+        "loai": "tra_cuu",
+        "answer": "[Điều 187, BLLD2019_D187_K0] Hòa giải viên lao động  \n[Điều 187, BLLD2019_D187_K0] Hội đồng trọng tài lao động  \n[Điều 187, BLLD2019_D187_K0] Tòa án nhân dân  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          187
+        ],
+        "truth_dieu": [
+          187
+        ],
+        "judge_score": 5,
+        "latency_s": 38.65,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t032",
+        "loai": "tra_cuu",
+        "answer": "Những tranh chấp lao động cá nhân **không bắt buộc phải qua thủ tục hòa giải trước khi khởi kiện** là:\n\n- **Về xử lý kỷ luật lao động theo hình thức sa thải hoặc về trường hợp bị đơn phương chấm dứt hợp đồng lao động**; [Điều 188, Bộ luật Lao động 2019]  \n- **Về bồi thường thiệt hại, trợ cấp khi chấm dứt hợp đồng lao động**; [Điều 188, Bộ luật Lao động 2019]  \n- **Giữa người giúp việc gia đình với người sử dụng lao động**; [Điều 188, Bộ luật Lao động 2019]  \n- **Về bảo hiểm xã hội, bảo hiểm y tế, bảo hiểm thất nghiệp, bảo hiểm tai nạn lao động, bệnh nghề nghiệp**; [Điều 188, Bộ luật Lao động 2019]  \n- **Về bồi thường thiệt hại giữa người lao động với doanh nghiệp, tổ chức đưa người lao động đi làm việc ở nước ngoài theo hợp đồng**; [Điều 188, Bộ luật Lao động 2019]  \n- **Giữa người lao động thuê lại với người sử dụng lao động thuê lại**; [Điều 188, Bộ luật Lao động 2019]  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          188
+        ],
+        "truth_dieu": [
+          188
+        ],
+        "judge_score": 5,
+        "latency_s": 43.96,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t033",
+        "loai": "tra_cuu",
+        "answer": "không tìm thấy cán cục\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          198
+        ],
+        "judge_score": 1,
+        "latency_s": 38.94,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t034",
+        "loai": "tra_cuu",
+        "answer": "Trong thời hạn **30 ngày** kể từ ngày bắt đầu hoạt động, người sử dụng lao động phải lập sổ quản lý lao động.  \n[Điều 3, Nghị định 145/2020/NĐ‑CP]  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          3
+        ],
+        "truth_dieu": [
+          3
+        ],
+        "judge_score": 5,
+        "latency_s": 39.2,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "t035",
+        "loai": "tra_cuu",
+        "answer": "Người sử dụng lao động phải định kỳ báo cáo tình hình thay đổi lao động **trước ngày 05 tháng 6 hàng năm và trước ngày 05 tháng 12 hàng năm** (định kỳ 6 tháng và hằng năm).  \n[ND145_2020_D4_K0]  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          4
+        ],
+        "judge_score": 5,
+        "latency_s": 40.78,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h001",
+        "loai": "tinh_huong",
+        "answer": "Công ty ký hợp đồng lao động xác định thời hạn 40 tháng với bạn **không đúng quy định của pháp luật**.  \n\nTheo **Điều 20** Bộ luật Lao động 2019, hợp đồng lao động xác định thời hạn phải được ký trong thời gian **không quá 36 tháng** kể từ thời điểm có hiệu lực của hợp đồng. Việc ký hợp đồng 40 tháng vượt quá giới hạn này, do đó hợp đồng không hợp pháp và có thể bị coi là hợp đồng không xác định thời hạn hoặc bị hủy hiệu.\n\n[Điều 20, Bộ luật Lao động 2019]  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          20
+        ],
+        "truth_dieu": [
+          20
+        ],
+        "judge_score": 5,
+        "latency_s": 40.03,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h002",
+        "loai": "tinh_huong",
+        "answer": "[Điều 20, BLLD2019_D20_K0]  \nHợp đồng lao động đã hết hạn 24 tháng và tiếp tục làm việc mà trong vòng 30 ngày kể từ ngày hết hạn công ty chưa ký hợp đồng mới, theo quy định tại điểm b khoản 1 Điều 20, hợp đồng đã giao kết trở thành **hợp đồng lao động không xác định thời hạn**.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          20
+        ],
+        "truth_dieu": [
+          20
+        ],
+        "judge_score": 5,
+        "latency_s": 34.89,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h003",
+        "loai": "tinh_huong",
+        "answer": "Không tìm thấy can cu.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          29
+        ],
+        "judge_score": 1,
+        "latency_s": 35.72,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h004",
+        "loai": "tinh_huong",
+        "answer": "Không tìm thấy can cu.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          31
+        ],
+        "judge_score": 1,
+        "latency_s": 35.71,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h005",
+        "loai": "tinh_huong",
+        "answer": "Không tìm thấy can cu.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          33
+        ],
+        "judge_score": 1,
+        "latency_s": 35.27,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h006",
+        "loai": "tinh_huong",
+        "answer": "Không tìm thấy can cu.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          17
+        ],
+        "judge_score": 1,
+        "latency_s": 35.47,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h007",
+        "loai": "tinh_huong",
+        "answer": "Không tìm thấy can cu.  \n\n[Điều 18, Bộ luật Lao động 2019] – Đối với công việc theo mùa vụ, công việc nhất định có thời hạn dưới 12 tháng, nhóm người lao động từ đủ 18 tuổi trở lên có thể ủy quyền cho một người lao động trong nhóm để giao kết hợp đồng lao động. Hợp đồng phải được giao kết bằng văn bản và có hiệu lực như giao kết với từng người lao động, đồng thời kèm theo danh sách ghi rõ họ tên, ngày tháng năm sinh, giới tính, nơi cư trú và chữ ký của từng người lao động.  \n\n[Điều 5, Bộ luật Lao động 2019] – Người lao động có quyền tự do lựa chọn việc làm và được bảo hộ lao động.  \n\n[Điều 6, Bộ luật Lao động 2019] – Người sử dụng lao động có quyền tuyển dụng, bố trí, quản lý lao động và phải thực hiện hợp đồng lao động.  \n\n[Điều 162, Bộ luật Lao động 2019] – Đối với lao động là người giúp việc gia đình, hợp đồng phải được giao kết bằng văn bản và có thời hạn thỏa thuận.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          5,
+          6,
+          18,
+          162
+        ],
+        "truth_dieu": [
+          18
+        ],
+        "judge_score": 1,
+        "latency_s": 35.27,
+        "interrupted": false,
+        "citation_p": 0.25,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h008",
+        "loai": "tinh_huong",
+        "answer": "không tìm thấy cán cục\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          61
+        ],
+        "judge_score": 1,
+        "latency_s": 36.05,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h009",
+        "loai": "tinh_huong",
+        "answer": "Không tìm thấy can cu.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          62
+        ],
+        "judge_score": 1,
+        "latency_s": 35.31,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h010",
+        "loai": "tinh_huong",
+        "answer": "Không, theo quy định hiện hành công ty không được trả lương 2 tháng một lần cho người lao động hưởng lương theo tháng.\n\n[Điều 97, Bộ luật Lao động 2019]  \n[Điều 54, Nghị định 145/2020/NĐ-CP]  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          54,
+          97
+        ],
+        "truth_dieu": [
+          97
+        ],
+        "judge_score": 5,
+        "latency_s": 34.75,
+        "interrupted": false,
+        "citation_p": 0.5,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h011",
+        "loai": "tinh_huong",
+        "answer": "Không tìm thấy can cu.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          96
+        ],
+        "judge_score": 1,
+        "latency_s": 33.87,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h012",
+        "loai": "tinh_huong",
+        "answer": "[Điều 107, BLLD2019_D107_K0]  \n- Thời gian làm thêm giờ trong một tháng không được vượt quá **40 giờ** (điều 107, khoản 2b).  \n- Ngoài ra, tổng số giờ làm thêm trong một năm không được vượt quá **200 giờ** (điều 107, khoản 2c) trừ các ngành nghề đặc thù được quy định trong khoản 3.  \n\nBạn đã làm thêm **45 giờ** trong tháng này, đã vượt quá giới hạn 40 giờ cho một tháng. Vì công ty không thuộc ngành nghề đặc thù (không nằm trong danh sách khoản 3), và không có bất kỳ trường hợp đặc biệt (đặc biệt, khẩn cấp, bảo vệ tính mạng, v.v.) được quy định trong Điều 108, công ty không được phép yêu cầu bạn làm thêm giờ nữa trong tháng này.  \n\n**Kết luận:** Việc công ty yêu cầu bạn làm thêm giờ nữa trong tháng hiện tại **không đúng luật**.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          107,
+          108
+        ],
+        "truth_dieu": [
+          107
+        ],
+        "judge_score": 5,
+        "latency_s": 34.14,
+        "interrupted": false,
+        "citation_p": 0.5,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h013",
+        "loai": "tinh_huong",
+        "answer": "[Điều 108, Bộ luật Lao động 2019]  \nCông ty có quyền yêu cầu người lao động làm thêm giờ trong trường hợp khắc phục hậu quả thiên tai, hỏa hoạn, dịch bệnh nguy hiểm và thảm họa. Trong trường hợp này, người lao động không được từ chối.  \n\n[Điều 55, Nghị định 145/2020/NĐ-CP]  \nNếu làm thêm giờ, người lao động sẽ được trả lương làm thêm theo mức tối thiểu 150% (hoặc 200%/300% tùy theo ngày làm việc) của lương giờ thực trả.  \n\nDo đó, khi công ty yêu cầu bạn làm thêm giờ để khắc phục hậu quả bão lũ khẩn cấp, bạn không có quyền từ chối. Bạn phải thực hiện công việc và được trả lương làm thêm theo quy định.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          55,
+          108
+        ],
+        "truth_dieu": [
+          108
+        ],
+        "judge_score": 5,
+        "latency_s": 36.0,
+        "interrupted": false,
+        "citation_p": 0.5,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h014",
+        "loai": "tinh_huong",
+        "answer": "không tìm thấy cán cục\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          139
+        ],
+        "judge_score": 1,
+        "latency_s": 33.77,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h015",
+        "loai": "tinh_huong",
+        "answer": "Không tìm thấy can cu.  \n[Điều 145, Bộ luật Lao động 2019]  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          145
+        ],
+        "truth_dieu": [
+          145
+        ],
+        "judge_score": 1,
+        "latency_s": 37.34,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h016",
+        "loai": "tinh_huong",
+        "answer": "[Điều 146, BLLD2019_D146_K0]  \n- Người chưa đủ 15 tuổi không được làm việc quá 04 giờ trong 01 ngày và 20 giờ trong 01 tuần; không được làm thêm giờ, làm việc vào ban đêm.  \n- 5 giờ/ngày vượt quá giới hạn 4 giờ/ngày, do đó vi phạm quy định.\n\n[Điều 145, BLLD2019_D145_K0]  \n- Khi sử dụng người chưa đủ 15 tuổi làm việc, người sử dụng lao động phải tuân theo quy định: giao kết hợp đồng lao động bằng văn bản, bố trí giờ làm việc không ảnh hưởng đến thời gian học tập, có giấy khám sức khỏe, và tổ chức kiểm tra sức khỏe định kỳ ít nhất một lần trong 06 tháng.  \n- Việc làm 5 giờ/ngày không tuân thủ giới hạn giờ làm việc đã nêu, đồng thời có thể không đáp ứng đầy đủ các yêu cầu về hợp đồng và kiểm tra sức khỏe.\n\nKết luận: Việc một em 14 tuổi làm việc 5 giờ/ngày tại xưởng nhỏ không đúng với quy định của Bộ luật Lao động 2019.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          145,
+          146
+        ],
+        "truth_dieu": [
+          146
+        ],
+        "judge_score": 5,
+        "latency_s": 34.45,
+        "interrupted": false,
+        "citation_p": 0.5,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h017",
+        "loai": "tinh_huong",
+        "answer": "Không tìm thấy căn cứ.  \nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          160
+        ],
+        "judge_score": 1,
+        "latency_s": 35.41,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h018",
+        "loai": "tinh_huong",
+        "answer": "Không tìm thấy can cu.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          188
+        ],
+        "judge_score": 1,
+        "latency_s": 33.8,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h019",
+        "loai": "tinh_huong",
+        "answer": "Không tìm thấy can cu.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          168
+        ],
+        "judge_score": 1,
+        "latency_s": 34.1,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h020",
+        "loai": "tinh_huong",
+        "answer": "Không tìm thấy can cu.\n\n[Điều 95, Bộ luật Lao động 2019]  \n[Điều 94, Bộ luật Lao động 2019]  \n[Điều 102, Bộ luật Lao động 2019]  \n[Điều 97, Bộ luật Lao động 2019]  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          94,
+          95,
+          97,
+          102
+        ],
+        "truth_dieu": [
+          95
+        ],
+        "judge_score": 1,
+        "latency_s": 35.19,
+        "interrupted": false,
+        "citation_p": 0.25,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h021",
+        "loai": "tinh_huong",
+        "answer": "Không tìm thấy can cu.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          94
+        ],
+        "judge_score": 1,
+        "latency_s": 34.57,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h022",
+        "loai": "tinh_huong",
+        "answer": "không tìm thấy cán cục\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          19
+        ],
+        "judge_score": 1,
+        "latency_s": 35.65,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h023",
+        "loai": "tinh_huong",
+        "answer": "Không tìm thấy can cu.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          30
+        ],
+        "judge_score": 1,
+        "latency_s": 34.46,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h024",
+        "loai": "tinh_huong",
+        "answer": "Không tìm thấy can cu.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          32
+        ],
+        "judge_score": 1,
+        "latency_s": 33.61,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h025",
+        "loai": "tinh_huong",
+        "answer": "không tìm thấy cán cục\n\n[Điều 21, Nghị định 145/2020/NĐ-CP]  \n[Điều 54, Bộ luật Lao động 2019]  \n[Điều 16, Nghị định 145/2020/NĐ-CP]  \n[Điều 19, Nghị định 145/2020/NĐ-CP]  \n[Điều 20, Nghị định 145/2020/NĐ-CP]  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          16,
+          19,
+          20,
+          21,
+          54
+        ],
+        "truth_dieu": [
+          54
+        ],
+        "judge_score": 1,
+        "latency_s": 33.93,
+        "interrupted": false,
+        "citation_p": 0.2,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h026",
+        "loai": "tinh_huong",
+        "answer": "Bạn tôi 17 tuổi được xem là **lao động chưa thành niên**. Theo Điều 143 của Bộ luật Lao động 2019, người lao động chưa đủ 18 tuổi được quy định là lao động chưa thành niên và phải tuân thủ các quy định bảo vệ sức khỏe, an toàn, quyền lợi và giới hạn giờ làm việc dành cho người chưa thành niên.  \n\n[Điều 143, Bộ luật Lao động 2019]  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          143
+        ],
+        "truth_dieu": [
+          143
+        ],
+        "judge_score": 5,
+        "latency_s": 34.94,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h027",
+        "loai": "tinh_huong",
+        "answer": "không tìm thấy cán cục\n\n[Điều 18, Bộ luật Lao động 2019]\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          18
+        ],
+        "truth_dieu": [
+          49
+        ],
+        "judge_score": 1,
+        "latency_s": 35.53,
+        "interrupted": false,
+        "citation_p": 0.0,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h028",
+        "loai": "tinh_huong",
+        "answer": "Không tìm thấy can cu\n\n[Điều 204, Bộ luật Lao động 2019]\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          204
+        ],
+        "truth_dieu": [
+          198
+        ],
+        "judge_score": 1,
+        "latency_s": 35.18,
+        "interrupted": false,
+        "citation_p": 0.0,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h029",
+        "loai": "tinh_huong",
+        "answer": "không tìm thấy can cu\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          159
+        ],
+        "judge_score": 1,
+        "latency_s": 36.97,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "h030",
+        "loai": "tinh_huong",
+        "answer": "không tìm thấy cán cục\n\n[Điều 107, Bộ luật Lao động 2019]  \n[Điều 60, Nghị định 145/2020/NĐ-CP]  \n[Điều 108, Bộ luật Lao động 2019]  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          60,
+          107,
+          108
+        ],
+        "truth_dieu": [
+          107
+        ],
+        "judge_score": 1,
+        "latency_s": 34.97,
+        "interrupted": false,
+        "citation_p": 0.3333333333333333,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "n001",
+        "loai": "nhieu_dieu",
+        "answer": "không tìm thấy cán cục\n\n[Điều 146, Bộ luật Lao động 2019]  \n[Điều 107, Bộ luật Lao động 2019]  \n[Điều 145, Bộ luật Lao động 2019]  \n[Điều 144, Bộ luật Lao động 2019]  \n[Điều 108, Bộ luật Lao động 2019]  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          107,
+          108,
+          144,
+          145,
+          146
+        ],
+        "truth_dieu": [
+          145,
+          146
+        ],
+        "judge_score": 1,
+        "latency_s": 34.57,
+        "interrupted": false,
+        "citation_p": 0.4,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "n002",
+        "loai": "nhieu_dieu",
+        "answer": "",
+        "cited_dieu": [],
+        "truth_dieu": [
+          30,
+          31
+        ],
+        "judge_score": 1,
+        "latency_s": 37.54,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "n003",
+        "loai": "nhieu_dieu",
+        "answer": "không tìm thấy cán cục\n\n[Điều 62, Bộ luật Lao động 2019]  \n[Điều 35, Bộ luật Lao động 2019]  \n[Điều 36, Bộ luật Lao động 2019]  \n[Điều 61, Bộ luật Lao động 2019]  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          35,
+          36,
+          61,
+          62
+        ],
+        "truth_dieu": [
+          40,
+          62
+        ],
+        "judge_score": 1,
+        "latency_s": 35.56,
+        "interrupted": false,
+        "citation_p": 0.25,
+        "citation_r": 0.5,
+        "refusal_correct": null
+      },
+      {
+        "id": "n004",
+        "loai": "nhieu_dieu",
+        "answer": "không tìm thấy cán cục\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          32,
+          168
+        ],
+        "judge_score": 1,
+        "latency_s": 34.64,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "n005",
+        "loai": "nhieu_dieu",
+        "answer": "Không tìm thấy can cu.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          54,
+          55
+        ],
+        "judge_score": 1,
+        "latency_s": 34.65,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "n006",
+        "loai": "nhieu_dieu",
+        "answer": "không tìm thấy can cu\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          109,
+          160
+        ],
+        "judge_score": 1,
+        "latency_s": 34.84,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "n007",
+        "loai": "nhieu_dieu",
+        "answer": "Không tìm thấy cán cục.\n\n[Điều 188, Bộ luật Lao động 2019]  \n[Điều 168, Bộ luật Lao động 2019]  \n[Điều 41, Bộ luật Lao động 2019]  \n[Điều 219 Khoản 1, Bộ luật Lao động 2019]  \n[Điều 219 Khoản 2, Bộ luật Lao động 2019]\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          41,
+          168,
+          188,
+          219
+        ],
+        "truth_dieu": [
+          17,
+          188
+        ],
+        "judge_score": 1,
+        "latency_s": 35.71,
+        "interrupted": false,
+        "citation_p": 0.25,
+        "citation_r": 0.5,
+        "refusal_correct": null
+      },
+      {
+        "id": "n008",
+        "loai": "nhieu_dieu",
+        "answer": "không tìm thấy cán cục\n\n[Điều 18, Bộ luật Lao động 2019]\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          18
+        ],
+        "truth_dieu": [
+          18,
+          143
+        ],
+        "judge_score": 1,
+        "latency_s": 34.59,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 0.5,
+        "refusal_correct": null
+      },
+      {
+        "id": "n009",
+        "loai": "nhieu_dieu",
+        "answer": "Không tìm thấy can cu.  \n\n[Điều 19, Bộ luật Lao động 2019]  \n[Điều 168, Bộ luật Lao động 2019]  \n[Điều 89, Nghị định 145/2020/NĐ-CP]  \n[Điều 48, Bộ luật Lao động 2019]  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          19,
+          48,
+          89,
+          168
+        ],
+        "truth_dieu": [
+          19,
+          168
+        ],
+        "judge_score": 1,
+        "latency_s": 34.86,
+        "interrupted": false,
+        "citation_p": 0.5,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "n010",
+        "loai": "nhieu_dieu",
+        "answer": "Không tìm thấy can cu.  \n\n[Điều 29, Bộ luật Lao động 2019]  \n[Điều 42, Bộ luật Lao động 2019]  \n[Điều 41, Bộ luật Lao động 2019]  \n[Điều 125, Bộ luật Lao động 2019]  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          29,
+          41,
+          42,
+          125
+        ],
+        "truth_dieu": [
+          29,
+          34,
+          42
+        ],
+        "judge_score": 1,
+        "latency_s": 35.04,
+        "interrupted": false,
+        "citation_p": 0.5,
+        "citation_r": 0.6666666666666666,
+        "refusal_correct": null
+      },
+      {
+        "id": "n011",
+        "loai": "nhieu_dieu",
+        "answer": "Không tìm thấy can cu.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          94,
+          95
+        ],
+        "judge_score": 1,
+        "latency_s": 35.3,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "n012",
+        "loai": "nhieu_dieu",
+        "answer": "Không tìm thấy căn cứ.  \n\n[Điều 108, Bộ luật Lao động 2019]  \n[Điều 107, Bộ luật Lao động 2019]  \n[Điều 61, Nghị định 145/2020/NĐ-CP]  \n[Điều 62, Nghị định 145/2020/NĐ-CP]  \n[Điều 5, Bộ luật Lao động 2019]  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          5,
+          61,
+          62,
+          107,
+          108
+        ],
+        "truth_dieu": [
+          107,
+          108
+        ],
+        "judge_score": 1,
+        "latency_s": 34.18,
+        "interrupted": false,
+        "citation_p": 0.4,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "n013",
+        "loai": "nhieu_dieu",
+        "answer": "Theo quy định của Bộ luật Lao động 2019, việc sa thải người lao động trong thời gian nghỉ thai sản không được phép, bất kể lý do “tái cơ cấu nhân sự” hay bất kỳ lý do nào khác.  \n\n1. **Điều 137 – Bảo vệ thai sản**  \n   - **Điều 137.3**: “Người sử dụng lao động không được sa thải hoặc đơn phương chấm dứt hợp đồng lao động đối với người lao động vì lý do kết hôn, mang thai, nghỉ thai sản, nuôi con dưới 12 tháng tuổi…”.  \n   - **Điều 137.3** cũng quy định rằng trong trường hợp hợp đồng lao động hết hạn trong thời gian lao động nữ mang thai hoặc nuôi con dưới 12 tháng tuổi thì được ưu tiên giao kết hợp đồng lao động mới.  \n\n2. **Điều 140 – Bảo đảm việc làm cho lao động nghỉ thai sản**  \n   - **Điều 140**: “Lao động được bảo đảm việc làm cũ khi trở lại làm việc sau khi nghỉ hết thời gian theo quy định tại các khoản 1, 3 và 5 Điều 139 của Bộ luật này mà không bị cắt giảm tiền lương và quyền, lợi ích so với trước khi nghỉ thai sản; trường hợp việc làm cũ không còn thì người sử dụng lao động phải bố trí việc làm khác cho họ với mức lương không thấp hơn mức lương trước khi nghỉ thai sản.”  \n\n3. **Điều 37 – Trường hợp người sử dụng lao động không được thực hiện quyền đơn phương chấm dứt hợp đồng lao động**  \n   - **Điều 37.3**: “Người lao động nữ mang thai; người lao động đang nghỉ thai sản hoặc nuôi con dưới 12 tháng tuổi.”  \n\n4. **Điều 125 – Áp dụng hình thức xử lý kỷ luật sa thải**  \n   - **Điều 125** chỉ liệt kê các trường hợp hợp pháp để sa thải, không bao gồm việc sa thải trong thời gian nghỉ thai sản.  \n\nVì vậy, việc công ty sa thải bạn trong thời gian nghỉ thai sản với lý do “tái cơ cấu nhân sự” vi phạm quy định của **Điều 137, 140, 37** của Bộ luật Lao động 2019. Bạn có quyền yêu cầu công ty hủy bỏ quyết định sa thải, bảo đảm quyền làm việc cũ khi trở lại, hoặc được bố trí công việc khác với mức lương không thấp hơn mức lương trước khi nghỉ thai sản. Nếu công ty không tuân thủ, bạn có thể khiếu nại tới cơ quan bảo vệ quyền lợi người lao động hoặc khởi kiện theo quy định của pháp luật.\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          37,
+          125,
+          137,
+          139,
+          140
+        ],
+        "truth_dieu": [
+          137,
+          139
+        ],
+        "judge_score": 5,
+        "latency_s": 36.44,
+        "interrupted": false,
+        "citation_p": 0.4,
+        "citation_r": 1.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "n014",
+        "loai": "nhieu_dieu",
+        "answer": "Bạn **không bắt buộc** phải qua hòa giải viên lao động trước khi khởi kiện ra tòa trong trường hợp này.  \n\n[Điều 188, Bộ luật Lao động 2019] quy định:  \n> “Tranh chấp lao động cá nhân phải được giải quyết thông qua thủ tục hòa giải của hòa giải viên lao động trước khi yêu cầu Hội đồng trọng tài lao động hoặc Tòa án giải quyết, **trừ các tranh chấp lao động sau đây không bắt buộc phải qua thủ tục hòa giải**:  \n> a) Về xử lý kỷ luật lao động theo hình thức sa thải hoặc **về trường hợp bị đơn phương chấm dứt hợp đồng lao động**; …”\n\nDo đó, khi công ty đơn phương chấm dứt hợp đồng lao động trái luật và bạn đang tranh chấp về khoản bồi thường, bạn có thể trực tiếp yêu cầu giải quyết tại Hội đồng trọng tài lao động hoặc Tòa án mà không cần qua hòa giải viên lao động.\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          188
+        ],
+        "truth_dieu": [
+          187,
+          188
+        ],
+        "judge_score": 5,
+        "latency_s": 35.19,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 0.5,
+        "refusal_correct": null
+      },
+      {
+        "id": "n015",
+        "loai": "nhieu_dieu",
+        "answer": "Không tìm thấy cán cục.  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [
+          187,
+          188
+        ],
+        "judge_score": 1,
+        "latency_s": 104.43,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": 0.0,
+        "refusal_correct": null
+      },
+      {
+        "id": "n016",
+        "loai": "nhieu_dieu",
+        "answer": "không tìm thấy cán cục\n\n[Điều 48, Bộ luật Lao động 2019]  \n[Điều 36, Bộ luật Lao động 2019]  \n[Điều 41, Bộ luật Lao động 2019]  \n[Điều 37, Bộ luật Lao động 2019]  \n[Điều 35, Bộ luật Lao động 2019]  \n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          35,
+          36,
+          37,
+          41,
+          48
+        ],
+        "truth_dieu": [
+          36,
+          168
+        ],
+        "judge_score": 1,
+        "latency_s": 60.99,
+        "interrupted": false,
+        "citation_p": 0.2,
+        "citation_r": 0.5,
+        "refusal_correct": null
+      }
+    ]
+  }
+}
