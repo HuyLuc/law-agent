@@ -28,10 +28,20 @@ DEAD_KEYS_PATH = ROOT / ".gemini_dead_keys.json"
 
 # Quota free-tier tinh RIENG cho tung model (khong chi rieng tung key), nen
 # khi het quota model chinh (settings.LLM_MODEL) o TAT CA key, van con co the
-# goi duoc cac model flash khac cung key do. Danh sach nay la cac ban flash
-# on dinh (khong phai "-preview"/"-lite"/"-image"/"-tts") con ton tai tai
-# thoi diem lam du an (kiem tra qua genai Client.models.list()).
-GEMINI_MODEL_FALLBACKS = ["gemini-3.7-flash", "gemini-3.6-flash", "gemini-3.5-flash", "gemini-2.5-flash"]
+# goi duoc cac model flash khac cung key do. Cac ban flash day du thu truoc
+# (chat luong cao hon), roi moi toi cac ban "flash-lite": quota free-tier
+# cua flash-lite cao hon han (~500 request/ngay/key so voi ~20 cua flash
+# day du), nen de cuoi danh sach van dam bao thu het flash truoc khi can
+# den luong quota lon cua lite. Danh sach kiem tra qua
+# genai.Client.models.list() tai thoi diem lam du an.
+GEMINI_MODEL_FALLBACKS = [
+    "gemini-3.7-flash",
+    "gemini-3.6-flash",
+    "gemini-3.5-flash",
+    "gemini-2.5-flash",
+    "gemini-3.5-flash-lite",
+    "gemini-3.1-flash-lite",
+]
 
 
 def get_gemini_llms() -> list[BaseChatModel]:
