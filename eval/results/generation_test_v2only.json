@@ -1,11 +1,11 @@
 {
   "v2": {
-    "citation_precision": 0.7220125786163523,
-    "citation_recall": 0.5946502057613169,
-    "avg_judge_score": 2.8641975308641974,
-    "refusal_accuracy": null,
-    "latency_p50_s": 36.97,
-    "latency_p95_s": 74.18,
+    "citation_precision": 0.7079096045197741,
+    "citation_recall": 0.5901960784313726,
+    "avg_judge_score": 2.89,
+    "refusal_accuracy": 0.5333333333333333,
+    "latency_p50_s": 40.03,
+    "latency_p95_s": 80.05,
     "n": 100,
     "per_item": [
       {
@@ -1395,6 +1395,279 @@
         "citation_p": 0.2,
         "citation_r": 0.5,
         "refusal_correct": null
+      },
+      {
+        "id": "n017",
+        "loai": "nhieu_dieu",
+        "answer": "Công ty không thể để em 14 tuổi nằm trong nhóm ủy quyền ký hợp đồng lao động chung.\n\nCăn cứ theo quy định pháp luật:\n1.  **Về thẩm quyền ủy quyền giao kết hợp đồng lao động theo nhóm:** Đối với công việc theo mùa vụ, công việc nhất định có thời hạn dưới 12 tháng, nhóm người lao động có thể ủy quyền cho một người trong nhóm để giao kết hợp đồng lao động, nhưng nhóm người lao động này phải \"từ đủ 18 tuổi trở lên\" [Điều 18 Khoản 2, Bộ luật Lao động 2019]. Do em 14 tuổi chưa đủ 18 tuổi, em không thể là thành viên của nhóm ủy quyền này.\n2.  **Về người giao kết hợp đồng lao động bên phía người lao động:**\n    *   Người lao động từ đủ 18 tuổi trở lên trực tiếp giao kết hợp đồng lao động [Điều 18 Khoản 4 Điểm a, Bộ luật Lao động 2019].\n    *   Đối với người chưa đủ 15 tuổi (như trường hợp em 14 tuổi), hợp đồng lao động phải do \"Người chưa đủ 15 tuổi và người đại diện theo pháp luật của người đó\" giao kết [Điều 18 Khoản 4 Điểm c, Bộ luật Lao động 2019].\n\n**Giải pháp:**\nThay vì nằm trong nhóm ủy quyền, em 14 tuổi phải trực tiếp giao kết hợp đồng lao động của mình, và hợp đồng này phải có chữ ký của người đại diện theo pháp luật của em (ví dụ: cha, mẹ hoặc người giám hộ) [Điều 18 Khoản 4 Điểm c, Bộ luật Lao động 2019].\n\nNgoài ra, khi sử dụng lao động chưa thành niên (bao gồm cả em 14 tuổi), công ty cần lưu ý các quy định sau:\n*   Phải có sự đồng ý của cha, mẹ hoặc người giám hộ của em [Điều 144 Khoản 3, Bộ luật Lao động 2019].\n*   Lập sổ theo dõi riêng, ghi đầy đủ họ tên, ngày tháng năm sinh, công việc đang làm, kết quả những lần kiểm tra sức khỏe định kỳ và xuất trình khi cơ quan nhà nước có thẩm quyền yêu cầu [Điều 144 Khoản 3, Bộ luật Lao động 2019].\n*   Đảm bảo công việc phù hợp với sức khỏe để bảo đảm sự phát triển thể lực, trí lực, nhân cách của em [Điều 144 Khoản 1, Bộ luật Lao động 2019].\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          18,
+          144
+        ],
+        "truth_dieu": [
+          18,
+          145
+        ],
+        "judge_score": 3,
+        "latency_s": 316.13,
+        "interrupted": false,
+        "citation_p": 0.5,
+        "citation_r": 0.5,
+        "refusal_correct": null
+      },
+      {
+        "id": "n018",
+        "loai": "nhieu_dieu",
+        "answer": "Có, công ty phải tạm ứng tiền lương hằng tháng cho bạn.\n\nCụ thể, đối với người lao động hưởng lương theo sản phẩm, theo khoán, nếu công việc phải làm trong nhiều tháng thì hằng tháng người lao động được tạm ứng tiền lương theo khối lượng công việc đã làm trong tháng [Khoản 3 Điều 97, Bộ luật Lao động 2019].\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          97
+        ],
+        "truth_dieu": [
+          96,
+          97
+        ],
+        "judge_score": 5,
+        "latency_s": 53.87,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 0.5,
+        "refusal_correct": null
+      },
+      {
+        "id": "n019",
+        "loai": "nhieu_dieu",
+        "answer": "Dựa trên ngữ cảnh được cung cấp:\n\nTrường hợp công ty đơn phương sửa đổi mức lương trong hợp đồng lao động mà không có sự thỏa thuận trước với bạn, và bạn không đồng ý nên nghỉ việc ngay lập tức, hành vi này của bạn có thể không bị coi là đơn phương chấm dứt hợp đồng lao động trái pháp luật.\n\nTheo quy định của pháp luật lao động, người lao động có quyền đơn phương chấm dứt hợp đồng lao động không cần báo trước nếu không được trả đủ lương hoặc trả lương không đúng thời hạn [Điều 35, khoản 2, điểm b, Bộ luật Lao động 2019]. Việc công ty đơn phương sửa đổi mức lương mà không thỏa thuận, dẫn đến việc bạn không được hưởng mức lương đã giao kết ban đầu, có thể được xem là không đảm bảo việc trả lương theo thỏa thuận.\n\nDo đó, nếu việc công ty đơn phương sửa đổi mức lương mà không thỏa thuận trước được xem là hành vi không trả đủ lương theo hợp đồng đã giao kết, bạn có quyền đơn phương chấm dứt hợp đồng lao động mà không cần báo trước. Trong trường hợp này, việc bạn nghỉ việc ngay lập tức sẽ không bị coi là đơn phương chấm dứt hợp đồng lao động trái pháp luật.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          35
+        ],
+        "truth_dieu": [
+          33,
+          35
+        ],
+        "judge_score": 5,
+        "latency_s": 56.64,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 0.5,
+        "refusal_correct": null
+      },
+      {
+        "id": "n020",
+        "loai": "nhieu_dieu",
+        "answer": "Dựa trên thông tin được cung cấp:\n\nViệc công ty nhận một em 16 tuổi vào làm việc mà không có sự đồng ý của cha mẹ và không lập sổ theo dõi riêng là không đúng quy định của pháp luật.\n\nCụ thể:\n1.  **Về sự đồng ý của cha, mẹ hoặc người giám hộ:** Khi sử dụng lao động chưa thành niên (bao gồm cả người 16 tuổi), người sử dụng lao động phải có sự đồng ý của cha, mẹ hoặc người giám hộ [Khoản 3 Điều 144, Bộ luật Lao động 2019].\n2.  **Về việc lập sổ theo dõi riêng:** Khi sử dụng lao động chưa thành niên, người sử dụng lao động phải lập sổ theo dõi riêng, ghi đầy đủ họ tên, ngày tháng năm sinh, công việc đang làm, kết quả những lần kiểm tra sức khỏe định kỳ và xuất trình khi cơ quan nhà nước có thẩm quyền yêu cầu [Khoản 3 Điều 144, Bộ luật Lao động 2019].\n\nDo đó, công ty đã không tuân thủ các quy định nêu trên.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          144
+        ],
+        "truth_dieu": [
+          143,
+          144
+        ],
+        "judge_score": 5,
+        "latency_s": 54.01,
+        "interrupted": false,
+        "citation_p": 1.0,
+        "citation_r": 0.5,
+        "refusal_correct": null
+      },
+      {
+        "id": "o001",
+        "loai": "ngoai_pham_vi",
+        "answer": "Không tìm thấy căn cứ trong ngữ cảnh được cung cấp để trả lời câu hỏi về thủ tục thừa kế tài sản khi không có di chúc.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [],
+        "truth_dieu": [],
+        "judge_score": 4,
+        "latency_s": 51.11,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": null,
+        "refusal_correct": true
+      },
+      {
+        "id": "o002",
+        "loai": "ngoai_pham_vi",
+        "answer": "Chào bạn,\n\nDựa trên ngữ cảnh được cung cấp, tôi không tìm thấy thông tin về các giấy tờ cần thiết để đăng ký kinh doanh hộ cá thể. Các văn bản được cung cấp tập trung vào việc đăng ký nội quy lao động và hồ sơ, thủ tục cấp/cấp lại giấy phép hoạt động cho thuê lại lao động.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [],
+        "truth_dieu": [],
+        "judge_score": 3,
+        "latency_s": 52.57,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": null,
+        "refusal_correct": false
+      },
+      {
+        "id": "o003",
+        "loai": "ngoai_pham_vi",
+        "answer": "Chào bạn,\n\nDựa trên thông tin trong phần \"Ngữ cảnh\" được cung cấp, không có quy định nào về việc hợp đồng mua bán nhà đất cần công chứng ở đâu. Các văn bản được cung cấp chỉ liên quan đến hợp đồng lao động và các vấn đề liên quan đến lao động.\n\nDo đó, tôi không tìm thấy căn cứ để trả lời câu hỏi của bạn.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [],
+        "truth_dieu": [],
+        "judge_score": 4,
+        "latency_s": 52.65,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": null,
+        "refusal_correct": true
+      },
+      {
+        "id": "o004",
+        "loai": "ngoai_pham_vi",
+        "answer": "Không tìm thấy căn cứ trong ngữ cảnh được cung cấp để trả lời câu hỏi của bạn.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [],
+        "truth_dieu": [],
+        "judge_score": 3,
+        "latency_s": 51.18,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": null,
+        "refusal_correct": true
+      },
+      {
+        "id": "o005",
+        "loai": "ngoai_pham_vi",
+        "answer": "Không tìm thấy căn cứ trong ngữ cảnh được cung cấp để trả lời câu hỏi về thủ tục xin visa du lịch sang Nhật Bản.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [],
+        "truth_dieu": [],
+        "judge_score": 4,
+        "latency_s": 52.09,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": null,
+        "refusal_correct": true
+      },
+      {
+        "id": "o006",
+        "loai": "ngoai_pham_vi",
+        "answer": "Không tìm thấy căn cứ trong ngữ cảnh được cung cấp để trả lời về thủ tục pháp lý nhận con nuôi.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [],
+        "truth_dieu": [],
+        "judge_score": 4,
+        "latency_s": 51.69,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": null,
+        "refusal_correct": true
+      },
+      {
+        "id": "o007",
+        "loai": "ngoai_pham_vi",
+        "answer": "Không tìm thấy căn cứ.\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [],
+        "judge_score": 2,
+        "latency_s": 52.43,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": null,
+        "refusal_correct": true
+      },
+      {
+        "id": "o008",
+        "loai": "ngoai_pham_vi",
+        "answer": "không tìm thấy cán cục\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [],
+        "judge_score": 1,
+        "latency_s": 238.17,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": null,
+        "refusal_correct": false
+      },
+      {
+        "id": "o009",
+        "loai": "ngoai_pham_vi",
+        "answer": "không tìm thấy cán cục [Điều 1, Luật Bảo hộ thương hiệu].  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [
+          1
+        ],
+        "truth_dieu": [],
+        "judge_score": 1,
+        "latency_s": 55.51,
+        "interrupted": false,
+        "citation_p": 0.0,
+        "citation_r": null,
+        "refusal_correct": false
+      },
+      {
+        "id": "o010",
+        "loai": "ngoai_pham_vi",
+        "answer": "Không tìm thấy cán cục.  \nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [],
+        "judge_score": 1,
+        "latency_s": 53.7,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": null,
+        "refusal_correct": false
+      },
+      {
+        "id": "o011",
+        "loai": "ngoai_pham_vi",
+        "answer": "không tìm thấy cán cục\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [],
+        "judge_score": 1,
+        "latency_s": 66.3,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": null,
+        "refusal_correct": false
+      },
+      {
+        "id": "o012",
+        "loai": "ngoai_pham_vi",
+        "answer": "không tìm thấy cán cục\n\n[Law No. 30/2014/ND-CP, Law on Charitable Organizations]\n\nNoi dung chi mang tinh tham khao, khong thay the tu van phap ly.",
+        "cited_dieu": [],
+        "truth_dieu": [],
+        "judge_score": 1,
+        "latency_s": 54.4,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": null,
+        "refusal_correct": false
+      },
+      {
+        "id": "o013",
+        "loai": "ngoai_pham_vi",
+        "answer": "Dựa trên ngữ cảnh được cung cấp, không tìm thấy căn cứ quy định về mức án phạt cho tội trộm cắp tài sản theo Bộ luật Hình sự. Ngữ cảnh chỉ đề cập đến hành vi trộm cắp là một trong các trường hợp người sử dụng lao động có thể áp dụng hình thức xử lý kỷ luật sa thải đối với người lao động [Điều 125, Bộ luật Lao động 2019] và việc vi phạm có thể bị truy cứu trách nhiệm hình sự nếu gây thiệt hại [Điều 217, Bộ luật Lao động 2019], nhưng không nêu rõ mức án phạt cụ thể.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [
+          125,
+          217
+        ],
+        "truth_dieu": [],
+        "judge_score": 2,
+        "latency_s": 59.31,
+        "interrupted": false,
+        "citation_p": 0.0,
+        "citation_r": null,
+        "refusal_correct": true
+      },
+      {
+        "id": "o014",
+        "loai": "ngoai_pham_vi",
+        "answer": "Không tìm thấy căn cứ trong ngữ cảnh được cung cấp để trả lời về việc cấp lại hộ chiếu bị mất.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [],
+        "truth_dieu": [],
+        "judge_score": 4,
+        "latency_s": 53.54,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": null,
+        "refusal_correct": true
+      },
+      {
+        "id": "o015",
+        "loai": "ngoai_pham_vi",
+        "answer": "khong tim thay can cu.\n\nNội dung chỉ mang tính tham khảo, không thay thế tư vấn pháp lý.",
+        "cited_dieu": [],
+        "truth_dieu": [],
+        "judge_score": 4,
+        "latency_s": 55.77,
+        "interrupted": false,
+        "citation_p": null,
+        "citation_r": null,
+        "refusal_correct": false
       }
     ]
   }

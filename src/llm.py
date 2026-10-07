@@ -44,6 +44,18 @@ GEMINI_MODEL_FALLBACKS = [
 ]
 
 
+# Khong dat timeout thi 1 request Gemini bi treo (ket noi mo nhung khong tra
+# loi) se chan ca tien trinh vo han -- da gap thuc te: eval treo ~2 gio o 0%
+# CPU. max_retries mac dinh cua client (6, backoff luy thua) cung khien moi
+# lan loi 503/504 keo dai nhieu phut; de 1 va tu xu ly fallback o duoi.
+LLM_REQUEST_TIMEOUT_S = 90
+GEMINI_CLIENT_MAX_RETRIES = 1
+# Model bi 503/504 (qua tai phia Google) thi LOI CHUNG cho moi key, khong
+# phai het quota -- cho model do "nghi" mot luc de khoi mat ~timeout x 5 key
+# cho moi lan goi.
+MODEL_COOLDOWN_SECONDS = 900
+
+
 def get_gemini_llms() -> list[BaseChatModel]:
     """Mot ChatGoogleGenerativeAI cho MOI to hop (model, key): thu het cac
     key voi model chinh (settings.LLM_MODEL) truoc -- giu nguyen hanh vi cu
@@ -51,7 +63,13 @@ def get_gemini_llms() -> list[BaseChatModel]:
     khi ca 5 key deu da het quota voi model chinh."""
     models = [settings.LLM_MODEL, *[m for m in GEMINI_MODEL_FALLBACKS if m != settings.LLM_MODEL]]
     return [
-        ChatGoogleGenerativeAI(model=model_name, google_api_key=key, temperature=0)
+        ChatGoogleGenerativeAI(
+            model=model_name,
+            google_api_key=key,
+            temperature=0,
+            timeout=LLM_REQUEST_TIMEOUT_S,
+            max_retries=GEMINI_CLIENT_MAX_RETRIES,
+        )
         for model_name in models
         for key in settings.gemini_api_keys
     ]
@@ -67,6 +85,7 @@ def get_fallback_llm() -> BaseChatModel:
         model=settings.GROQ_MODEL,
         api_key=settings.GROQ_API_KEY,
         temperature=0,
+        request_timeout=LLM_REQUEST_TIMEOUT_S,
     )
 
 
@@ -123,6 +142,16 @@ def _is_key_unusable_error(exc: Exception) -> bool:
     return any(code in msg for code in ["RESOURCE_EXHAUSTED", "429", "NOT_FOUND", "404", "PERMISSION_DENIED", "403"])
 
 
+_model_cooldown_until: dict[int, float] = {}  # chi so model (khong phai to hop) -> time.monotonic()
+
+
+def _is_transient_overload_error(exc: Exception) -> bool:
+    """503/504/timeout: model qua tai hoac cham phia Google. Khac voi het
+    quota -- khong danh dau chet ca ngay, chi cho model do nghi ngan han."""
+    msg = str(exc)
+    return any(s in msg for s in ["503", "UNAVAILABLE", "504", "DEADLINE_EXCEEDED", "timed out", "imeout"])
+
+
 GROQ_RETRY_ATTEMPTS = 3  # Groq la tuyen cuoi khi Gemini het sach quota: mot lan JSON
 # sinh sai dinh dang (glitch thoang qua cua model, khong phai loi logic) khong nen
 # lam sap ca batch eval nhieu gio chay -- thu lai vai lan truoc khi bo cuoc.
@@ -148,16 +177,23 @@ class _ChainWithKeyMemory:
     def invoke(self, *args, **kwargs):
         _refresh_dead_keys_if_new_day()
         last_err: Exception | None = None
+        n_keys = len(settings.gemini_api_keys)
         for i, model in enumerate(self._gemini_models):
             if i in _dead_gemini_keys:
+                continue
+            model_idx = i // n_keys  # get_gemini_llms() xep theo model truoc, key sau
+            if _model_cooldown_until.get(model_idx, 0.0) > time.monotonic():
                 continue
             try:
                 return model.invoke(*args, **kwargs)
             except Exception as e:  # noqa: BLE001 -- can bat moi loi de thu key/Groq tiep theo
                 last_err = e
-                if _is_key_unusable_error(e) and i not in _dead_gemini_keys:
-                    _dead_gemini_keys.add(i)
-                    _save_dead_keys(_dead_gemini_keys)
+                if _is_key_unusable_error(e):
+                    if i not in _dead_gemini_keys:
+                        _dead_gemini_keys.add(i)
+                        _save_dead_keys(_dead_gemini_keys)
+                elif _is_transient_overload_error(e):
+                    _model_cooldown_until[model_idx] = time.monotonic() + MODEL_COOLDOWN_SECONDS
         try:
             return _invoke_groq_with_retry(self._groq_model, *args, **kwargs)
         except Exception as e:
