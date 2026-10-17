@@ -13,14 +13,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from langchain_core.messages import HumanMessage
-from langgraph.types import Command
+from langchain_core.messages import HumanMessage  # noqa: E402
+from langgraph.types import Command  # noqa: E402
 
-from src.agent.graph import build_graph
-from src.agent.nodes import message_text
-from src.tools.contract_rules import review_contract_file
+from src.agent.graph import build_graph  # noqa: E402
+from src.agent.nodes import message_text  # noqa: E402
+from src.tools.contract_rules import review_contract_file  # noqa: E402
 
-ROOT = Path(__file__).resolve().parents[1]
 CONTRACTS_DIR = ROOT / "data" / "eval" / "contracts"
 
 

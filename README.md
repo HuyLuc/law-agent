@@ -80,6 +80,19 @@ Bộ câu hỏi: 40 câu dev / 100 câu test, chia 4 nhóm — `tra_cuu` (tra 1 
 
 Trên 10 hợp đồng mẫu tự tạo (2 đúng, 8 có lỗi cài cắm có chủ đích): **precision = recall = 1.0** (14/14 lỗi phát hiện đúng, không có false positive).
 
+## Kịch bản Demo thực tế
+
+Dự án cung cấp script kiểm thử độc lập 4 kịch bản cốt lõi (xem [scripts/demo_scenarios.py](./scripts/demo_scenarios.py)):
+
+```bash
+python scripts/demo_scenarios.py
+```
+
+1. **Tra cứu luật:** Hỏi về thời gian thử việc tối đa cho trình độ trung cấp → Agent tra cứu và trích dẫn chuẩn xác Điều 25 Bộ luật Lao động 2019 (không quá 30 ngày).
+2. **Tính trợ cấp thôi việc:** Cung cấp đầy đủ thời gian làm việc (24 tháng), thời gian BHTN (0 tháng), lương bình quân (10.000.000đ) → Agent gọi tool Python `tinh_tro_cap_thoi_viec` tính ra chính xác 10.000.000đ (2 năm × 0.5 × 10tr), trích dẫn Điều 46 BLLĐ 2019.
+3. **Agent tự hỏi lại (`ask_user` + `interrupt()`):** Người dùng hỏi chung chung *"tính trợ cấp thôi việc giúp tôi"* mà không cung cấp số liệu → Agent tự dừng luồng qua `interrupt()`, đặt câu hỏi làm rõ; sau khi nhận câu trả lời bổ sung qua `resume`, Agent tính toán chính xác và trả lời đầy đủ.
+4. **Rà soát hợp đồng lao động:** Đọc file DOCX (`data/contracts/contract_09_nhieu_loi_1.docx`) → Agent bóc tách cấu trúc và phát hiện chính xác 2 vi phạm pháp lý cài sẵn (thử việc 15 ngày vượt quá 6 ngày đối với lao động phổ thông theo Điều 25; lương thử việc 4.000.000đ thấp hơn mức 85% lương chính theo Điều 26).
+
 ## Quyết định thiết kế
 
 - **Chia chunk theo Điều/Khoản, không theo độ dài cố định** — giữ nguyên đơn vị pháp lý nhỏ nhất có ý nghĩa độc lập, tránh cắt ngang một quy định.
@@ -132,6 +145,28 @@ streamlit run src/ui/app.py         # terminal 2
 ### Kaggle (tạo embedding, đánh giá retrieval trên GPU)
 
 Xem `kaggle/01_embed_chunks.ipynb` (tạo `embeddings.parquet` từ `data/processed/chunks.jsonl`) và `kaggle/02_eval_retrieval.ipynb` (đo Hit@5/MRR@5 cho V1-V3 trên GPU T4). Cấu hình `~/.kaggle/kaggle.json` trước, chi tiết ở [PLAN.md § 6](./PLAN.md#6-hướng-dẫn-làm-việc-với-kaggle).
+
+### Hugging Face Spaces (CPU Miễn phí)
+
+Dự án cung cấp cấu hình Dockerfile độc lập trọn gói tại `deploy/hf_spaces/` (tự động khởi động Qdrant local, FastAPI backend và Streamlit UI trong cùng 1 container):
+- Xem chi tiết tại [deploy/hf_spaces/README.md](./deploy/hf_spaces/README.md).
+- Chạy thử container Spaces trên máy:
+  ```bash
+  docker build -t vn-labor-law-space -f deploy/hf_spaces/Dockerfile .
+  docker run -p 8501:8501 --env-file .env vn-labor-law-space
+  ```
+
+### Giám sát Observability với Langfuse Cloud (Tuần 6)
+
+Hỗ trợ ghi nhận trace, latency, token và toàn bộ chuỗi suy luận của Agent qua Langfuse:
+- Cài đặt thư viện: `pip install langfuse`
+- Thêm cấu hình vào `.env`:
+  ```bash
+  LANGFUSE_PUBLIC_KEY=pk-lf-...
+  LANGFUSE_SECRET_KEY=sk-lf-...
+  LANGFUSE_HOST=https://cloud.langfuse.com
+  ```
+Hệ thống sẽ tự động bắt callbacks cho cả LangGraph và FastAPI streaming mà không cần sửa code.
 
 ### Test và lint
 
