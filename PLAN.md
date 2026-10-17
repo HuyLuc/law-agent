@@ -52,11 +52,11 @@ Toàn bộ được chứng minh bằng **số liệu đánh giá trên tập te
 | Bảng đánh giá V0 → V4 trên tập test | |
 
 ### 1.3. Khi nào coi là xong
-- [ ] Clone repo về máy mới, chạy `docker compose up` là dùng được sau khoảng 10 phút
-- [ ] Mọi câu trả lời pháp lý đều có trích dẫn `[Điều X, Văn bản Y]`
-- [x] Có bảng số liệu **trên tập test khóa cứng** cho V0 → V4 (đã lưu tại `eval/results/generation_test.json`)
-- [ ] README có sơ đồ kiến trúc, bảng kết quả, GIF demo và phần "Hạn chế"
-- [ ] Không có API key nào trong lịch sử git
+- [x] Clone repo về máy mới, chạy `docker compose up` là dùng được sau khoảng 10 phút (đã xác minh độc lập ở Tuần 5 Buổi 3)
+- [x] Mọi câu trả lời pháp lý đều có trích dẫn `[Điều X, Văn bản Y]` (có bộ lọc `verify_citation` kiểm tra và tự ép trả lời lại nếu bịa)
+- [x] Có bảng số liệu **trên tập test khóa cứng** cho V0 → V4 (đã lưu tại `eval/results/generation_test.json`, n=100)
+- [x] README có sơ đồ kiến trúc, bảng kết quả, kịch bản demo và phần "Hạn chế"
+- [x] Không có API key nào trong lịch sử git (đã quét xác minh bằng `git log -S`)
 
 ### 1.4. Các phiên bản sẽ so sánh
 
