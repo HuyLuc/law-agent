@@ -23,6 +23,10 @@ class Settings(BaseSettings):
     # can chay `python -m scripts.export_onnx_reranker` truoc) | "onnx_int8" (nhanh nhat,
     # MRR@5 giam nhe). Xem eval/results/onnx_reranker.json va PLAN.md Tuan 6 muc 2.
     RERANKER_BACKEND: str = "onnx_fp32"
+    # Langfuse Cloud tracking (Tuần 6 mục 4 - tuỳ chọn)
+    LANGFUSE_PUBLIC_KEY: str = ""
+    LANGFUSE_SECRET_KEY: str = ""
+    LANGFUSE_HOST: str = "https://cloud.langfuse.com"
 
     @property
     def gemini_api_keys(self) -> list[str]:

@@ -17,6 +17,7 @@ from pydantic import BaseModel
 from src.agent.graph import build_graph
 from src.config import settings
 from src.llm import message_text
+from src.observability import get_callbacks
 from src.retrieval.hybrid import get_client
 from src.tools.contract_rules import review_contract_file
 
@@ -75,6 +76,9 @@ def _stream_graph_events(graph_input, config: dict, thread_id: str):
 def chat(req: ChatRequest):
     thread_id = req.thread_id or str(uuid.uuid4())
     config = {"configurable": {"thread_id": thread_id}}
+    callbacks = get_callbacks(session_id=thread_id)
+    if callbacks:
+        config["callbacks"] = callbacks
     return StreamingResponse(
         _stream_graph_events(_new_state(req.message), config, thread_id),
         media_type="text/event-stream",
@@ -84,6 +88,9 @@ def chat(req: ChatRequest):
 @app.post("/chat/resume")
 def chat_resume(req: ResumeRequest):
     config = {"configurable": {"thread_id": req.thread_id}}
+    callbacks = get_callbacks(session_id=req.thread_id)
+    if callbacks:
+        config["callbacks"] = callbacks
     return StreamingResponse(
         _stream_graph_events(Command(resume=req.answer), config, req.thread_id),
         media_type="text/event-stream",

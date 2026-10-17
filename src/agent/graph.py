@@ -22,6 +22,7 @@ from src.agent.nodes import (
     verify_citation,
 )
 from src.agent.state import AgentState
+from src.observability import get_callbacks
 
 
 def build_graph():
@@ -54,7 +55,10 @@ def build_graph():
 
 def run_cli(question: str) -> str:
     app = build_graph()
+    callbacks = get_callbacks(session_id="cli")
     config = {"configurable": {"thread_id": "cli"}}
+    if callbacks:
+        config["callbacks"] = callbacks
     state = {
         "messages": [HumanMessage(question)],
         "evidence": {},
