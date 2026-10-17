@@ -58,9 +58,21 @@ Pipeline dữ liệu: `vbpl.vn` (Playwright, vượt chặn WAF) → parser tác
 | V3 — hybrid + rerank RAG | 3.00 | 0.79 | 0.67 | 0.40 | 55s | 148s |
 | V4 — agent đầy đủ (tool-calling + verify_citation) | **4.76** | 0.75 | **0.86** | **1.00** | 175s | 352s |
 
+### Sinh câu trả lời trên bộ test khóa cứng (n=100)
+
+| Phiên bản | Judge (1-5) | Citation P | Citation R | Từ chối đúng* | Độ trễ p50 | p95 |
+|---|---|---|---|---|---|---|
+| V0 — không RAG | 4.59 | 0.85 | 0.55 | 0.27 | 36s | 58s |
+| V1 — dense RAG | **4.68** | 0.78 | **0.87** | 0.80 | 54s | 210s |
+| V2 — hybrid RAG (dense+sparse, RRF) | 2.89 | 0.71 | 0.59 | 0.53 | 40s | 80s |
+| V3 — hybrid + rerank RAG | 4.08 | **0.87** | 0.82 | 0.53 | 67s | 173s |
+| **V4 — agent đầy đủ** | 4.39 | 0.75 | 0.84 | **1.00** | 161s | 385s |
+
 \* Tỷ lệ từ chối đúng trên nhóm câu hỏi `ngoai_pham_vi` (câu hỏi không thuộc phạm vi luật lao động, agent phải biết từ chối thay vì bịa câu trả lời).
 
-→ V4 là bản duy nhất từ chối đúng 100% câu ngoài phạm vi (router + `agent_loop` không ép phải dùng RAG context như V1-V3) và có citation recall cao nhất, đổi lại độ trễ cao hơn hẳn (nhiều vòng tool-call + verify, cộng thời gian retry khi gặp quota Gemini cạn giữa chừng — xem Hạn chế bên dưới). V3 có judge score thấp bất thường so với V1/V2 dù retrieval tốt hơn (xem bảng Retrieval) — rerank cải thiện ngữ cảnh truy xuất nhưng không nhất thiết cải thiện câu trả lời cuối, đáng đào sâu thêm nếu có thời gian (xem Hạn chế).
+→ **Nhận xét quan trọng trên tập test:**
+- **V4 (agent đầy đủ)** là phiên bản duy nhất **từ chối đúng tuyệt đối 100% (15/15)** các câu hỏi ngoài phạm vi nhờ có `router` độc lập, đồng thời duy trì Citation Recall cao (0.84) và Judge Score 4.39.
+- **V2 (hybrid RAG)** trên bộ test có judge score thấp (2.89) do 49/100 câu rơi vào trạng thái *"Không tìm thấy căn cứ"* (bị chấm 1 điểm): nguyên nhân do RAG tĩnh không có reranker, khi RRF mang về chunk nhiễu kết hợp với mô hình fallback cạn quota cuối ngày có xu hướng phản hồi bảo thủ. Khi lên **V3** (thêm reranker), điểm phục hồi lên 4.08, và ở **V4** (agent tự tìm lại qua `get_article`/tool khác), điểm số đạt 4.39.
 
 Bộ câu hỏi: 40 câu dev / 100 câu test, chia 4 nhóm — `tra_cuu` (tra 1 điều), `nhieu_dieu` (cần gộp nhiều điều), `tinh_huong` (cần tính toán), `ngoai_pham_vi` (phải từ chối).
 
@@ -79,10 +91,10 @@ Trên 10 hợp đồng mẫu tự tạo (2 đúng, 8 có lỗi cài cắm có ch
 
 ## Hạn chế và lỗi đã biết
 
-- **Độ trễ V0-V4 đo được bị ảnh hưởng bởi retry quota** — khi chạy, quota Gemini free-tier (nhiều key x nhiều model) cạn dần giữa chừng và phải rơi xuống Groq; số liệu p50/p95 vì vậy cao hơn tốc độ thực khi quota còn đủ, đặc biệt rõ ở V4 (175s/352s). Chưa đo lại trong điều kiện quota ổn định hoàn toàn.
-- **V3 (rerank) có judge score thấp hơn V1/V2 dù retrieval tốt hơn** — chưa phân tích nguyên nhân cụ thể (xem bảng Sinh câu trả lời), cần xem lại 10 câu sai để phân loại lỗi.
+- **Độ trễ V0-V4 đo được bị ảnh hưởng bởi retry quota** — khi chạy, quota Gemini free-tier (nhiều key x nhiều model) cạn dần giữa chừng và phải rơi xuống Groq; số liệu p50/p95 vì vậy cao hơn tốc độ thực khi quota còn đủ, đặc biệt rõ ở V4 (161s/385s trên test). Chưa đo lại trong điều kiện quota ổn định hoàn toàn.
+- **V2 (hybrid) điểm thấp trên test do cơ chế bảo thủ của RAG tĩnh** — đã phân tích nguyên nhân: 49/100 câu rơi vào "Không tìm thấy căn cứ" khi không có reranker lọc nhiễu trước ngữ cảnh RAG.
 - **RAGAS faithfulness** (đo trong PLAN.md) chưa triển khai — bị hoãn có chủ đích do giới hạn thời gian, ưu tiên các chỉ số citation precision/recall và giám khảo LLM trước.
-- **Chưa chạy đánh giá sinh câu trả lời trên bộ test (100 câu)** — mới hoàn thành đầy đủ V0-V4 trên bộ dev (40 câu).
+- **Đã hoàn thành đánh giá toàn diện V0 → V4 trên cả 2 bộ dev (40 câu) và test (100 câu)** — lưu tại `eval/results/generation_dev.json` và `eval/results/generation_test.json`.
 - **Reranker vẫn chậm trên CPU dù đã chuyển ONNX** (~13s/query với backend mặc định `onnx_fp32`, giảm từ ~27s/query của bản gốc — xem `eval/results/onnx_reranker.json`) — khả thi hơn nhiều cho demo nhưng vẫn chưa đủ nhanh cho sản phẩm thời gian thực có nhiều người dùng đồng thời trên CPU.
 - **Dữ liệu nguồn giới hạn 3 văn bản** (Bộ luật Lao động 2019, NĐ 145/2020, NĐ 293/2025) — chưa có Luật BHXH 2024, chưa xử lý hiệu lực theo thời gian khi văn bản có nhiều đợt sửa đổi.
 

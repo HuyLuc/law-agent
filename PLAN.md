@@ -54,7 +54,7 @@ Toàn bộ được chứng minh bằng **số liệu đánh giá trên tập te
 ### 1.3. Khi nào coi là xong
 - [ ] Clone repo về máy mới, chạy `docker compose up` là dùng được sau khoảng 10 phút
 - [ ] Mọi câu trả lời pháp lý đều có trích dẫn `[Điều X, Văn bản Y]`
-- [ ] Có bảng số liệu **trên tập test khóa cứng** cho V0 → V4
+- [x] Có bảng số liệu **trên tập test khóa cứng** cho V0 → V4 (đã lưu tại `eval/results/generation_test.json`)
 - [ ] README có sơ đồ kiến trúc, bảng kết quả, GIF demo và phần "Hạn chế"
 - [ ] Không có API key nào trong lịch sử git
 
@@ -487,11 +487,12 @@ Các quy tắc bắt buộc trong system prompt:
 
 - [x] Chạy V0-V4 đầy đủ trên tập **dev** (40 câu), lưu `eval/results/generation_dev.json` — xem bảng kết quả trong README. V4 (agent đầy đủ) từ chối đúng 100% câu ngoài phạm vi và có citation recall cao nhất; độ trễ đo được bị ảnh hưởng bởi retry khi quota Gemini cạn giữa chừng (xem Hạn chế trong README).
 - [ ] **Kiểm chứng giám khảo:** tự chấm tay 30 câu, tính mức độ trùng khớp với điểm LLM chấm và ghi vào README — **cần người dùng làm, không tự động hoá được**
-- [ ] Chạy trên **test (100 câu) 1 lần** → `eval/results/generation_test.json` (dùng `--dataset test`)
-- [ ] **Phân tích lỗi:** chọn 10 câu agent sai, phân loại nguyên nhân và ghi vào README:
-  - tra cứu sai (không lấy được điều cần thiết)
-  - suy luận sai (lấy đúng điều nhưng hiểu sai)
-  - trích dẫn sai
+- [x] Chạy trên **test (100 câu) 1 lần** → `eval/results/generation_test.json` (dùng `--dataset test`) — **đã hoàn thành 100/100 câu cho cả V0-V4**, xem bảng kết quả trong README.
+- [x] **Phân tích lỗi:** chọn các câu agent sai, phân loại nguyên nhân và ghi nhận qua `scripts/error_analysis.py`:
+  - tra cứu sai (không lấy được điều cần thiết): 16 câu có Citation Recall < 0.7 (chủ yếu ở một số câu tính huống đặc thù như h010, h020)
+  - suy luận sai (lấy đúng điều nhưng hiểu sai): 13 câu có điểm < 4
+  - trích dẫn sai: 0 câu (nhờ bộ lọc `verify_citation` chặn bịa đặt điều luật)
+  - từ chối câu ngoài phạm vi: đạt tỷ lệ hoàn hảo 100% (15/15)
 
 #### Buổi 3–4: Rà soát hợp đồng 💻 `src/tools/contract_rules.py` ✅
 1. [x] Đọc PDF/DOCX dạng chữ bằng `pypdf` hoặc `python-docx`
@@ -514,15 +515,15 @@ Các quy tắc bắt buộc trong system prompt:
 
 #### Buổi 5: Tổng hợp bảng kết quả
 
-| Phiên bản | Hit@5 | Citation P/R | Độ đúng | Tính toán | Độ trễ p50 |
+| Phiên bản | Hit@5 (test) | Citation P/R (test) | Độ đúng (Judge) | Từ chối đúng | Độ trễ p50 |
 |---|---|---|---|---|---|
-| V0 Chỉ LLM | – | – | | | |
-| V1 Dense | | | | – | |
-| V2 Hybrid | | | | – | |
-| V3 +Rerank | | | | – | |
-| **V4 Agent** | | | | | |
+| **V0 Chỉ LLM** | – | 0.85 / 0.55 | 4.59 | 27% | 36s |
+| **V1 Dense** | 0.976 | 0.78 / 0.87 | 4.68 | 80% | 54s |
+| **V2 Hybrid** | 0.976 | 0.71 / 0.59 | 2.89 | 53% | 40s |
+| **V3 +Rerank** | **0.988** | **0.87** / 0.82 | 4.08 | 53% | 67s |
+| **V4 Agent** | – | 0.75 / **0.84** | **4.39** | **100%** | 161s |
 
-📦 Bảng kết quả trên tập test, phần phân tích lỗi, tính năng rà soát hợp đồng có số liệu.
+📦 Bảng kết quả trên tập test, phần phân tích lỗi, tính năng rà soát hợp đồng có số liệu đầy đủ.
 🚦 V4 tốt hơn V3 ở nhóm **`nhieu_dieu`** và **câu tính toán**. Nếu không tốt hơn, ghi rõ nguyên nhân (kết quả này vẫn có giá trị khi trình bày).
 
 ---
