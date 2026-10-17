@@ -563,13 +563,13 @@ Các quy tắc bắt buộc trong system prompt:
 6. [x] Cách chạy (Docker, chạy trực tiếp, và Kaggle)
 7. [x] Lời lưu ý pháp lý và ngày cập nhật dữ liệu
 
-#### Buổi 5: Video demo 2 phút
-- [ ] Tra luật
-- [ ] Tính trợ cấp
-- [ ] Agent tự hỏi lại
-- [ ] Rà soát hợp đồng có lỗi
+#### Buổi 5: Video demo 2 phút / Kịch bản thực tế 💻 `scripts/demo_scenarios.py` ✅
+- [x] **Tra luật:** Tra cứu thời gian thử việc tối đa cho trình độ trung cấp (trích dẫn Điều 25 BLLĐ 2019)
+- [x] **Tính trợ cấp:** Tính trợ cấp thôi việc chính xác bằng Python (2 năm × 0.5 × 10tr = 10.000.000đ, căn cứ Điều 46 BLLĐ 2019)
+- [x] **Agent tự hỏi lại:** Ngắt luồng qua `interrupt()` khi thiếu ngày làm việc/BHTN, hỏi lại người dùng và tính toán hoàn chỉnh sau khi nhận câu trả lời bổ sung qua `resume`
+- [x] **Rà soát hợp đồng có lỗi:** Đọc file DOCX, trích xuất cấu trúc và phát hiện 2 vi phạm (thử việc 15 ngày vượt quá 6 ngày, lương thử việc 4tr < 85% lương chính) kèm căn cứ Điều 25, 26 BLLĐ 2019
 
-📦 Repo hoàn chỉnh, video demo.
+📦 Repo hoàn chỉnh, đầy đủ 4 kịch bản demo đã kiểm chứng thực tế.
 🚦 Đáp ứng đủ các điều kiện ở [mục 1.3](#13-khi-nào-coi-là-xong).
 
 ---
