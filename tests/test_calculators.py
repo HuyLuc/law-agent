@@ -5,6 +5,7 @@ import pytest
 from pydantic import ValidationError
 
 from src.tools.calculators import (
+    tinh_boi_thuong_cham_dut_trai_luat,
     tinh_ngay_phep_nam,
     tinh_thoi_han_bao_truoc,
     tinh_tien_lam_them_gio,
@@ -90,3 +91,93 @@ def test_ngay_phep_nam_rejects_thang_ngoai_khoang():
 def test_thoi_han_bao_truoc_rejects_am():
     with pytest.raises(ValidationError):
         tinh_thoi_han_bao_truoc(thoi_han_hop_dong_thang=-1)
+
+
+def test_boi_thuong_cham_dut_trai_luat_standard():
+    # Luong 10tr, 3 thang khong lam viec (30tr), boi thuong them 2 thang (20tr),
+    # lam viec 36 thang, BHTN 12 thang -> 24 thang = 2 nam -> TCTV = 2 * 0.5 * 10tr = 10tr
+    # Tong = 30tr + 20tr + 10tr = 60tr
+    res = tinh_boi_thuong_cham_dut_trai_luat(
+        luong_thang=10_000_000,
+        so_thang_khong_duoc_lam_viec=3,
+        thoi_gian_lam_viec_thang=36,
+        thoi_gian_dong_bhtn_thang=12,
+    )
+    assert res["ket_qua"] == 60_000_000
+    assert "Điều 41 Bộ luật Lao động 2019" in res["can_cu"]
+    assert "Điều 46 Bộ luật Lao động 2019" in res["can_cu"]
+    assert res["cach_tinh"]
+
+
+def test_boi_thuong_cham_dut_trai_luat_with_notice_violation():
+    # Luong 13tr (13tr / 26 = 500k/ngay), vi pham 10 ngay = 5tr
+    # 2 thang khong lam viec (26tr) + 2 thang boi thuong them (26tr)
+    # Lam viec 24 thang, BHTN 24 thang -> TCTV = 0
+    # Tong = 26tr + 26tr + 0 + 5tr = 57tr
+    res = tinh_boi_thuong_cham_dut_trai_luat(
+        luong_thang=13_000_000,
+        so_thang_khong_duoc_lam_viec=2,
+        thoi_gian_lam_viec_thang=24,
+        thoi_gian_dong_bhtn_thang=24,
+        so_ngay_vi_pham_bao_truoc=10,
+    )
+    assert res["ket_qua"] == 57_000_000
+    assert "26 ngày công" in res["cach_tinh"]
+    assert "Điều 36 Bộ luật Lao động 2019" in res["can_cu"]
+
+
+def test_boi_thuong_cham_dut_trai_luat_under_12_months():
+    # Lam viec 8 thang (< 12 thang) -> khong co tro cap thoi viec (0d)
+    # 1 thang khong lam viec (10tr) + 2 thang boi thuong them (20tr) = 30tr
+    res = tinh_boi_thuong_cham_dut_trai_luat(
+        luong_thang=10_000_000,
+        so_thang_khong_duoc_lam_viec=1,
+        thoi_gian_lam_viec_thang=8,
+        thoi_gian_dong_bhtn_thang=0,
+    )
+    assert res["ket_qua"] == 30_000_000
+    assert "dưới 12 tháng" in res["cach_tinh"]
+
+
+def test_boi_thuong_cham_dut_trai_luat_zero_months_worked():
+    # Moi di lam chua du 1 thang (0 thang) da bi sa thai trai luat
+    res = tinh_boi_thuong_cham_dut_trai_luat(
+        luong_thang=10_000_000,
+        so_thang_khong_duoc_lam_viec=1,
+        thoi_gian_lam_viec_thang=0,
+        thoi_gian_dong_bhtn_thang=0,
+    )
+    assert res["ket_qua"] == 30_000_000
+    assert "dưới 12 tháng" in res["cach_tinh"]
+
+
+def test_boi_thuong_cham_dut_trai_luat_rejects_negative_salary():
+    with pytest.raises(ValidationError):
+        tinh_boi_thuong_cham_dut_trai_luat(
+            luong_thang=-10_000_000,
+            so_thang_khong_duoc_lam_viec=2,
+            thoi_gian_lam_viec_thang=24,
+            thoi_gian_dong_bhtn_thang=12,
+        )
+
+
+def test_boi_thuong_cham_dut_trai_luat_rejects_extra_months_less_than_2():
+    with pytest.raises(ValidationError):
+        tinh_boi_thuong_cham_dut_trai_luat(
+            luong_thang=10_000_000,
+            so_thang_khong_duoc_lam_viec=2,
+            thoi_gian_lam_viec_thang=24,
+            thoi_gian_dong_bhtn_thang=12,
+            so_thang_boi_thuong_them=1,
+        )
+
+
+def test_boi_thuong_cham_dut_trai_luat_rejects_bhtn_exceeding_total_time():
+    with pytest.raises(ValidationError):
+        tinh_boi_thuong_cham_dut_trai_luat(
+            luong_thang=10_000_000,
+            so_thang_khong_duoc_lam_viec=2,
+            thoi_gian_lam_viec_thang=12,
+            thoi_gian_dong_bhtn_thang=24,
+        )
+

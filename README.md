@@ -91,7 +91,7 @@ python scripts/demo_scenarios.py
 1. **Tra cứu luật:** Hỏi về thời gian thử việc tối đa cho trình độ trung cấp → Agent tra cứu và trích dẫn chuẩn xác Điều 25 Bộ luật Lao động 2019 (không quá 30 ngày).
 2. **Tính trợ cấp thôi việc:** Cung cấp đầy đủ thời gian làm việc (24 tháng), thời gian BHTN (0 tháng), lương bình quân (10.000.000đ) → Agent gọi tool Python `tinh_tro_cap_thoi_viec` tính ra chính xác 10.000.000đ (2 năm × 0.5 × 10tr), trích dẫn Điều 46 BLLĐ 2019.
 3. **Agent tự hỏi lại (`ask_user` + `interrupt()`):** Người dùng hỏi chung chung *"tính trợ cấp thôi việc giúp tôi"* mà không cung cấp số liệu → Agent tự dừng luồng qua `interrupt()`, đặt câu hỏi làm rõ; sau khi nhận câu trả lời bổ sung qua `resume`, Agent tính toán chính xác và trả lời đầy đủ.
-4. **Rà soát hợp đồng lao động:** Đọc file DOCX (`data/contracts/contract_09_nhieu_loi_1.docx`) → Agent bóc tách cấu trúc và phát hiện chính xác 2 vi phạm pháp lý cài sẵn (thử việc 15 ngày vượt quá 6 ngày đối với lao động phổ thông theo Điều 25; lương thử việc 4.000.000đ thấp hơn mức 85% lương chính theo Điều 26).
+4. **Rà soát hợp đồng lao động:** Đọc file DOCX (`data/eval/contracts/contract_09_nhieu_loi_1.docx`) → Agent bóc tách cấu trúc và phát hiện chính xác 2 vi phạm pháp lý cài sẵn (thử việc 15 ngày vượt quá 6 ngày đối với lao động phổ thông theo Điều 25; lương thử việc 4.000.000đ thấp hơn mức 85% lương chính theo Điều 26).
 
 ## Quyết định thiết kế
 
@@ -117,14 +117,13 @@ python scripts/demo_scenarios.py
 
 ```bash
 cp .env.example .env               # điền GEMINI_API_KEY (hoặc GEMINI_API_KEYS), GROQ_API_KEY
-# data/embeddings/embeddings.parquet không nằm trong git (file lớn, sinh từ Kaggle,
-# xem mục Kaggle bên dưới) — cần có sẵn file này trước khi build.
+# data/embeddings/embeddings.parquet (~917 KB, sinh từ Kaggle) đã có sẵn trong repo.
 docker compose build
 docker compose up -d
 make docker-index                  # nạp chunks + embeddings vào Qdrant trong container
 ```
 
-- API: http://localhost:8000 (`/health`, `/chat`, `/chat/resume`, `/review-contract`, docs tại `/docs`)
+- API: http://localhost:8000 (`/health`, `/chat`, `/chat/resume`, `/review-contract`, `/review-contract/export-docx`, docs tại `/docs`)
 - UI: http://localhost:8501
 - Container `api` chưa có sẵn model ONNX đã export (không nằm trong image) nên tự fallback về reranker gốc (chậm hơn nhưng vẫn đúng); muốn có tốc độ ONNX trong Docker thì chạy `docker compose exec api python -m scripts.export_onnx_reranker` sau khi `up` (cần mount thêm volume nếu muốn giữ qua lần restart).
 

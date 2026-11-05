@@ -7,7 +7,7 @@ kaggle.json
 .gemini_dead_keys.json
 
 # Data (large / generated)
-data/embeddings/
+data/embeddings/*.log
 data/models/
 
 # Python

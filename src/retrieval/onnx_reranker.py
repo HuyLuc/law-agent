@@ -30,8 +30,8 @@ class OnnxReranker:
         self._tokenizer = AutoTokenizer.from_pretrained(self._model_dir)
 
     def rerank(self, query: str, candidates: list[dict], top_k: int = 5, max_length: int = 384) -> list[dict]:
-        if not candidates:
-            return []
+        if len(candidates) <= 1:
+            return list(candidates[:top_k])
         self._ensure_loaded()
         texts = [c["noi_dung"] for c in candidates]
         inputs = self._tokenizer(

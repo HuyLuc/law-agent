@@ -152,6 +152,43 @@ def tinh_thoi_han_bao_truoc_tool(thoi_han_hop_dong_thang: int | None) -> tuple[s
     return _format_calc_result(result), result
 
 
+@tool(response_format="content_and_artifact")
+def tinh_boi_thuong_cham_dut_trai_luat_tool(
+    luong_thang: float,
+    so_thang_khong_duoc_lam_viec: float,
+    thoi_gian_lam_viec_thang: int,
+    thoi_gian_dong_bhtn_thang: int,
+    so_ngay_vi_pham_bao_truoc: int = 0,
+    so_thang_boi_thuong_them: int = 2,
+) -> tuple[str, dict]:
+    """Tinh tong tien boi thuong khi nguoi su dung lao dong don phuong cham dut hop dong
+    lao dong trai phap luat (Dieu 41, Dieu 46, Dieu 36 BLLD 2019 va Dieu 8 ND145/2020).
+
+    Bao gom: tien luong nhung ngay khong duoc lam viec + it nhat 2 thang tien luong
+    boi thuong them + tro cap thoi viec (neu lam viec tu du 12 thang) + tien boi thuong
+    vi pham thoi han bao truoc (neu co, tinh theo 26 ngay cong/thang).
+
+    Args:
+        luong_thang: Tien luong theo hop dong lao dong (dong/thang).
+        so_thang_khong_duoc_lam_viec: So thang nguoi lao dong khong duoc lam viec do bi
+            cham dut hop dong trai phap luat.
+        thoi_gian_lam_viec_thang: Tong thoi gian lam viec thuc te cho NSDLD (thang, >= 0).
+        thoi_gian_dong_bhtn_thang: Thoi gian da tham gia bao hiem that nghiep (thang, >= 0).
+        so_ngay_vi_pham_bao_truoc: So ngay vi pham thoi han bao truoc theo khoan 2 Dieu 36 (mac dinh 0).
+        so_thang_boi_thuong_them: So thang tien luong boi thuong them theo khoan 1 Dieu 41
+            (it nhat 2 thang, mac dinh 2).
+    """
+    result = calculators.tinh_boi_thuong_cham_dut_trai_luat(
+        luong_thang=luong_thang,
+        so_thang_khong_duoc_lam_viec=so_thang_khong_duoc_lam_viec,
+        thoi_gian_lam_viec_thang=thoi_gian_lam_viec_thang,
+        thoi_gian_dong_bhtn_thang=thoi_gian_dong_bhtn_thang,
+        so_ngay_vi_pham_bao_truoc=so_ngay_vi_pham_bao_truoc,
+        so_thang_boi_thuong_them=so_thang_boi_thuong_them,
+    )
+    return _format_calc_result(result), result
+
+
 @tool
 def ask_user(question: str) -> str:
     """Hoi lai nguoi dung khi thieu thong tin quyet dinh de tra loi chinh xac
@@ -173,5 +210,6 @@ ALL_TOOLS = [
     tinh_tien_lam_them_gio_tool,
     tinh_ngay_phep_nam_tool,
     tinh_thoi_han_bao_truoc_tool,
+    tinh_boi_thuong_cham_dut_trai_luat_tool,
     ask_user,
 ]

@@ -4,6 +4,7 @@ roi KIEM TRA BANG QUY TAC LAP TRINH SAN (khong de LLM tu danh gia dung/sai).
 Xem PLAN.md Tuan 4 Buoi 3-4.
 """
 
+import io
 from pathlib import Path
 from typing import Literal
 
@@ -217,3 +218,88 @@ def review_contract_file(path: Path) -> tuple[ContractInfo, list[dict]]:
     text = extract_text_from_file(path)
     info = extract_contract_info(text)
     return info, check_contract(info)
+
+
+_LOAI_HD_LABELS = {
+    "khong_xac_dinh_thoi_han": "Hợp đồng lao động không xác định thời hạn",
+    "xac_dinh_thoi_han": "Hợp đồng lao động xác định thời hạn",
+}
+
+_TRINH_DO_LABELS = {
+    "quan_ly": "Người quản lý doanh nghiệp",
+    "cao_dang_tro_len": "Từ cao đẳng trở lên",
+    "trung_cap": "Trung cấp / Công nhân kỹ thuật / Nhân viên nghiệp vụ",
+    "khac": "Lao động phổ thông (khác)",
+}
+
+
+def export_contract_review_docx(info: ContractInfo, warnings: list[dict], source_filename: str = "") -> bytes:
+    """Xuat bien ban ra soat hop dong lao dong ra dinh dang .docx (bytes)."""
+    from docx import Document
+
+    doc = Document()
+    doc.add_heading("BÁO CÁO RÀ SOÁT HỢP ĐỒNG LAO ĐỘNG", level=0)
+
+    if source_filename:
+        doc.add_paragraph(f"Tệp hợp đồng đối chiếu: {source_filename}")
+
+    doc.add_heading("1. Thông tin trích xuất từ hợp đồng", level=2)
+
+    loai_hd = _LOAI_HD_LABELS.get(info.loai_hop_dong or "", "Chưa xác định")
+    thoi_han = f"{info.thoi_han_hop_dong_thang} tháng" if info.thoi_han_hop_dong_thang is not None else "Chưa xác định"
+    vi_tri = info.vi_tri_cong_viec or "Chưa xác định"
+    trinh_do = _TRINH_DO_LABELS.get(info.trinh_do_yeu_cau or "", "Chưa xác định")
+    thu_viec = f"{info.so_ngay_thu_viec} ngày" if info.so_ngay_thu_viec is not None else "Chưa xác định"
+    luong_tv = f"{info.luong_thu_viec:,.0f} đ/tháng" if info.luong_thu_viec is not None else "Chưa xác định"
+    luong_chinh = f"{info.luong_chinh:,.0f} đ/tháng" if info.luong_chinh is not None else "Chưa xác định"
+    vung = f"Vùng {info.vung_luong_toi_thieu}" if info.vung_luong_toi_thieu else "Chưa xác định"
+    gio_ngay = f"{info.gio_lam_ngay:g} giờ/ngày" if info.gio_lam_ngay is not None else "Chưa xác định"
+    gio_tuan = f"{info.gio_lam_tuan:g} giờ/tuần" if info.gio_lam_tuan is not None else "Chưa xác định"
+
+    missing_fields = [ten for field, ten in _NOI_DUNG_BAT_BUOC if not getattr(info, field)]
+    noi_dung_dieu_21 = (
+        "Đầy đủ các mục bắt buộc"
+        if not missing_fields
+        else "Thiếu: " + "; ".join(missing_fields)
+    )
+
+    summary_items = [
+        ("Loại hợp đồng", loai_hd),
+        ("Thời hạn hợp đồng", thoi_han),
+        ("Vị trí công việc", vi_tri),
+        ("Trình độ yêu cầu", trinh_do),
+        ("Số ngày thử việc", thu_viec),
+        ("Lương thử việc", luong_tv),
+        ("Lương chính thức", luong_chinh),
+        ("Vùng lương tối thiểu", vung),
+        ("Giờ làm việc/ngày", gio_ngay),
+        ("Giờ làm việc/tuần", gio_tuan),
+        ("Các nội dung bắt buộc theo Điều 21", noi_dung_dieu_21),
+    ]
+    for label, val in summary_items:
+        doc.add_paragraph(f"• {label}: {val}")
+
+    doc.add_heading("2. Kết quả kiểm tra tuân thủ pháp luật", level=2)
+
+    if not warnings:
+        doc.add_paragraph(
+            "Không phát hiện điều khoản vi phạm theo các quy tắc kiểm tra hiện hành "
+            "(Điều 21, 25, 26, 105 BLLĐ 2019 và Nghị định 293/2025/NĐ-CP)."
+        )
+    else:
+        doc.add_paragraph(f"Phát hiện {len(warnings)} cảnh báo vi phạm:")
+        for idx, w in enumerate(warnings, start=1):
+            doc.add_paragraph(f"({idx}) Cảnh báo: {w.get('canh_bao', '')}")
+            doc.add_paragraph(f"    Căn cứ pháp lý: {w.get('can_cu', '')}")
+            trich_dan = w.get("trich_dan", "")
+            if trich_dan:
+                doc.add_paragraph(f"    Trích dẫn điều luật: {trich_dan}")
+
+    doc.add_paragraph(
+        "Lưu ý: Báo cáo này được tạo tự động bởi AI Agent và chỉ mang tính chất tham khảo, "
+        "không thay thế văn bản tư vấn pháp lý chính thức."
+    )
+
+    buf = io.BytesIO()
+    doc.save(buf)
+    return buf.getvalue()

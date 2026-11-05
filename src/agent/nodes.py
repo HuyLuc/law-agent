@@ -23,8 +23,18 @@ MAX_TOOL_CALLS = 6
 MAX_VERIFY_ROUNDS = 2
 
 _tool_node = ToolNode(ALL_TOOLS)
-_DIEU_RE = re.compile(r"Điều\s+(\d+)")
+_DIEU_RE = re.compile(r"Điều\s+(\d+)", re.IGNORECASE)
+_CLAUSE_SPLIT_RE = re.compile(r"[\n.;\[\]]")
+_COMPOUND_CONNECTOR_RE = re.compile(
+    r"^(?:\s|,|và|hoặc|khoản\s+\d+|điểm\s+[a-zđ])*$", re.IGNORECASE
+)
 _CHUNK_ID_DIEU_RE = re.compile(r"_D(\d+)_K")
+_CHUNK_ID_DOC_DIEU_RE = re.compile(r"^(.+?)_D(\d+)_K")
+_DOC_PATTERNS: list[tuple[str, re.Pattern[str]]] = [
+    ("BLLD2019", re.compile(r"Bộ\s+luật\s+Lao\s+động|BLLĐ|45/2019", re.IGNORECASE)),
+    ("ND145_2020", re.compile(r"Nghị\s+định\s*145|NĐ\s*145|145/2020", re.IGNORECASE)),
+    ("ND293_2025", re.compile(r"Nghị\s+định\s*293|NĐ\s*293|293/2025", re.IGNORECASE)),
+]
 
 
 def router(state: AgentState) -> dict:
@@ -69,6 +79,14 @@ def should_call_tools(state: AgentState) -> str:
     return "verify_citation"
 
 
+def _detect_doc_code(text: str) -> str | None:
+    """Nhan dien ma van ban chuan hoa tu chuoi trich dan."""
+    for doc_code, pattern in _DOC_PATTERNS:
+        if pattern.search(text):
+            return doc_code
+    return None
+
+
 def _allowed_dieu_numbers(evidence: dict[str, str]) -> set[int]:
     """Chi tin cac Dieu THUC SU duoc tra ve (parse tu key), khong quet noi
     dung chunk -- vi mot chunk co the nhac ("dan chieu") den Dieu khac ma
@@ -81,6 +99,25 @@ def _allowed_dieu_numbers(evidence: dict[str, str]) -> set[int]:
         elif key.startswith("can_cu:"):
             allowed.update(int(m) for m in _DIEU_RE.findall(key))
     return allowed
+
+
+def _allowed_doc_dieu_pairs(evidence: dict[str, str]) -> dict[int, set[str]]:
+    """Anh xa so_dieu -> tap ma van ban chuan hoa (vd: 'BLLD2019', 'ND145_2020')."""
+    pairs: dict[int, set[str]] = {}
+    for key in evidence:
+        chunk_match = _CHUNK_ID_DOC_DIEU_RE.search(key)
+        if chunk_match:
+            doc_code = chunk_match.group(1)
+            dieu_num = int(chunk_match.group(2))
+            pairs.setdefault(dieu_num, set()).add(doc_code)
+        elif key.startswith("can_cu:"):
+            doc_code = _detect_doc_code(key)
+            for m in _DIEU_RE.findall(key):
+                dieu_num = int(m)
+                docs = pairs.setdefault(dieu_num, set())
+                if doc_code is not None:
+                    docs.add(doc_code)
+    return pairs
 
 
 def verify_citation(state: AgentState) -> dict:
@@ -97,9 +134,30 @@ def verify_citation(state: AgentState) -> dict:
             "messages": [SystemMessage("Câu trả lời bị trống. Hãy trả lời lại đầy đủ câu hỏi của người dùng.")],
         }
 
+    evidence = state.get("evidence", {})
     cited = {int(m) for m in _DIEU_RE.findall(answer)}
-    allowed = _allowed_dieu_numbers(state.get("evidence", {}))
+    allowed = _allowed_dieu_numbers(evidence)
     invalid = cited - allowed
+
+    doc_dieu_pairs = _allowed_doc_dieu_pairs(evidence)
+    wrong_doc_notes: list[str] = []
+    for match in _DIEU_RE.finditer(answer):
+        dieu_num = int(match.group(1))
+        if dieu_num in invalid:
+            continue
+        clause_tail = _CLAUSE_SPLIT_RE.split(answer[match.end() :])[0][:80]
+        immediate_tail = _DIEU_RE.split(clause_tail)[0][:40]
+        cited_doc = _detect_doc_code(immediate_tail)
+        if cited_doc is None and _COMPOUND_CONNECTOR_RE.match(immediate_tail):
+            cited_doc = _detect_doc_code(clause_tail)
+        allowed_docs = doc_dieu_pairs.get(dieu_num, set())
+        if cited_doc is not None and allowed_docs and cited_doc not in allowed_docs:
+            invalid.add(dieu_num)
+            allowed_str = ", ".join(sorted(allowed_docs))
+            wrong_doc_notes.append(
+                f"Điều {dieu_num} trong evidence thuộc {allowed_str} (không phải {cited_doc})"
+            )
+
     if not invalid:
         return {}
 
@@ -109,6 +167,8 @@ def verify_citation(state: AgentState) -> dict:
 
     dieu_str = ", ".join(f"Điều {n}" for n in sorted(invalid))
     feedback = VERIFY_FEEDBACK_TEMPLATE.format(dieu_khong_hop_le=dieu_str)
+    if wrong_doc_notes:
+        feedback += " Lưu ý sai văn bản: " + "; ".join(wrong_doc_notes) + "."
     return {
         "verify_rounds": rounds,
         "messages": [SystemMessage(feedback)],

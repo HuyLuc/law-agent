@@ -45,8 +45,8 @@ class Reranker:
     def rerank(
         self, query: str, candidates: list[dict], top_k: int = 5, max_length: int = 384
     ) -> list[dict]:
-        if not candidates:
-            return []
+        if len(candidates) <= 1:
+            return list(candidates[:top_k])
         pairs = [[query, c["noi_dung"]] for c in candidates]
         scores = self.model.compute_score(pairs, normalize=True, max_length=max_length)
         if isinstance(scores, float):
@@ -90,4 +90,6 @@ def search_reranked(
     candidates = search_hybrid(
         query, top_k=prefetch_limit, prefetch_limit=prefetch_limit, van_ban=van_ban
     )
+    if len(candidates) <= 1:
+        return list(candidates[:top_k])
     return get_reranker().rerank(query, candidates, top_k=top_k)

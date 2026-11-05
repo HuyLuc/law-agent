@@ -11,6 +11,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY src/ src/
 COPY data/processed/ data/processed/
 COPY data/embeddings/ data/embeddings/
+COPY scripts/ scripts/
 
 ENV HF_HOME=/root/.cache/huggingface
 

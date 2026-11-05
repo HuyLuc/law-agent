@@ -20,3 +20,46 @@ def test_backend_khong_hop_le_bao_loi(monkeypatch):
     monkeypatch.setattr(rr.settings, "RERANKER_BACKEND", "vo_ly")
     with pytest.raises(ValueError, match="vo_ly"):
         rr._build_reranker()
+
+
+def test_reranker_fast_path_0_hoac_1_candidate_khong_goi_model(monkeypatch):
+    reranker = rr.Reranker()
+
+    def _boom(_self):
+        raise AssertionError("Khong duoc khoi tao hay goi model khi len(candidates) <= 1")
+
+    monkeypatch.setattr(rr.Reranker, "model", property(_boom))
+
+    assert reranker.rerank("thử việc", [], top_k=5) == []
+
+    single = [{"id": "BLLD2019_D25_K0", "noi_dung": "Thời gian thử việc..."}]
+    assert reranker.rerank("thử việc", single, top_k=5) == single
+    assert reranker._model is None
+
+
+def test_search_reranked_fast_path_1_candidate_khong_goi_get_reranker(monkeypatch):
+    single = [{"id": "BLLD2019_D25_K0", "noi_dung": "Thời gian thử việc..."}]
+    monkeypatch.setattr(rr, "search_hybrid", lambda *_args, **_kwargs: single)
+
+    def _boom():
+        raise AssertionError("Khong duoc goi get_reranker khi len(candidates) <= 1")
+
+    monkeypatch.setattr(rr, "get_reranker", _boom)
+
+    assert rr.search_reranked("thử việc", top_k=5) == single
+
+
+def test_onnx_reranker_fast_path_0_hoac_1_candidate_khong_load_model(monkeypatch, tmp_path):
+    from src.retrieval.onnx_reranker import OnnxReranker
+
+    onnx_rr = OnnxReranker(tmp_path / "dummy")
+
+    def _boom(_self):
+        raise AssertionError("Khong duoc goi _ensure_loaded khi len(candidates) <= 1")
+
+    monkeypatch.setattr(OnnxReranker, "_ensure_loaded", _boom)
+
+    assert onnx_rr.rerank("thử việc", [], top_k=5) == []
+    single = [{"id": "BLLD2019_D25_K0", "noi_dung": "Thời gian thử việc..."}]
+    assert onnx_rr.rerank("thử việc", single, top_k=5) == single
+

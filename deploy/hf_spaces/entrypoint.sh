@@ -31,7 +31,7 @@ done
 echo "FastAPI backend da san sang!"
 
 echo "=== [3/4] Export ONNX Reranker neu can ==="
-if [ ! -f "data/models/bge-reranker-base.onnx" ]; then
+if [ ! -f "data/models/bge-reranker-v2-m3-onnx/model.onnx" ]; then
     echo "Chuyen doi reranker sang ONNX de tang toc CPU..."
     python -m scripts.export_onnx_reranker || true
 fi

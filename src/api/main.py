@@ -9,17 +9,17 @@ import uuid
 from pathlib import Path
 
 from fastapi import FastAPI, File, HTTPException, UploadFile
-from fastapi.responses import StreamingResponse
+from fastapi.responses import Response, StreamingResponse
 from langchain_core.messages import HumanMessage
 from langgraph.types import Command
-from pydantic import BaseModel
+from pydantic import BaseModel, ValidationError
 
 from src.agent.graph import build_graph
 from src.config import settings
 from src.llm import message_text
 from src.observability import get_callbacks
 from src.retrieval.hybrid import get_client
-from src.tools.contract_rules import review_contract_file
+from src.tools.contract_rules import ContractInfo, export_contract_review_docx, review_contract_file
 
 app = FastAPI(title="VN Labor Law Agent API")
 _graph = build_graph()
@@ -33,6 +33,12 @@ class ChatRequest(BaseModel):
 class ResumeRequest(BaseModel):
     answer: str
     thread_id: str
+
+
+class ContractReportRequest(BaseModel):
+    extracted_info: dict
+    warnings: list[dict]
+    filename: str = "hop_dong.docx"
 
 
 def _new_state(message: str) -> dict:
@@ -113,6 +119,19 @@ async def review_contract(file: UploadFile = File(...)):  # noqa: B008 -- patter
         tmp_path.unlink(missing_ok=True)
 
     return {"extracted_info": info.model_dump(), "warnings": warnings}
+
+
+@app.post("/review-contract/export-docx")
+def export_contract_docx(req: ContractReportRequest):
+    try:
+        info = ContractInfo(**req.extracted_info)
+    except ValidationError as exc:
+        raise HTTPException(422, f"Dữ liệu extracted_info không hợp lệ: {exc}") from exc
+    docx_bytes = export_contract_review_docx(info, req.warnings, source_filename=req.filename)
+    return Response(
+        content=docx_bytes,
+        media_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    )
 
 
 @app.get("/health")

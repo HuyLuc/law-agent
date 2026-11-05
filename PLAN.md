@@ -218,9 +218,9 @@ Mỗi giai đoạn gồm: 🎯 mục tiêu · ✅ việc cần làm · 📦 đ�
 | 1 | Dữ liệu | `chunks.jsonl`, `dev.jsonl` | ✅ |
 | 2 | Tìm kiếm | V0–V3, tập test đã khóa | ✅ |
 | 3 | Agent | V4 chạy được | ✅ |
-| 4 | Đánh giá + hợp đồng | Bảng kết quả hoàn chỉnh | ⬜ |
-| 5 | Đóng gói | Docker, README, video demo | ⬜ |
-| 6 | Dự phòng | Sửa lỗi, phần mở rộng | ⬜ |
+| 4 | Đánh giá + hợp đồng | Bảng kết quả hoàn chỉnh | ✅ |
+| 5 | Đóng gói | Docker, README, kịch bản demo | ✅ |
+| 6 | Dự phòng | Sửa lỗi, ONNX, HF Spaces, Langfuse | ✅ |
 
 ---
 
@@ -557,7 +557,7 @@ Các quy tắc bắt buộc trong system prompt:
 #### Buổi 4: README 💻 ✅ (trừ GIF demo — sẽ làm cùng video ở Buổi 5)
 1. [x] Giới thiệu 1 câu — GIF demo để dành làm cùng video Buổi 5
 2. [x] Sơ đồ kiến trúc (Mermaid từ LangGraph)
-3. [x] **Bảng kết quả V0 → V4** kèm giải thích ngắn — retrieval V1-V3 đầy đủ (dev+test); sinh câu trả lời chỉ có V0/V1 do quota cạn giữa chừng, đã ghi chú rõ là chưa đầy đủ/chưa nên coi là kết luận cuối
+3. [x] **Bảng kết quả V0 → V4** kèm giải thích ngắn — đã hoàn thành đầy đủ retrieval V1–V3 và sinh câu trả lời V0–V4 trên cả bộ dev (n=40) và bộ test khóa cứng (n=100)
 4. [x] Các quyết định thiết kế: chia theo Điều · hybrid + rerank · không để LLM tính toán · kiểm tra trích dẫn bằng code · chia dev/test
 5. [x] Phân tích lỗi và hạn chế
 6. [x] Cách chạy (Docker, chạy trực tiếp, và Kaggle)
@@ -694,11 +694,11 @@ kaggle datasets version -p data/processed -m "update chunks"
 
 ### 9.1. Mẫu mô tả trong CV
 > **AI Agent tư vấn Luật Lao động Việt Nam** · GitHub · Demo
-> - Xây dựng agent bằng **LangGraph** với 6 công cụ: tra cứu điều luật nhiều bước, 5 hàm tính trợ cấp/làm thêm giờ, tự hỏi lại người dùng khi thiếu thông tin; kiểm tra trích dẫn để chống bịa luật
-> - Tối ưu tìm kiếm bằng **hybrid search bge-m3 (dense + sparse) + reranker**: Hit@5 **X → Y** trên 100 câu test tự xây dựng; citation precision **Z%**
-> - Tách phần tính toán thành công cụ có kiểm thử: độ chính xác **A%**, so với **B%** khi để LLM tự tính
-> - Rà soát hợp đồng lao động bằng trích xuất có cấu trúc kết hợp quy tắc pháp lý: phát hiện đúng **C/D** lỗi cài sẵn
-> - **Công nghệ:** LangGraph, Qdrant, bge-m3, Gemini, FastAPI, Docker, Kaggle GPU
+> - Xây dựng agent bằng **LangGraph** với 9 công cụ: tra cứu điều luật nhiều bước (`search_law`, `get_article`, `follow_references`), 5 hàm tính trợ cấp/làm thêm giờ/ngày phép, tự hỏi lại người dùng khi thiếu thông tin (`ask_user` + `interrupt()`); kiểm tra trích dẫn bằng code (`verify_citation`) để chống bịa luật và từ chối đúng **100% (15/15)** câu hỏi ngoài phạm vi
+> - Tối ưu tìm kiếm bằng **hybrid search bge-m3 (dense + sparse, RRF) + reranker (ONNX fp32 tăng tốc 2× trên CPU)**: Hit@5 tăng từ **0.976 → 0.988** và MRR@10 tăng từ **0.903 → 0.940** trên 100 câu test khóa cứng; Citation Recall của Agent đạt **84%** (Judge Score **4.39/5.0**)
+> - Tách phần tính toán thành công cụ Python thuần có kiểm thử Pydantic: độ chính xác đạt **100% (40/40 tình huống)**, khắc phục sai số làm tròn/công thức khi để LLM tự tính
+> - Rà soát hợp đồng lao động (PDF/DOCX) bằng trích xuất có cấu trúc (Pydantic) kết hợp quy tắc pháp lý: phát hiện đúng **14/14 lỗi cài sẵn** trên 10 hợp đồng mẫu (**Precision = Recall = 1.0**)
+> - **Công nghệ:** LangGraph, Qdrant, BAAI/bge-m3, ONNX Runtime, Gemini / Groq, FastAPI, Streamlit, Langfuse, Docker, Kaggle GPU
 
 ### 9.2. Câu hỏi phỏng vấn nên chuẩn bị
 1. Vì sao chia chunk theo Điều mà không theo độ dài cố định?

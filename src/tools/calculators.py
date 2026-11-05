@@ -1,4 +1,4 @@
-"""5 ham tinh toan thuan Python (khong goi LLM) cho agent.
+"""6 ham tinh toan thuan Python (khong goi LLM) cho agent.
 
 Doi chieu cong thuc voi BLLD2019 va ND145/2020 (xem PLAN.md muc "Tuan 3,
 Buoi 1"). Moi ham nhan input da duoc kiem tra bang Pydantic va tra ve:
@@ -229,3 +229,105 @@ def tinh_thoi_han_bao_truoc(thoi_han_hop_dong_thang: int | None) -> dict:
         ),
         "can_cu": ["Điều 35 Bộ luật Lao động 2019", "Điều 36 Bộ luật Lao động 2019"],
     }
+
+
+# ---------------------------------------------------------------------------
+# tinh_boi_thuong_cham_dut_trai_luat
+
+
+class BoiThuongChamDutTraiLuatInput(BaseModel):
+    luong_thang: float = Field(gt=0, description="Tien luong theo hop dong lao dong (dong/thang)")
+    so_thang_khong_duoc_lam_viec: float = Field(
+        ge=0, description="So thang nguoi lao dong khong duoc lam viec"
+    )
+    thoi_gian_lam_viec_thang: int = Field(ge=0, description="Tong thoi gian lam viec thuc te (thang)")
+    thoi_gian_dong_bhtn_thang: int = Field(ge=0, description="Thoi gian da tham gia BHTN (thang)")
+    so_ngay_vi_pham_bao_truoc: int = Field(
+        default=0, ge=0, description="So ngay vi pham thoi han bao truoc (neu co)"
+    )
+    so_thang_boi_thuong_them: int = Field(
+        default=2,
+        ge=2,
+        description="Ít nhất 2 tháng tiền lương theo HĐLĐ theo khoản 1 Điều 41",
+    )
+
+    @model_validator(mode="after")
+    def _check_bhtn_khong_vuot_qua_tong_thoi_gian(self) -> "BoiThuongChamDutTraiLuatInput":
+        if self.thoi_gian_dong_bhtn_thang > self.thoi_gian_lam_viec_thang:
+            raise ValueError(
+                "thoi_gian_dong_bhtn_thang khong the lon hon thoi_gian_lam_viec_thang"
+            )
+        return self
+
+
+def tinh_boi_thuong_cham_dut_trai_luat(
+    luong_thang: float,
+    so_thang_khong_duoc_lam_viec: float,
+    thoi_gian_lam_viec_thang: int,
+    thoi_gian_dong_bhtn_thang: int,
+    so_ngay_vi_pham_bao_truoc: int = 0,
+    so_thang_boi_thuong_them: int = 2,
+) -> dict:
+    """Tinh tong tien boi thuong khi NSDLD don phuong cham dut HDLD trai phap luat (Dieu 41 BLLD 2019)."""
+    data = BoiThuongChamDutTraiLuatInput(
+        luong_thang=luong_thang,
+        so_thang_khong_duoc_lam_viec=so_thang_khong_duoc_lam_viec,
+        thoi_gian_lam_viec_thang=thoi_gian_lam_viec_thang,
+        thoi_gian_dong_bhtn_thang=thoi_gian_dong_bhtn_thang,
+        so_ngay_vi_pham_bao_truoc=so_ngay_vi_pham_bao_truoc,
+        so_thang_boi_thuong_them=so_thang_boi_thuong_them,
+    )
+
+    tien_khong_lam_viec = data.so_thang_khong_duoc_lam_viec * data.luong_thang
+    tien_boi_thuong_them = data.so_thang_boi_thuong_them * data.luong_thang
+
+    if data.thoi_gian_lam_viec_thang >= 12:
+        tctv_res = tinh_tro_cap_thoi_viec(
+            data.thoi_gian_lam_viec_thang,
+            data.thoi_gian_dong_bhtn_thang,
+            data.luong_thang,
+        )
+        tro_cap_thoi_viec = tctv_res["ket_qua"]
+        tctv_note = f"{_format_vnd(tro_cap_thoi_viec)} ({tctv_res['cach_tinh']})"
+    else:
+        tro_cap_thoi_viec = 0
+        tctv_note = "0đ (làm việc dưới 12 tháng nên không hưởng trợ cấp thôi việc theo Điều 46)"
+
+    tien_vi_pham_bao_truoc = round((data.luong_thang / 26) * data.so_ngay_vi_pham_bao_truoc)
+    ket_qua = round(
+        tien_khong_lam_viec + tien_boi_thuong_them + tro_cap_thoi_viec + tien_vi_pham_bao_truoc
+    )
+
+    parts = [
+        (
+            f"Tiền lương những ngày không được làm việc "
+            f"({data.so_thang_khong_duoc_lam_viec} tháng × {_format_vnd(data.luong_thang)}) "
+            f"= {_format_vnd(tien_khong_lam_viec)}"
+        ),
+        (
+            f"Bồi thường thêm ({data.so_thang_boi_thuong_them} tháng × {_format_vnd(data.luong_thang)}) "
+            f"= {_format_vnd(tien_boi_thuong_them)}"
+        ),
+        f"Trợ cấp thôi việc = {tctv_note}",
+    ]
+    if data.so_ngay_vi_pham_bao_truoc > 0:
+        parts.append(
+            f"Bồi thường vi phạm báo trước "
+            f"({data.so_ngay_vi_pham_bao_truoc} ngày × {_format_vnd(data.luong_thang)}/26 ngày công) "
+            f"= {_format_vnd(tien_vi_pham_bao_truoc)}"
+        )
+
+    cach_tinh = "; ".join(parts) + f". Tổng cộng = {_format_vnd(ket_qua)}"
+    can_cu = [
+        "Điều 41 Bộ luật Lao động 2019",
+        "Điều 46 Bộ luật Lao động 2019",
+        "Điều 8 Nghị định 145/2020/NĐ-CP",
+    ]
+    if data.so_ngay_vi_pham_bao_truoc > 0:
+        can_cu.append("Điều 36 Bộ luật Lao động 2019")
+    return {
+        "ket_qua": ket_qua,
+        "cach_tinh": cach_tinh,
+        "can_cu": can_cu,
+    }
+

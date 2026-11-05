@@ -2,6 +2,7 @@
 # (mọi gói con) nằm ở requirements.lock.txt, tạo bằng `pip freeze`.
 langgraph==1.2.12
 langchain>=0.3
+langchain-community
 langchain-google-genai
 langchain-groq
 FlagEmbedding
@@ -10,9 +11,15 @@ optimum[onnxruntime]
 qdrant-client
 ragas==0.4.3
 pydantic>=2
+pydantic-settings
 fastapi
+python-multipart
 uvicorn[standard]
 streamlit
+requests
+pandas
+pyarrow
+pyyaml
 pypdf
 python-docx
 beautifulsoup4

@@ -8,6 +8,5 @@
 data/raw
 data/eval
 kaggle
-scripts
 tests
 eval/results
